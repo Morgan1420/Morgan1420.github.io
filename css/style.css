@@ -19,15 +19,16 @@
     justify-content: center;
     align-items: center;
     border-radius: 15%;
+    border: 2px solid ;
 }
 
 
 @keyframes move-binary-right {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(0%);
     }
     100% {
-        transform: translateX(100%);
+        transform: translateX(30%);
     }
 }
 
@@ -83,10 +84,10 @@
 
 @keyframes move-binary-left {
     0% {
-        transform: translateX(100%);
+        transform: translateX(30%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(0%);
     }
 }
 
@@ -114,10 +115,10 @@
 
 @keyframes move-binary-down {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(0%);
     }
     100% {
-        transform: translateY(100%);
+        transform: translateY(30%);
     }
 }
 
@@ -142,3 +143,4 @@
     font-size: 20px; 
     writing-mode: vertical-rl; 
 }
+

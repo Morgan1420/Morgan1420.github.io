@@ -60,7 +60,7 @@
 
 			<!-- Slide 1 -->
             <section style="display: flex; justify-content: center; align-items: center; height: 100vh;" data-auto-animate>
-                <img src="images/gif_maquina.gif" alt="GIF de Maquinaria" style="max-width: 100%; height: auto; margin-top: 25%; border-radius: 15px;">
+                <img src="images/gif_maquina.gif" alt="GIF de Maquinaria" style="max-width: 100%; height: auto; margin-top: 18%; border-radius: 15px;">
             </section>
 
 
@@ -91,35 +91,34 @@
                     <div class="fragment">
                         <section style="display: flex; justify-content: center; align-items: center; height: 100vh;">
                             <!-- Div PLC en la máquina -->
-                            <div class="box" style="top: 25%; left: 25%; width: 100px; height: 100px; color: black; font-size: xx-large;">PLC</div>
+                            <div class="box" style="top: 25%; left: 25%; width: 100px; height: 100px; color: black; font-size: xx-large; background-color: rgb(231, 142, 142);">PLC</div>
                             <img src="images/cloud.png" alt="cloud" style="width: 20%; height: auto; top: 48%; left: 0%; border-radius: 15px; position: absolute;">
                             <div class="connection-line-horizontal" style="top: 56%; left: 20%; width: 10.2%; background-color: red;"></div>
                             <div class="connection-line-vertical" style="top: 34.3%; left: 30%; height: 21.8%; background-color: red;"></div>
 
                             <div class="binary-container-down" style="left: 28%;">
-                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
+                                <div class="binary-text-down">01010101010101010010101010101010101010010101010101010100101010101010101010100101010101010101001010101010101010101001010101010101010010101010101010101010</div>
                             </div>
-                            <div class="binary-container-down" style="left: 30.3%;">
-                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
-                            </div>
+                            
                             <div class="binary-container-left">
-                                <div class="binary-text-left">01010101010101010010101010101010101010</div>
+                                <div class="binary-text-left">01010101010101010010101010101010101010010101010101010100101010101010101010100101010101010101001010101010101010101001010101010101010010101010101010101010</div>
                             </div>
                         </section>
                         <div class="fragment">
-                            <div class="box" style="top: 25%; left: 65%; width: 100px; height: 100px; color: black; font-size: x-large;">ADAM</div>
-                            <div class="box" style="top: 52%; left: 85%; width: 100px; height: 100px;"></div>
+                            
                             <div class="connection-line-horizontal" style="top: 56%; left: 70%; width: 15%;"></div>
                             <div class="connection-line-vertical" style="top: 34.3%; left: 70%; height: 21.8%;"></div>
+
+                            <div class="box" style="top: 25%; left: 65%; width: 100px; height: 100px; color: black; font-size: x-large; background-color: rgb(153, 218, 218);" data-id="div-maquina">ADAM</div>
+                            <div class="box" style="top: 52%; left: 85%; width: 100px; height: 100px;"></div>
+                            
                             <!-- Contenedor de la cadena binaria -->
                             <div class="binary-container-down" style="left: 70.3%;">
-                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
+                                <div class="binary-text-down">01010101010101010010101010101010101010010101010101010100101010101010101010100101010101010101001010101010101010101001010101010101010010101010101010101010</div>
                             </div>
-                            <div class="binary-container-down" style="left: 68%;">
-                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
-                            </div>
+
                             <div class="binary-container">
-                                <div class="binary-text">01010101010101010010101010101010101010</div>
+                                <div class="binary-text">0101010101010101010101010101010101010101110101010101010101110101010101010101010111010101010101010111010101010101010101011101010101010101011101010101010101010101110101010101010101010101010101010101010101010111010101010101010111010101010101010101010101010101010101010101010101010101</div>
                             </div>
                         </div>
                         <div class="fragment">
@@ -127,15 +126,22 @@
                             <div class="connection-line-horizontal" style="top: 56%; left: 50%; width: 20%;"></div>
 
                             <div class="binary-container-long">
-                                <div class="binary-text">0101010101010101001010101010101010101001010101010101010010101010101010101010</div>
+                                <div class="binary-text">‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎010101010</div>
                             </div>
+
                             <div class="binary-container-medium">
-                                <div class="binary-text">0101010101010101001010101010101010101001010101010101010010101010101010101010</div>
+                                <div class="binary-text">01010101010101010101010101010101010101011101010101010101011101010101010101010101110101010101010101110101010101010101010111010101010101010111010101010101010101011101010101010101011101010101010101010101110101010101010101110101010101010101010</div>
                             </div>
+                            <div class="binary-container-down" style="left: 68%;">
+                                <div class="binary-text-down">01010101010101010010101010101010101010010101010101010100101010101010101010100101010101010101001010101010101010101001010101010101010010101010101010101010</div>
+                            </div>
+                            <div class="binary-container-down" style="left: 30.3%;">
+                                <div class="binary-text-down">01010101010101010010101010101010101010010101010101010100101010101010101010100101010101010101001010101010101010101001010101010101010010101010101010101010</div>
+                            </div> 
                         </div>
                         <section class="fragment" data-auto-animate>
                             <img src="images/firewall.png" alt="cloud" style="width: 20%; height: auto; top: 43%; left: 40%; border-radius: 15px; position: absolute;">
-                            <div class="box" style="top: 56.25%; left: 58.4%; width: 26.56%; height: 5%; background-color: #012713; border-radius: 0;"></div>
+                            <div class="box" style="top: 56.25%; left: 58.4%; width: 26.56%; height: 5%; background-color: #012713; border-radius: 0; border: none;"></div>
 						</section>
                     </div>
                 </section>
@@ -166,16 +172,20 @@
                 <img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="max-width: 60%; height: auto; margin-top: 7%; border-radius: 15px;" data-id="menshen-machine" />
 
                 <!-- Div en la máquina ADAM -->
-                <div class="box" style="top: 15%; left: 60%; width: 100px; height: 100px; color: black; font-size: x-large;" data-id="div-maquina">ADAM</div>
+                 <!-- Líneas de conexión -->
+                <div class="connection-line-horizontal" style="top: 45%; left: 65%; width: 95px;" data-id="div-c1"></div>
+                <div class="connection-line-vertical" style="top: 24.3%; left: 65%; height: 20.8%;" data-id="div-c3"></div>
+                <div class="box" style="top: 15%; left: 60%; width: 100px; height: 100px; color: black; font-size: x-large; background-color: rgb(153, 218, 218);" data-id="div-maquina">ADAM</div>
                 <!-- Model Preventiu -->
-                <div class="box" style="top: 40%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-1">Model Preventiu</div>
+                <div class="box" style="top: 40%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-1">Viewer</div>
 
 				
 				<!-- PLC -->
-				<div class="box" style="top: 15%; left: 25%; width: 100px; height: 100px; color: black; font-size: xx-large;" data-id="plc-box">PLC</div>
-                <img src="images/cloud.png" alt="cloud" style="width: 15%; height: auto; top: 35%; left: 0%; border-radius: 15px; position: absolute;" data-id="cloud-image">
                 <div class="connection-line-horizontal" style="top: 45%; left: 15%; width: 15.2%; background-color: red;" data-id="cloud-plc-1"></div>
                 <div class="connection-line-vertical" style="top: 24.3%; left: 30%; height: 20.8%; background-color: red;" data-id="cloud-plc-2"></div>
+				<div class="box" style="top: 15%; left: 25%; width: 100px; height: 100px; color: black; font-size: xx-large; background-color: rgb(231, 142, 142);" data-id="plc-box">PLC</div>
+                <img src="images/cloud.png" alt="cloud" style="width: 15%; height: auto; top: 35%; left: 0%; border-radius: 15px; position: absolute;" data-id="cloud-image">
+                
 					
 
 				<!-- Firewall -->
@@ -184,19 +194,15 @@
 				<img src="images/firewall.png" alt="cloud" style="width: 15%; height: auto; top: 36%; left: 40%; border-radius: 15px; position: absolute;" data-id="firewall-image">
 				
 
-                <!-- Líneas de conexión -->
-                <div class="connection-line-horizontal" style="top: 45%; left: 65%; width: 95px;" data-id="div-c1"></div>
-                <div class="connection-line-vertical" style="top: 24.3%; left: 65%; height: 20.8%;" data-id="div-c3"></div>
+                
 
 				
 				<div class="fragment">
 					<!-- Segundo div conectado al primero -->
-					<div class="box" style="top: 55%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-2">Model Predictiu</div>
+					<div class="box" style="top: 55%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-2">Analitzador</div>
 					<div class="connection-line-horizontal" style="top: 60%; left: 65%; width: 95px;" data-id="div-c2"></div>
 					<div class="connection-line-vertical" style="top: 45%; left: 65%; height: 15.1%;" data-id="div-c4"></div>
 				</div>
-					
-				</section>
             </section>
 
 
@@ -226,15 +232,15 @@
 
                 <!-- ADAM -->
                 <div class="box" style="
-					top: -25%; left: 5%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="div-maquina">ADAM</div>
+					top: -25%; left: 5%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="div-maquina background-color: rgb(153, 218, 218);" data-id="div-maquina">ADAM</div>
 
                 <!-- Model Preventiu -->
                 <div class="box" style="
-					top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: x-large;" data-id="zoom-div-1">Model Preventiu</div>
+					top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: x-large;" data-id="zoom-div-1">Viewer</div>
 
                 <!-- Model Predictiu -->
                 <div class="box" style="
-					top: 40%; left: 75%; width: 200px; height: 200px;color: black; font-size: x-large;" data-id="zoom-div-2">Model Predictiu</div>
+					top: 40%; left: 75%; width: 200px; height: 200px;color: black; font-size: x-large;" data-id="zoom-div-2">Analitzador</div>
 
                 <!-- Líneas de conexión -->
 				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c1"></div>
@@ -247,7 +253,7 @@
 				<img src="images/firewall.png" alt="cloud" style="width: 30%; height: auto; top: 5%; left: -50%; border-radius: 15px; position: absolute;" data-id="firewall-image">
 
 				<!-- PLC -->
-				<div class="box" style="top: -25%; left: -20%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="plc-box">PLC</div>
+				<div class="box" style="top: -25%; left: -20%; width: 200px; height: 200px; color: black; font-size: xx-large; background-color: rgb(231, 142, 142);" data-id="plc-box">PLC</div>
 				<img src="images/cloud.png" alt="cloud" style="width: 15%; height: auto; top: 13%; left: -60%; border-radius: 15px; position: absolute;" data-id="cloud-image">
 				<div class="connection-line-horizontal" style="top: 20%; left: -40%; width: 15.2%; background-color: red;" data-id="cloud-plc-1"></div>
 				<div class="connection-line-vertical" style="top: -7%; left: -30%; height: 25%; background-color: red;" data-id="cloud-plc-2"></div>
@@ -280,16 +286,15 @@
 			
 				<!-- ADAM -->
 				<div class="box" style="
-					top: -25%; left: 5%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="div-maquina">ADAM</div>
+					top: -25%; left: 5%; width: 200px; height: 200px; color: black; font-size: xx-large; background-color: rgb(153, 218, 218);" data-id="div-maquina">ADAM</div>
 			
 				<!-- Model Preventiu -->
 				<div class="box" style="
 					top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: x-large;" data-id="zoom-div-1"></div>
 			
 				<!-- Model Predictiu -->
-				<div class="box" style="
-					top: 10%; left: 75%; width: 200px; height: 200px;color: black; font-size: xx-large;" data-id="zoom-div-2">
-					<img src="images/bd.png" alt="BD" style="max-width: 100%; height: auto; top: -10%; left: 75%; "/>
+				<div class="box" style="top: 10%; left: 75%; width: 200px; height: 200px;color: black; font-size: xx-large;" data-id="zoom-div-2">
+					<img src="images/bd.png" alt="BD" style="max-width: 100%; height: auto; top: -10%; left: 75%; " data-id="bd-image"/>
 				</div>
 
 				
@@ -323,11 +328,52 @@
 
 
 			<!-- Slide 9 -->
-            <section data-auto-animate data-auto-animate-unmatched="fade">
-                <h2 style="opacity: 0;">Interesante</h2>
-                <h2 style="opacity: 1;">Muy</h2>
-                <h2 style="opacity: 0;">Proyecto</h2>
+            <section style="display: flex; justify-content: center; left: -70%; margin-top: 10%; align-items: center; height: 100vh; position: absolute;" data-auto-animate data-auto-animate-unmatched="fade">
+                <!-- Imagen principal -->
+				<img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="
+					max-width: 100%; height: auto; margin-top: -100%; margin-left: -100%; border-radius: 15px;" data-id="menshen-machine"/>
+			
+				
+			
+				<!-- Model Preventiu -->
+				<div class="box" style="
+					top: 10%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-1"></div>
+			
+				<!-- BD -->
+				<div style="position: absolute">
+					<img src="images/bd.png" alt="BD" style="width: 35.5%; height: auto; margin-top: 11.5%; margin-left: 142%;" data-id="bd-image" />
+				</div>
+
+				
+			
+				<!-- Líneas de conexión -->
+				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c1"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c2"></div>
+				<div class="connection-line-vertical" 	style="top: -7%; left: 10%; height: 27%; width: 4px;" data-id="div-c3"></div>
+				<div class="connection-line-vertical"   style="top: -7%; left: 10%; height: 27%; width: 4px;" data-id="div-c4"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: -30%; width: 40%; height: 4px;" data-id="cable-firewall"></div>
+				
+				<img src="images/firewall.png" alt="cloud" style="width: 30%; height: auto; top: 5%; left: -50%; border-radius: 15px; position: absolute;" data-id="firewall-image">
+
+
+				<div class="fragment" >
+					<div class="box" style="top: -5%; left: 150%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Prev">
+                        <img src="images/preventiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="preventiu-image" />
+                    </div>
+					<div class="connection-line-horizontal" style="top: 15%; left: 96.2%; width: 9.2%; height: 4px;" data-id="C-Prev-1"></div>
+					<div class="connection-line-vertical" style="top: 5%; left: 105%; height: 10.1%; width: 4px;" data-id="C-Prev-2"></div>
+					<div class="connection-line-horizontal" style="top: 5%; left: 105%; width: 45%; height: 4px;" data-id="C-Prev-3"></div>
+				</div>
+				<div class="fragment">
+					<div class="box" style="top: 23%; left: 150%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Pred">
+                        <img src="images/predictiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="predictiu-image" />
+                    </div>
+					<div class="connection-line-horizontal" style="top: 23%; left: 96.2%; width: 9.2%; height: 4px;" data-id="C-Pred-1"></div>
+					<div class="connection-line-vertical" style="top: 23%; left: 105%; height: 10.1%; width: 4px;" data-id="C-Pred-2"></div>
+					<div class="connection-line-horizontal" style="top: 33%; left: 105%; width: 45%; height: 4px;" data-id="C-Pred-3"></div>
+				</div>
             </section>
+
 
 
 
@@ -348,11 +394,213 @@
 
 
 			<!-- Slide 10 -->
-            <section data-auto-animate data-auto-animate-unmatched="fade">
-                <h2 style="opacity: 0;">none</h2>
-                <h2 style="opacity: 1;">Interesante</h2>
-                <h2 style="opacity: 0;">Muy</h2>
+            <section style="display: flex; justify-content: center; left: -70%; margin-top: 10%; align-items: center; height: 100vh; position: absolute;" data-auto-animate data-auto-animate-unmatched="fade">
+                <!-- Imagen principal -->
+				<img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="
+					max-width: 100%; height: auto; margin-top: -100%; margin-left: -100%; border-radius: 15px;" data-id="menshen-machine"/>
+			
+				
+			
+				<!-- Model Preventiu -->
+				<div class="box" style="
+					top: 10%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-1"></div>
+			
+				<!-- BD -->
+				<div style="position: absolute">
+					<img src="images/bd.png" alt="BD" style="width: 35.5%; height: auto; margin-top: 11.5%; margin-left: 142%;" data-id="bd-image" />
+				</div>
+				
+			
+				<!-- Líneas de conexión -->
+				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c1"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c2"></div>
+				<div class="connection-line-vertical" 	style="top: -7%; left: 10%; height: 27%; width: 4px;" data-id="div-c3"></div>
+				<div class="connection-line-vertical"   style="top: -7%; left: 10%; height: 27%; width: 4px;" data-id="div-c4"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: -30%; width: 40%; height: 4px;" data-id="cable-firewall"></div>
+				
+				<img src="images/firewall.png" alt="cloud" style="width: 30%; height: auto; top: 5%; left: -50%; border-radius: 15px; position: absolute;" data-id="firewall-image">
+
+				<div class="box" style="top: -5%; left: 150%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Prev">
+                    <img src="images/preventiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="preventiu-image" />
+                </div>
+				<div class="connection-line-horizontal" style="top: 15%; left: 95.8%; width: 9.6%; height: 4px;" data-id="C-Prev-1"></div>
+				<div class="connection-line-vertical" style="top: 5%; left: 105%; height: 10.1%; width: 4px;" data-id="C-Prev-2"></div>
+				<div class="connection-line-horizontal" style="top: 5%; left: 105%; width: 45%; height: 4px;" data-id="C-Prev-3"></div>
+				
+
+                <div class="connection-line-horizontal" style="top: 23%; left: 95.8%; width: 9.6%; height: 4px;" data-id="C-Pred-1"></div>
+				<div class="connection-line-vertical" style="top: 23%; left: 105%; height: 10.1%; width: 4px;" data-id="C-Pred-2"></div>
+				<div class="connection-line-horizontal" style="top: 33%; left: 105%; width: 45%; height: 4px;" data-id="C-Pred-3"></div>
+				<div class="box" style=" top: -10%; left: 72%; width: 96%; height: 80%; color: black; font-size: xx-large;" data-id="Pred">
+                    <img src="images/predictiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="predictiu-image" />
+                </div>
+			
+				
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            <!-- Slide 11 digamos que en esta hay mucho para el zoom out-->
+            <section style="display: flex; justify-content: center; left: -70%; margin-top: 10%; align-items: center; height: 100vh; position: absolute;" data-auto-animate data-auto-animate-unmatched="fade">
+                <!-- Imagen principal -->
+				<img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="
+					max-width: 100%; height: auto; margin-top: -100%; margin-left: -100%; border-radius: 15px;" data-id="menshen-machine"/>
+			
+				
+			
+				<!-- Model Preventiu -->
+				<div class="box" style="
+					top: 10%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-1"></div>
+			
+				<!-- BD -->
+				<div style="position: absolute">
+					<img src="images/bd.png" alt="BD" style="width: 35.5%; height: auto; margin-top: 11.5%; margin-left: 142%;" data-id="bd-image" />
+				</div>
+
+				
+			
+				<!-- Líneas de conexión -->
+				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c1"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c2"></div>
+				<div class="connection-line-vertical" 	style="top: -7%; left: 10%; height: 27%; width: 4px;" data-id="div-c3"></div>
+				<div class="connection-line-vertical"   style="top: -7%; left: 10%; height: 27%; width: 4px;" data-id="div-c4"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: -30%; width: 40%; height: 4px;" data-id="cable-firewall"></div>
+				
+				<img src="images/firewall.png" alt="cloud" style="width: 30%; height: auto; top: 5%; left: -50%; border-radius: 15px; position: absolute;" data-id="firewall-image">
+
+
+				
+				<div class="box" style="top: -5%; left: 150%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Prev">
+                    <img src="images/preventiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="preventiu-image" />
+                </div>
+				<div class="connection-line-horizontal" style="top: 15%; left: 95.8%; width: 9.6%; height: 4px;" data-id="C-Prev-1"></div>
+				<div class="connection-line-vertical" style="top: 5%; left: 105%; height: 10.1%; width: 4px;" data-id="C-Prev-2"></div>
+				<div class="connection-line-horizontal" style="top: 5%; left: 105%; width: 45%; height: 4px;" data-id="C-Prev-3"></div>
+				
+				
+				<div class="connection-line-horizontal" style="top: 23%; left: 95.8%; width: 9.6%; height: 4px;" data-id="C-Pred-1"></div>
+				<div class="connection-line-vertical" style="top: 23%; left: 105%; height: 10.1%; width: 4px;" data-id="C-Pred-2"></div>
+				<div class="connection-line-horizontal" style="top: 33%; left: 105%; width: 45%; height: 4px;" data-id="C-Pred-3"></div>
+                <div class="box" style="top: 23%; left: 150%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Pred">
+                    <img src="images/predictiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="predictiu-image" />
+                </div>
+				
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <!-- Slide 12     predictiu i preventiu es junten amb DB, apareix-->
+             <section style="display: flex; justify-content: center; left: -60%; margin-top: 10%; align-items: center; height: 100vh; position: absolute;" data-auto-animate data-auto-animate-unmatched="fade">
+                <!-- Imagen principal -->
+				<img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="
+					max-width: 100%; height: auto; margin-top: -100%; margin-left: -100%; border-radius: 15px;" data-id="menshen-machine"/>
+			
+				
+			
+				<!-- Líneas de conexión -->
+				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c2"></div>
+				
+                <div class="connection-line-vertical"   style="top: 20.2%; left: 105%; height: 0.1%; width: 4px;" data-id="C-Prev-2"></div>
+                <div class="connection-line-vertical"   style="top: 20.2%; left: 105%; height: 0.1%; width: 4px;" data-id="C-Pred-2"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: 95.8%; width: 9.6%; height: 4px;" data-id="C-Prev-1"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: 105%;  width: 9.6%; height: 4px;" data-id="C-Prev-3"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: 95.8%; width: 9.6%; height: 4px;" data-id="C-Pred-1"></div>
+				<div class="connection-line-horizontal" style="top: 20%; left: 105%;  width: 9.6%; height: 4px;" data-id="C-Pred-3"></div>
+
+                <div class="box" style="top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Prev"></div>
+                
+                
+                
+                <div class="box" style="top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Pred"></div>
+                   
+                
+                
+
+
+                <!-- Aplicació -->
+                <div class="box" style="top: 10%; left: 114%; width: 400px; height: 200px; color: black; font-size: xx-large; border-radius: 1.5rem;" data-id="App">Aplicació</div>
+                <!-- 910900900 -->
+                <!-- Model Preventiu -->
+				<div class="box" style="
+                top: 10%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-1"></div>
+        
+                <!-- BD -->
+                <div class="box" style="top: 34%; background-color: #012713; border: none; border-radius: none;">
+                    <img src="images/bd.png" alt="BD" style="width: 9%;height: auto; margin-top: -20%;margin-left: 70%;" data-id="bd-image">
+                    <img src="images/preventiu.png" alt="Preventiu" style="width: 7%;height: auto; margin-top: -29%;margin-left: 3%;" data-id="preventiu-image">
+                    <img src="images/predictiu.png" alt="Predictiu" style="width: 7%;height: auto; margin-top: -9.5%;margin-left: -7%;" data-id="predictiu-image">
+                </div>
+
+                <!-- USERS -->
+                <div style="position: absolute">
+                    <img src="images/user.png" alt="BD" style="width: 30%; height: auto; margin-top: -23%; margin-left: 214%; ;" data-id="user-image-1" />
+                </div>
+                <div style="position: absolute">
+                    <img src="images/user.png" alt="BD" style="width: 30%; height: auto; margin-top: -23%; margin-left: 260%; ;" data-id="user-image-2" />
+                </div>
+                <div style="position: absolute">
+                    <img src="images/user.png" alt="BD" style="width: 30%; height: auto; margin-top: 46%; margin-left: 214%; ;" data-id="user-image-3" />
+                </div>
+                <div style="position: absolute">
+                    <img src="images/user.png" alt="BD" style="width: 30%; height: auto; margin-top: 46%; margin-left: 260%; ;" data-id="user-image-4" />
+                </div>
+
+                <div class="connection-line-vertical"   style="top: 8%; left: 122%; height: 2%; width: 4px;" data-id="C-User-1"></div>
+                <div class="connection-line-vertical"   style="top: 8%; left: 146.5%; height: 2%; width: 4px;" data-id="C-User-2"></div>
+                <div class="connection-line-vertical"   style="top: 33.5%; left: 122%; height: 2%; width: 4px;" data-id="C-User-3"></div>
+                <div class="connection-line-vertical"   style="top: 33.5%; left: 146.5%; height: 2%; width: 4px;" data-id="C-User-4"></div>
+
+                
+				
+            </section>
+
+
+
+
+
+
+
 
 
 
