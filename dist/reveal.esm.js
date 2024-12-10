@@ -1,6 +1,6 @@
 /*!
  * reveal.js 5.1.0
- * https://revealjs.com
+ * https://morgan1420.github.io/
  * MIT licensed
  *
  * Copyright (C) 2011-2024 Hakim El Hattab, https://hakim.se

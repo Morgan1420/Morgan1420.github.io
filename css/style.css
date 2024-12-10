@@ -1,0 +1,144 @@
+.connection-line-horizontal {
+    position: absolute;
+    background-color: aqua;
+    height: 2px;
+}
+
+.connection-line-vertical {
+    position: absolute;
+    background-color: aqua;
+    width: 2px;
+    
+
+}
+
+.box{
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+
+@keyframes move-binary-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.binary-container {
+    position: absolute;
+    top: 54%;
+    left: 71%;
+    width: 13.5%;
+    height: 2%;
+    overflow: hidden;
+    background-color: #012713;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.binary-container-long {
+    position: absolute;
+    top: 56.2%;
+    left: 20%;
+    width: 65%;
+    height: 2%;
+    overflow: hidden;
+    background-color: #012713;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.binary-container-medium {
+    position: absolute;
+    top: 54%;
+    left: 30.5%;
+    width: 39.2%;
+    height: 2%;
+    overflow: hidden;
+    background-color: #012713;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.binary-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: move-binary-right 10s linear infinite;
+    font-size: 20px;
+}
+
+@keyframes move-binary-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.binary-container-left {
+    position: absolute;
+    top: 54%;
+    left: 20%;
+    width: 9.8%;
+    height: 2%;
+    overflow: hidden;
+    background-color: #012713;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.binary-text-left {
+    display: inline-block;
+    white-space: nowrap;
+    animation: move-binary-left 10s linear infinite;
+    font-size: 20px;
+}
+
+
+@keyframes move-binary-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.binary-container-down {
+    position: absolute;
+    top: 35%;
+    
+    width: 2%;
+    height: 19%;
+    overflow: hidden;
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.binary-text-down {
+    display: inline-block;
+    white-space: nowrap;
+    animation: move-binary-down 10s linear infinite;
+    font-size: 20px; 
+    writing-mode: vertical-rl; 
+}

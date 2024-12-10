@@ -12,13 +12,13 @@
   * GLOBAL STYLES
   *********************************************/
  :root {
-   --r-background-color: #4d7e65;
-   --r-main-font: Source Sans Pro, Helvetica, sans-serif;
+   --r-background-color: #012713;
+   --r-main-font: "Times New Roman", Times, serif;
    --r-main-font-size: 42px;
    --r-main-color: #fff;
    --r-block-margin: 20px;
    --r-heading-margin: 0 0 20px 0;
-   --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
+   --r-heading-font: "Times New Roman", Times, serif;
    --r-heading-color: #fff;
    --r-heading-line-height: 1.2;
    --r-heading-letter-spacing: normal;
@@ -26,9 +26,9 @@
    --r-heading-text-shadow: none;
    --r-heading-font-weight: 600;
    --r-heading1-text-shadow: none;
-   --r-heading1-size: 2.5em;
+   --r-heading1-size: 2.0em;
    --r-heading2-size: 1.6em;
-   --r-heading3-size: 1.3em;
+   --r-heading3-size: 1.0em;
    --r-heading4-size: 1em;
    --r-code-font: monospace;
    --r-link-color: #42affa;

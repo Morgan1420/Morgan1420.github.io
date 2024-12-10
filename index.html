@@ -1,53 +1,343 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>PMI Presentation</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/tema-presentacion.css">
+    <title>PMI Presentation</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2 style="opacity: 0;">Muy</h2>
-					<h2 style="opacity: 1;">Proyecto</h2>
-					<h2 style="opacity: 0;">none</h2>
-				</section>
-				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2 style="opacity: 0;">Interesante</h2>
-					<h2 style="opacity: 1;">Muy</h2>
-					<h2 style="opacity: 0;">Proyecto</h2>
-				</section>
-				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2 style="opacity: 0;">none</h2>
-					<h2 style="opacity: 1;">Interesante</h2>
-					<h2 style="opacity: 0;">Muy</h2>
-				</section>
-			</div>
-		</div>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/tema-presentacion.css">
+    <link rel="stylesheet" href="css/style.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+
+			<!-- Slide 0 -->
+            <section>
+                <h1 style="display: flex; justify-content: space-between; align-items: center;">
+                    ConnecTech 4.0
+                    <img src="images/image.png" alt="Logo" style="margin-left: 10px; width: 200px; height: auto;">
+                </h1>
+                <h3 style="margin-top: -7%;">El futur de la maquinària industrial</h3>
+                <br>
+                <p>Gerard Garcia Gros</p>
+                <p>Jan Moran Ricardo</p>
+                <p>Mario Lacueva Conesa</p>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- Slide 1 -->
+            <section style="display: flex; justify-content: center; align-items: center; height: 100vh;" data-auto-animate>
+                <img src="images/gif_maquina.gif" alt="GIF de Maquinaria" style="max-width: 100%; height: auto; margin-top: 25%; border-radius: 15px;">
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Slide 2 -->
+			<section style="display: flex; justify-content: center; align-items: center; height: 100vh; position: absolute;" data-auto-animate>
+                <img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="max-width: 100%; height: auto; margin-top: 18%; border-radius: 15px;" data-id="menshen-machine">
+
+                <section style="display: flex; justify-content: center; align-items: center; height: 100vh; position: absolute;">
+                    <div class="fragment">
+                        <section style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+                            <!-- Div PLC en la máquina -->
+                            <div class="box" style="top: 25%; left: 25%; width: 100px; height: 100px; color: black; font-size: xx-large;">PLC</div>
+                            <img src="images/cloud.png" alt="cloud" style="width: 20%; height: auto; top: 48%; left: 0%; border-radius: 15px; position: absolute;">
+                            <div class="connection-line-horizontal" style="top: 56%; left: 20%; width: 10.2%; background-color: red;"></div>
+                            <div class="connection-line-vertical" style="top: 34.3%; left: 30%; height: 21.8%; background-color: red;"></div>
+
+                            <div class="binary-container-down" style="left: 28%;">
+                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
+                            </div>
+                            <div class="binary-container-down" style="left: 30.3%;">
+                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
+                            </div>
+                            <div class="binary-container-left">
+                                <div class="binary-text-left">01010101010101010010101010101010101010</div>
+                            </div>
+                        </section>
+                        <div class="fragment">
+                            <div class="box" style="top: 25%; left: 65%; width: 100px; height: 100px; color: black; font-size: x-large;">ADAM</div>
+                            <div class="box" style="top: 52%; left: 85%; width: 100px; height: 100px;"></div>
+                            <div class="connection-line-horizontal" style="top: 56%; left: 70%; width: 15%;"></div>
+                            <div class="connection-line-vertical" style="top: 34.3%; left: 70%; height: 21.8%;"></div>
+                            <!-- Contenedor de la cadena binaria -->
+                            <div class="binary-container-down" style="left: 70.3%;">
+                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
+                            </div>
+                            <div class="binary-container-down" style="left: 68%;">
+                                <div class="binary-text-down">01010101010101010010101010101010101010</div>
+                            </div>
+                            <div class="binary-container">
+                                <div class="binary-text">01010101010101010010101010101010101010</div>
+                            </div>
+                        </div>
+                        <div class="fragment">
+                            <div class="connection-line-horizontal" style="top: 56%; left: 30%; width: 20%; background-color: red;"></div>
+                            <div class="connection-line-horizontal" style="top: 56%; left: 50%; width: 20%;"></div>
+
+                            <div class="binary-container-long">
+                                <div class="binary-text">0101010101010101001010101010101010101001010101010101010010101010101010101010</div>
+                            </div>
+                            <div class="binary-container-medium">
+                                <div class="binary-text">0101010101010101001010101010101010101001010101010101010010101010101010101010</div>
+                            </div>
+                        </div>
+                        <div class="fragment">
+                            <img src="images/firewall.png" alt="cloud" style="width: 20%; height: auto; top: 43%; left: 40%; border-radius: 15px; position: absolute;">
+                            <div class="box" style="top: 56.25%; left: 58.4%; width: 26.56%; height: 5%; background-color: #012713; border-radius: 0;"></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+            <!-- Slide 6 -->
+            <!-- Primera sección -->
+            <section style="display: flex; justify-content: center; align-items: center; height: 100vh; position: absolute;" data-auto-animate>
+                <!-- Imagen principal -->
+                <img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="max-width: 60%; height: auto; margin-top: 7%; border-radius: 15px;" data-id="menshen-machine" />
+
+                <!-- Div en la máquina -->
+                <div class="box" style="top: 15%; left: 60%; width: 100px; height: 100px;" data-id="div-maquina"></div>
+
+                <!-- Div principal blanco conectado -->
+                <div class="box" style="top: 40%; left: 75%; width: 100px; height: 100px;" data-id="zoom-div-1"></div>
+
+                <!-- Segundo div conectado al primero -->
+                <div class="box" style="top: 55%; left: 75%; width: 100px; height: 100px;" data-id="zoom-div-2"></div>
+
+                <!-- Líneas de conexión -->
+                <div class="connection-line-horizontal" style="top: 45%; left: 65%; width: 95px;" data-id="div-c1"></div>
+                <div class="connection-line-horizontal" style="top: 60%; left: 65%; width: 95px;" data-id="div-c2"></div>
+                <div class="connection-line-vertical" style="top: 26.5%; left: 65%; height: 300px;" data-id="div-c3"></div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- Slide 7 -->
+            <!-- Segunda sección: Zoom in -->
+            <section style="display: flex; justify-content: center; align-items: center; height: 100vh; position: absolute;" data-auto-animate>
+                <!-- Imagen principal -->
+                <img src="images/Menshen_Machine_1.png" alt="GIF de Maquinaria" style="
+					max-width: 100%; height: auto; margin-top: -100%; margin-left: -100%; border-radius: 15px;" />
+
+                <!-- Div en la máquina -->
+                <div class="box" style="
+					top: -25%; left: 5%; width: 200px; height: 200px;"data-id="div-maquina"></div>
+
+                <!-- Div principal blanco conectado con zoom -->
+                <div class="box" style="
+					top: 10%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-1"></div>
+
+                <!-- Segundo div conectado al primero con zoom -->
+                <div class="box" style="
+					top: 50%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-2"></div>
+
+                 <!-- Líneas de conexión -->
+				 <div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 624px; height: 4px;" data-id="div-c1"></div>
+				 <div class="connection-line-horizontal" style="top: 60%; left: 10%; width: 624px; height: 4px;" data-id="div-c2"></div>
+				 <div class="connection-line-vertical" 	 style="top: -7%; left: 10%; height: 600px; width: 4px;" data-id="div-c3"></div>
+				
+				
+				
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- Slide 8 -->
+            <section data-auto-animate data-auto-animate-unmatched="fade">
+                <h2 style="opacity: 0;">Muy</h2>
+                <h2 style="opacity: 1;">Proyecto</h2>
+                <h2 style="opacity: 0;">none</h2>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- Slide 9 -->
+            <section data-auto-animate data-auto-animate-unmatched="fade">
+                <h2 style="opacity: 0;">Interesante</h2>
+                <h2 style="opacity: 1;">Muy</h2>
+                <h2 style="opacity: 0;">Proyecto</h2>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- Slide 10 -->
+            <section data-auto-animate data-auto-animate-unmatched="fade">
+                <h2 style="opacity: 0;">none</h2>
+                <h2 style="opacity: 1;">Interesante</h2>
+                <h2 style="opacity: 0;">Muy</h2>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom]
+        });
+    </script>
+</body>
+
 </html>
