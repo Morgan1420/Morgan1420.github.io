@@ -78,10 +78,10 @@
                     <div class="fragment">
                         <section style="display: flex; justify-content: center; align-items: center; height: 100vh;">
                             <!-- Div PLC en la máquina -->
-                            <div class="box" style="top: 25%; left: 25%; width: 100px; height: 100px; color: black; font-size: xx-large; background-color: rgb(231, 142, 142);">PLC</div>
                             <img src="images/cloud.png" alt="cloud" style="width: 20%; height: auto; top: 48%; left: 0%; border-radius: 15px; position: absolute;">
                             <div class="connection-line-horizontal" style="top: 56%; left: 20%; width: 10.2%; background-color: red;"></div>
                             <div class="connection-line-vertical" style="top: 34.6%; left: 30%; height: 21.7%; background-color: red;"></div>
+                            <div class="box" style="top: 25%; left: 25%; width: 100px; height: 100px; color: black; font-size: xx-large; background-color: rgb(231, 142, 142);">PLC</div>
 
                             <div class="binary-container-down" style="left: 28%;">
                                 <div class="binary-text-down">01010101010101010010101010101010101010010101010101010100101010101010101010100101010101010101001010101010101010101001010101010101010010101010101010101010</div>
@@ -97,7 +97,7 @@
                             <div class="connection-line-vertical" style="top: 34.3%; left: 70%; height: 21.8%;"></div>
 
                             <div class="box" style="top: 25%; left: 65%; width: 100px; height: 100px; color: black; font-size: x-large; background-color: rgb(153, 218, 218);" data-id="div-maquina">ADAM</div>
-                            <div class="box" style="top: 52%; left: 85%; width: 100px; height: 100px; color: black; font-size: x-large;">Viewer</div>
+                            <div class="box" style="top: 52%; left: 85%; width: 100px; height: 100px; color: black; font-size: large;">BD ADAM</div>
                             
                             <!-- Contenedor de la cadena binaria -->
                             <div class="binary-container-down" style="left: 70.3%;">
@@ -167,7 +167,7 @@
                 <div class="box" style="top: 15%; left: 60%; width: 100px; height: 100px; color: black; font-size: x-large; background-color: rgb(153, 218, 218);" data-id="div-maquina">ADAM</div>
                 
                 <!-- Model Preventiu -->
-                <div class="box" style="top: 40%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-1">Viewer</div>
+                <div class="box" style="top: 40%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-1">BD ADAM</div>
 
 				
 				<!-- PLC -->
@@ -189,7 +189,7 @@
 				
 				<div class="fragment">
 					<!-- Segundo div conectado al primero -->
-					<div class="box" style="top: 55%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-2">Analitzador</div>
+					<div class="box" style="top: 55%; left: 75%; width: 100px; height: 100px; color: black; font-size: large;" data-id="zoom-div-2">BD PLC</div>
 					<div class="connection-line-horizontal" style="top: 60%; left: 65%; width: 95px;" data-id="div-c2"></div>
 					<div class="connection-line-vertical" style="top: 45%; left: 65%; height: 15.1%;" data-id="div-c4"></div>
 				</div>
@@ -224,11 +224,11 @@
 
                 <!-- Model Viewer -->
                 <div class="box" style="
-					top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: x-large;" data-id="zoom-div-1">Viewer</div>
+					top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: x-large;" data-id="zoom-div-1">BD ADAM</div>
 
                 <!-- Model Analitzador -->
                 <div class="box" style="
-					top: 40%; left: 75%; width: 200px; height: 200px;color: black; font-size: x-large;" data-id="zoom-div-2">Analitzador</div>
+					top: 40%; left: 75%; width: 200px; height: 200px;color: black; font-size: x-large;" data-id="zoom-div-2">BD PLC</div>
 
                 <!-- Líneas de conexión -->
 				<div class="connection-line-horizontal" style="top: 20%; left: 10%; width: 65%; height: 4px;" data-id="div-c1"></div>
@@ -457,14 +457,8 @@
 			
 				
 			
-				<!-- Model Preventiu -->
-				<div class="box" style="
-					top: 10%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-1"></div>
-			
-				<!-- BD -->
-				<div class="box-image" style="top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: xx-large;">
-					<img src="images/bd.png" alt="BD" style="width: 90%; height: auto;" data-id="bd-image" />
-				</div>
+				
+				
 
 				
 			
@@ -476,8 +470,8 @@
 				<div class="connection-line-horizontal" style="top: 20%; left: -30%; width: 40%; height: 4px;" data-id="cable-firewall"></div>
 				
 				<img src="images/firewall.png" alt="firewall" style="width: 30%; height: auto; top: 5%; left: -50%; border-radius: 15px; position: absolute;" data-id="firewall-image">
-
-
+                
+                
 				
 				<div class="box" style="top: -5%; left: 150%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Prev">
                     <img src="images/preventiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="preventiu-image" />
@@ -493,6 +487,15 @@
                 <div class="box" style="top: 23%; left: 150%; width: 200px; height: 200px; color: black; font-size: xx-large;" data-id="Pred">
                     <img src="images/predictiu.png" alt="BD" style="width: 70%; height: auto; margin-top: 11.5%; margin-left: 0%;" data-id="predictiu-image" />
                 </div>
+
+                <!-- Model Preventiu -->
+				<div class="box" style="
+                top: 10%; left: 75%; width: 200px; height: 200px;" data-id="zoom-div-1"></div>
+   
+                <!-- BD -->
+				<div class="box-image" style="top: 10%; left: 75%; width: 200px; height: 200px; color: black; font-size: xx-large;">
+					<img src="images/bd.png" alt="BD" style="width: 90%; height: auto;" data-id="bd-image" />
+				</div>
 				
             </section>
 
