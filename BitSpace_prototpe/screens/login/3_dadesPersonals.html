@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitSpace</title>
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/loginStage.css">
+</head>
+<body>
+
+    <div id="phone-frame"> 
+        <div id="screen">
+
+            <div class="zazu-screen">
+                <div class="zazu"><img src="../../imatges/bits/Zazu.png" alt="Zazu"></div>
+                <div class="textBubble">
+                    <p>Abans de res m'agradaria conèixer-te millor.</p>
+                    <p>Com et dius? Quina edat tens? Estudies o treballes?</p>
+                </div>
+            </div>
+        
+            <div class="form">
+                <form>
+                    <label for="name">Nom:*</label>
+                    <input type="text" id="name" name="name" placeholder="Gerard GG" required>
+
+                    <label for="age">Edat:*</label>
+                    <input type="number" id="age" name="age" placeholder="22" required>
+
+                    <label for="occupation">Estudies o treballes?:*</label>
+                    <select id="occupation" name="occupation" required>
+                        <option value="" disabled selected>Selecciona una opció</option>
+                        <option value="estudiant">Estudio</option>
+                        <option value="treballador">Treballo</option>
+                        <option value="ambdós">Faig els dos :D</option>
+                        <option value="nini">Sóc un nini</option>
+                    </select>
+
+                    <label for="email">Correu electrònic:*</label>
+                    <input type="email" id="email" name="email" placeholder="gerard@example.com" required>
+                </form>
+            </div>
+            <div class="options">
+                <div class="go-to-tutorial" style="cursor:pointer;" onclick="window.location.href='4_triaBit.html'">
+                    <span>Continuar</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

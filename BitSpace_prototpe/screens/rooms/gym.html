@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Virtual</title>
+    <link rel="stylesheet" href="../../styles/gym.css">
+</head>
+<body>
+    <div id="phone-frame">
+        <div id="screen">
+            <div id="left-arrow" class="nav-arrow">&lt;</div>
+            <div id="room-title">Gym</div>
+            <div id="right-arrow" class="nav-arrow">&gt;</div>
+            <div id="top-bar">
+                <div class="coins">
+                    <span class="icon">₿</span>120
+                </div>
+                <div>15d</div>
+                <div>
+                    <span class="icon">❤️</span>3
+                </div>
+            </div>
+            <div id="main-content">
+                <div id="room">
+                    <div class="wall">
+                        <div id="down-arrow-btn" class="ui-button">↓</div>
+                        <div id="confirm-btn" class="ui-button">✓</div>
+                        <div class="gym-equipment">
+                            <div class="gym-bar"></div>
+                            <div class="gym-dumbbell"></div>
+                            <div class="gym-dumbbell right"></div>
+                        </div>
+                    </div>
+                    <div class="floor"></div>
+                </div>
+                <div id="character">
+                    <img src="./bit.png" alt="Personaje Bit">
+                </div>
+            </div>
+            <div id="bottom-nav">
+                <div id="add-button">+</div>
+                <div id="add-dropdown" style="display:none; position:absolute; bottom:60px; left:50%; transform:translateX(-50%); background:#fff; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.15); padding:16px 24px; z-index:2000;">
+                    <button id="start-exercise-btn" style="font-size:18px; padding:8px 18px; border-radius:8px; border:none; background:#42A5F5; color:white; cursor:pointer;">Iniciar ejercicio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+        leftArrow.addEventListener('click', () => {
+            window.location.href = 'bedroom.html';
+        });
+        rightArrow.addEventListener('click', () => {
+            window.location.href = 'bedroom.html';
+        });
+        const addButton = document.getElementById('add-button');
+        const addDropdown = document.getElementById('add-dropdown');
+        const startExerciseBtn = document.getElementById('start-exercise-btn');
+        const characterImg = document.querySelector('#character img');
+        let isExercising = false;
+        addButton.addEventListener('click', () => {
+            if (!isExercising) {
+                addDropdown.style.display = addDropdown.style.display === 'none' ? 'block' : 'none';
+            } else {
+                characterImg.src = './bit.png';
+                addButton.textContent = '+';
+                isExercising = false;
+            }
+        });
+        document.addEventListener('click', (e) => {
+            if (!addButton.contains(e.target) && !addDropdown.contains(e.target)) {
+                addDropdown.style.display = 'none';
+            }
+        });
+        startExerciseBtn.addEventListener('click', () => {
+            characterImg.src = './bit_llegint.png'; // Puedes cambiar a otra imagen si tienes una de ejercicio
+            addDropdown.style.display = 'none';
+            addButton.textContent = '⏹';
+            isExercising = true;
+        });
+    </script>
+</body>
+</html>

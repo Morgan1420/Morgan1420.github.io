@@ -1,0 +1,388 @@
+
+        /* --- General Setup --- */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Comic Sans MS', 'Chalkduster', 'cursive';
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        /* --- Navigation Arrows --- */
+        .nav-arrow {
+            position: absolute;
+            top: 85%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1000;
+            user-select: none; /* Prevent text selection */
+        }
+
+        #left-arrow {
+            left: 20px;
+        }
+
+        #right-arrow {
+            right: 20px;
+        }
+
+        /* --- Phone Frame --- */
+        #phone-frame {
+            width: 414px;
+            height: 896px;
+            background-color: #1c1c1c;
+            border: 16px solid #1c1c1c;
+            border-radius: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        #phone-frame::before {
+             content: '';
+             position: absolute;
+             top: 0px;
+             left: 50%;
+             transform: translateX(-50%);
+             width: 210px;
+             height: 30px;
+             background: #1c1c1c;
+             border-bottom-left-radius: 20px;
+             border-bottom-right-radius: 20px;
+             z-index: 20;
+        }
+
+
+        #screen {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 44px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* --- Top Status Bar --- */
+        #top-bar {
+            padding: 20px 20px 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border-bottom: 2px solid #ddd;
+            position: relative;
+            z-index: 10;
+        }
+
+        #top-bar > div {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: red;
+        }
+        
+        #top-bar .coins {
+             color: #000;
+        }
+
+        #top-bar .icon {
+            margin-right: 8px;
+            font-size: 30px;
+        }
+
+        /* --- Main Content (The Room) --- */
+        #main-content {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        #room {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wall {
+            height: 60%;
+            background: repeating-linear-gradient(
+                90deg,
+                #E57373,
+                #E57373 50px,
+                #FFCDD2 50px,
+                #FFCDD2 100px
+            );
+            position: relative;
+            border-bottom: 5px solid #8D6E63;
+        }
+
+        .floor {
+            height: 40%;
+            background: #D2B48C; /* Tan color for wood */
+            background-image: linear-gradient(rgba(0,0,0,0.05) 50%, transparent 50%);
+            background-size: 100% 40px;
+        }
+
+        /* --- Room Elements --- */
+        .window {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            background: #87CEEB; /* Sky blue */
+            border: 10px solid #8D6E63; /* Wood frame */
+            box-sizing: border-box;
+        }
+        
+        .window::before, .window::after {
+            content: '';
+            position: absolute;
+            background: #8D6E63;
+        }
+        /* Window cross */
+        .window::before {
+            width: 100%;
+            height: 6px;
+            top: 50%;
+            left:0;
+            transform: translateY(-50%);
+        }
+        .window::after {
+            width: 6px;
+            height: 100%;
+            left: 50%;
+            top:0;
+            transform: translateX(-50%);
+        }
+
+        .curtain {
+            position: absolute;
+            top: 15%;
+            width: 50px;
+            height: 125px;
+            background: #FFF59D; /* Light yellow */
+            border: 3px solid #FBC02D;
+        }
+        .curtain.left {
+            left: calc(50% - 110px);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .curtain.right {
+            right: calc(50% - 110px);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .desk {
+            position: absolute;
+            bottom: 40%;
+            left: 20px;
+            width: 120px;
+            height: 70px;
+            background: #A1887F;
+            border: 4px solid #5D4037;
+            border-bottom: none;
+        }
+        
+        .desk::before, .desk::after { /* Desk legs */
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            width: 10px;
+            height: 50px;
+            background: #5D4037;
+        }
+        
+        .desk::before {
+            left: 5px;
+        }
+        
+        .desk::after {
+            right: 5px;
+        }
+
+        .paper-on-desk {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            width: 40px;
+            height: 25px;
+            background: white;
+            border: 1px solid black;
+        }
+        
+        .stool {
+            position: absolute;
+            bottom: 35%;
+            left: 100px;
+            width: 40px;
+            height: 20px;
+            background: #EF9A9A;
+            border: 3px solid #C62828;
+            border-radius: 5px;
+        }
+        .stool::after { /* Stool leg */
+             content: '';
+             position: absolute;
+             bottom: -20px;
+             left: 50%;
+             transform: translateX(-50%);
+             width: 8px;
+             height: 20px;
+             background: #C62828;
+        }
+
+        .bed {
+            position: absolute;
+            bottom: 40%;
+            right: 20px;
+            width: 120px;
+            height: 50px;
+            background: #EF5350; /* Red mattress */
+            border: 4px solid #C62828;
+        }
+        .bed::before, .bed::after { /* Bed legs */
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            width: 10px;
+            height: 40px;
+            background: #5D4037;
+        }
+        .bed::before { left: 5px; }
+        .bed::after { right: 5px; }
+        
+        .pillow {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 40px;
+            height: 30px;
+            background: white;
+            border: 2px solid #BDBDBD;
+            border-radius: 5px;
+        }
+        
+        /* --- Character --- */
+        #character {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+        
+        #character img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.3));
+        }
+        
+        /* --- UI Buttons on screen --- */
+        .ui-button {
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        
+        #down-arrow-btn {
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #42A5F5; /* Blue */
+            color: white;
+            font-size: 24px;
+        }
+        
+        #confirm-btn {
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #66BB6A; /* Green */
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            border: 4px solid white;
+        }
+
+        /* --- Bottom Nav Bar --- */
+        #bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            background: #f8f8f8;
+            border-top: 1px solid #ddd;
+            position: relative;
+        }
+        
+        .nav-icon {
+            cursor: pointer;
+            fill: #8e8e93;
+            width: 28px;
+            height: 28px;
+            position: static;
+            margin: 0 10px;
+        }
+
+        #home-button {
+            width: 70px;
+            height: 70px;
+            background: #42A5F5; /* Blue */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid white;
+            margin-top: -40px; /* Pull up */
+            box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        #home-button svg {
+            fill: white;
+            width: 35px;
+            height: 35px;
+        }
+
+        #add-button {
+            width: 35px;
+            height: 35px;
+            color: #66BB6A;
+            font-size: 40px;
+            font-weight: 200;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+        }
+        

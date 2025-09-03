@@ -1,0 +1,48 @@
+/* --- General Setup --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Comic Sans MS', 'Chalkduster', 'cursive';
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* --- Phone Frame --- */
+#phone-frame {
+    width: 414px;
+    height: 896px;
+    background-color: #1c1c1c;
+    border: 16px solid #1c1c1c;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    box-sizing: border-box;
+}
+
+#phone-frame::before {
+     content: '';
+     position: absolute;
+     top: 0px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 210px;
+     height: 30px;
+     background: #1c1c1c;
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+     z-index: 20;
+}
+
+#screen {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 44px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}

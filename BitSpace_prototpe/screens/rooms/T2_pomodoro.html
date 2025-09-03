@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitSpace</title>
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/T2_roomStyle.css">
+</head>
+<body>
+    <div class="change-room-type-arrow left">&#8592;</div>
+    <div class="change-room-type-arrow right">&#8594;</div>
+    <div id="phone-frame">  
+        <div id="screen">
+            <div class="statsHeader">
+                <div class="coins"> 
+                    💵
+                    <span>100</span>
+                </div>
+                <div class="ratxa">
+                    🔥
+                    <span>69</span>
+                </div>
+                <div class="calendaroi">
+                    📅
+                </div>
+            </div>
+            <div class="quick-stats">
+                <div class="stat">
+                    <span class="label">📱</span>
+                    <div id="barra-repte-1">
+                        <div style="width: 80%;"></div>
+                        <div style="width: 20%;"></div>
+                    </div>
+                    <span class="value">2:30/3h</span>
+                </div>
+                <div class="stat">
+                    <span class="label">📚</span>
+                    <div id="barra-repte-1">
+                        <div style="width: 40%; background-color: rgb(124, 253, 137);"></div>
+                        <div style="width: 60%;"></div>
+                    </div>
+                    <span class="value">2/5</span>
+                </div>
+            </div>
+            <div class="room" style="background: url('../../imatges/habitacions_i_mobles/pomodoro_room.png') center center / 100% 100% no-repeat;">
+                <div class="floating-buttons">
+                    <div class="ui-button" id="invisible-button"></div>
+                    <div class="ui-button" id="stats-arrow">↓</div>
+                    <div class="ui-button" id="edit-button">✏️</div>
+                </div>
+                <div class="bit">
+                    <img src="../../imatges/bits/bitJan.png" alt="Personaje Bit">
+                </div>
+                <div class="floating-arrows">
+                    <div class="left-arrow nav-arrow">←</div>
+                    <div class="room-title">Pomodoro</div>
+                    <div class="right-arrow nav-arrow">→</div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="profile">👤</div>
+                <div class="shop">🛒</div>
+                <div class="activity">+</div>
+                <div class="home">🏠</div>
+                <div class="friends">👥</div>
+            </div>
+        </div>
+    </div>
+    <div id="tooltip" class="room-tooltip"></div>
+    <script src="../../scripts/generalRoomScripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Floating arrows: switch between bedroom and pomodoro for T2
+            const leftArrow = document.querySelector('.floating-arrows .left-arrow');
+            const rightArrow = document.querySelector('.floating-arrows .right-arrow');
+            leftArrow.addEventListener('click', function() {
+                window.location.href = 'T2_bedroom.html';
+            });
+            rightArrow.addEventListener('click', function() {
+                window.location.href = 'T2_bedroom.html';
+            });
+        });
+        // Change room type arrows: switch between T1, T2, T3 pomodoro
+        document.querySelector('.change-room-type-arrow.left').addEventListener('click', function() {
+            window.location.href = 'T1_pomodoro.html';
+        });
+        document.querySelector('.change-room-type-arrow.right').addEventListener('click', function() {
+            window.location.href = 'T3_pomodoro.html';
+        });
+    </script>
+</body>
+</html>

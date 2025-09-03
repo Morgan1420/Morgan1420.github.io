@@ -1,0 +1,252 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0f7fa;
+    font-family: 'Comic Sans MS', 'Chalkduster', 'cursive';
+    overflow: hidden;
+}
+
+#phone-frame {
+    width: 414px;
+    height: 896px;
+    background-color: #1c1c1c;
+    border: 16px solid #1c1c1c;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    box-sizing: border-box;
+}
+
+#phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 210px;
+    height: 30px;
+    background: #1c1c1c;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 20;
+}
+
+#screen {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 44px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+#left-arrow, #right-arrow {
+    position: absolute;
+    top: 85%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+#left-arrow { 
+    left: 20px; 
+}
+
+#right-arrow { 
+    right: 20px; 
+}
+
+#room-title {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1000;
+    user-select: none;
+}
+
+#top-bar {
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 10;
+}
+
+#top-bar > div {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+}
+
+#top-bar .coins { 
+    color: #000; 
+}
+
+#top-bar .icon { 
+    margin-right: 8px; 
+    font-size: 30px; 
+}
+
+#main-content { 
+    flex-grow: 1; 
+    position: relative; 
+}
+
+#room {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wall {
+    height: 60%;
+    background: linear-gradient(180deg, #b2dfdb 60%, #fff 100%);
+    position: relative;
+    border-bottom: 5px solid #00897b;
+}
+
+.gym-equipment {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 80px;
+    background: #bdbdbd;
+    border-radius: 20px;
+    border: 4px solid #616161;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gym-bar {
+    width: 160px;
+    height: 12px;
+    background: #616161;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gym-dumbbell {
+    width: 40px;
+    height: 20px;
+    background: #757575;
+    border-radius: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.gym-dumbbell.right {
+    left: unset;
+    right: 20px;
+}
+
+.floor {
+    height: 40%;
+    background: #a7ffeb;
+    background-image: linear-gradient(rgba(0,0,0,0.05) 50%, transparent 50%);
+    background-size: 100% 40px;
+}
+
+#character {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+#character img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.3));
+}
+
+.ui-button {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+#down-arrow-btn {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #42A5F5;
+    color: white;
+    font-size: 24px;
+}
+
+#confirm-btn {
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #66BB6A;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border: 4px solid white;
+}
+
+#bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+
+#add-button {
+    width: 35px;
+    height: 35px;
+    color: #66BB6A;
+    font-size: 40px;
+    font-weight: 200;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}

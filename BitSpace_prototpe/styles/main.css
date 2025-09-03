@@ -1,0 +1,53 @@
+#screen{ 
+    /* Sobreescrivim la classe screen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbf5fc;
+}
+
+h1 {
+
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 100px;   
+
+    text-align: center;
+}
+
+.zazu-screen {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.zazu img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.textBubble {
+    width: 40%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.options div {
+    width: 200px;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: #ffdcd6;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+}
