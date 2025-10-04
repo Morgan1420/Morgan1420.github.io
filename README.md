@@ -1,10 +1,3 @@
-# pmi_presentation.github.io
+# My GitHub Pages
 
-Presentació del repte de Menshen. Amb reveal.js
-
-
-## Launch the project in local
-
-npm start
-
-[http://localhost:8000]()
+I use this repository as a sort of joker repository for quickly deploying static websites. Mainly for making quick prototypes (using html and css) and being able to share them with the world.
