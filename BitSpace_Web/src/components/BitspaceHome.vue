@@ -10,6 +10,7 @@
       <div class="header-content">
         <img src="../assets/images/Titol.png" alt="">
       </div>
+      
     </header>
 
     <main>
@@ -21,6 +22,9 @@ En altres paraules: En cuidar la teva mascota t’estàs cuidant a tu mateix.
 En unes altres paraules encara: El teu Bit actua de mirall de la teva salut “digital”."
         videoSrc="https://www.youtube.com/watch?v=Qwq4Hw9aljQ"
       />
+      
+      <br>
+      <Formulario/>
     </main>
   </div>
 </template>
@@ -28,6 +32,7 @@ En unes altres paraules encara: El teu Bit actua de mirall de la teva salut “d
 <script setup>
 import { ref, onMounted } from 'vue'
 import VideoSection from './VideoSection.vue'
+import Formulario from './Formulario.vue';
 
 const bitImageNames = [
   'Bit_1.png', 'Bit_10.png', 'Bit_11.png', 'Bit_12.png', 'Bit_13.png',
