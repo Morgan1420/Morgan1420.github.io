@@ -1,5 +1,5 @@
 <template>
-  <div class="video-container" :class="{ 'video-below': text === '' }">
+  <div class="video-container" :class="{ 'video-below': text === '' }" :style="{ backgroundColor: backgroundColor }">
     <div class="text-content">
       <h2>{{ title }}</h2>
       <p v-if="text">{{ text }}</p>
@@ -31,6 +31,10 @@ const props = defineProps({
   videoSrc: {
     type: String,
     required: true
+  },
+  backgroundColor: {
+    type: String,
+    default: '#FFFFFF'
   }
 })
 
@@ -58,7 +62,7 @@ const embedUrl = computed(() => {
 .video-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 2rem;
   padding: 4rem 2rem;
@@ -86,11 +90,11 @@ const embedUrl = computed(() => {
 
 .video-content {
   flex: 1 1 500px;
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   position: relative;
   /* Proporción 16:9 para el video */
-  padding-top: 19.5%; /* 9 / 16 = 0.5625 */
+  padding-top: 21%; /* 9 / 16 = 0.5625 → jo poso 21 pq si*/
 }
 
 .video-iframe {

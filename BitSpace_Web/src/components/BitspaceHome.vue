@@ -9,6 +9,9 @@
       </div>
       <div class="header-content">
         <img src="../assets/images/Titol.png" alt="">
+        <div class="buttons">
+          <div class="survey-btn">!! Respongueu a les ENQUESTES !!</div>
+        </div>
       </div>
       
     </header>
@@ -16,11 +19,9 @@
     <main>
       <VideoSection
         title="Què és BitSpace?"
-        text="BitSpace és un entorn virtual accessible via aplicació mòbil i web, que es basa a cuidar mascotes digitals (els 'Bits'), de forma similar a jocs com Pou o Tamagotchi. A diferència d’aquests, a BitSpace, el benestar del Bit està directament lligat als hàbits de cura personal de l'usuari. 
-
-En altres paraules: En cuidar la teva mascota t’estàs cuidant a tu mateix.
-En unes altres paraules encara: El teu Bit actua de mirall de la teva salut “digital”."
+        text="BitSpace és un entorn virtual accessible via aplicació mòbil i web, que es basa a cuidar mascotes digitals (els 'Bits'), de forma similar a jocs com Pou o Tamagotchi. A diferència d’aquests, a BitSpace, el benestar del Bit està directament lligat als hàbits de cura personal de l'usuari. En altres paraules: En cuidar la teva mascota t’estàs cuidant a tu mateix. En unes altres paraules encara: El teu Bit actua de mirall de la teva salut “digital”."
         videoSrc="https://www.youtube.com/watch?v=Qwq4Hw9aljQ"
+        backgroundColor="#FFD8CF"
       />
       
       <br>
@@ -47,7 +48,7 @@ const rowsOfBits = ref([]);
 
 const generateBackgroundBits = () => {
   const allRows = [];
-  for (let r = 0; r < 5; r++) {
+  for (let r = 0; r < 6; r++) {
     const newRow = [];
     for (let i = 0; i < 50; i++) {
       const randomIndex = Math.floor(Math.random() * bitImageNames.length);
@@ -69,7 +70,7 @@ onMounted(() => {
 
 <style scoped>
 .home-container {
-  background-color: #FFD8CF;
+  background-color: #FFE4DD;
   min-height: 100vh;
   font-family: sans-serif;
   color: #333;
@@ -78,8 +79,11 @@ onMounted(() => {
 .header {
   position: relative;
   text-align: center;
-  padding: 6rem 2rem;
+  min-height: 100vh;
   background-color: #FFE4DD;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   overflow: hidden;
 }
 
@@ -123,15 +127,75 @@ onMounted(() => {
   flex-shrink: 0;
 }
 
+/* make image sit on top and buttons stack below it */
 .header-content {
   position: relative;
   z-index: 2;
   background-color: #FFE4DD;
-  padding: 2rem;
+  padding: 1rem 1.75rem;
   border-radius: 15px;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
+
+/* keep header image responsive and above the buttons */
+.header-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* prettier buttons that fit under the image */
+.buttons {
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
+
+.survey-btn {
+  -webkit-appearance: none;
+
+  padding: 0.6rem 1rem;
+  width: 70%;
+  max-width: 340px;
+  height: 40px;
+
+  appearance: none;
+  background: #ffbbac; /* Bluish color */
+  
+  border: none;
+  border-radius: 10px;
+
+  color: #0a0a0a;
+  font-weight: 600;
+  align-content: center;
+
+  cursor: pointer;
+  
+  box-shadow: 0 6px 12px rgba(255,111,97,0.18);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+@keyframes pulse-btn {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+.survey-btn {
+  animation: pulse-btn 2.2s ease-in-out infinite;
+}
+.survey-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,111,97,0.18); }
+.survey-btn:active { transform: translateY(0); opacity: .95 }
+.survey-btn:focus { outline: 3px solid rgba(255,138,128,0.22); outline-offset: 2px }
 
 .header h1 {
   font-size: 3rem;
@@ -151,6 +215,19 @@ onMounted(() => {
   }
   .header p {
     font-size: 1.2rem;
+  }
+
+  .header-content {
+    padding: 1rem;
+    max-width: 320px;
+  }
+
+  .header-content img {
+    max-width: 280px;
+  }
+
+  .survey-btn {
+    max-width: 280px;
   }
 }
 </style>
