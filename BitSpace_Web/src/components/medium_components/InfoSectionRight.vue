@@ -1,12 +1,19 @@
+<script>
+export default {
+  name: 'InfoSectionRight'
+}
+</script>
+
 <template>
-  <div class="info-container" :class="{ 'image-below': text === '' }">
+  <div class="container" :class="{ 'image-below': text === '' }" :style="{ backgroundColor: backgroundColor }">
     <div class="text-content">
       <h2>{{ title }}</h2>
-      <p v-if="text">{{ text }}</p>
+      <p v-if="text" v-html="text"></p>
     </div>
     <div class="image-content">
-      <img :src="imageSrc" :alt="title" class="info-image" />
+      <img :src="imageSrc" :alt="title" class="info-image" v-if="imageSrc"/>
     </div>
+    
   </div>
 </template>
 
@@ -23,12 +30,16 @@ defineProps({
   imageSrc: {
     type: String,
     required: true
+  },
+  backgroundColor: {
+    type: String,
+    default: '#FFFFFF'
   }
 })
 </script>
 
 <style scoped>
-.info-container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,29 +48,25 @@ defineProps({
   padding: 4rem 2rem;
 }
 
-.info-container.image-below {
+.container.image-below {
   flex-direction: column;
   text-align: center;
 }
 
 .text-content {
-  flex: 1 1 400px;
-  max-width: 600px;
+  width: 50%;
 }
-
 .text-content h2 {
+  margin-top: 1rem;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
 }
-
 .text-content p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 
 .image-content {
-  flex: 1 1 500px;
-  max-width: 700px;
+  width: 35%;
   position: relative;
 }
 
@@ -70,7 +77,7 @@ defineProps({
 }
 
 @media (max-width: 768px) {
-  .info-container {
+  .container {
     padding: 2rem 1rem;
     flex-direction: column;
   }

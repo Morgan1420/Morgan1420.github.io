@@ -1,16 +1,13 @@
 <script>
 export default {
-  name: 'InfoSectionLeft'
+  name: 'InfoSectionJustText'
 }
 </script>
 
 <template>
-  <div class="container" :class="{ 'image-below': text === '' }" :style="{ backgroundColor: backgroundColor }">
-    <div class="image-content">
-      <img :src="imageSrc" :alt="title" class="info-image" v-if="imageSrc"/>
-    </div>
+  <div class="container" :style="{ backgroundColor: backgroundColor, textAlign: center ? 'center' : 'left' }">
     <div class="text-content">
-      <h2>{{ title }}</h2>
+      <h2 v-html="title"></h2>
       <p v-if="text" v-html="text"></p>
     </div>
     
@@ -27,13 +24,13 @@ defineProps({
     type: String,
     default: ''
   },
-  imageSrc: {
-    type: String,
-    required: true
-  },
   backgroundColor: {
     type: String,
     default: '#FFFFFF'
+  },
+  center: {
+    type: Boolean,
+    default: false,
   }
 })
 </script>
@@ -54,7 +51,7 @@ defineProps({
 }
 
 .text-content {
-  width: 50%;
+  width: 90%;
 }
 .text-content h2 {
   margin-top: 1rem;
@@ -65,16 +62,6 @@ defineProps({
   line-height: 1.6;
 }
 
-.image-content {
-  width: 35%;
-  position: relative;
-}
-
-.info-image {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
 
 @media (max-width: 768px) {
   .container {
