@@ -1,11 +1,17 @@
+<script>
+export default {
+  name: 'InfoSectionLeft'
+}
+</script>
+
 <template>
-  <div class="info-container" :class="{ 'image-below': text === '' }">
+  <div class="info-container" :class="{ 'image-below': text === '' }" :style="{ backgroundColor: backgroundColor }">
     <div class="image-content">
-      <img :src="imageSrc" :alt="title" class="info-image" />
+      <img :src="imageSrc" :alt="title" class="info-image" v-if="imageSrc"/>
     </div>
     <div class="text-content">
       <h2>{{ title }}</h2>
-      <p v-if="text">{{ text }}</p>
+      <p v-if="text" v-html="text"></p>
     </div>
     
   </div>
@@ -24,6 +30,10 @@ defineProps({
   imageSrc: {
     type: String,
     required: true
+  },
+  backgroundColor: {
+    type: String,
+    default: '#FFFFFF'
   }
 })
 </script>

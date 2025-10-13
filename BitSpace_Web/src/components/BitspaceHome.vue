@@ -4,10 +4,19 @@
     <main>
       <VideoSection
         title="Què és BitSpace?"
-        text="BitSpace és un entorn virtual accessible via aplicació mòbil i web, que es basa a cuidar mascotes digitals (els 'Bits'), de forma similar a jocs com Pou o Tamagotchi. A diferència d’aquests, a BitSpace, el benestar del Bit està directament lligat als hàbits de cura personal de l'usuari. En altres paraules: En cuidar la teva mascota t’estàs cuidant a tu mateix. En unes altres paraules encara: El teu Bit actua de mirall de la teva salut “digital”."
+        text="BitSpace és un <b>entorn virtual</b> accessible via aplicació mòbil que es basa a <b>cuidar mascotes digitals</b> (els 'Bits'), de forma similar a jocs com Pou o Tamagotchi. 
+              <br><br> El teu bit actuarà com a mirall de la teva salut: la seva felicitat i benestar estan directament lligats als teus hàbits de cura personal en el món real..
+              <br><br> L'objectiu és simple: <b>En cuidar la teva mascota t’estàs cuidant a tu mateix</b>"
         videoSrc="https://www.youtube.com/watch?v=Qwq4Hw9aljQ"
         backgroundColor="#FFD8CF"
       />
+
+      <InfoSectionLeft
+        title=""
+        text=""
+        image=""
+      />
+
 
       <br>
       <Formulario/>
@@ -19,6 +28,7 @@
 import Carousel from './medium_components/Carousel.vue';
 import VideoSection from './medium_components/VideoSection.vue'
 import Formulario from './Formulario.vue';
+import InfoSectionLeft from './medium_components/InfoSectionLeft.vue';
 </script>
 
 <style scoped>

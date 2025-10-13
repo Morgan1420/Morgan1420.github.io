@@ -1,8 +1,8 @@
 <template>
-  <div class="video-container" :class="{ 'video-below': text === '' }" :style="{ backgroundColor: backgroundColor }">
+  <div class="container" :class="{ 'below': text === '' }" :style="{ backgroundColor: backgroundColor }">
     <div class="text-content">
       <h2>{{ title }}</h2>
-      <p v-if="text">{{ text }}</p>
+      <p v-if="text" v-html="text"></p>
     </div>
     <div class="video-content">
       <iframe
@@ -59,42 +59,35 @@ const embedUrl = computed(() => {
 </script>
 
 <style scoped>
-.video-container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
+  align-items: top;
+  gap: 1rem;
+  padding: 5rem 2rem;
 }
 
-.video-container.video-below {
+.container.below {
   flex-direction: column;
   text-align: center;
 }
 
 .text-content {
-  flex: 1 1 400px;
-  max-width: 600px;
+  width: 50%;
 }
-
 .text-content h2 {
+  margin-top: 1rem;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
 }
-
 .text-content p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 
 .video-content {
-  flex: 1 1 500px;
-  max-width: 600px;
-  width: 100%;
+  width: 35%;
   position: relative;
-  /* Proporción 16:9 para el video */
-  padding-top: 21%; /* 9 / 16 = 0.5625 → jo poso 21 pq si*/
 }
 
 .video-iframe {
@@ -107,8 +100,8 @@ const embedUrl = computed(() => {
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-@media (max-width: 768px) {
-  .video-container {
+@media (max-width: 1400px) {
+  .container {
     padding: 2rem 1rem;
     flex-direction: column;
   }
