@@ -6,11 +6,11 @@ export default {
 
 <template>
   <div class="waitlist-container">
-    <h2 class="title">Únete a nuestra lista de espera</h2>
+    <h2 class="title">Uneix-te a la nostra llista d'espera</h2>
     <form @submit.prevent="submitForm" class="waitlist-form">
-      <input v-model="email" type="email" placeholder="Tu correo electrónico" required class="input-email" />
+      <input v-model="email" type="email" placeholder="El teu correu electrònic" required class="input-email" />
       <button type="submit" class="submit-btn" :disabled="loading">
-        {{ loading ? 'Enviando...' : 'Unirme' }}
+        {{ loading ? 'Enviant...' : 'Unirme' }}
       </button>
     </form>
 
