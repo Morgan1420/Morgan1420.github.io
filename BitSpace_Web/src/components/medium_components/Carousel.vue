@@ -9,8 +9,8 @@
     <div class="header-content">
       <img src="../../assets/images/Titol.png" alt="">
       <div class="buttons">
-        <fancy-button buttonText="!! Respongueu a les ENQUESTES !!" />
-        <fancy-button buttonText="!! Apunta't a la LLISTA D'ESPERA !!" />
+        <fancyButton buttonText="!! Respongueu a les ENQUESTES !!" @click="$emit('go-to-collaborate')" center="true" />
+        <fancyButton buttonText="!! Apunta't a la LLISTA D'ESPERA !!" @click="$emit('go-to-waitlist')" center="true" />
       </div>
     </div>
   </header>

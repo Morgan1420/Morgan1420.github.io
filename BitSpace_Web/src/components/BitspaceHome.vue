@@ -1,14 +1,6 @@
 <template>
   <div class="home-container">
-    <InfoSectionJustText 
-      title="⚠️ APP EN DESENVOLUPAMENT! <i>APP STILL IN PROGRESS!</i> ⚠️"
-      text="<b>La pàgina web encara està en desenvolupament. Tingueu en compte que algunes seccions poden estar incompletes o contenir contingut provisional.</b>
-            <br></br><i>The web page is still in development. Please be mindful that some sections may be incomplete or contain placeholder content.</i>
-            "
-      backgroundColor="#FFD600"
-      center="true"
-    />
-    <Carousel/>
+  <Carousel @go-to-collaborate="scrollToCollaborate"/>
     <main>
       <VideoSection
         title="Què és BitSpace?"
@@ -65,20 +57,15 @@
       />
 
       <!-- Potser fer un component només per aquesta part -->
-      <InfoSectionJustText
+      <Collaborate
+        id="collaborate"
         title="Col·labora amb nosaltres!"
-        text="Com podeu veure encara estem en una fase molt inicial del projecte, i ens encantaria comptar amb la vostra ajuda per fer-lo créixer i millorar-lo.
-              <br><br> <b>Si us agrada la idea</b> podeu donar-nos suport simplement <b>responent les enquestes</b> i/o apuntant-vos a la llista d'espera per ser els primers en ser notificats del llançament de l'MVP.
-              <br><br> <b>Si us agrada MOLT la idea</b> i voleu formar part activa del projecte, tenim les següents posicions obertes:
-              <br><br> - <b>Psicòleg/a</b> (a poder ser especialitzat/da en salut mental i benestar)
-              <br> - <b>Dissenyador/a Gràfic</b> (si et fan mal a la vista els nostres dissenys, i creus que ho pots fer millor, aquesta posició és per a tu!)
-              <br> - <b>Economista o entès amb finances</b> (necessitem algú que ens ajudi a muntar l'empresa i a gestionar tota l'activitat econòmica/legal)
-              <br><br> Si estàs interessat/da en alguna d'aquestes posicions, o simplement vols ajudar-nos i no saps com, <b>contacta amb nosaltres a través del nostre correu electrònic:"
         backgroundColor="#FFE4DD"
         center="true"
       />
-      <br>
-      <Formulario/>
+      
+      <br><hr>
+      <Formulario style="background-color: aliceblue;"/>
     </main>
   </div>
 </template>
@@ -90,6 +77,17 @@ import Formulario from './Formulario.vue';
 import InfoSectionLeft from './medium_components/InfoSectionLeft.vue';
 import InfoSectionRight from './medium_components/InfoSectionRight.vue';
 import InfoSectionJustText from './medium_components/InfoSectionJustText.vue';
+import Collaborate from './medium_components/Collaborate.vue';
+
+function scrollToCollaborate () {
+  const el = document.getElementById('collaborate')
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    // for accessibility, move focus
+    //el.setAttribute('tabindex', '-1')
+    el.focus({ preventScroll: true })
+  }
+}
 </script>
 
 <style scoped>

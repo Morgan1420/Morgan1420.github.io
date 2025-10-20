@@ -1,5 +1,5 @@
 <template>
-  <div class="btn"> {{ buttonText }} </div>
+  <div class="btn" :style="{ backgroundColor: colour, textAlign: center ? 'center' : 'left' }"> {{ buttonText }} </div>
 </template>
 
 <script setup>
@@ -10,6 +10,14 @@ const props = defineProps({
   buttonText: {
     type: String,
     required: true
+  },
+  colour: {
+    type: String,
+    default: '#ffbbac'
+  },
+  center: {
+    type: Boolean,
+    default: false,
   }
 })
 </script>
