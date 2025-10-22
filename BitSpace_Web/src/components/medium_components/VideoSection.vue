@@ -108,6 +108,7 @@ const embedUrl = computed(() => {
   .text-content h2 {
     font-size: 2rem;
   }
+  
   .video-content {
     width: 100%;
     padding-top: 56.25%;

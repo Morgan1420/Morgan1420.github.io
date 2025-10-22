@@ -40,7 +40,7 @@ const generateBackgroundBits = () => {
       const imageName = bitImageNames[randomIndex];
       newRow.push({
         id: i,
-        src: new URL(`../../assets/images/Bits Background/${imageName}`, import.meta.url).href
+        src: new URL(`../../assets/images/Bits_Background/${imageName}`, import.meta.url).href
       });
     }
     allRows.push(newRow);

@@ -14,7 +14,7 @@
       <InfoSectionLeft
         title="Com funciona?"
         text="Quan et descarregues BitSpace, a part del nom i l'edat, se't demanarà que indiquis <b>quin aspecte de la teva vida vols millorar</b>. 
-              <br><br> Podràs triar entre una multitud d'àrees com ara: millorar l'us del telèfon mòbil, fer més esport i millor, millorar els teus hàbits d'estudi o convertir-te en un lector habitual. 
+              <br><br> Podràs triar entre una multitud d'àrees com ara: millorar l'us del telèfon mòbil, fer més esport, millorar els teus hàbits d'estudi o convertir-te en un lector habitual. 
               <br><br> A partir d'aquí, <b>BitSpace et proposarà reptes i activitats diàries</b> relacionades amb l'àrea que has escollit, ajudant-te a establir i mantenir hàbits saludables."
         image=""
         backgroundColor="#FFE4DD"
@@ -45,15 +45,8 @@
         center="true"
       /> <!--Escriure "true" és un placebo, per dir que no ho vols centrat has d'esborrar l'entrada i deixar que el valor per defecte faci la seva feina-->
 
-      <InfoSectionRight
-        title="L'Equip de BitSpace"
-        text="L'equip de BitSpace està format per:
-              <br><br> - Lluna Lara Valle (CEO): Enfermera 
-              <br> - Jan Moran Ricardo (COO): Enginyer Electrònic de Telecomunicacions i Informàtic
-              <br> - Gerard Garcia Gross (CTO): Enginyer de Sistemes de Telecomunicacions i Informàtic
-              <br><br> Junts, combinem les nostres habilitats per crear una aplicació que no només sigui tecnològicament sòlida, sinó que també tingui un impacte positiu en la vida dels nostres usuaris."
+      <EquipPetit
         backgroundColor="#FFD8CF"
-        center="true"
       />
 
       <!-- Potser fer un component només per aquesta part -->
@@ -78,6 +71,7 @@ import InfoSectionLeft from './medium_components/InfoSectionLeft.vue';
 import InfoSectionRight from './medium_components/InfoSectionRight.vue';
 import InfoSectionJustText from './medium_components/InfoSectionJustText.vue';
 import Collaborate from './medium_components/Collaborate.vue';
+import EquipPetit from './medium_components/EquipPetit.vue';
 
 function scrollToCollaborate () {
   const el = document.getElementById('collaborate')
