@@ -2,15 +2,15 @@
   <header class="header">
     <div class="bit-background">
       <div v-for="(row, rowIndex) in rowsOfBits" :key="'row-' + rowIndex" class="bit-scroll-track">
-        <img v-for="bit in row" :key="'r' + rowIndex + '-1-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" />
-        <img v-for="bit in row" :key="'r' + rowIndex + '-2-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" />
+        <img v-for="bit in row" :key="'r' + rowIndex + '-1-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" draggable="false" />
+        <img v-for="bit in row" :key="'r' + rowIndex + '-2-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" draggable="false" />
       </div>
     </div>
     <div class="header-content">
-      <img src="../../assets/images/Titol.png" alt="">
+      <img src="../../assets/images/Titol.png" alt="" draggable="false">
       <div class="buttons">
-        <fancyButton buttonText="!! Respongueu a les ENQUESTES !!" @click="$emit('go-to-collaborate')" center="true" />
-        <fancyButton buttonText="!! Apunta't a la LLISTA D'ESPERA !!" @click="$emit('go-to-waitlist')" center="true" />
+        <fancyButton :buttonText="t('carousel_button_surveys')" @click="$emit('go-to-collaborate')" :center="true" />
+        <fancyButton :buttonText="t('carousel_button_waitlist')" @click="$emit('go-to-waitlist')" :center="true" />
       </div>
     </div>
   </header>
@@ -18,7 +18,13 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import fancyButton from '../small_components/fancyButton.vue'
+
+const { t } = useI18n()
+
+// Define los eventos que este componente puede emitir
+defineEmits(['go-to-collaborate', 'go-to-waitlist'])
 
 const bitImageNames = [
   'Bit_1.png', 'Bit_10.png', 'Bit_11.png', 'Bit_12.png', 'Bit_13.png',
@@ -53,7 +59,6 @@ onMounted(() => {
 });
 
 </script>
-
 
 <style scoped>
 
@@ -114,6 +119,8 @@ onMounted(() => {
   height: 120px;
   margin: 0 10px;
   flex-shrink: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
 /* make image sit on top and buttons stack below it */

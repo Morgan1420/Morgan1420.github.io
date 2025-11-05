@@ -14,15 +14,15 @@ export default {
         <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.png" alt="Bit_Gerard" />
         <div class="nom">Gerard Garcia Gross</div>
         <div class="estudis">Enginyer</div>
-        <div class="bottom_text">Fan #1 del Karting i de fer projectes personals</div>
+        <!-- <div class="bottom_text">Fan #1 del Karting i de fer projectes personals</div> -->
       </div>
 
       <div class="membre">
-        <img class="imatge"src="@/assets/images/Equip/anulL.png" alt="Lluna Lara Valle" />
+        <img class="imatge" src="@/assets/images/Equip/anulL.png" alt="Lluna Lara Valle" />
         <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.png" alt="Bit_Lluna" />
         <div class="nom">Lluna Lara Valle</div>
         <div class="estudis">Infermera <div class="small_wording">(en procés)</div></div>
-        <div class="bottom_text">Apassionada de la lectura i dels cavalls</div>
+        <!-- <div class="bottom_text">Apassionada de la lectura i dels cavalls</div> -->
       </div>
 
       <div class="membre">
@@ -30,7 +30,7 @@ export default {
         <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Bit_jan_llegint.png" alt="Bit_Jan" />
         <div class="nom">Jan Moran Ricardo</div>
         <div class="estudis">Enginyer</div>
-        <div class="bottom_text">Amant de la música i de les coses ben fetes</div>
+        <!-- <div class="bottom_text">Amant de la música i de les coses ben fetes</div> -->
       </div>
 
       

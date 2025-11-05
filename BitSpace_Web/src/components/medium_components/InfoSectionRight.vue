@@ -5,15 +5,14 @@ export default {
 </script>
 
 <template>
-  <div class="container" :class="{ 'image-below': text === '' }" :style="{ backgroundColor: backgroundColor }">
+  <div class="container" :style="{ backgroundColor: backgroundColor }">
+    <div class="image-content">
+      <img :src="imageSrc" alt="Info image" v-if="imageSrc" />
+    </div>
     <div class="text-content">
       <h2>{{ title }}</h2>
       <p v-if="text" v-html="text"></p>
     </div>
-    <div class="image-content">
-      <img :src="imageSrc" :alt="title" class="info-image" v-if="imageSrc"/>
-    </div>
-    
   </div>
 </template>
 

@@ -6,30 +6,17 @@ export default {
 
 <template>
   <div class="container" :style="{ backgroundColor: backgroundColor }">
-    <h2>Col·labora amb nosaltres!</h2>
-    <div class="text-content">
-      <p>El vostre feedback és important! Així que, si podeu, respongueu a les enquestes. Nosaltres us ho agrairem ;)</p>
-  <p style="text-align: center"><b>ENQUESTA GENERAL:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a></p>
-    </div>
-
-    <div class="text-content">
-        <p>Forma part del canvi i apunta't a alguna de les posicions obertes dins del grup:</p>
-        <div class="roles-buttons">
-          <FancyButton buttonText="Psicòleg/oga" colour="#9AB8D4" center="true" />
-          <FancyButton buttonText="Dissenyador/a Gràfic/a" colour="#B5EAD6" center="true" />
-          <FancyButton buttonText="Economista o entès amb finances" colour="#F6EAC2" center="true" />
-        </div>
-    </div>
-
-    <div class="text-content">
-        <p>Contacta'ns a través del nostre correu electrònic: info@bitspace.com</p>
-    </div>
-    
+    <h2>{{ t('collaborate_title') }}</h2>
+    <div class="text-content" v-html="t('collaborate_text_1')"></div>
+    <div class="text-content" v-html="t('collaborate_text_2')"></div>
+    <div class="text-content" v-html="t('collaborate_text_3')"></div>
   </div>
 </template>
 
 <script setup>
-import FancyButton from '../small_components/fancyButton.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 defineProps({
   backgroundColor: {
