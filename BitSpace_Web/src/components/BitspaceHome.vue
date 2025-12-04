@@ -86,7 +86,7 @@ const schemaWebApplication = {
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS, Android",
   "description": "BitSpace és un entorn virtual accessible via aplicació mòbil que es basa a cuidar mascotes digitals (els 'Bits'). Al cuidar de la teva mascota, t'estàs cuidant a tu mateix.",
-  "url": "https://morgan1420.github.io",
+  "url": "https://bitspace.es",
   "author": {
     "@type": "Organization",
     "name": "BitSpace Team",
@@ -108,8 +108,8 @@ const schemaOrganization = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "BitSpace",
-  "url": "https://morgan1420.github.io",
-  "logo": "https://morgan1420.github.io/src/assets/logoBit.ico",
+  "url": "https://bitspace.es",
+  "logo": "https://bitspace.es/src/assets/logoBit.ico",
   "description": "Digital Health - Cuida tu mascota digital, cuídate a ti mismo",
   "contactPoint": {
     "@type": "ContactPoint",

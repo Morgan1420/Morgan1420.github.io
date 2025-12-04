@@ -53,7 +53,7 @@ const updateMetaTags = (lang) => {
   
   let ogUrl = document.querySelector('meta[property="og:url"]')
   if (ogUrl) {
-    ogUrl.setAttribute('content', `https://morgan1420.github.io/${lang}`)
+    ogUrl.setAttribute('content', `https://bitspace.es/${lang}`)
   }
   
   // Update Twitter Card
@@ -69,13 +69,13 @@ const updateMetaTags = (lang) => {
   
   let twitterUrl = document.querySelector('meta[name="twitter:url"]')
   if (twitterUrl) {
-    twitterUrl.setAttribute('content', `https://morgan1420.github.io/${lang}`)
+    twitterUrl.setAttribute('content', `https://bitspace.es/${lang}`)
   }
   
   // Update canonical URL
   let canonical = document.querySelector('link[rel="canonical"]')
   if (canonical) {
-    canonical.setAttribute('href', `https://morgan1420.github.io/${lang}`)
+    canonical.setAttribute('href', `https://bitspace.es/${lang}`)
   }
   
   // Update HTML lang attribute
