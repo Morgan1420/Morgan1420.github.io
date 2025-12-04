@@ -71,7 +71,11 @@ p {
     flex-direction: column;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.2rem;
+  }
+  .text-content {
+    width: 100%;
+    font-size: .8rem;
   }
 }
 </style>

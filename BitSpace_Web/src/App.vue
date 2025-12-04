@@ -1,8 +1,9 @@
 <template>
   <div id="main-app-container">
     <nav class="language-switcher">
-      <router-link to="/ca">Català</router-link> |
-      <router-link to="/es">Español</router-link>
+      <router-link to="/ca"><img class="flag" src="./assets/images/Web_icons/cat_flag.png" alt="Cat" /></router-link> |
+      <router-link to="/en"><img class="flag" src="./assets/images/Web_icons/uk_flag.png" alt="Eng" /></router-link> |
+      <router-link to="/es"><img class="flag" src="./assets/images/Web_icons/es_flag.png" alt="Esp" /></router-link>       
     </nav>
     <router-view />
   </div>
@@ -20,7 +21,7 @@ const { locale } = useI18n()
 watch(
   () => route.params.lang,
   (newLang) => {
-    if (newLang && ['es', 'ca'].includes(newLang)) {
+    if (newLang && ['es', 'en', 'ca'].includes(newLang)) {
       locale.value = newLang
     }
   },
@@ -40,6 +41,13 @@ html, body {
   position: relative;
 }
 
+.flag {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 .language-switcher {
   position: fixed;
   top: 1rem;
@@ -49,6 +57,8 @@ html, body {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
 }
 
 .language-switcher a {
@@ -64,7 +74,21 @@ html, body {
 }
 
 .language-switcher a.router-link-exact-active {
-  color: #E57373;
-  text-decoration: underline;
+  color: #fff;
+  background: #E57373;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(229,115,115,0.18);
+}
+
+.language-switcher a[aria-current="page"] {
+  /* fallback selector for exact active link if router sets aria-current */
+  color: #fff;
+  background: #E57373;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(229,115,115,0.18);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="bit-background">
-      <div v-for="(row, rowIndex) in rowsOfBits" :key="'row-' + rowIndex" class="bit-scroll-track">
+      <div v-for="(row, rowIndex) in rowsOfBits" :key="'row-' + rowIndex" class="bit-scroll-track" :style="{ animationDuration: animationDuration }">
         <img v-for="bit in row" :key="'r' + rowIndex + '-1-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" draggable="false" />
         <img v-for="bit in row" :key="'r' + rowIndex + '-2-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" draggable="false" />
       </div>
@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import fancyButton from '../small_components/fancyButton.vue'
 
@@ -35,28 +35,62 @@ const bitImageNames = [
   'Bit_jan_llegint.png', 'Bit_triste.png', 'Lluna_Bit_sin_fondo.png'
 ];
 
-const rowsOfBits = ref([]);
+const rowsOfBits = ref([])
+const animationDuration = ref('180s')
 
-const generateBackgroundBits = () => {
-  const allRows = [];
-  for (let r = 0; r < 6; r++) {
-    const newRow = [];
-    for (let i = 0; i < 50; i++) {
-      const randomIndex = Math.floor(Math.random() * bitImageNames.length);
-      const imageName = bitImageNames[randomIndex];
+function buildRows (rowsCount, itemsCount) {
+  const allRows = []
+  for (let r = 0; r < rowsCount; r++) {
+    const newRow = []
+    for (let i = 0; i < itemsCount; i++) {
+      const randomIndex = Math.floor(Math.random() * bitImageNames.length)
+      const imageName = bitImageNames[randomIndex]
       newRow.push({
         id: i,
         src: new URL(`../../assets/images/Bits_Background/${imageName}`, import.meta.url).href
-      });
+      })
     }
-    allRows.push(newRow);
+    allRows.push(newRow)
   }
-  rowsOfBits.value = allRows;
-};
+  rowsOfBits.value = allRows
+}
+
+function setForViewport (isMobile) {
+  if (isMobile) {
+    // fewer rows and items, faster animation on phones
+    buildRows(7, 20)
+    animationDuration.value = '40s'
+  } else {
+    buildRows(6, 50)
+    animationDuration.value = '180s'
+  }
+}
+
+let mql
+function onMediaChange (e) {
+  setForViewport(e.matches)
+}
 
 onMounted(() => {
-  generateBackgroundBits();
-});
+  mql = window.matchMedia('(max-width: 768px)')
+  // initial setup: pass true if mobile
+  setForViewport(mql.matches)
+  // listen for changes and update rows/speed dynamically
+  if (mql.addEventListener) {
+    mql.addEventListener('change', onMediaChange)
+  } else if (mql.addListener) {
+    mql.addListener(onMediaChange)
+  }
+})
+
+onBeforeUnmount(() => {
+  if (!mql) return
+  if (mql.removeEventListener) {
+    mql.removeEventListener('change', onMediaChange)
+  } else if (mql.removeListener) {
+    mql.removeListener(onMediaChange)
+  }
+})
 
 </script>
 
@@ -184,6 +218,7 @@ onMounted(() => {
 
 
   .header-content {
+    
     padding: 1rem;
     padding-bottom: 0;
     max-width: 320px;
@@ -192,7 +227,7 @@ onMounted(() => {
   }
 
   .header-content img {
-    max-width: 280px;
+    size: 100%;
   }
 
   .buttons {

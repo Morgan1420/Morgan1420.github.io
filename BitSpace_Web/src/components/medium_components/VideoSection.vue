@@ -109,11 +109,11 @@ const embedUrl = computed(() => {
   }
 
   .text-content h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .text-content p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 
   .video-content {

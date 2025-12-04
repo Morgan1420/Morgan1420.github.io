@@ -10,28 +10,51 @@ export default {
     <div class="equip">
       
       <div class="membre">
-        <img class="imatge" src="@/assets/images/Equip/Gerard.png" alt="Gerard Garcia Gross" />
-        <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.png" alt="Bit_Gerard" />
-        <div class="nom">Gerard Garcia Gross</div>
-        <div class="estudis">Enginyer</div>
-        <!-- <div class="bottom_text">Fan #1 del Karting i de fer projectes personals</div> -->
+        <div class="imatge-with-bit">
+          <img class="imatge" src="@/assets/images/Equip/Jan.png" alt="Jan Moran Ricardo" />
+          <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Bit_jan_llegint.png" alt="Bit_Jan" />
+        </div>
+        <div class="info-membre">
+          <div class="nom">Jan Moran Ricardo</div>
+          <div class="estudis">Enginyer Electrònic i Enginyer informàtic</div>
+        </div>
+        <!-- <div class="bottom_text">Amant de la música i de les coses ben fetes</div> -->
       </div>
 
       <div class="membre">
-        <img class="imatge" src="@/assets/images/Equip/anulL.png" alt="Lluna Lara Valle" />
-        <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.png" alt="Bit_Lluna" />
-        <div class="nom">Lluna Lara Valle</div>
-        <div class="estudis">Infermera <div class="small_wording">(en procés)</div></div>
+        <div class="imatge-with-bit">
+          <img class="imatge" src="@/assets/images/Equip/Gerard.png" alt="Gerard Garcia Gross" />
+          <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.png" alt="Bit_Gerard" />
+        </div>
+        <div class="info-membre">
+          <div class="nom">Gerard Garcia Gross</div>
+          <div class="estudis">Enginyer de Sistemes i Enginyer informàtic</div>
+        </div><!-- <div class="bottom_text">Fan #1 del Karting i de fer projectes personals</div> -->
+      </div>
+
+      <div class="membre">
+        <div class="imatge-with-bit">
+          <img class="imatge" src="@/assets/images/Equip/anulL.png" alt="Lluna Lara Valle" />
+          <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.png" alt="Bit_Lluna" />
+        </div>
+        <div class="info-membre">
+          <div class="nom">Lluna Lara Valle</div>
+          <div class="estudis">Infermera i experta en salut</div>
+        </div>
         <!-- <div class="bottom_text">Apassionada de la lectura i dels cavalls</div> -->
       </div>
 
       <div class="membre">
-        <img class="imatge" src="@/assets/images/Equip/Jan.png" alt="Jan Moran Ricardo" />
-        <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Bit_jan_llegint.png" alt="Bit_Jan" />
-        <div class="nom">Jan Moran Ricardo</div>
-        <div class="estudis">Enginyer</div>
-        <!-- <div class="bottom_text">Amant de la música i de les coses ben fetes</div> -->
+        <div class="imatge-with-bit">
+          <img class="imatge" src="@/assets/images/Equip/Suzana.jpg" alt="Suzana Jeal" />
+        </div>
+        <div class="info-membre">
+          <div class="nom">Suzana Jeal</div>
+          <div class="estudis">Experta en Intel·ligència artificial</div>
+        </div>
+        <!-- <div class="bottom_text">Apassionada de la lectura i dels cavalls</div> -->
       </div>
+      
 
       
     </div>
@@ -88,6 +111,11 @@ p {
   text-align: center;
 }
 
+.imatge-with-bit, .info-membre{
+  display: flex;
+  flex-direction: column;
+}
+
 .imatge {
   width: 200px;
   height: 200px;
@@ -100,13 +128,13 @@ p {
   width: 125px;
   height: 125px;
   margin-top: -100px;
-  margin-right: -100px;
+  margin-left: 100px;
 }
 .imatge_bit_left {
   width: 125px;
   height: auto;
   margin-top: -100px;
-  margin-left: -100px;
+  margin-right: -100px;
 }
 
 .nom {
@@ -116,7 +144,7 @@ p {
 .estudis {
   display: flex;
   align-items: center;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.2rem;
 }
 .small_wording {
@@ -147,6 +175,41 @@ p {
   .small_wording {
     font-size: 0rem; /* Hide the small wording on smaller screens */
   }
+}
 
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .membre {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .imatge {
+    width: 110px;
+    height: 110px;
+  }
+  .imatge_bit_right {
+    width: 80px;
+    height: 80px;
+    margin-top: -65px;
+    margin-left: 65px;
+  }
+  .imatge_bit_left {
+    width: 80px;
+    height: auto;
+    margin-top: -65px;
+    margin-right: 65px;
+  }
+  .nom {
+    font-size: 1rem;
+  }
+  .estudis {
+    font-size: .8rem;
+    font-weight: normal;
+  }
 }
 </style>
