@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://morgan1420.github.io/sitemap.xml
+Sitemap: https://bitspace.es/sitemap.xml
 
 # Crawl delay (optional, adjust if needed)
 Crawl-delay: 1

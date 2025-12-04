@@ -4,40 +4,40 @@
   
   <!-- Catalan / Default -->
   <url>
-    <loc>https://morgan1420.github.io/ca</loc>
+    <loc>https://bitspace.es/ca</loc>
     <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://morgan1420.github.io/ca"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://morgan1420.github.io/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morgan1420.github.io/en"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en"/>
   </url>
   
   <!-- Spanish -->
   <url>
-    <loc>https://morgan1420.github.io/es</loc>
+    <loc>https://bitspace.es/es</loc>
     <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://morgan1420.github.io/ca"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://morgan1420.github.io/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morgan1420.github.io/en"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en"/>
   </url>
   
   <!-- English -->
   <url>
-    <loc>https://morgan1420.github.io/en</loc>
+    <loc>https://bitspace.es/en</loc>
     <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://morgan1420.github.io/ca"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://morgan1420.github.io/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morgan1420.github.io/en"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en"/>
   </url>
   
   <!-- Root redirect -->
   <url>
-    <loc>https://morgan1420.github.io/</loc>
+    <loc>https://bitspace.es/</loc>
     <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
