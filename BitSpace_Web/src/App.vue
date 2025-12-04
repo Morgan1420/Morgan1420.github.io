@@ -1,9 +1,9 @@
 <template>
   <div id="main-app-container">
-    <nav class="language-switcher">
-      <router-link to="/ca"><img class="flag" src="./assets/images/Web_icons/cat_flag.png" alt="Cat" /></router-link> |
-      <router-link to="/en"><img class="flag" src="./assets/images/Web_icons/uk_flag.png" alt="Eng" /></router-link> |
-      <router-link to="/es"><img class="flag" src="./assets/images/Web_icons/es_flag.png" alt="Esp" /></router-link>       
+    <nav class="language-switcher" role="navigation" aria-label="Selector de idioma">
+      <router-link to="/ca" aria-label="Cambiar a Catalán"><img class="flag" src="./assets/images/Web_icons/cat_flag.png" alt="Bandera de Catalunya - Canviar idioma a Català" /></router-link> |
+      <router-link to="/en" aria-label="Switch to English"><img class="flag" src="./assets/images/Web_icons/uk_flag.png" alt="UK Flag - Switch language to English" /></router-link> |
+      <router-link to="/es" aria-label="Cambiar a Español"><img class="flag" src="./assets/images/Web_icons/es_flag.png" alt="Bandera de España - Cambiar idioma a Español" /></router-link>       
     </nav>
     <router-view />
   </div>

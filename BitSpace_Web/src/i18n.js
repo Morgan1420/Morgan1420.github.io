@@ -2,6 +2,10 @@ import { createI18n } from 'vue-i18n'
 
 const messages = {
   es: {
+    // SEO Meta
+    meta_title: 'BitSpace - Salud Digital | Cuida tu mascota digital',
+    meta_description: 'BitSpace es una aplicación móvil que te ayuda a mejorar tus hábitos de salud cuidando una mascota digital. Mejora tu bienestar mientras tu Bit crece feliz.',
+    
     welcome: 'Bienvenido a BitSpace',
     what_is_bitspace: '¿Qué es BitSpace?',
     what_is_bitspace_text: "BitSpace es un <b>entorno virtual</b> accesible vía aplicación móvil que se basa en <b>cuidar mascotas digitales</b> (los 'Bits'), de forma similar a juegos como Pou o Tamagotchi. <br><br> Tu bit actuará como un espejo de tu salud: su felicidad y bienestar están directamente ligados a tus hábitos de cuidado personal en el mundo real. <br><br> El objetivo es simple: <b>Al cuidar de tu mascota, te estás cuidando a ti mismo</b>.",
@@ -42,6 +46,10 @@ const messages = {
     carousel_button_waitlist: '!! Apúntate a la LISTA DE ESPERA !!',
   },
   en: {
+    // SEO Meta
+    meta_title: 'BitSpace - Digital Health | Take care of your digital pet',
+    meta_description: 'BitSpace is a mobile app that helps you improve your health habits by caring for a digital pet. Improve your wellbeing while your Bit grows happily.',
+    
     welcome: 'Welcome to BitSpace',
     what_is_bitspace: 'What is BitSpace?',
     what_is_bitspace_text: "BitSpace is a <b>virtual environment</b> accessible via mobile app focused on <b>caring for digital pets</b> (the 'Bits'), similar to games like Pou or Tamagotchi. <br><br> Your bit acts as a mirror of your wellbeing: its happiness and health are directly tied to your real-life self-care habits. <br><br> The goal is simple: <b>By caring for your pet, you are taking care of yourself</b>.",
@@ -82,6 +90,10 @@ const messages = {
     carousel_button_waitlist: '!! Join the WAITLIST !!',
   },
   ca: {
+    // SEO Meta
+    meta_title: 'BitSpace - Salut Digital | Cuida la teva mascota digital',
+    meta_description: 'BitSpace és una aplicació mòbil que t\'ajuda a millorar els teus hàbits de salut cuidant una mascota digital. Millora el teu benestar mentre el teu Bit creix feliç.',
+    
     welcome: 'Benvingut a BitSpace',
     what_is_bitspace: 'Què és BitSpace?',
     what_is_bitspace_text: "BitSpace és un <b>entorn virtual</b> accessible via aplicació mòbil que es basa a <b>cuidar mascotes digitals</b> (els 'Bits'), de forma similar a jocs com Pou o Tamagotchi. <br><br> El teu bit actuarà com a mirall de la teva salut: la seva felicitat i benestar estan directament lligats als teus hàbits de cura personal en el món real. <br><br> L'objectiu és simple: <b>En cuidar la teva mascota t'estàs cuidant a tu mateix</b>.",
