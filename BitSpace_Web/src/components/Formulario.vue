@@ -6,11 +6,17 @@ export default {
 
 <template>
   <div class="waitlist-container">
-    <h2 class="title">Uneix-te a la nostra llista d'espera</h2>
+    <h2 class="title">{{ t('waitlist_title') }}</h2>
     <form @submit.prevent="submitForm" class="waitlist-form">
-      <input v-model="email" type="email" placeholder="El teu correu electrònic" required class="input-email" />
+      <input 
+        v-model="email" 
+        type="email" 
+        :placeholder="t('waitlist_email_placeholder')" 
+        required 
+        class="input-email" 
+      />
       <button type="submit" class="submit-btn" :disabled="loading">
-        {{ loading ? 'Enviant...' : 'Unirme' }}
+        {{ loading ? t('waitlist_button_loading') : t('waitlist_button_submit') }}
       </button>
     </form>
 
@@ -20,6 +26,9 @@ export default {
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const SCRIPT_BASE = 'https://script.google.com/macros/s/AKfycbyiPoDCZKIAY0nMLcXIAfiAWbdfNLb2IgAWXmAYnGbTfxPzqvS0UaDiQAKgpcgKyt6uCA/exec'
 
@@ -28,7 +37,8 @@ const message = ref('')
 const loading = ref(false)
 
 const messageClass = computed(() =>
-  message.value.includes('Gracias') || message.value.includes('añadido') ? 'success' : 'error'
+  message.value.includes(t('waitlist_success_added')) || 
+  message.value.includes(t('waitlist_error_exists')) ? 'success' : 'error'
 )
 
 function makeCallbackName() {
@@ -37,7 +47,7 @@ function makeCallbackName() {
 
 const submitForm = () => {
   if (!/^\S+@\S+\.\S+$/.test(email.value)) {
-    message.value = 'Por favor, introduce un correo válido.'
+    message.value = t('waitlist_error_invalid_email')
     return
   }
 
@@ -48,7 +58,7 @@ const submitForm = () => {
   // Timeout en caso de que no responda (limpia)
   const timeout = setTimeout(() => {
     cleanup()
-    message.value = 'No se recibió respuesta del servidor.'
+    message.value = t('waitlist_error_no_response')
     loading.value = false
   }, 10000) // 10s
 
@@ -57,12 +67,12 @@ const submitForm = () => {
     clearTimeout(timeout)
     try {
       if (res.result === 'success') {
-        message.value = '¡Gracias! Te hemos añadido a la lista de espera.'
+        message.value = t('waitlist_success_added')
         email.value = ''
       } else if (res.result === 'exists') {
-        message.value = 'Ya estás en la lista de espera.'
+        message.value = t('waitlist_error_exists')
       } else {
-        message.value = res.message || 'Hubo un error en la solicitud.'
+        message.value = res.message || t('waitlist_error_generic')
       }
     } finally {
       cleanup()
