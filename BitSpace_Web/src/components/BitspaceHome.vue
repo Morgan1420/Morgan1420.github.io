@@ -66,7 +66,6 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-import { onMounted, onUnmounted } from 'vue'
 import Carousel from './medium_components/Carousel.vue';
 import VideoSection from './medium_components/VideoSection.vue'
 import Formulario from './Formulario.vue';
@@ -77,77 +76,6 @@ import EquipPetit from './medium_components/EquipPetit.vue';
 import SiteFooter from './medium_components/Footer.vue';
 
 const { t } = useI18n()
-
-// Schema.org Structured Data
-const schemaWebApplication = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "BitSpace",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "iOS, Android",
-  "description": "BitSpace és un entorn virtual accessible via aplicació mòbil que es basa a cuidar mascotes digitals (els 'Bits'). Al cuidar de la teva mascota, t'estàs cuidant a tu mateix.",
-  "url": "https://bitspace.es",
-  "author": {
-    "@type": "Organization",
-    "name": "BitSpace Team",
-    "email": "info@bitspace.es"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "150"
-  }
-}
-
-const schemaOrganization = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "BitSpace",
-  "url": "https://bitspace.es",
-  "logo": "https://bitspace.es/src/assets/logoBit.ico",
-  "description": "Digital Health - Cuida tu mascota digital, cuídate a ti mismo",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@bitspace.es",
-    "contactType": "Customer Service"
-  },
-  "sameAs": [
-    "https://www.instagram.com/bitspace_app",
-    "https://www.linkedin.com/company/bitspace"
-  ]
-}
-
-let schemaScripts = []
-
-onMounted(() => {
-  // Insertar Schema.org scripts en el head
-  const script1 = document.createElement('script')
-  script1.type = 'application/ld+json'
-  script1.textContent = JSON.stringify(schemaWebApplication)
-  document.head.appendChild(script1)
-  schemaScripts.push(script1)
-
-  const script2 = document.createElement('script')
-  script2.type = 'application/ld+json'
-  script2.textContent = JSON.stringify(schemaOrganization)
-  document.head.appendChild(script2)
-  schemaScripts.push(script2)
-})
-
-onUnmounted(() => {
-  // Limpiar los scripts cuando el componente se desmonte
-  schemaScripts.forEach(script => {
-    if (script.parentNode) {
-      script.parentNode.removeChild(script)
-    }
-  })
-  schemaScripts = []
-})
 
 function scrollToCollaborate () {
   const el = document.getElementById('collaborate')
