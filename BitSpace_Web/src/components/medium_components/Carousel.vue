@@ -61,8 +61,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
-
 .header {
   position: relative;
   text-align: center;
@@ -73,10 +71,12 @@ onMounted(() => {
   display: flex;
   overflow: hidden;
 }
+
 .header h1 {
   font-size: 3rem;
   font-weight: bold;
 }
+
 .header p {
   font-size: 1.75rem;
 }
@@ -85,6 +85,7 @@ onMounted(() => {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -134,7 +135,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* keep header image responsive and above the buttons */
@@ -163,25 +164,44 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .header {
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
   }
+
   .header h1 {
     font-size: 2rem;
   }
+
   .header p {
     font-size: 1.2rem;
   }
 
+  .bit-bg-image {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    flex-shrink: 0;
+  }
+
+
   .header-content {
     padding: 1rem;
+    padding-bottom: 0;
     max-width: 320px;
+    height: fit-content;
+    justify-content: center;
   }
 
   .header-content img {
     max-width: 280px;
   }
 
+  .buttons {
+    /* Hide from view for now */
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+
 }
-
-
 </style>
