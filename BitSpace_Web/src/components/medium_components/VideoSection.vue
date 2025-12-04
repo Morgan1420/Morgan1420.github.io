@@ -5,13 +5,9 @@
       <p v-if="text" v-html="text"></p>
     </div>
     <div class="video-content">
-      <iframe
-        :src="embedUrl"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        class="video-iframe"
-      ></iframe>
+      <iframe :src="embedUrl" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        class="video-iframe"></iframe>
     </div>
   </div>
 </template>
@@ -76,10 +72,12 @@ const embedUrl = computed(() => {
 .text-content {
   width: 50%;
 }
+
 .text-content h2 {
   margin-top: 1rem;
   font-size: 2.5rem;
 }
+
 .text-content p {
   font-size: 1.4rem;
   line-height: 1.6;
@@ -97,18 +95,27 @@ const embedUrl = computed(() => {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 768px) {
   .container {
     padding: 2rem 1rem;
     flex-direction: column;
   }
+
+  .text-content {
+    width: 100%;
+  }
+
   .text-content h2 {
     font-size: 2rem;
   }
-  
+
+  .text-content p {
+    font-size: 1.2rem;
+  }
+
   .video-content {
     width: 100%;
     padding-top: 56.25%;

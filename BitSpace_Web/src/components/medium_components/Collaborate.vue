@@ -22,7 +22,7 @@ export default {
     </div>
 
     <div class="text-content">
-        <p>Contacta'ns a través del nostre correu electrònic: info@bitspace.com</p>
+        <p>Contacta'ns a través del nostre correu electrònic: jan.moran.r@gmail.com (encara no tenim domini :( )</p>
     </div>
     
   </div>
