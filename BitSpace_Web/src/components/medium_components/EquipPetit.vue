@@ -1,12 +1,6 @@
-<script>
-export default {
-  name: 'EquipPetit'
-}
-</script>
-
 <template>
   <div class="container" :style="{ backgroundColor: backgroundColor }">
-    <h2>L'Equip de BitSpace</h2>
+    <h2>{{ t('equip_title') }}</h2>
     <div class="equip">
       
       <div class="membre">
@@ -15,8 +9,8 @@ export default {
           <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Bit_jan_llegint.png" alt="Bit_Jan" />
         </div>
         <div class="info-membre">
-          <div class="nom">Jan Moran Ricardo</div>
-          <div class="estudis">Enginyer Electrònic i Enginyer informàtic</div>
+          <div class="nom">{{ t('member_jan_name') }}</div>
+          <div class="estudis">{{ t('member_jan_role') }}</div>
         </div>
         <!-- <div class="bottom_text">Amant de la música i de les coses ben fetes</div> -->
       </div>
@@ -27,8 +21,8 @@ export default {
           <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.png" alt="Bit_Gerard" />
         </div>
         <div class="info-membre">
-          <div class="nom">Gerard Garcia Gross</div>
-          <div class="estudis">Enginyer de Sistemes i Enginyer informàtic</div>
+          <div class="nom">{{ t('member_gerard_name') }}</div>
+          <div class="estudis">{{ t('member_gerard_role') }}</div>
         </div><!-- <div class="bottom_text">Fan #1 del Karting i de fer projectes personals</div> -->
       </div>
 
@@ -38,8 +32,8 @@ export default {
           <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.png" alt="Bit_Lluna" />
         </div>
         <div class="info-membre">
-          <div class="nom">Lluna Lara Valle</div>
-          <div class="estudis">Infermera i experta en salut</div>
+          <div class="nom">{{ t('member_lluna_name') }}</div>
+          <div class="estudis">{{ t('member_lluna_role') }}</div>
         </div>
         <!-- <div class="bottom_text">Apassionada de la lectura i dels cavalls</div> -->
       </div>
@@ -49,8 +43,8 @@ export default {
           <img class="imatge" src="@/assets/images/Equip/Suzana.jpg" alt="Suzana Jeal" />
         </div>
         <div class="info-membre">
-          <div class="nom">Suzana Jeal</div>
-          <div class="estudis">Experta en Intel·ligència artificial</div>
+          <div class="nom">{{ t('member_suzana_name') }}</div>
+          <div class="estudis">{{ t('member_suzana_role') }}</div>
         </div>
         <!-- <div class="bottom_text">Apassionada de la lectura i dels cavalls</div> -->
       </div>
@@ -62,11 +56,16 @@ export default {
 </template>
 
 <script setup>
+defineOptions({ name: 'EquipPetit' })
+
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 defineProps({
   backgroundColor: {
     type: String,
     default: '#FFFFFF'
-  },
+  }
 })
 </script>
 
