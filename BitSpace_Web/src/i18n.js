@@ -44,6 +44,8 @@ const messages = {
     waitlist_error_generic: 'Hubo un error en la solicitud.',
     carousel_button_surveys: '!! Responde a las ENCUESTAS !!',
     carousel_button_waitlist: '!! Apúntate a la LISTA DE ESPERA !!',
+    create_your_bit: 'Crea tu Bit',
+    choose_outfit: 'Elige tu ropa',
   },
   en: {
     // SEO Meta
@@ -88,6 +90,8 @@ const messages = {
     waitlist_error_generic: 'There was an error with the request.',
     carousel_button_surveys: '!! Answer the SURVEYS !!',
     carousel_button_waitlist: '!! Join the WAITLIST !!',
+    create_your_bit: 'Create your Bit',
+    choose_outfit: 'Choose your outfit',
   },
   ca: {
     // SEO Meta
@@ -132,6 +136,8 @@ const messages = {
     waitlist_error_generic: 'Hi va haver un error en la sol·licitud.',
     carousel_button_surveys: '!! Respongueu a les ENQUESTES !!',
     carousel_button_waitlist: "!! Apunta't a la LLISTA D'ESPERA !!",
+    create_your_bit: 'Crea el teu Bit',
+    choose_outfit: 'Tria la teva roba',
   }
 }
 

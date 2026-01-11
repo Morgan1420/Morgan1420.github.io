@@ -72,7 +72,7 @@ defineProps({
 }
 
 .info-image {
-  width: 100%;
+  width: 90%;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
@@ -94,5 +94,9 @@ defineProps({
   .text-content p {
     font-size: 0.8rem;
   }
+  .info-image {
+  width: 200%;
+  margin-left: -50%;
+}
 }
 </style>

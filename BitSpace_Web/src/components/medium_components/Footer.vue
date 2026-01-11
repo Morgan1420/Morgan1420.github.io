@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 BitSpace. {{ t('footer_rights') }}</p>
+      <p>&copy; 2026 BitSpace. {{ t('footer_rights') }}</p>
     </div>
   </footer>
 </template>

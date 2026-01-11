@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BitspaceHome from '../components/BitspaceHome.vue'
+import CreaTuBit from '../components/CreaTuBit.vue'
 import LanguageWrapper from './LanguageWrapper.vue' // 1. Importa el nuevo componente
 import i18n from '../i18n'
 
@@ -102,6 +103,11 @@ const routes = [
         path: '',
         name: 'Home',
         component: BitspaceHome
+      },
+      {
+        path: 'crea-tu-bit',
+        name: 'CreaTuBit',
+        component: CreaTuBit
       }
     ]
   },
