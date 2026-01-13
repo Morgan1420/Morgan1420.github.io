@@ -46,6 +46,7 @@ const messages = {
     carousel_button_waitlist: '!! Apúntate a la LISTA DE ESPERA !!',
     create_your_bit: 'Crea tu Bit',
     choose_outfit: 'Elige tu ropa',
+    choose_hair: 'Elige tu pelo',
   },
   en: {
     // SEO Meta
@@ -92,6 +93,7 @@ const messages = {
     carousel_button_waitlist: '!! Join the WAITLIST !!',
     create_your_bit: 'Create your Bit',
     choose_outfit: 'Choose your outfit',
+    choose_hair: 'Choose your hair',
   },
   ca: {
     // SEO Meta
@@ -138,6 +140,7 @@ const messages = {
     carousel_button_waitlist: "!! Apunta't a la LLISTA D'ESPERA !!",
     create_your_bit: 'Crea el teu Bit',
     choose_outfit: 'Tria la teva roba',
+    choose_hair: 'Tria el teu cabell',
   }
 }
 

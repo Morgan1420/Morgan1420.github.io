@@ -10,7 +10,7 @@
 
         <section aria-labelledby="how-it-works">
           <InfoSectionLeft :title="t('how_it_works')" :text="t('how_it_works_text')"
-            imageSrc="../src/assets/images/bit-leyendo.gif" backgroundColor="#FFE4DD" />
+            :imageSrc="bitLeyendoGif" backgroundColor="#FFE4DD" />
         </section>
 
         <section aria-labelledby="what-about-bits">
@@ -27,7 +27,7 @@
           <EquipPetit :title="t('team_title')" backgroundColor="#FFD8CF" />
         </section>
 
-        <!-- <CreaTuBit /> -->
+        <CreaTuBit /> 
 
         <section aria-labelledby="collaborate">
           <Collaborate id="collaborate" :title="t('collaborate_title')" backgroundColor="#FFE4DD" />
@@ -53,7 +53,8 @@ import InfoSectionRight from './medium_components/InfoSectionRight.vue';
 import Collaborate from './medium_components/Collaborate.vue';
 import EquipPetit from './medium_components/EquipPetit.vue';
 import SiteFooter from './medium_components/Footer.vue';
-// import CreaTuBit from './CreaTuBit.vue';
+import bitLeyendoGif from '@/assets/images/bit-leyendo.gif'
+import CreaTuBit from './CreaTuBit.vue';
 
 
 const { t } = useI18n()
