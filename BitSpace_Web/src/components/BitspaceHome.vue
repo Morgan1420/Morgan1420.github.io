@@ -15,7 +15,7 @@
 
         <section aria-labelledby="what-about-bits">
           <InfoSectionRight :title="t('what_about_bits')" :text="t('what_about_bits_text')" imageSrc=""
-            backgroundColor="#FFD8CF" />
+            :image-src="gerardLlorandoGif" backgroundColor="#FFD8CF" />
         </section>
 
         <section aria-labelledby="what-about-space">
@@ -54,6 +54,7 @@ import Collaborate from './medium_components/Collaborate.vue';
 import EquipPetit from './medium_components/EquipPetit.vue';
 import SiteFooter from './medium_components/Footer.vue';
 import bitLeyendoGif from '@/assets/images/bit-leyendo.gif'
+import gerardLlorandoGif from '@/assets/images/Gerard_llorando_project_def.gif'
 import CreaTuBit from './CreaTuBit.vue';
 
 

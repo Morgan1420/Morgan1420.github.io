@@ -41,6 +41,7 @@
       <div class="membre">
         <div class="imatge-with-bit">
           <img class="imatge" src="@/assets/images/Equip/Suzana.jpg" alt="Suzana Jeal" />
+          <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Suzana_Bit_sin_fondo.png" alt="Bit_Suzana" />
         </div>
         <div class="info-membre">
           <div class="nom">{{ t('member_suzana_name') }}</div>
