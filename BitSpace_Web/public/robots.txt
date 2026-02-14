@@ -1,0 +1,12 @@
+# robots.txt for BitSpace
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bitspace.es/sitemap.xml
+
+# Crawl delay (optional, adjust if needed)
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any in the future)
+# Disallow: /admin/

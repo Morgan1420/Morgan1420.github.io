@@ -1,0 +1,37 @@
+{
+  "name": "BitSpace",
+  "short_name": "BitSpace",
+  "description": "BitSpace - Salut Digital. Cuida la teva mascota digital, cuida't a tu mateix",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFD8CF",
+  "theme_color": "#FFD8CF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/src/assets/logoBit.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/src/assets/logoBit.ico",
+      "sizes": "512x512",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "lifestyle", "education"],
+  "lang": "ca",
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "Inici",
+      "short_name": "Inici",
+      "description": "Anar a la pàgina principal",
+      "url": "/ca",
+      "icons": [{ "src": "/src/assets/logoBit.ico", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": []
+}

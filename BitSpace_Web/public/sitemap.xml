@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Catalan / Default -->
+  <url>
+    <loc>https://bitspace.es/ca</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en"/>
+  </url>
+  
+  <!-- Spanish -->
+  <url>
+    <loc>https://bitspace.es/es</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en"/>
+  </url>
+  
+  <!-- English -->
+  <url>
+    <loc>https://bitspace.es/en</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en"/>
+  </url>
+  
+  <!-- Root redirect -->
+  <url>
+    <loc>https://bitspace.es/</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>
