@@ -135,7 +135,7 @@ Antes de hacer público el sitio:
 
 **Producción:**
 - Sitio: https://morgan1420.github.io
-- Catalán: https://morgan1420.github.io/ca
+- Català: https://morgan1420.github.io/ca
 - Español: https://morgan1420.github.io/es
 - Inglés: https://morgan1420.github.io/en
 

@@ -171,7 +171,7 @@ Añadir en el servidor o en `public/_headers` (para Netlify):
 
 ### 12. **Contenido Multilingüe Enriquecido**
 Asegurar que todas las traducciones están completas y son naturales:
-- CA (Catalán) ✅
+- CA (Català) ✅
 - ES (Español) ✅
 - EN (Inglés) ✅
 - Considerar: FR, IT, PT, DE

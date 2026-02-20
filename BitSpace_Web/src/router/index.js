@@ -96,7 +96,7 @@ const routes = [
         updateMetaTags(lang)
         return next()
       }
-      return next({ path: '/ca' }) // Redirigir a catalán por defecto si el idioma no es válido
+      return next({ path: '/ca' }) // Redirigir a Català por defecto si el idioma no es válido
     },
     children: [
       {
@@ -113,7 +113,7 @@ const routes = [
   },
   {
     path: '/',
-    redirect: '/ca' // Redirigir la raíz al idioma por defecto (catalán)
+    redirect: '/ca' // Redirigir la raíz al idioma por defecto (Català)
   }
 ]
 

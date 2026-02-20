@@ -68,13 +68,21 @@ defineProps({
 
 .image-content {
   width: 35%;
-  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.info-image {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.image-content img {
+
+  position: relative;
+
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {

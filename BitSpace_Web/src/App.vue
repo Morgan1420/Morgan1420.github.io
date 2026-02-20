@@ -1,10 +1,5 @@
 <template>
   <div id="main-app-container">
-    <nav class="language-switcher" role="navigation" aria-label="Selector de idioma">
-      <router-link to="/ca" aria-label="Cambiar a Catalán"><img class="flag" src="./assets/images/Web_icons/cat_flag.png" alt="Bandera de Catalunya - Canviar idioma a Català" /></router-link> |
-      <router-link to="/en" aria-label="Switch to English"><img class="flag" src="./assets/images/Web_icons/uk_flag.png" alt="UK Flag - Switch language to English" /></router-link> |
-      <router-link to="/es" aria-label="Cambiar a Español"><img class="flag" src="./assets/images/Web_icons/es_flag.png" alt="Bandera de España - Cambiar idioma a Español" /></router-link>       
-    </nav>
     <router-view />
   </div>
 </template>
@@ -39,56 +34,5 @@ html, body {
 
 #main-app-container {
   position: relative;
-}
-
-.flag {
-  width: 20px;
-  height: auto;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.language-switcher {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  align-items: center;
-  justify-content: center;
-}
-
-.language-switcher a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.25rem;
-  transition: color 0.3s;
-}
-
-.language-switcher a:hover {
-  color: #d85a5a;
-}
-
-.language-switcher a.router-link-exact-active {
-  color: #fff;
-  background: #E57373;
-  padding: 0.25rem 0.6rem;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(229,115,115,0.18);
-}
-
-.language-switcher a[aria-current="page"] {
-  /* fallback selector for exact active link if router sets aria-current */
-  color: #fff;
-  background: #E57373;
-  padding: 0.25rem 0.6rem;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(229,115,115,0.18);
 }
 </style>
