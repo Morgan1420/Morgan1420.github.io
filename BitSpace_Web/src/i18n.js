@@ -1,34 +1,97 @@
 import { createI18n } from 'vue-i18n'
 
 const messages = {
+  ca: {
+    // SEO Meta
+    meta_title: 'BitSpace - Salut Digital | Cuida la teva mascota digital',
+    meta_description:
+      "BitSpace és una aplicació mòbil que t'ajuda a millorar els teus hàbits de salut cuidant una mascota digital. Millora el teu benestar mentre el teu Bit creix feliç.",
+
+    welcome: 'Benvingut a BitSpace',
+    what_is_bitspace: 'Què és BitSpace?',
+    what_is_bitspace_text:
+      "BitSpace és un <b>entorn virtual</b> accessible via aplicació mòbil que es basa a <b>cuidar mascotes digitals</b> (els 'Bits'), de forma similar a jocs com Pou o Tamagotchi. <br><br> El teu bit actuarà com a mirall de la teva salut: la seva felicitat i benestar estan directament lligats als teus hàbits de cura personal en el món real. <br><br> L'objectiu és simple: <b>En cuidar la teva mascota t'estàs cuidant a tu mateix</b>.",
+    how_it_works: 'Com funciona?',
+    how_it_works_text:
+      "Quan et descarregues BitSpace, a part del nom i l'edat, se't demanarà que indiquis <b>quin aspecte de la teva vida vols millorar</b>. <br><br> Podràs triar entre una multitud d'àrees com ara: millorar l'us del telèfon mòbil, fer més esport, millorar els teus hàbits d'estudi o convertir-te en un lector habitual. <br><br> A partir d'aquí, <b>BitSpace et proposarà reptes i activitats diàries</b> relacionades amb l'àrea que has escollit, ajudant-te a establir i mantenir hàbits saludables.",
+    what_about_bits: 'I els Bits que fan?',
+    what_about_bits_text:
+      'Els Bits són les teves mascotes digitals, i <b>la seva felicitat depèn de tu</b>. <br><br> Si compleixes els teus reptes diaris, el teu Bit estarà content, creixerà i et donarà recompenses per personalitzar el seu entorn. <br><br> Però si no compleixes els teus reptes, el teu Bit es posarà trist i malalt, reflectint la importància de cuidar-se a un mateix.',
+    what_about_space: "I la part de 'Space' vol dir res?",
+    what_about_space_text:
+      "Si! Per 'Space' ens referim a l'espai on viurà el teu Bit. Ja que els Bits no viuen en un fons blanc, no, <b>viuran en una casa</b>! <br><br> Aquesta casa serà el teu espai segur, un lloc on podràs relaxar-te i veure el teu progrés. <br><br> Evidentment tant la casa com el bit es podran personalitzar al teu gust, creant mica en mica la teva nova forma de ser.",
+    team_title: "L'equip darrere de BitSpace",
+    equip_title: "L'Equip de BitSpace",
+    member_jan_name: 'Jan Moran Ricardo',
+    member_jan_role: 'Co-Founder & Finance Lead',
+    member_gerard_name: 'Gerard Garcia Gros',
+    member_gerard_role: 'Co-Founder & Tech Lead',
+    member_lluna_name: 'Lluna Lara Valle',
+    member_lluna_role: 'Co-Founder & Health Expert',
+    member_suzana_name: 'Suzana Jeal',
+    member_suzana_role: 'AI Specialist',
+    collaborate_title: 'Col·labora amb nosaltres!',
+    collaborate_text_1:
+      'El vostre feedback és important! Així que, si podeu, respongueu a les enquestes. Nosaltres us ho agrairem ;)',
+    collaborate_text_2:
+      '<b>ENQUESTA GENERAL:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
+    collaborate_text_3:
+      "Forma part del canvi i contacta'ns per saber com pots col·laborar a través del nostre correu electrònic: info{'@'}bitspace.es",
+    footer_logo_text: 'BitSpace: Digital Health',
+    footer_contact_title: 'Contacta amb nosaltres',
+    footer_social_title: 'Segueix-nos a',
+    waitlist_title: "Uneix-te a la nostra llista d'espera",
+    footer_rights: 'Tots els drets reservats',
+    waitlist_email_placeholder: 'El teu correu electrònic',
+    waitlist_button_submit: 'Unir-me',
+    waitlist_button_loading: 'Enviant...',
+    waitlist_error_invalid_email: 'Si us plau, introdueix un correu vàlid.',
+    waitlist_error_no_response: 'No es va rebre resposta del servidor.',
+    waitlist_success_added: "Gràcies! T'hem afegit a la llista d'espera.",
+    waitlist_error_exists: "Ja estàs a la llista d'espera.",
+    waitlist_error_generic: 'Hi va haver un error en la sol·licitud.',
+    carousel_button_surveys: '!! Respongueu a les ENQUESTES !!',
+    carousel_button_waitlist: "!! Apunta't a la LLISTA D'ESPERA !!",
+    create_your_bit: 'Crea el teu Bit',
+    choose_outfit: 'Tria la teva roba',
+    choose_hair: 'Tria el teu cabell',
+  },
   es: {
     // SEO Meta
     meta_title: 'BitSpace - Salud Digital | Cuida tu mascota digital',
-    meta_description: 'BitSpace es una aplicación móvil que te ayuda a mejorar tus hábitos de salud cuidando una mascota digital. Mejora tu bienestar mientras tu Bit crece feliz.',
-    
+    meta_description:
+      'BitSpace es una aplicación móvil que te ayuda a mejorar tus hábitos de salud cuidando una mascota digital. Mejora tu bienestar mientras tu Bit crece feliz.',
+
     welcome: 'Bienvenido a BitSpace',
     what_is_bitspace: '¿Qué es BitSpace?',
-    what_is_bitspace_text: "BitSpace es un <b>entorno virtual</b> accesible vía aplicación móvil que se basa en <b>cuidar mascotas digitales</b> (los 'Bits'), de forma similar a juegos como Pou o Tamagotchi. <br><br> Tu bit actuará como un espejo de tu salud: su felicidad y bienestar están directamente ligados a tus hábitos de cuidado personal en el mundo real. <br><br> El objetivo es simple: <b>Al cuidar de tu mascota, te estás cuidando a ti mismo</b>.",
+    what_is_bitspace_text:
+      "BitSpace es un <b>entorno virtual</b> accesible vía aplicación móvil que se basa en <b>cuidar mascotas digitales</b> (los 'Bits'), de forma similar a juegos como Pou o Tamagotchi. <br><br> Tu bit actuará como un espejo de tu salud: su felicidad y bienestar están directamente ligados a tus hábitos de cuidado personal en el mundo real. <br><br> El objetivo es simple: <b>Al cuidar de tu mascota, te estás cuidando a ti mismo</b>.",
     how_it_works: '¿Cómo funciona?',
-    how_it_works_text: "Cuando te descargas BitSpace, además del nombre y la edad, se te pedirá que indiques <b>qué aspecto de tu vida quieres mejorar</b>. <br><br> Podrás elegir entre una multitud de áreas como: mejorar el uso del teléfono móvil, hacer más deporte, mejorar tus hábitos de estudio o convertirte en un lector habitual. <br><br> A partir de ahí, <b>BitSpace te propondrá retos y actividades diarias</b> relacionadas con el área que has escogido, ayudándote a establecer y mantener hábitos saludables.",
+    how_it_works_text:
+      'Cuando te descargas BitSpace, además del nombre y la edad, se te pedirá que indiques <b>qué aspecto de tu vida quieres mejorar</b>. <br><br> Podrás elegir entre una multitud de áreas como: mejorar el uso del teléfono móvil, hacer más deporte, mejorar tus hábitos de estudio o convertirte en un lector habitual. <br><br> A partir de ahí, <b>BitSpace te propondrá retos y actividades diarias</b> relacionadas con el área que has escogido, ayudándote a establecer y mantener hábitos saludables.',
     what_about_bits: '¿Y los Bits qué hacen?',
-    what_about_bits_text: "Los Bits son tus mascotas digitales, y <b>su felicidad depende de ti</b>. <br><br> Si cumples tus retos diarios, tu Bit estará contento, crecerá y te dará recompensas para personalizar su entorno. <br><br> Pero si no cumples tus retos, tu Bit se pondrá triste y enfermo, reflejando la importancia de cuidarse a uno mismo.",
+    what_about_bits_text:
+      'Los Bits son tus mascotas digitales, y <b>su felicidad depende de ti</b>. <br><br> Si cumples tus retos diarios, tu Bit estará contento, crecerá y te dará recompensas para personalizar su entorno. <br><br> Pero si no cumples tus retos, tu Bit se pondrá triste y enfermo, reflejando la importancia de cuidarse a uno mismo.',
     what_about_space: "¿Y la parte de 'Space' significa algo?",
-    what_about_space_text: "¡Sí! Por 'Space' nos referimos al espacio donde vivirá tu Bit. Porque los Bits no viven en un fondo blanco, no, ¡<b>vivirán en una casa</b>! <br><br> Esta casa será tu espacio seguro, un lugar donde podrás relajarte y ver tu progreso. <br><br> Evidentemente, tanto la casa como el bit se podrán personalizar a tu gusto, creando poco a poco tu nueva forma de ser.",
+    what_about_space_text:
+      "¡Sí! Por 'Space' nos referimos al espacio donde vivirá tu Bit. Porque los Bits no viven en un fondo blanco, no, ¡<b>vivirán en una casa</b>! <br><br> Esta casa será tu espacio seguro, un lugar donde podrás relajarte y ver tu progreso. <br><br> Evidentemente, tanto la casa como el bit se podrán personalizar a tu gusto, creando poco a poco tu nueva forma de ser.",
     team_title: 'El equipo detrás de BitSpace',
     equip_title: 'El Equipo de BitSpace',
     member_jan_name: 'Jan Moran Ricardo',
-    member_jan_role: 'Ingeniero Electrónico e Ingeniero Informático',
+    member_jan_role: 'Co-Founder & Finance Lead',
     member_gerard_name: 'Gerard Garcia Gros',
-    member_gerard_role: 'Ingeniero de Sistemas e Ingeniero Informático',
+    member_gerard_role: 'Co-Founder & Tech Lead',
     member_lluna_name: 'Lluna Lara Valle',
-    member_lluna_role: 'Enfermera y experta en salud',
+    member_lluna_role: 'Co-Founder & Health Expert',
     member_suzana_name: 'Suzana Jeal',
-    member_suzana_role: 'Experta en Inteligencia Artificial',
+    member_suzana_role: 'AI specialist',
     collaborate_title: '¡Colabora con nosotros!',
-    collaborate_text_1: '¡Tu feedback es importante! Si puedes, responde a las encuestas. Te lo agradeceremos ;)',
-    collaborate_text_2: '<b>ENCUESTA GENERAL:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
-    collaborate_text_3: "Forma parte del cambio y contáctanos para saber cómo puedes colaborar a través de nuestro correo electrónico: info{'@'}bitspace.es",
+    collaborate_text_1:
+      '¡Tu feedback es importante! Si puedes, responde a las encuestas. Te lo agradeceremos ;)',
+    collaborate_text_2:
+      '<b>ENCUESTA GENERAL:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
+    collaborate_text_3:
+      "Forma parte del cambio y contáctanos para saber cómo puedes colaborar a través de nuestro correo electrónico: info{'@'}bitspace.es",
     footer_logo_text: 'BitSpace: Digital Health',
     footer_contact_title: 'Contacta con nosotros',
     footer_social_title: 'Síguenos en',
@@ -51,31 +114,39 @@ const messages = {
   en: {
     // SEO Meta
     meta_title: 'BitSpace - Digital Health | Take care of your digital pet',
-    meta_description: 'BitSpace is a mobile app that helps you improve your health habits by caring for a digital pet. Improve your wellbeing while your Bit grows happily.',
-    
+    meta_description:
+      'BitSpace is a mobile app that helps you improve your health habits by caring for a digital pet. Improve your wellbeing while your Bit grows happily.',
+
     welcome: 'Welcome to BitSpace',
     what_is_bitspace: 'What is BitSpace?',
-    what_is_bitspace_text: "BitSpace is a <b>virtual environment</b> accessible via mobile app focused on <b>caring for digital pets</b> (the 'Bits'), similar to games like Pou or Tamagotchi. <br><br> Your bit acts as a mirror of your wellbeing: its happiness and health are directly tied to your real-life self-care habits. <br><br> The goal is simple: <b>By caring for your pet, you are taking care of yourself</b>.",
+    what_is_bitspace_text:
+      "BitSpace is a <b>virtual environment</b> accessible via mobile app focused on <b>caring for digital pets</b> (the 'Bits'), similar to games like Pou or Tamagotchi. <br><br> Your bit acts as a mirror of your wellbeing: its happiness and health are directly tied to your real-life self-care habits. <br><br> The goal is simple: <b>By caring for your pet, you are taking care of yourself</b>.",
     how_it_works: 'How it works',
-    how_it_works_text: "When you download BitSpace, besides your name and age, you'll be asked which area of your life you want to improve. <br><br> You can choose from areas like: better phone usage, exercising more, improving study habits or becoming a regular reader. <br><br> From there, <b>BitSpace will suggest daily challenges and activities</b> related to the area you picked, helping you create and maintain healthy habits.",
+    how_it_works_text:
+      "When you download BitSpace, besides your name and age, you'll be asked which area of your life you want to improve. <br><br> You can choose from areas like: better phone usage, exercising more, improving study habits or becoming a regular reader. <br><br> From there, <b>BitSpace will suggest daily challenges and activities</b> related to the area you picked, helping you create and maintain healthy habits.",
     what_about_bits: 'What do the Bits do?',
-    what_about_bits_text: "Bits are your digital pets, and <b>their happiness depends on you</b>. <br><br> When you complete your daily challenges, your Bit will be happier, grow, and reward you with items to personalize its environment. <br><br> But if you don't complete challenges, your Bit will become sad and ill, reflecting the importance of self-care.",
+    what_about_bits_text:
+      "Bits are your digital pets, and <b>their happiness depends on you</b>. <br><br> When you complete your daily challenges, your Bit will be happier, grow, and reward you with items to personalize its environment. <br><br> But if you don't complete challenges, your Bit will become sad and ill, reflecting the importance of self-care.",
     what_about_space: "What does the 'Space' part mean?",
-    what_about_space_text: "The 'Space' is the place where your Bit lives. Bits won't live on a blank background — they will live in a home! <br><br> This home is your safe space where you can relax and watch your progress. <br><br> Both the house and the bit can be customized to your taste, shaping your new little world.",
+    what_about_space_text:
+      "The 'Space' is the place where your Bit lives. Bits won't live on a blank background — they will live in a home! <br><br> This home is your safe space where you can relax and watch your progress. <br><br> Both the house and the bit can be customized to your taste, shaping your new little world.",
     team_title: 'The team behind BitSpace',
     equip_title: 'The BitSpace Team',
     member_jan_name: 'Jan Moran Ricardo',
-    member_jan_role: 'Electronics Engineer & Computer Engineer',
+    member_jan_role: 'Co-Founder & Finance Lead',
     member_gerard_name: 'Gerard Garcia Gros',
-    member_gerard_role: 'Systems Engineer & Computer Engineer',
+    member_gerard_role: 'Co-Founder & Tech Lead',
     member_lluna_name: 'Lluna Lara Valle',
-    member_lluna_role: 'Nurse and health expert',
+    member_lluna_role: 'Co-Founder & Health Expert',
     member_suzana_name: 'Suzana Jeal',
     member_suzana_role: 'AI specialist',
     collaborate_title: 'Collaborate with us!',
-    collaborate_text_1: 'Your feedback is important! If you can, please answer the surveys. We appreciate it ;)',
-    collaborate_text_2: '<b>GENERAL SURVEY:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
-    collaborate_text_3: "Be part of the change and contact us to learn how to collaborate via email: info{'@'}bitspace.es",
+    collaborate_text_1:
+      'Your feedback is important! If you can, please answer the surveys. We appreciate it ;)',
+    collaborate_text_2:
+      '<b>GENERAL SURVEY:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
+    collaborate_text_3:
+      "Be part of the change and contact us to learn how to collaborate via email: info{'@'}bitspace.es",
     footer_logo_text: 'BitSpace: Digital Health',
     footer_contact_title: 'Contact us',
     footer_social_title: 'Follow us on',
@@ -95,53 +166,6 @@ const messages = {
     choose_outfit: 'Choose your outfit',
     choose_hair: 'Choose your hair',
   },
-  ca: {
-    // SEO Meta
-    meta_title: 'BitSpace - Salut Digital | Cuida la teva mascota digital',
-    meta_description: 'BitSpace és una aplicació mòbil que t\'ajuda a millorar els teus hàbits de salut cuidant una mascota digital. Millora el teu benestar mentre el teu Bit creix feliç.',
-    
-    welcome: 'Benvingut a BitSpace',
-    what_is_bitspace: 'Què és BitSpace?',
-    what_is_bitspace_text: "BitSpace és un <b>entorn virtual</b> accessible via aplicació mòbil que es basa a <b>cuidar mascotes digitals</b> (els 'Bits'), de forma similar a jocs com Pou o Tamagotchi. <br><br> El teu bit actuarà com a mirall de la teva salut: la seva felicitat i benestar estan directament lligats als teus hàbits de cura personal en el món real. <br><br> L'objectiu és simple: <b>En cuidar la teva mascota t'estàs cuidant a tu mateix</b>.",
-    how_it_works: 'Com funciona?',
-    how_it_works_text: "Quan et descarregues BitSpace, a part del nom i l'edat, se't demanarà que indiquis <b>quin aspecte de la teva vida vols millorar</b>. <br><br> Podràs triar entre una multitud d'àrees com ara: millorar l'us del telèfon mòbil, fer més esport, millorar els teus hàbits d'estudi o convertir-te en un lector habitual. <br><br> A partir d'aquí, <b>BitSpace et proposarà reptes i activitats diàries</b> relacionades amb l'àrea que has escollit, ajudant-te a establir i mantenir hàbits saludables.",
-    what_about_bits: 'I els Bits que fan?',
-    what_about_bits_text: "Els Bits són les teves mascotes digitals, i <b>la seva felicitat depèn de tu</b>. <br><br> Si compleixes els teus reptes diaris, el teu Bit estarà content, creixerà i et donarà recompenses per personalitzar el seu entorn. <br><br> Però si no compleixes els teus reptes, el teu Bit es posarà trist i malalt, reflectint la importància de cuidar-se a un mateix.",
-    what_about_space: "I la part de 'Space' vol dir res?",
-    what_about_space_text: "Si! Per 'Space' ens referim a l'espai on viurà el teu Bit. Ja que els Bits no viuen en un fons blanc, no, <b>viuran en una casa</b>! <br><br> Aquesta casa serà el teu espai segur, un lloc on podràs relaxar-te i veure el teu progrés. <br><br> Evidentment tant la casa com el bit es podran personalitzar al teu gust, creant mica en mica la teva nova forma de ser.",
-    team_title: "L'equip darrere de BitSpace",
-    equip_title: "L'Equip de BitSpace",
-    member_jan_name: 'Jan Moran Ricardo',
-    member_jan_role: 'Enginyer Electrònic i Enginyer informàtic',
-    member_gerard_name: 'Gerard Garcia Gros',
-    member_gerard_role: 'Enginyer de Sistemes i Enginyer informàtic',
-    member_lluna_name: 'Lluna Lara Valle',
-    member_lluna_role: 'Infermera i experta en salut',
-    member_suzana_name: 'Suzana Jeal',
-    member_suzana_role: 'Experta en Intel·ligència artificial',
-    collaborate_title: 'Col·labora amb nosaltres!',
-    collaborate_text_1: 'El vostre feedback és important! Així que, si podeu, respongueu a les enquestes. Nosaltres us ho agrairem ;)',
-    collaborate_text_2: '<b>ENQUESTA GENERAL:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
-    collaborate_text_3: "Forma part del canvi i contacta'ns per saber com pots col·laborar a través del nostre correu electrònic: info{'@'}bitspace.es",
-    footer_logo_text: 'BitSpace: Digital Health',
-    footer_contact_title: 'Contacta amb nosaltres',
-    footer_social_title: 'Segueix-nos a',
-    waitlist_title: "Uneix-te a la nostra llista d'espera",
-    footer_rights: 'Tots els drets reservats',
-    waitlist_email_placeholder: 'El teu correu electrònic',
-    waitlist_button_submit: 'Unir-me',
-    waitlist_button_loading: 'Enviant...',
-    waitlist_error_invalid_email: 'Si us plau, introdueix un correu vàlid.',
-    waitlist_error_no_response: 'No es va rebre resposta del servidor.',
-    waitlist_success_added: 'Gràcies! T\'hem afegit a la llista d\'espera.',
-    waitlist_error_exists: 'Ja estàs a la llista d\'espera.',
-    waitlist_error_generic: 'Hi va haver un error en la sol·licitud.',
-    carousel_button_surveys: '!! Respongueu a les ENQUESTES !!',
-    carousel_button_waitlist: "!! Apunta't a la LLISTA D'ESPERA !!",
-    create_your_bit: 'Crea el teu Bit',
-    choose_outfit: 'Tria la teva roba',
-    choose_hair: 'Tria el teu cabell',
-  }
 }
 
 const i18n = createI18n({

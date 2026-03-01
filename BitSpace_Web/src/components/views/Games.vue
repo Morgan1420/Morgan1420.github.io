@@ -1,17 +1,18 @@
 <template>
     <div class="games-container">
         <h1>Games</h1>
-        <div class="games-grid">
-            <div v-for="game in games" :key="game.id" class="game-card">
-                <h2>{{ game.title }}</h2>
-                <p>{{ game.description }}</p>
-                <button @click="playGame(game.id)">Play</button>
-            </div>
-        </div>
+
+        <NavBar></NavBar>
+        <div id="create-your-bit"></div>
+
+        ...................
+        <CreaTuBit />
     </div>
 </template>
 
 <script>
+import CreaTuBit from '../complex_components/CreaTuBit.vue';
+import NavBar from '../medium_components/navBar.vue';
 export default {
     name: 'Games',
     data() {
