@@ -8,16 +8,13 @@ export default {
   <div class="waitlist-container">
     <h2 class="title">{{ t('waitlist_title') }}</h2>
     <form @submit.prevent="submitForm" class="waitlist-form">
-      <input 
-        v-model="email" 
-        type="email" 
-        :placeholder="t('waitlist_email_placeholder')" 
-        required 
-        class="input-email" 
-      />
+      <input v-model="email" type="email" :placeholder="t('waitlist_email_placeholder')" required class="input-email" />
       <button type="submit" class="submit-btn" :disabled="loading">
         {{ loading ? t('waitlist_button_loading') : t('waitlist_button_submit') }}
       </button>
+      <p class="text-legal">En unir-te a la waitlist, acceptes la nostra Política de Privacitat. Podràs donar-te de
+        baixa
+        en qualsevol moment fent clic a l'enllaç que trobaràs al final de cada correu.</p>
     </form>
 
     <p v-if="message" :class="messageClass" class="message">{{ message }}</p>
@@ -37,8 +34,8 @@ const message = ref('')
 const loading = ref(false)
 
 const messageClass = computed(() =>
-  message.value.includes(t('waitlist_success_added')) || 
-  message.value.includes(t('waitlist_error_exists')) ? 'success' : 'error'
+  message.value.includes(t('waitlist_success_added')) ||
+    message.value.includes(t('waitlist_error_exists')) ? 'success' : 'error'
 )
 
 function makeCallbackName() {
@@ -99,13 +96,29 @@ const submitForm = () => {
 <style scoped>
 .waitlist-container {
   max-width: 500px;
-  margin: 4rem auto; /* Centrado y con margen superior e inferior para separarlo */
+  margin: 4rem auto;
   padding: 2rem;
-  text-align: center;
-  background-color: #FFE4DD; /* Mismo color de fondo que el header */
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra a juego */
+
+  background-color: #fae4de;
+  border: 10px solid #f8d1c6;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   font-family: sans-serif;
+  text-align: center;
+  animation: grow 2s ease-in-out infinite;
+}
+
+@keyframes grow {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
 }
 
 .title {
@@ -124,19 +137,21 @@ const submitForm = () => {
 .input-email {
   padding: 0.85rem 1rem;
   border-radius: 8px;
-  border: 1px solid #FFD8CF;
   background-color: #fff;
   font-size: 1rem;
+  border-width: 0;
+  border-style: solid;
 }
 
 .input-email:focus {
   outline: none;
+  border-width: 3px;
   border-color: #E57373;
-  box-shadow: 0 0 0 3px rgba(229, 115, 115, 0.2);
 }
 
 .submit-btn {
-  background: #E57373; /* Color que encaja con la paleta */
+  background: #E57373;
+  /* Color que encaja con la paleta */
   color: #fff;
   padding: .85rem;
   border-radius: 8px;
@@ -168,5 +183,10 @@ const submitForm = () => {
 
 .error {
   color: #d9534f;
+}
+
+.text-legal {
+  font-size: x-small;
+  color: #555;
 }
 </style>

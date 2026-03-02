@@ -2,7 +2,7 @@
     <div class="games-container">
         <div class="Team-header" ref="headerWrapper">
             <img class="Team-header-bit" id="team" src="@/assets/images/web_images/radioSVH.jpeg" alt="Bit_Team" />
-            <h1 class="team-title">The BitSpace Team</h1>
+            <h1 class="team-title">{{ $t('team_page_title') }}</h1>
         </div>
 
         <NavBar :is-over-carousel="isOverCarousel"></NavBar>
@@ -17,13 +17,13 @@
             </div>
             <div class="member-text-fields">
                 <div class="member-quick-facts">
-                    <div class="member-name">Gerard Garcia Gros</div>
-                    <div class="member-role">Co-Founder & Tech Lead</div>
+                    <div class="member-name">{{ $t('member_gerard_name') }}</div>
+                    <div class="member-role">{{ $t('member_gerard_role') }}</div>
 
                     <div class="member-social-links">
                         <a href="https://www.linkedin.com/in/gerard-garcia-gros/" target="_blank"
                             aria-label="LinkedIn de Gerard Garcia Gros">
-                            <img src="@/assets/images/Web_icons/linkedin-reverse.png" alt="LinkedIn Icon"
+                            <img src="@/assets/images/Web_icons/linkedin_black-removebg-preview.png" alt="LinkedIn Icon"
                                 class="social-icon">
                         </a>
                         <a href="https://github.com/GeriiGarcia" target="_blank"
@@ -32,10 +32,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="member-studies"><b>Bio:</b> Futur enginyer de telecomunicacions i informàtica. Ocupat amb
-                    MEMEnginys i projectes personals des de que va néixer. </div>
-                <div class="member-description"><b>Forma de ser:</b> La productivitat de'n Gerard depèn proporcionalment
-                    de la cobertura del tren.</div>
+                <div class="member-studies"><b>Bio:</b> {{ $t('member_gerard_bio') }}</div>
+                <div class="member-description"><b>Forma de ser:</b> {{ $t('member_gerard_desc') }}</div>
             </div>
         </div>
 
@@ -49,13 +47,13 @@
             </div>
             <div class="member-text-fields">
                 <div class="member-quick-facts">
-                    <div class="member-name">Jan Moran Ricardo</div>
-                    <div class="member-role">Co-Founder & Finance Lead</div>
+                    <div class="member-name">{{ $t('member_jan_name') }}</div>
+                    <div class="member-role">{{ $t('member_jan_role') }}</div>
 
                     <div class="member-social-links">
                         <a href="https://www.linkedin.com/in/jan-moran/" target="_blank"
                             aria-label="LinkedIn de Jan Moran Ricardo">
-                            <img src="@/assets/images/Web_icons/linkeding_icon.png" alt="LinkedIn Icon"
+                            <img src="@/assets/images/Web_icons/linkedin_black-removebg-preview.png" alt="LinkedIn Icon"
                                 class="social-icon">
                         </a>
                         <a href="https://github.com/Morgan1420" target="_blank"
@@ -64,11 +62,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="member-studies"><b>Bio:</b> Estudiant d'un doble grau en enginyeria, treballant en el sector
-                    de l'espai des de 2024 i immers en l'emprenedoria des de 2025.</div>
-                <div class="member-description"><b>Forma de ser:</b> En Jan és aquella persona que primer salta per la
-                    finestra i desprès crea el paracaigudes.
-                </div>
+                <div class="member-studies"><b>Bio:</b> {{ $t('member_jan_bio') }}</div>
+                <div class="member-description"><b>Forma de ser:</b> {{ $t('member_jan_desc') }}</div>
             </div>
         </div>
 
@@ -82,29 +77,26 @@
             </div>
             <div class="member-text-fields">
                 <div class="member-quick-facts">
-                    <div class="member-name">Lluna Lara Valle</div>
-                    <div class="member-role">Co-Founder & Health Lead</div>
+                    <div class="member-name">{{ $t('member_lluna_name') }}</div>
+                    <div class="member-role">{{ $t('member_lluna_role') }}</div>
 
                     <div class="member-social-links">
                         <a href="https://www.linkedin.com/in/lluna-lara-valle-4487a7259/" target="_blank"
                             aria-label="LinkedIn de Lluna Lara Valle">
-                            <img src="@/assets/images/Web_icons/linkeding_icon.png" alt="LinkedIn Icon"
+                            <img src="@/assets/images/Web_icons/linkedin_black-removebg-preview.png" alt="LinkedIn Icon"
                                 class="social-icon">
                         </a>
                     </div>
                 </div>
-                <div class="member-studies"><b>Bio:</b> Infermera, artista i futura cardiòloga. Sempre preocupada pels
-                    demès, és
-                    nota que d'ella origina la idea de BitSpace.</div>
-                <div class="member-description"><b>Forma de ser:</b> La Lluna només està addicta a una pantalla, la del
-                    Kindle.</div>
+                <div class="member-studies"><b>Bio:</b> {{ $t('member_lluna_bio') }}</div>
+                <div class="member-description"><b>Forma de ser:</b> {{ $t('member_lluna_desc') }}</div>
             </div>
         </div>
 
 
         <div class="Team-header" id="history" ref="headerWrapper">
             <img class="Team-header-bit" src="@/assets/images/web_images/premi_ifest.jpeg" alt="Bit_Jan" />
-            <h1 class="team-title">La nostra història</h1>
+            <h1 class="team-title">{{ $t('team_history_title') }}</h1>
         </div>
 
         <div class="slides-container">
@@ -137,6 +129,7 @@
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n';
 import InfoSectionLeft from '../medium_components/InfoSectionLeft.vue';
 import NavBar from '../medium_components/navBar.vue';
 import Footer from '../medium_components/Footer.vue';
@@ -153,46 +146,53 @@ export default {
         InfoSectionLeft,
         Footer
     },
+    setup() {
+        const { t } = useI18n();
+        return { t };
+    },
     data() {
         return {
             isOverCarousel: true,
             headerObserver: null,
             scrollY: 0,
             currentSlide: 0,
-            slides: [
+        };
+    },
+    computed: {
+        slides() {
+            return [
                 {
                     image: image_ifest,
-                    title: 'Guanyadors de l\'iFest !! 🏆',
-
-                    content: 'El dia 13 de maig de 2024 vam presentar per primer cop BitSpace al públic, en concret a la gran final del concurs iFest, organitzat per la Generalitat de Catalunya.\n\nTot i ser una final complicada, amb molts equips molt potents, el nostre pitch fou prou impactant com per endur-nos el premi a casa.\n\nAquesta fita marca doncs la gènesi de BitSpace.'
+                    title: this.t('history_slide_1_title'),
+                    content: this.t('history_slide_1_content')
                 },
                 {
                     image: image_lisboa,
-                    title: 'Curs d\'acceleració Lisboa 🇵🇹',
-                    content: 'BitSpace hauria pogut morir amb el concurs, però aquí agraïm molt que el premi d\'aquest fos una setmana d\'acceleració en un entorn tan creatiu i innovador com ho és Lisboa, Portugal.\n\nDurant el transcurs d\'aquesta setmana vam aprendre de forma intensiva les bases de l\'emprenedoria, per via de classes, mentories personalitzades o "sessions de networking" en vaixell per la desembocadura del Tejo.\n\nAquest viatge ens va donar les eines per seguir endavant amb BitSpace.'
+                    title: this.t('history_slide_2_title'),
+                    content: this.t('history_slide_2_content')
                 },
                 {
                     image: image_radioSVH,
-                    title: 'Aparicions en mitjans 📻',
-                    content: 'Tornats de Lisboa i amb moltes idees vam començar a validar i desenvolupar BitSpace.\n\nLes nostres accions i fites no van passar desapercebudes i diferents mitjans de comunicació com ara la Ràdio de Sant Vicenç dels Horts, el butlletí de la Generalitat o les xarxes de comunicació de la UAB ens van fer difusió.\n\nBitSpace començà a agafar forma, però encara queda molta feina per fer.'
+                    title: this.t('history_slide_3_title'),
+                    content: this.t('history_slide_3_content')
                 },
                 {
                     image: image_iaacerelate,
-                    title: 'IA Accelerate 🚀',
-                    content: 'Per mitjà d\'aquesta divulgació vam aconseguir entrar al curs d\'acceleració IA Accelerate.\n\nA aquest curs vàrem ampliar la base de coneixements adquirida a Lisboa i vam donar cos i pell al projecte, entre altres coses vam perfeccionar el pitch, crear un model de negoci sostenible i idear un pla de futur realista.\n\nA més, en aquest curs hem conegut i connectat amb moltes persones com nosaltres, principiants en el món de l\'emprenedoria i  amb un munt de ganes de millorar el món.'
+                    title: this.t('history_slide_4_title'),
+                    content: this.t('history_slide_4_content')
                 },
                 {
                     image: image_radioSVH,
-                    title: 'MWC Barcelona📱',
-                    content: 'L\'IAAccelerate culmina doncs al MWC Barcelona 2025, on en Gerard realitzà un pitch davant d\'un gran nombre d\'inversors i empresaris que ens poden ajudar a impulsar el projecte.\n\nA més, com a membres de Emprèn UAB i de la xarxa RDI-IA, se\'ns van proporcionar diversos stands on poder presentar el nostre projecte durant un parell de dies.\n\nTot i això, no ens vàrem quedar quiets i vam buscar sinergies per tot el congrés durant tots els dies, va ser un no parar.'
+                    title: this.t('history_slide_5_title'),
+                    content: this.t('history_slide_5_content')
                 },
                 {
                     image: image_radioSVH,
-                    title: 'Plans a futur 🌌',
-                    content: 'Avui en dia BitSpace segueix en fase de desenvolupament, amb un possible MVP preparat per llençar el juny, amb una primera versió pel setembre.\n\nSi voleu estar al corrent de l\'estat de BitSpace apunteu-vos a la llista d\'espera que trobareu en aquesta mateixa pàgina.\n\nI si teniu interès a participar més activament en el projecte estarem encantats d\'escoltar la vostra opinió :)'
+                    title: this.t('history_slide_6_title'),
+                    content: this.t('history_slide_6_content')
                 }
-            ]
-        };
+            ];
+        }
     },
     methods: {
         nextSlide() {

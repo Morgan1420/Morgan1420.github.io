@@ -39,7 +39,7 @@
 
         <hr aria-hidden="true">
         <section aria-labelledby="waitlist">
-          <Formulario id="waitlist" style="background-color: aliceblue;" />
+          <Formulario id="waitlist" />
         </section>
       </article>
     </main>
