@@ -1,15 +1,18 @@
 <template>
   <header class="header">
     <div class="bit-background">
-      <div v-for="(row, rowIndex) in rowsOfBits" :key="'row-' + rowIndex" class="bit-scroll-track" :style="{ animationDuration: animationDuration }">
-        <img v-for="bit in row" :key="'r' + rowIndex + '-1-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" draggable="false" />
-        <img v-for="bit in row" :key="'r' + rowIndex + '-2-' + bit.id" :src="bit.src" alt="Bit character" class="bit-bg-image" draggable="false" />
+      <div v-for="(row, rowIndex) in rowsOfBits" :key="'row-' + rowIndex" class="bit-scroll-track"
+        :style="{ animationDuration: animationDuration }">
+        <img v-for="bit in row" :key="'r' + rowIndex + '-1-' + bit.id" :src="bit.src" alt="Bit character"
+          class="bit-bg-image" draggable="false" />
+        <img v-for="bit in row" :key="'r' + rowIndex + '-2-' + bit.id" :src="bit.src" alt="Bit character"
+          class="bit-bg-image" draggable="false" />
       </div>
     </div>
     <div class="header-content">
       <img src="../../assets/images/Titol.png" alt="" draggable="false">
       <div class="buttons">
-        <fancyButton :buttonText="t('carousel_button_surveys')" @click="$emit('go-to-collaborate')" :center="true" />
+        <fancyButton :buttonText="$t('prototype_access')" @click="openPrototype" :center="true" />
         <fancyButton :buttonText="t('carousel_button_waitlist')" @click="$emit('go-to-waitlist')" :center="true" />
       </div>
     </div>
@@ -17,11 +20,23 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import fancyButton from '../small_components/fancyButton.vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+// Prototype link and opener
+const prototype_link = computed(() => {
+  const loc = locale && locale.value ? String(locale.value).toLowerCase() : ''
+  if (loc.startsWith('en')) return 'https://prototype.bitspace.es/en'
+  if (loc.startsWith('es')) return 'https://prototype.bitspace.es/es'
+  return 'https://prototype.bitspace.es/ca'
+})
+
+function openPrototype() {
+  window.open(prototype_link.value, '_blank', 'noopener,noreferrer')
+}
 
 // Define los eventos que este componente puede emitir
 defineEmits(['go-to-collaborate', 'go-to-waitlist'])
@@ -38,7 +53,7 @@ const bitImageNames = [
 const rowsOfBits = ref([])
 const animationDuration = ref('180s')
 
-function buildRows (rowsCount, itemsCount) {
+function buildRows(rowsCount, itemsCount) {
   const allRows = []
   for (let r = 0; r < rowsCount; r++) {
     const newRow = []
@@ -55,7 +70,7 @@ function buildRows (rowsCount, itemsCount) {
   rowsOfBits.value = allRows
 }
 
-function setForViewport (isMobile) {
+function setForViewport(isMobile) {
   if (isMobile) {
     // fewer rows and items, faster animation on phones
     buildRows(7, 20)
@@ -67,7 +82,7 @@ function setForViewport (isMobile) {
 }
 
 let mql
-function onMediaChange (e) {
+function onMediaChange(e) {
   setForViewport(e.matches)
 }
 
@@ -218,7 +233,7 @@ onBeforeUnmount(() => {
 
 
   .header-content {
-    
+
     padding: 1rem;
     padding-bottom: 0;
     max-width: 320px;

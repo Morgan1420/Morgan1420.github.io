@@ -8,6 +8,54 @@
 
     <main role="main">
       <article itemscope itemtype="https://schema.org/WebApplication">
+
+        <section class="MWC-section" aria-labelledby="MWC">
+          <h1>Visita'ns MWC Barcelona</h1>
+
+          <div class="MWC-container-section">
+
+            <div class="MWC-container">
+              <h2>Dimarts 3</h2>
+              <h3>Dia de pitch</h3>
+              <div class="MWC-hotirzontal-box">
+                <div><img src="@/assets/images/Web_icons/ubi_icon.png" alt="Ubicació"></div>
+                <p>CATALONIA - Hall 8.1</p>
+              </div>
+              <div class="MWC-hotirzontal-box">
+                <div><img src="@/assets/images/Web_icons/clock.png" alt="Hora"></div>
+                <p>14:30 - 16:00</p>
+              </div>
+
+            </div>
+
+            <div class="MWC-container">
+              <h2>Dimecres</h2>
+              <div class="MWC-hotirzontal-box">
+                <div>icona time</div>
+                <p>Dimecres 4 Mar · 10:00</p>
+              </div>
+              <div class="MWC-hotirzontal-box">
+                <div>icona ubi</div>
+                <p>Pitching Point - Hall 8.1</p>
+              </div>
+            </div>
+
+            <div class="MWC-container">
+              <h2>Vine a Stand</h2>
+              <div class="MWC-hotirzontal-box">
+                <div>icona ubi</div>
+                <p>Pitching Point - Hall 8.1</p>
+              </div>
+              <div class="MWC-hotirzontal-box">
+                <div>icona ubi</div>
+                <p>Pitching Point - Hall 8.1</p>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
         <section aria-labelledby="what-is-bitspace">
           <VideoSection :title="t('what_is_bitspace')" :text="t('what_is_bitspace_text')"
             videoSrc="https://www.youtube.com/watch?v=Qwq4Hw9aljQ" backgroundColor="#FFD8CF" />
@@ -32,12 +80,7 @@
           <EquipPetit :title="t('team_title')" backgroundColor="#FFD8CF" />
         </section>
 
-        <CreaTuBit></CreaTuBit>
-        <section aria-labelledby="collaborate">
-          <Collaborate id="collaborate" :title="t('collaborate_title')" backgroundColor="#FFE4DD" />
-        </section>
 
-        <hr aria-hidden="true">
         <section aria-labelledby="waitlist">
           <Formulario id="waitlist" />
         </section>
@@ -125,5 +168,33 @@ onBeforeUnmount(() => {
   min-height: 100vh;
   font-family: sans-serif;
   color: #333;
+}
+
+.MWC-section {
+  width: 90%;
+  padding-inline: 5%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.MWC-container-section {
+
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  gap: 1rem;
+
+  margin: 0.5rem 0;
+}
+
+.MWC-container {
+  width: 30%;
+
+  background-color: #FFD8CF;
+
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 800px;
 }
 </style>

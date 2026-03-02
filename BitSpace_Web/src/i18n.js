@@ -88,6 +88,7 @@ const messages = {
       "Avui en dia BitSpace segueix en fase de desenvolupament, amb un possible MVP preparat per llençar el juny, amb una primera versió pel setembre.\n\nSi voleu estar al corrent de l'estat de BitSpace apunteu-vos a la llista d'espera que trobareu en aquesta mateixa pàgina.\n\nI si teniu interès a participar més activament en el projecte estarem encantats d'escoltar la vostra opinió :)",
     // Collaborate Page
     collaborate_title: 'Col·labora amb nosaltres!',
+    collaborate_opinion_subtitle: "Quina t'agrada més?",
     collaborate_waitlist_description_1:
       "Actualment, BitSpace està en fase de desenvolupament i, per tant, no el trobareu disponible enlloc. Per tal doncs d'estar al corrent tant de l'estat del projecte i ser notificat quan aquest surti al mercat et recomanem que t'uneixis a la llista d'espera!",
     collaborate_waitlist_description_2:
@@ -121,6 +122,10 @@ const messages = {
       'Error de connexió. Si us plau, intenta-ho més tard o envia un correu a info@bitspace.es directament.',
     contact_form_privacy:
       "La teva informació es tractarà de manera confidencial i només s'utilitzarà per respondre a la teva consulta.",
+    // Games Page
+    games_title: 'Jocs',
+    prototype_title: 'Prova el Prototip',
+    prototype_access: 'Accés al prototip',
   },
   es: {
     // SEO Meta
@@ -209,6 +214,7 @@ const messages = {
       'Hoy en día BitSpace sigue en fase de desarrollo, con un posible MVP listo para lanzar en junio, con una primera versión en septiembre.\n\nSi queréis estar al corriente del estado de BitSpace apuntaos a la lista de espera que encontraréis en esta misma página.\n\nY si tenéis interés en participar más activamente en el proyecto estaremos encantados de escuchar vuestra opinión :)',
     // Collaborate Page
     collaborate_title: '¡Colabora con nosotros!',
+    collaborate_opinion_subtitle: '¿Cuál te gusta más?',
     collaborate_waitlist_description_1:
       'Actualmente, BitSpace está en fase de desarrollo y, por lo tanto, no lo encontrarás disponible en ningún lugar. Para poder estar al tanto del estado del proyecto y ser notificado cuando este salga al mercado te recomendamos que te unas a la lista de espera.',
     collaborate_waitlist_description_2:
@@ -241,6 +247,10 @@ const messages = {
       'Error de conexión. Por favor, inténtalo más tarde o envía un correo a info@bitspace.es directamente.',
     contact_form_privacy:
       'Tu información será tratada de manera confidencial y solo se utilizará para responder tu consulta.',
+    // Games Page
+    games_title: 'Juegos',
+    prototype_title: 'Prueba el Prototipo',
+    prototype_access: 'Acceso al prototipo',
   },
   en: {
     // SEO Meta
@@ -332,6 +342,7 @@ const messages = {
     collaborate_waitlist_description_2:
       'Also, everyone on the waitlist when we launch will automatically become premium members, no charge at all!',
     collaborate_contact_title: 'Contact Us',
+    collaborate_opinion_subtitle: 'Which one do you prefer?',
     collaborate_contact_description:
       'If you have any questions, feedback, or want to schedule a meeting with us, you can do so through the contact form below:',
     collaborate_opinion_title: 'Share Your Opinion!',
@@ -359,6 +370,10 @@ const messages = {
       'Connection error. Please try again later or email info@bitspace.es directly.',
     contact_form_privacy:
       'Your information will be treated confidentially and only used to respond to your inquiry.',
+    // Games Page
+    games_title: 'Games',
+    prototype_title: 'Try the Prototype',
+    prototype_access: 'Open prototype',
   },
 }
 
