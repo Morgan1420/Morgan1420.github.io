@@ -1,84 +1,89 @@
 <template>
     <div id="nav-bar" :class="{ 'nav-over-carousel': isOverCarousel, 'nav-after-carousel': !isOverCarousel }">
-        <router-link id="nb-BitSpace-logo" :to="'/' + locale" aria-label="Tornar a la pàgina inicial de BitSpace">
+        <router-link id="nb-BitSpace-logo" :to="'/' + locale" :aria-label="t('nav_logo_aria')">
             <img class="bitspace-logo" src="../../assets/images/Web_icons/BS-logo.png" alt="Logotip de BitSpace" />
         </router-link>
 
         <div id="nb-web-menus">
             <div class="nav-item nav-item-games">
                 <router-link class="nav-button" :to="{ name: 'Games', params: { lang: locale } }">
-                    Games
+                    {{ t('nav_games') }}
                 </router-link>
                 <div class="nav-submenu">
-                    <button type="button" class="nav-submenu-item">Prototype</button>
+                    <router-link class="nav-submenu-item"
+                        :to="{ name: 'Games', params: { lang: locale }, hash: '#prototype' }">
+                        {{ t('nav_prototype') }}
+                    </router-link>
                     <router-link class="nav-submenu-item"
                         :to="{ name: 'Games', params: { lang: locale }, hash: '#create-your-bit' }">
-                        Create your bit
+                        {{ t('nav_create_your_bit') }}
+                    </router-link>
+                    <router-link class="nav-submenu-item"
+                        :to="{ name: 'Games', params: { lang: locale }, hash: '#opinionSlides' }">
+                        {{ t('nav_bid_your_bit') }}
                     </router-link>
                 </div>
             </div>
 
             <div class="nav-item nav-item-team">
                 <router-link class="nav-button" :to="{ name: 'Team', params: { lang: locale } }">
-                    Team
+                    {{ t('nav_team') }}
                 </router-link>
                 <div class="nav-submenu">
                     <router-link class="nav-submenu-item"
                         :to="{ name: 'Team', params: { lang: locale }, hash: '#team' }">
-                        Team
+                        {{ t('nav_team') }}
                     </router-link>
                     <router-link class="nav-submenu-item"
                         :to="{ name: 'Team', params: { lang: locale }, hash: '#history' }">
-                        History
+                        {{ t('nav_history') }}
                     </router-link>
                 </div>
             </div>
 
             <div class="nav-item nav-item-collaborate">
                 <router-link class="nav-button" :to="{ name: 'Collaborate', params: { lang: locale } }">
-                    Collaborate
+                    {{ t('nav_collaborate') }}
                 </router-link>
                 <div class="nav-submenu">
                     <router-link class="nav-submenu-item"
-                        :to="{ name: 'Collaborate', params: { lang: locale }, hash: '#surveys' }">
-                        Surveys
-                    </router-link>
-                    <router-link class="nav-submenu-item"
                         :to="{ name: 'Collaborate', params: { lang: locale }, hash: '#waiting-list' }">
-                        Waiting list
+                        {{ t('nav_waiting_list') }}
                     </router-link>
                     <router-link class="nav-submenu-item"
                         :to="{ name: 'Collaborate', params: { lang: locale }, hash: '#contact-us' }">
-                        Contact us
+                        {{ t('nav_contact_us') }}
                     </router-link>
                 </div>
             </div>
 
             <div class="nav-language" @keyup.esc.stop="isLangMenuOpen = false">
                 <button type="button" class="nav-lang-toggle" @click="isLangMenuOpen = !isLangMenuOpen"
-                    :aria-expanded="isLangMenuOpen ? 'true' : 'false'" aria-haspopup="true" aria-label="Canviar idioma">
+                    :aria-expanded="isLangMenuOpen ? 'true' : 'false'" aria-haspopup="true"
+                    :aria-label="t('nav_change_language')">
                     <img class="flag" :src="currentLangFlag.src" :alt="currentLangFlag.alt" />
                 </button>
 
                 <div v-if="isLangMenuOpen" class="nav-lang-menu" role="menu">
-                    <router-link to="/ca" role="menuitem" aria-label="Cambiar a Català" @click="isLangMenuOpen = false">
+                    <router-link to="/ca" role="menuitem" :aria-label="t('nav_change_to_ca')"
+                        @click="isLangMenuOpen = false">
                         <img class="flag" src="../../assets/images/Web_icons/cat_flag.png"
                             alt="Bandera de Catalunya - Canviar idioma a Català" />
-                        <span>CAT</span>
+                        <span>{{ t('nav_lang_label_ca') }}</span>
                     </router-link>
 
-                    <router-link to="/en" role="menuitem" aria-label="Switch to English"
+                    <router-link to="/en" role="menuitem" :aria-label="t('nav_change_to_en')"
                         @click="isLangMenuOpen = false">
                         <img class="flag" src="../../assets/images/Web_icons/uk_flag.png"
                             alt="UK Flag - Switch language to English" />
-                        <span>ENG</span>
+                        <span>{{ t('nav_lang_label_en') }}</span>
                     </router-link>
 
-                    <router-link to="/es" role="menuitem" aria-label="Cambiar a Español"
+                    <router-link to="/es" role="menuitem" :aria-label="t('nav_change_to_es')"
                         @click="isLangMenuOpen = false">
                         <img class="flag" src="../../assets/images/Web_icons/es_flag.png"
                             alt="Bandera de España - Cambiar idioma a Español" />
-                        <span>ESP</span>
+                        <span>{{ t('nav_lang_label_es') }}</span>
                     </router-link>
                 </div>
             </div>
@@ -94,7 +99,7 @@ import catFlag from '@/assets/images/Web_icons/cat_flag.png'
 import ukFlag from '@/assets/images/Web_icons/uk_flag.png'
 import esFlag from '@/assets/images/Web_icons/es_flag.png'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const { isOverCarousel } = defineProps({
     isOverCarousel: {
@@ -137,6 +142,7 @@ const currentLangFlag = computed(() => {
     left: 0;
     right: 0;
     height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -285,5 +291,11 @@ const currentLangFlag = computed(() => {
 .flag {
     width: 18px;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    #nav-bar {
+        display: none;
+    }
 }
 </style>

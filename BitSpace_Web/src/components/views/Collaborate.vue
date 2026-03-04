@@ -22,8 +22,6 @@
             <ContactForm />
         </div>
 
-        <OpinionSlides />
-
 
     </div>
     <Footer></Footer>

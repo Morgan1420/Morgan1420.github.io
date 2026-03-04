@@ -86,6 +86,22 @@ const messages = {
     history_slide_6_title: 'Plans a futur 🌌',
     history_slide_6_content:
       "Avui en dia BitSpace segueix en fase de desenvolupament, amb un possible MVP preparat per llençar el juny, amb una primera versió pel setembre.\n\nSi voleu estar al corrent de l'estat de BitSpace apunteu-vos a la llista d'espera que trobareu en aquesta mateixa pàgina.\n\nI si teniu interès a participar més activament en el projecte estarem encantats d'escoltar la vostra opinió :)",
+    // MWC section
+    mwc_title: "Visita'ns al MWC Barcelona",
+    mwc_day1_title: 'Dimarts 3 - PITCH',
+    mwc_day1_desc: 'Vine a escoltar el nostre pitch:',
+    mwc_day1_location: 'CATALONIA - Hall 8.1',
+    mwc_day1_time: '14:30 - 16:00',
+
+    mwc_day2_title: 'Dimecres 4 - STAND',
+    mwc_day2_desc: 'Passa a saludar-nos i a fer networking!',
+    mwc_day2_location: 'HALL: 8.0 STAND: 8.0B13.1',
+    mwc_day2_time: '14:30 - 16:00',
+
+    mwc_day3_title: 'Dijous 4 - STAND TOT EL DIA',
+    mwc_day3_desc: 'Passa a saludar-nos i a fer networking!',
+    mwc_day3_location: 'HALL 8.1 STAND 8.1C43.7',
+    mwc_day3_time: 'TOT EL DIA !!',
     // Collaborate Page
     collaborate_title: 'Col·labora amb nosaltres!',
     collaborate_opinion_subtitle: "Quina t'agrada més?",
@@ -126,6 +142,24 @@ const messages = {
     games_title: 'Jocs',
     prototype_title: 'Prova el Prototip',
     prototype_access: 'Accés al prototip',
+    /* Nav bar labels */
+    nav_games: 'Jocs',
+    nav_prototype: 'Prototip',
+    nav_create_your_bit: 'Crea el teu Bit',
+    nav_bid_your_bit: 'Crea el teu Bit?',
+    nav_team: 'Equip',
+    nav_history: 'Història',
+    nav_collaborate: 'Col·labora',
+    nav_waiting_list: "Llista d'espera",
+    nav_contact_us: 'Contacta',
+    nav_change_language: 'Canviar idioma',
+    nav_logo_aria: 'Tornar a la pàgina inicial de BitSpace',
+    nav_change_to_ca: 'Canviar a Català',
+    nav_change_to_en: 'Switch to English',
+    nav_change_to_es: 'Cambiar a Español',
+    nav_lang_label_ca: 'CAT',
+    nav_lang_label_en: 'ENG',
+    nav_lang_label_es: 'ESP',
   },
   es: {
     // SEO Meta
@@ -212,6 +246,22 @@ const messages = {
     history_slide_6_title: 'Planes a futuro 🌌',
     history_slide_6_content:
       'Hoy en día BitSpace sigue en fase de desarrollo, con un posible MVP listo para lanzar en junio, con una primera versión en septiembre.\n\nSi queréis estar al corriente del estado de BitSpace apuntaos a la lista de espera que encontraréis en esta misma página.\n\nY si tenéis interés en participar más activamente en el proyecto estaremos encantados de escuchar vuestra opinión :)',
+    // MWC section
+    mwc_title: 'Visítanos en el MWC Barcelona',
+    mwc_day1_title: 'Martes 3 - PITCH',
+    mwc_day1_desc: 'Ven a escuchar nuestro pitch:',
+    mwc_day1_location: 'CATALONIA - Hall 8.1',
+    mwc_day1_time: '14:30 - 16:00',
+
+    mwc_day2_title: 'Miércoles 4 - STAND',
+    mwc_day2_desc: '¡Pasa a saludarnos y hacer networking!',
+    mwc_day2_location: 'HALL: 8.0 STAND: 8.0B13.1',
+    mwc_day2_time: '14:30 - 16:00',
+
+    mwc_day3_title: 'Jueves 4 - STAND TODO EL DÍA',
+    mwc_day3_desc: '¡Pasa a saludarnos y hacer networking!',
+    mwc_day3_location: 'HALL 8.1 STAND 8.1C43.7',
+    mwc_day3_time: '¡TODO EL DÍA!!',
     // Collaborate Page
     collaborate_title: '¡Colabora con nosotros!',
     collaborate_opinion_subtitle: '¿Cuál te gusta más?',
@@ -251,6 +301,24 @@ const messages = {
     games_title: 'Juegos',
     prototype_title: 'Prueba el Prototipo',
     prototype_access: 'Acceso al prototipo',
+    /* Nav bar labels */
+    nav_games: 'Juegos',
+    nav_prototype: 'Prototipo',
+    nav_create_your_bit: 'Crea tu Bit',
+    nav_bid_your_bit: '¿Crea tu Bit?',
+    nav_team: 'Equipo',
+    nav_history: 'Historia',
+    nav_collaborate: 'Colabora',
+    nav_waiting_list: 'Lista de espera',
+    nav_contact_us: 'Contacta',
+    nav_change_language: 'Cambiar idioma',
+    nav_logo_aria: 'Volver a la página principal de BitSpace',
+    nav_change_to_ca: 'Cambiar a Català',
+    nav_change_to_en: 'Switch to English',
+    nav_change_to_es: 'Cambiar a Español',
+    nav_lang_label_ca: 'CAT',
+    nav_lang_label_en: 'ENG',
+    nav_lang_label_es: 'ESP',
   },
   en: {
     // SEO Meta
@@ -336,6 +404,22 @@ const messages = {
     history_slide_6_title: 'Future Plans 🌌',
     history_slide_6_content:
       "Today BitSpace is still in development phase, with a possible MVP ready to launch in June, with a first version in September.\n\nIf you want to stay up to date on BitSpace's status, sign up for the waitlist that you will find on this page.\n\nAnd if you are interested in participating more actively in the project we will be delighted to hear your opinion :)",
+    // MWC section
+    mwc_title: 'Visit us at MWC Barcelona',
+    mwc_day1_title: 'Tuesday 3 - PITCH',
+    mwc_day1_desc: 'Come listen to our pitch:',
+    mwc_day1_location: 'CATALONIA - Hall 8.1',
+    mwc_day1_time: '14:30 - 16:00',
+
+    mwc_day2_title: 'Wednesday 4 - STAND',
+    mwc_day2_desc: 'Stop by to say hi and network!',
+    mwc_day2_location: 'HALL: 8.0 STAND: 8.0B13.1',
+    mwc_day2_time: '14:30 - 16:00',
+
+    mwc_day3_title: 'Thursday 4 - STAND ALL DAY',
+    mwc_day3_desc: 'Stop by to say hi and network!',
+    mwc_day3_location: 'HALL 8.1 STAND 8.1C43.7',
+    mwc_day3_time: 'ALL DAY!!',
     // Collaborate Page
     collaborate_waitlist_description_1:
       "Currently, BitSpace is in development phase and therefore you won't find it available anywhere. To stay informed about the project status and be notified when it launches, we recommend you join the waitlist!",
@@ -374,6 +458,24 @@ const messages = {
     games_title: 'Games',
     prototype_title: 'Try the Prototype',
     prototype_access: 'Open prototype',
+    /* Nav bar labels */
+    nav_games: 'Games',
+    nav_prototype: 'Prototype',
+    nav_create_your_bit: 'Create your Bit',
+    nav_bid_your_bit: 'Build your Bit?',
+    nav_team: 'Team',
+    nav_history: 'History',
+    nav_collaborate: 'Collaborate',
+    nav_waiting_list: 'Waiting list',
+    nav_contact_us: 'Contact us',
+    nav_change_language: 'Change language',
+    nav_logo_aria: 'Return to the BitSpace homepage',
+    nav_change_to_ca: 'Canviar a Català',
+    nav_change_to_en: 'Switch to English',
+    nav_change_to_es: 'Cambiar a Español',
+    nav_lang_label_ca: 'CAT',
+    nav_lang_label_en: 'ENG',
+    nav_lang_label_es: 'ESP',
   },
 }
 

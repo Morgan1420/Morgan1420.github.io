@@ -1,17 +1,14 @@
 <template>
-  <div class="video-container" :style="{ backgroundColor: backgroundColor }" :class="{ 'video-below': videoPosition === 'below' }">
+  <div class="video-container" :style="{ backgroundColor: backgroundColor }"
+    :class="{ 'video-below': videoPosition === 'below' }">
     <div class="text-content">
       <h2>{{ title }}</h2>
       <p v-if="text" v-html="text"></p>
     </div>
     <div class="video-content">
-      <iframe
-        :src="embedUrl"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        class="video-iframe"
-      ></iframe>
+      <iframe :src="embedUrl" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        class="video-iframe"></iframe>
     </div>
   </div>
 </template>
@@ -75,18 +72,19 @@ const embedUrl = computed(() => {
 
 .text-content {
   flex: 1 1 400px;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 .text-content h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .text-content p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
-  text-align: justify; /* Asegura que el texto de los párrafos esté justificado */
+  text-align: justify;
+  /* Asegura que el texto de los párrafos esté justificado */
 }
 
 .video-content {
@@ -95,7 +93,8 @@ const embedUrl = computed(() => {
   width: 100%;
   position: relative;
   /* Proporción 16:9 para el video */
-  padding-top: 21%; /* 9 / 16 = 0.5625 → jo poso 21 pq si*/
+  padding-top: 21%;
+  /* 9 / 16 = 0.5625 → jo poso 21 pq si*/
 }
 
 .video-iframe {
@@ -105,7 +104,7 @@ const embedUrl = computed(() => {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
@@ -113,12 +112,21 @@ const embedUrl = computed(() => {
     padding: 2rem 1rem;
     flex-direction: column;
   }
+
   .text-content h2 {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
+
+  .text-content p {
+    font-size: 0.8rem;
+  }
+
+  /* Hide embedded video on small screens to save bandwidth and improve layout */
   .video-content {
-    width: 100%;
-    padding-top: 56.25%;
+    display: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
   }
 }
 </style>

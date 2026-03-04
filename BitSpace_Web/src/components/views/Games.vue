@@ -1,14 +1,12 @@
 <template>
     <div class="games-container">
         <div class="collaborate-header" ref="headerWrapper">
-            <img class="collaborate-header-bit" id="collaborate" src="@/assets/images/web_images/lisboa3.jpeg"
-                alt="Bit_Team" />
             <h1 class="collaborate-title">Jocs</h1>
         </div>
 
         <NavBar></NavBar>
 
-        <div id="prototip">
+        <div id="prototype">
             <h2>{{ $t('prototype_title') }}</h2>
             <p>BitSpace encara es troba en una fase "early seed" on on encara s'està validant i desenvolupant les bases
                 de l'aplicació final.</p>
@@ -82,7 +80,7 @@ export default {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    height: 70vh;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,14 +101,12 @@ export default {
 .collaborate-title {
     padding-top: 10vh;
     position: relative;
-    color: #ffffff;
+    color: black;
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    color: #ffffff;
 }
 
-#prototip {
+#prototype {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,14 +114,14 @@ export default {
     padding: 4rem 5rem;
 }
 
-#prototip h2 {
+#prototype h2 {
     width: 100%;
     font-size: 2rem;
     font-weight: bold;
     color: #333;
 }
 
-#prototip p {
+#prototype p {
     width: 100%;
     font-size: 1.1rem;
     color: #333;

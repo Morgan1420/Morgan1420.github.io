@@ -103,4 +103,16 @@ defineProps({
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Hide images on small screens to reduce clutter and bandwidth */
+  .image-content,
+  .info-image {
+    display: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+}
 </style>

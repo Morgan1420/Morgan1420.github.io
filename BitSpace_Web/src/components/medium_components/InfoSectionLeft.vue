@@ -102,9 +102,13 @@ defineProps({
     font-size: 0.8rem;
   }
 
+  /* Hide large decorative images on small screens to save bandwidth and space */
+  .image-content,
   .info-image {
-    width: 200%;
-    margin-left: -50%;
+    display: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
   }
 }
 </style>
