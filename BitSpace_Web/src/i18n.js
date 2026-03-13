@@ -157,9 +157,9 @@ const messages = {
     nav_change_to_ca: 'Canviar a Català',
     nav_change_to_en: 'Switch to English',
     nav_change_to_es: 'Cambiar a Español',
-    nav_lang_label_ca: 'CAT',
-    nav_lang_label_en: 'ENG',
-    nav_lang_label_es: 'ESP',
+    nav_lang_label_ca: 'Català',
+    nav_lang_label_en: 'English',
+    nav_lang_label_es: 'Castellano',
   },
   es: {
     // SEO Meta
@@ -316,9 +316,9 @@ const messages = {
     nav_change_to_ca: 'Cambiar a Català',
     nav_change_to_en: 'Switch to English',
     nav_change_to_es: 'Cambiar a Español',
-    nav_lang_label_ca: 'CAT',
-    nav_lang_label_en: 'ENG',
-    nav_lang_label_es: 'ESP',
+    nav_lang_label_ca: 'Català',
+    nav_lang_label_en: 'English',
+    nav_lang_label_es: 'Castellano',
   },
   en: {
     // SEO Meta
@@ -473,9 +473,9 @@ const messages = {
     nav_change_to_ca: 'Canviar a Català',
     nav_change_to_en: 'Switch to English',
     nav_change_to_es: 'Cambiar a Español',
-    nav_lang_label_ca: 'CAT',
-    nav_lang_label_en: 'ENG',
-    nav_lang_label_es: 'ESP',
+    nav_lang_label_ca: 'Català',
+    nav_lang_label_en: 'English',
+    nav_lang_label_es: 'Castellano',
   },
 }
 

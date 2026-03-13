@@ -61,28 +61,24 @@
                 <button type="button" class="nav-lang-toggle" @click="isLangMenuOpen = !isLangMenuOpen"
                     :aria-expanded="isLangMenuOpen ? 'true' : 'false'" aria-haspopup="true"
                     :aria-label="t('nav_change_language')">
-                    <img class="flag" :src="currentLangFlag.src" :alt="currentLangFlag.alt" />
+                    🌍
+                    <b><span style="margin-left: 0.4em;">{{ currentLangFlag.label }}</span></b>
                 </button>
 
                 <div v-if="isLangMenuOpen" class="nav-lang-menu" role="menu">
                     <router-link to="/ca" role="menuitem" :aria-label="t('nav_change_to_ca')"
                         @click="isLangMenuOpen = false">
-                        <img class="flag" src="../../assets/images/Web_icons/cat_flag.png"
-                            alt="Bandera de Catalunya - Canviar idioma a Català" />
+
                         <span>{{ t('nav_lang_label_ca') }}</span>
                     </router-link>
 
                     <router-link to="/en" role="menuitem" :aria-label="t('nav_change_to_en')"
                         @click="isLangMenuOpen = false">
-                        <img class="flag" src="../../assets/images/Web_icons/uk_flag.png"
-                            alt="UK Flag - Switch language to English" />
                         <span>{{ t('nav_lang_label_en') }}</span>
                     </router-link>
 
                     <router-link to="/es" role="menuitem" :aria-label="t('nav_change_to_es')"
                         @click="isLangMenuOpen = false">
-                        <img class="flag" src="../../assets/images/Web_icons/es_flag.png"
-                            alt="Bandera de España - Cambiar idioma a Español" />
                         <span>{{ t('nav_lang_label_es') }}</span>
                     </router-link>
                 </div>
@@ -142,7 +138,7 @@ const currentLangFlag = computed(() => {
     left: 0;
     right: 0;
     height: 80px;
-    width: 100%;
+    width: reverse;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -243,7 +239,6 @@ const currentLangFlag = computed(() => {
 }
 
 .nav-language {
-    margin-top: 5px;
     position: relative;
 }
 

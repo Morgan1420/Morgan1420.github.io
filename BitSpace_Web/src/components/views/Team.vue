@@ -139,6 +139,7 @@ import image_ifest from '@/assets/images/web_images/premi_ifest.jpeg';
 import image_lisboa from '@/assets/images/web_images/lisboa3.jpeg';
 import image_radioSVH from '@/assets/images/web_images/radioSVH.jpeg';
 import image_iaacerelate from '@/assets/images/web_images/iaacelerate1.jpeg';
+import image_MWC from '@/assets/images/web_images/MWC.jpeg';
 export default {
     name: 'TeamView',
     components: {
@@ -182,7 +183,7 @@ export default {
                     content: this.t('history_slide_4_content')
                 },
                 {
-                    image: image_radioSVH,
+                    image: image_MWC,
                     title: this.t('history_slide_5_title'),
                     content: this.t('history_slide_5_content')
                 },

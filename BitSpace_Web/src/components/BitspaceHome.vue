@@ -13,53 +13,6 @@
       <Formulario id="waitlist" />
     </section>
 
-    <section class="MWC-section" aria-labelledby="MWC">
-      <h1>{{ t('mwc_title') }}</h1>
-
-      <div class="MWC-container-section">
-
-        <div class="MWC-container">
-          <h2>{{ t('mwc_day1_title') }}</h2>
-          <p>{{ t('mwc_day1_desc') }}</p>
-          <div class="MWC-hotirzontal-box">
-            <div><img src="@/assets/images/Web_icons/ubi_icon.png" alt="Ubicació"></div>
-            <p>{{ t('mwc_day1_location') }}</p>
-          </div>
-          <div class="MWC-hotirzontal-box">
-            <div><img src="@/assets/images/Web_icons/clock.png" alt="Hora"></div>
-            <p>{{ t('mwc_day1_time') }}</p>
-          </div>
-        </div>
-
-        <div class="MWC-container" id="current-day-container">
-          <h2>{{ t('mwc_day2_title') }}</h2>
-          <p>{{ t('mwc_day2_desc') }}</p>
-          <div class="MWC-hotirzontal-box">
-            <div><img src="@/assets/images/Web_icons/ubi_icon.png" alt="Ubicació"></div>
-            <p>{{ t('mwc_day2_location') }}</p>
-          </div>
-          <div class="MWC-hotirzontal-box">
-            <div><img src="@/assets/images/Web_icons/clock.png" alt="Hora"></div>
-            <p>{{ t('mwc_day2_time') }}</p>
-          </div>
-        </div>
-
-        <div class="MWC-container">
-          <h2>{{ t('mwc_day3_title') }}</h2>
-          <p>{{ t('mwc_day3_desc') }}</p>
-          <div class="MWC-hotirzontal-box">
-            <div><img src="@/assets/images/Web_icons/ubi_icon.png" alt="Ubicació"></div>
-            <p>{{ t('mwc_day3_location') }}</p>
-          </div>
-          <div class="MWC-hotirzontal-box">
-            <div><img src="@/assets/images/Web_icons/clock.png" alt="Hora"></div>
-            <p><b>{{ t('mwc_day3_time') }}</b></p>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
     <div id="prototype">
       <h2>{{ $t('prototype_title') }}</h2>
       <p>BitSpace encara es troba en una fase "early seed" on on encara s'està validant i desenvolupant les bases
