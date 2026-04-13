@@ -30,7 +30,7 @@
 
         <section aria-labelledby="what-is-bitspace">
           <VideoSection :title="t('what_is_bitspace')" :text="t('what_is_bitspace_text')"
-            videoSrc="https://www.youtube.com/watch?v=Qwq4Hw9aljQ" backgroundColor="#FFD8CF" />
+            videoSrc="https://www.youtube.com/watch?v=4rEZk1cxuSc" backgroundColor="#FFD8CF" />
         </section>
 
         <section aria-labelledby="how-it-works">
