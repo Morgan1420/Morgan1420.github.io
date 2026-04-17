@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BitSpace — Cuida el teu Bit, cuida de tu | App de Benestar i Gamificació</title>
+  <meta name="description" content="BitSpace és l'app de benestar personal que converteix els teus hàbits saludables en la felicitat de la teva mascota virtual. Adopta el teu Bit, completa reptes diaris i observa com creix amb tu. iOS i Android.">
+  <meta name="keywords" content="app benestar, hàbits saludables, gamificació, mascota virtual, salut mental, digital detox, productivitat, app salut joves, bienestar personal, habit tracker">
+  <meta name="author" content="BitSpace">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bitspace.es/ca">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bitspace.es/ca">
+  <meta property="og:title" content="BitSpace — La teva salut reflectida en un món digital">
+  <meta property="og:description" content="Adopta el teu Bit, crea hàbits saludables i observa com creix amb tu. L'app que converteix l'autocura en un joc emocionant.">
+  <meta property="og:image" content="https://bitspace.es/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BitSpace — Cuida el teu Bit, cuida de tu">
+  <meta name="twitter:description" content="Menys scroll, més control. L'app de benestar amb mascota virtual que fa que cuidar-te sigui adictiu.">
+
+  <!-- Schema.org App -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "BitSpace",
+    "description": "Aplicació mòbil de benestar personal basada en gamificació i cura de mascotes virtuals. Converteix els teus hàbits saludables en la felicitat del teu Bit.",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "HealthApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1200" }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    /* =============================================
+       CSS VARIABLES & RESET
+    ============================================= */
+    :root {
+      --cream:      #FFF8F2;
+      --pink-soft:  #FFDDE9;
+      --pink:       #FFB5C8;
+      --pink-deep:  #FF8FAB;
+      --lavender:   #E8DEFF;
+      --purple:     #C4B5FD;
+      --purple-deep:#A78BFA;
+      --sky:        #D0F0FF;
+      --sky-deep:   #7DD3FC;
+      --mint:       #CCFBF1;
+      --gold:       #FDE68A;
+      --navy:       #0F1729;
+      --navy-mid:   #1E2D4A;
+      --neon-cyan:  #22D3EE;
+      --neon-purple:#C084FC;
+      --neon-pink:  #F472B6;
+      --text-dark:  #2D1B4E;
+      --text-mid:   #5B4A72;
+      --text-light: #9B8AAD;
+      --white:      #FFFFFF;
+      --radius-xl:  2rem;
+      --radius-lg:  1.5rem;
+      --radius-md:  1rem;
+      --shadow-soft: 0 8px 40px rgba(167,139,250,0.15);
+      --shadow-card: 0 4px 24px rgba(45,27,78,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Baloo 2', cursive; line-height: 1.2; }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* =============================================
+       SPARKLES & FLOATING ELEMENTS
+    ============================================= */
+    .sparkle {
+      position: absolute;
+      pointer-events: none;
+      animation: sparkle-float 3s ease-in-out infinite;
+    }
+
+    .sparkle svg { fill: currentColor; }
+
+    @keyframes sparkle-float {
+      0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.7; }
+      50%       { transform: translateY(-12px) rotate(15deg) scale(1.1); opacity: 1; }
+    }
+
+    @keyframes blob-float {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50%       { transform: translateY(-18px) rotate(2deg); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(196,181,253,0.3); }
+      50%       { box-shadow: 0 0 40px rgba(196,181,253,0.6); }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,248,242,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(196,181,253,0.2);
+      transition: all 0.3s;
+    }
+
+    nav.scrolled {
+      padding: 0.7rem 2rem;
+      box-shadow: 0 4px 24px rgba(45,27,78,0.08);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--text-dark);
+    }
+
+    .nav-logo .logo-blob {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      border-radius: 50% 50% 50% 40% / 50% 50% 40% 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      animation: blob-float 4s ease-in-out infinite;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--text-mid);
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 2px;
+      background: var(--purple-deep);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--purple-deep); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--purple-deep), var(--pink-deep));
+      color: white !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(167,139,250,0.4);
+    }
+
+    .nav-cta::after { display: none !important; }
+
+    .nav-lang {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      cursor: pointer;
+      border: 1px solid var(--purple);
+      padding: 0.25rem 0.6rem;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+
+    .nav-lang:hover { background: var(--lavender); }
+
+    /* =============================================
+       HERO SECTION
+    ============================================= */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 2rem 4rem;
+      background: linear-gradient(160deg, #FFF8F2 0%, #F0E8FF 40%, #FFE8F2 70%, #E8F8FF 100%);
+    }
+
+    .hero-bg-shapes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hero-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.25;
+      filter: blur(60px);
+    }
+
+    .hero-shape-1 {
+      width: 500px; height: 500px;
+      background: var(--purple);
+      top: -100px; right: -100px;
+      animation: blob-float 8s ease-in-out infinite;
+    }
+
+    .hero-shape-2 {
+      width: 400px; height: 400px;
+      background: var(--pink);
+      bottom: -50px; left: -80px;
+      animation: blob-float 10s ease-in-out infinite reverse;
+    }
+
+    .hero-shape-3 {
+      width: 300px; height: 300px;
+      background: var(--sky-deep);
+      top: 50%; left: 40%;
+      animation: blob-float 7s ease-in-out infinite 2s;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      border: 1.5px solid var(--purple);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--purple-deep);
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease both;
+      font-family: 'Press Start 2P', monospace;
+      letter-spacing: 0;
+    }
+
+    .hero-badge span { font-size: 0.7rem; }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+      animation: fadeInUp 0.6s ease 0.1s both;
+      line-height: 1.15;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(120deg, var(--purple-deep), var(--pink-deep));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-mid);
+      margin-bottom: 2rem;
+      max-width: 480px;
+      animation: fadeInUp 0.6s ease 0.2s both;
+      font-weight: 500;
+    }
+
+    .hero-tagline {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.65rem;
+      color: var(--purple-deep);
+      background: var(--lavender);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.6s ease 0.3s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.6s ease 0.4s both;
+    }
+
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, var(--purple-deep) 0%, var(--pink-deep) 100%);
+      color: white;
+      padding: 0.85rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      font-family: 'Baloo 2', cursive;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 24px rgba(167,139,250,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(167,139,250,0.5);
+    }
+
+    .btn-secondary {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: white;
+      color: var(--text-dark);
+      padding: 0.85rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      font-family: 'Baloo 2', cursive;
+      border: 2px solid var(--purple);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--lavender);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      animation: fadeInUp 0.6s ease 0.5s both;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Hero Visual */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: scaleIn 0.7s ease 0.2s both;
+    }
+
+    .room-preview {
+      position: relative;
+      width: 380px;
+      height: 380px;
+    }
+
+    .room-isometric {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    /* CSS Isometric Room */
+    .iso-room {
+      width: 280px;
+      height: 280px;
+      position: relative;
+      margin: auto;
+      transform: rotate(-30deg) skewX(15deg) scale(0.9);
+      transform-style: preserve-3d;
+    }
+
+    .iso-floor {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #f0e6ff 0%, #ffe0ec 100%);
+      position: absolute;
+      border-radius: 4px;
+    }
+
+    .iso-wall-left {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #ffe4f0 0%, #f8d7ff 100%);
+      position: absolute;
+      transform: rotateX(90deg);
+      transform-origin: bottom;
+    }
+
+    /* Floating mascot over room */
+    .hero-mascot-wrap {
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-mascot {
+      width: 220px;
+      filter: drop-shadow(0 20px 40px rgba(167,139,250,0.3));
+      animation: blob-float 4s ease-in-out infinite;
+    }
+
+    .hero-room-bg {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 340px;
+      opacity: 0.7;
+    }
+
+    /* Sparkles around hero */
+    .hero-sparkle {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .sparkle-star {
+      display: block;
+      animation: sparkle-float ease-in-out infinite;
+    }
+
+    /* =============================================
+       SECTION COMMONS
+    ============================================= */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-badge {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.6rem;
+      color: var(--purple-deep);
+      background: var(--lavender);
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 580px;
+      font-weight: 500;
+    }
+
+    .section-header {
+      margin-bottom: 4rem;
+    }
+
+    .text-center { text-align: center; }
+    .text-center .section-subtitle { margin: 0 auto; }
+
+    /* =============================================
+       WHAT IS BITSPACE
+    ============================================= */
+    #concept {
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #concept::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--purple), var(--pink), var(--sky-deep), var(--gold));
+    }
+
+    .concept-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .concept-text .big-quote {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-family: 'Baloo 2', cursive;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+      line-height: 1.35;
+    }
+
+    .concept-text .big-quote em {
+      font-style: normal;
+      color: var(--purple-deep);
+    }
+
+    .concept-text p {
+      color: var(--text-mid);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .uvp-card {
+      background: linear-gradient(135deg, var(--lavender), var(--pink-soft));
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      margin-top: 2rem;
+      border: 2px solid var(--purple);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uvp-card::before {
+      content: '✦';
+      position: absolute;
+      top: -1rem; right: 1.5rem;
+      font-size: 3rem;
+      opacity: 0.15;
+      color: var(--purple-deep);
+    }
+
+    .uvp-card p {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    /* Bit character display */
+    .concept-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .bit-states {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .bit-state-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1rem;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: transform 0.2s, border-color 0.2s;
+      box-shadow: var(--shadow-card);
+    }
+
+    .bit-state-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--purple);
+    }
+
+    .bit-emoji { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+
+    .bit-state-card h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .bit-state-card p {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin: 0;
+    }
+
+    .bit-state-card.happy { border-color: var(--mint); background: linear-gradient(135deg, #fff, #f0fff8); }
+    .bit-state-card.sad   { border-color: var(--sky);  background: linear-gradient(135deg, #fff, #f0f8ff); }
+    .bit-state-card.tired { border-color: var(--gold);  background: linear-gradient(135deg, #fff, #fffbf0); }
+
+    /* =============================================
+       HOW IT WORKS
+    ============================================= */
+    #how {
+      background: linear-gradient(160deg, var(--cream) 0%, var(--lavender) 50%, var(--pink-soft) 100%);
+      position: relative;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 52px;
+      left: calc(12.5% + 24px);
+      right: calc(12.5% + 24px);
+      height: 3px;
+      background: linear-gradient(90deg, var(--purple), var(--pink-deep));
+      border-radius: 2px;
+      z-index: 0;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(167,139,250,0.2);
+    }
+
+    .step-num {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--purple-deep), var(--pink-deep));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 4px 16px rgba(167,139,250,0.4);
+    }
+
+    .step-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+
+    .step-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card p {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       THE SPACE — ROOMS
+    ============================================= */
+    #spaces {
+      background: var(--navy);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #spaces .section-badge {
+      background: rgba(196,181,253,0.15);
+      color: var(--purple);
+      border: 1px solid rgba(196,181,253,0.3);
+    }
+
+    #spaces .section-title { color: white; }
+
+    #spaces .section-subtitle { color: rgba(255,255,255,0.6); }
+
+    .spaces-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(192,132,252,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(34,211,238,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .spaces-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .space-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .space-card:hover { transform: translateY(-8px); }
+
+    .space-card-inner {
+      padding: 2.5rem;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .space-card.cozy {
+      background: linear-gradient(160deg, #ffe4f0 0%, #f5d0ff 50%, #dbeafe 100%);
+      border: 2px solid rgba(255,180,220,0.5);
+    }
+
+    .space-card.cyber {
+      background: linear-gradient(160deg, #0f1729 0%, #1a1040 50%, #0d2040 100%);
+      border: 2px solid rgba(34,211,238,0.2);
+    }
+
+    .space-tag {
+      position: absolute;
+      top: 1.5rem; left: 1.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.5rem;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .space-card.cozy  .space-tag { background: #ffe4f0; color: #be185d; border: 1px solid #fbb6ce; }
+    .space-card.cyber .space-tag { background: rgba(34,211,238,0.1); color: var(--neon-cyan); border: 1px solid rgba(34,211,238,0.3); }
+
+    .space-preview-emoji {
+      font-size: 5rem;
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-60%);
+      opacity: 0.8;
+      animation: blob-float 5s ease-in-out infinite;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    }
+
+    .space-card.cozy .space-preview-emoji  { filter: drop-shadow(0 10px 30px rgba(255,180,200,0.4)); }
+    .space-card.cyber .space-preview-emoji { filter: drop-shadow(0 10px 30px rgba(34,211,238,0.4)); }
+
+    .space-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .space-card.cozy  h3 { color: var(--text-dark); }
+    .space-card.cyber h3 { color: white; }
+
+    .space-card p {
+      font-size: 0.9rem;
+      max-width: 300px;
+    }
+
+    .space-card.cozy  p { color: var(--text-mid); }
+    .space-card.cyber p { color: rgba(255,255,255,0.55); }
+
+    .space-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .space-item-chip {
+      padding: 0.25rem 0.7rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .space-card.cozy  .space-item-chip { background: white; color: var(--text-mid); }
+    .space-card.cyber .space-item-chip { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.1); }
+
+    /* =============================================
+       FEATURES
+    ============================================= */
+    #features {
+      background: white;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: var(--cream);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--lavender), var(--pink-soft));
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: inherit;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-soft);
+      border-color: var(--purple);
+    }
+
+    .feature-card:hover::before { opacity: 1; }
+
+    .feature-card > * { position: relative; z-index: 1; }
+
+    .feature-icon-wrap {
+      width: 56px; height: 56px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .fi-purple { background: var(--lavender); }
+    .fi-pink   { background: var(--pink-soft); }
+    .fi-mint   { background: var(--mint); }
+    .fi-sky    { background: var(--sky); }
+    .fi-gold   { background: #FEF9C3; }
+    .fi-peach  { background: #FFE4CC; }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       AREAS
+    ============================================= */
+    #areas {
+      background: linear-gradient(160deg, var(--pink-soft) 0%, var(--lavender) 50%, var(--sky) 100%);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .area-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: default;
+    }
+
+    .area-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(45,27,78,0.12);
+    }
+
+    .area-emoji {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .area-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .area-card p {
+      font-size: 0.82rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    .area-pill {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      font-family: 'Press Start 2P', monospace;
+    }
+
+    .area-card:nth-child(1) .area-pill { background: #E0F2FE; color: #0369A1; }
+    .area-card:nth-child(2) .area-pill { background: #DCFCE7; color: #15803D; }
+    .area-card:nth-child(3) .area-pill { background: #FEF3C7; color: #B45309; }
+    .area-card:nth-child(4) .area-pill { background: #EDE9FE; color: #6D28D9; }
+
+    /* =============================================
+       TEAM
+    ============================================= */
+    #team {
+      background: white;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .team-card {
+      background: linear-gradient(160deg, var(--lavender) 0%, var(--pink-soft) 100%);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      text-align: center;
+      border: 2px solid rgba(196,181,253,0.4);
+      transition: transform 0.3s;
+    }
+
+    .team-card:hover { transform: translateY(-6px); }
+
+    .team-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      background: white;
+      box-shadow: 0 4px 16px rgba(167,139,250,0.2);
+      animation: blob-float 5s ease-in-out infinite;
+    }
+
+    .team-card:nth-child(2) .team-avatar { animation-delay: 1s; }
+    .team-card:nth-child(3) .team-avatar { animation-delay: 2s; }
+
+    .team-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.5rem;
+      color: var(--purple-deep);
+      background: white;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-card p {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+    }
+
+    /* =============================================
+       CTA / WAITLIST
+    ============================================= */
+    #cta {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-glow {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 50%, rgba(192,132,252,0.15) 0%, transparent 60%),
+        radial-gradient(circle at 70% 50%, rgba(244,114,182,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    #cta .section-inner { position: relative; z-index: 1; }
+
+    #cta .section-badge {
+      background: rgba(196,181,253,0.1);
+      color: var(--purple);
+      border: 1px solid rgba(196,181,253,0.3);
+    }
+
+    #cta .section-title {
+      color: white;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+    }
+
+    #cta .section-subtitle {
+      color: rgba(255,255,255,0.6);
+      margin: 1rem auto 2.5rem;
+    }
+
+    .cta-mascot {
+      font-size: 5rem;
+      display: block;
+      margin-bottom: 1.5rem;
+      animation: blob-float 4s ease-in-out infinite;
+      filter: drop-shadow(0 10px 30px rgba(192,132,252,0.4));
+    }
+
+    .waitlist-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 480px;
+      margin: 0 auto 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .waitlist-form input {
+      flex: 1;
+      min-width: 240px;
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      border: 2px solid rgba(196,181,253,0.3);
+      background: rgba(255,255,255,0.07);
+      color: white;
+      font-size: 1rem;
+      font-family: 'Nunito', sans-serif;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .waitlist-form input::placeholder { color: rgba(255,255,255,0.35); }
+
+    .waitlist-form input:focus {
+      border-color: var(--purple);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .waitlist-form button {
+      background: linear-gradient(135deg, var(--purple-deep), var(--neon-pink));
+      color: white;
+      border: none;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Baloo 2', cursive;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 24px rgba(192,132,252,0.35);
+    }
+
+    .waitlist-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(192,132,252,0.5);
+    }
+
+    .store-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .store-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-family: 'Baloo 2', cursive;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .store-btn:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-2px);
+    }
+
+    .store-btn small {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 400;
+      opacity: 0.7;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .store-btn big {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .store-icon { font-size: 1.75rem; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      padding: 3rem 2rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-text {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      max-width: 260px;
+    }
+
+    .footer-tagline {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.5rem;
+      color: var(--purple);
+      margin-top: 1rem;
+      display: block;
+    }
+
+    .footer-col h4 {
+      font-family: 'Baloo 2', cursive;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--purple); }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.8rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-link {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.2s;
+    }
+
+    .social-link:hover {
+      background: var(--purple-deep);
+      color: white;
+      border-color: var(--purple-deep);
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 900px) {
+      .hero-inner      { grid-template-columns: 1fr; text-align: center; }
+      .hero-actions    { justify-content: center; }
+      .hero-stats      { justify-content: center; }
+      .hero-subtitle   { margin: 0 auto 2rem; }
+      .hero-visual     { order: -1; }
+      .hero-mascot     { width: 180px; }
+
+      .concept-grid    { grid-template-columns: 1fr; }
+      .steps-grid      { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid::before { display: none; }
+      .spaces-grid     { grid-template-columns: 1fr; }
+      .features-grid   { grid-template-columns: repeat(2, 1fr); }
+      .areas-grid      { grid-template-columns: repeat(2, 1fr); }
+      .team-grid       { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+      .footer-inner    { grid-template-columns: 1fr 1fr; }
+
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      section          { padding: 4rem 1.5rem; }
+      .steps-grid      { grid-template-columns: 1fr; }
+      .features-grid   { grid-template-columns: 1fr; }
+      .areas-grid      { grid-template-columns: 1fr; }
+      .footer-inner    { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* =============================================
+       NOTIFICATION PREVIEW
+    ============================================= */
+    .notification-preview {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 8px 32px rgba(45,27,78,0.1);
+      max-width: 320px;
+      margin: 2rem auto 0;
+      border: 1.5px solid var(--lavender);
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    .notif-bit { font-size: 2rem; }
+
+    .notif-text small {
+      font-size: 0.65rem;
+      font-family: 'Press Start 2P', monospace;
+      color: var(--text-light);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .notif-text p {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin: 0;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================== NAV ======================== -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <div class="logo-blob">🌟</div>
+      BitSpace
+    </div>
+    <ul class="nav-links">
+      <li><a href="#concept">El Concepte</a></li>
+      <li><a href="#how">Com funciona</a></li>
+      <li><a href="#spaces">The Space</a></li>
+      <li><a href="#features">Funcions</a></li>
+      <li><a href="#team">Equip</a></li>
+      <li><a href="#cta" class="nav-cta">Uneix-te ✨</a></li>
+    </ul>
+    <span class="nav-lang" onclick="window.location='/es'">ES / CA</span>
+  </nav>
+
+  <!-- ======================== HERO ======================== -->
+  <section id="hero">
+    <div class="hero-bg-shapes">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+    </div>
+
+    <!-- Floating sparkles -->
+    <svg class="hero-sparkle" style="top:15%;left:8%;width:28px;animation:sparkle-float 3.2s ease-in-out infinite;" viewBox="0 0 24 24" fill="#C4B5FD"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z"/></svg>
+    <svg class="hero-sparkle" style="top:20%;right:12%;width:20px;animation:sparkle-float 2.8s ease-in-out infinite 0.5s;" viewBox="0 0 24 24" fill="#FDE68A"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z"/></svg>
+    <svg class="hero-sparkle" style="bottom:30%;left:5%;width:16px;animation:sparkle-float 3.5s ease-in-out infinite 1s;" viewBox="0 0 24 24" fill="#7DD3FC"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z"/></svg>
+    <svg class="hero-sparkle" style="top:60%;right:8%;width:22px;animation:sparkle-float 4s ease-in-out infinite 0.3s;" viewBox="0 0 24 24" fill="#FFB5C8"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z"/></svg>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>✦</span> APP DE BENESTAR
+        </div>
+
+        <h1 class="hero-title">
+          El teu benestar,<br>
+          <span class="highlight">reflectit en<br>un món digital</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Adopta el teu Bit, crea hàbits saludables dia a dia i observa com creix feliç al teu costat. Perquè cuidar-te ha de ser emocionant, no estressant.
+        </p>
+
+        <div class="hero-tagline">
+          ✦ less scroll, more control ✦
+        </div>
+
+        <div class="hero-actions">
+          <a href="#cta" class="btn-primary">
+            <span>📱</span> Uneix-te a la llista d'espera
+          </a>
+          <a href="#how" class="btn-secondary">
+            <span>▶</span> Com funciona
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">18–35</div>
+            <div class="stat-label">anys</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label">àrees de millora</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">personalitzacions</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- SVG Bit mascot -->
+        <div class="hero-mascot-wrap">
+          <svg class="hero-mascot" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body blob -->
+            <ellipse cx="100" cy="120" rx="72" ry="68" fill="white"/>
+            <ellipse cx="100" cy="118" rx="70" ry="66" fill="white" stroke="#E8E0F0" stroke-width="2"/>
+            <!-- Shadow -->
+            <ellipse cx="100" cy="192" rx="50" ry="12" fill="#C4B5FD" opacity="0.25"/>
+            <!-- Left arm -->
+            <ellipse cx="40" cy="120" rx="18" ry="14" fill="white" stroke="#E8E0F0" stroke-width="1.5" transform="rotate(-15 40 120)"/>
+            <!-- Right arm -->
+            <ellipse cx="160" cy="120" rx="18" ry="14" fill="white" stroke="#E8E0F0" stroke-width="1.5" transform="rotate(15 160 120)"/>
+            <!-- Left foot -->
+            <ellipse cx="75" cy="186" rx="22" ry="12" fill="white" stroke="#E8E0F0" stroke-width="1.5"/>
+            <!-- Right foot -->
+            <ellipse cx="125" cy="186" rx="22" ry="12" fill="white" stroke="#E8E0F0" stroke-width="1.5"/>
+            <!-- Left eye -->
+            <circle cx="82" cy="108" r="9" fill="#1E1B2E"/>
+            <circle cx="85" cy="105" r="3" fill="white"/>
+            <!-- Right eye -->
+            <circle cx="118" cy="108" r="9" fill="#1E1B2E"/>
+            <circle cx="121" cy="105" r="3" fill="white"/>
+            <!-- Smile -->
+            <path d="M88 128 Q100 140 112 128" stroke="#1E1B2E" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <!-- Blush left -->
+            <ellipse cx="70" cy="122" rx="12" ry="8" fill="#FFB5C8" opacity="0.6"/>
+            <!-- Blush right -->
+            <ellipse cx="130" cy="122" rx="12" ry="8" fill="#FFB5C8" opacity="0.6"/>
+            <!-- Sparkle top-left -->
+            <path d="M50 40 L53 52 L65 55 L53 58 L50 70 L47 58 L35 55 L47 52Z" fill="#C4B5FD" opacity="0.8"/>
+            <!-- Sparkle top-right -->
+            <path d="M145 30 L147 39 L156 41 L147 43 L145 52 L143 43 L134 41 L143 39Z" fill="#FDE68A" opacity="0.9"/>
+            <!-- Sparkle right -->
+            <path d="M168 70 L170 77 L177 79 L170 81 L168 88 L166 81 L159 79 L166 77Z" fill="#7DD3FC" opacity="0.8"/>
+          </svg>
+
+          <!-- Notification bubble -->
+          <div class="notification-preview">
+            <div class="notif-bit">🌟</div>
+            <div class="notif-text">
+              <small>BitSpace · ara</small>
+              <p>El teu Bit et troba a faltar... Recordes que volies llegir més? 🥺</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONCEPT ======================== -->
+  <section id="concept">
+    <div class="section-inner">
+      <div class="concept-grid">
+        <div class="concept-text animate-on-scroll">
+          <div class="section-badge">✦ El concepte</div>
+          <h2 class="section-title">El teu Bit és el<br>teu espill digital</h2>
+
+          <p class="big-quote">
+            "Quan <em>cuides de tu</em>, el teu Bit floreix. Quan t'oblides dels teus hàbits... ell <em>t'enyora</em>."
+          </p>
+
+          <p>
+            BitSpace no és un comptador d'hàbits fred amb gràfiques de barres. És una connexió emocional. No falles a una llista de tasques — <strong>falles a un company que depèn de tu.</strong>
+          </p>
+
+          <p>
+            Aquesta responsabilitat afectiva és el motor que fa que BitSpace funcioni allà on les altres apps fracassen. La ciència del comportament diu que les emocions mouen les persones molt més que les dades numèriques.
+          </p>
+
+          <div class="uvp-card">
+            <p>"La teva salut reflectida en un món digital. Menys pressió, més connexió."</p>
+          </div>
+        </div>
+
+        <div class="concept-visual animate-on-scroll">
+          <div class="bit-states">
+            <div class="bit-state-card happy">
+              <span class="bit-emoji">😊</span>
+              <h4>Feliç</h4>
+              <p>Hàbits complerts. El Bit brilla!</p>
+            </div>
+            <div class="bit-state-card sad">
+              <span class="bit-emoji">🥺</span>
+              <h4>T'enyora</h4>
+              <p>Pocs reptes completats avui.</p>
+            </div>
+            <div class="bit-state-card tired">
+              <span class="bit-emoji">😴</span>
+              <h4>Cansat</h4>
+              <p>Necessita que cuides de tu.</p>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,var(--lavender),var(--pink-soft));border-radius:var(--radius-xl);padding:2rem;width:100%;text-align:center;border:2px solid rgba(196,181,253,0.4);">
+            <div style="font-size:3.5rem;margin-bottom:0.75rem;animation:blob-float 4s ease-in-out infinite;">🌟</div>
+            <h4 style="font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:0.4rem;">Core Loop</h4>
+            <p style="font-size:0.82rem;color:var(--text-mid);line-height:1.8;">
+              Adopta el Bit → Escull la teva àrea → Completa reptes diaris → Rep recompenses → Personalitza el teu Space → El Bit creix!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOW IT WORKS ======================== -->
+  <section id="how">
+    <div class="section-inner">
+      <div class="section-header text-center animate-on-scroll">
+        <div class="section-badge">✦ Com funciona</div>
+        <h2 class="section-title">Quatre passos cap al<br>teu millor tu</h2>
+        <p class="section-subtitle">Un procés senzill, emocionant i científicament dissenyat per crear hàbits duradors.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card animate-on-scroll" style="transition-delay:0.1s">
+          <div class="step-num">1</div>
+          <span class="step-icon">🐣</span>
+          <h3>Adopta el teu Bit</h3>
+          <p>Posa-li nom, personalitza el seu aspecte i crea un vincle emocional des del primer moment.</p>
+        </div>
+        <div class="step-card animate-on-scroll" style="transition-delay:0.2s">
+          <div class="step-num">2</div>
+          <span class="step-icon">🎯</span>
+          <h3>Escull la teva àrea</h3>
+          <p>Digital Detox, Esport, Lectura o Estudi. Tu decideixes el camí de millora que vols emprendre.</p>
+        </div>
+        <div class="step-card animate-on-scroll" style="transition-delay:0.3s">
+          <div class="step-num">3</div>
+          <span class="step-icon">⚡</span>
+          <h3>Completa reptes diaris</h3>
+          <p>Micro-reptes adaptats a tu. Senzills, motivadors i dissenyats per una experta en salut.</p>
+        </div>
+        <div class="step-card animate-on-scroll" style="transition-delay:0.4s">
+          <div class="step-num">4</div>
+          <span class="step-icon">🏡</span>
+          <h3>Decora el teu Space</h3>
+          <p>Guanya monedes, desbloqueja objectes i construeix l'habitació dels somnis del teu Bit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SPACES ======================== -->
+  <section id="spaces">
+    <div class="spaces-bg"></div>
+    <div class="section-inner" style="position:relative;z-index:1;">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge">✦ The Space</div>
+        <h2 class="section-title">El teu refugi digital</h2>
+        <p class="section-subtitle">Un entorn isomètric 3D completament personalitzable. El teu Space és el teu dashboard visual — i el llar del teu Bit.</p>
+      </div>
+
+      <div class="spaces-grid">
+        <div class="space-card cozy animate-on-scroll" style="transition-delay:0.1s">
+          <span class="space-tag">🌸 COZY MODE</span>
+          <div class="space-preview-emoji">🛏️</div>
+          <div class="space-card-inner">
+            <h3>L'Habitació Càlida</h3>
+            <p>Colors pastel, llum suau i objectes acollidors. Per als que necessiten un espai segur i tranquil.</p>
+            <div class="space-items">
+              <span class="space-item-chip">🛏 Llit cozy</span>
+              <span class="space-item-chip">📚 Estanteria</span>
+              <span class="space-item-chip">🪴 Planta</span>
+              <span class="space-item-chip">💡 Làmpada</span>
+              <span class="space-item-chip">🪑 Puf</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-card cyber animate-on-scroll" style="transition-delay:0.2s">
+          <span class="space-tag">⚡ CYBER MODE</span>
+          <div class="space-preview-emoji">🖥️</div>
+          <div class="space-card-inner">
+            <h3>L'Habitació Cyber</h3>
+            <p>Estètica fosca amb llums de neó. Per als que prefereixen una vibra gaming i futurista.</p>
+            <div class="space-items">
+              <span class="space-item-chip">🖥 Setup gaming</span>
+              <span class="space-item-chip">⌨️ Teclat RGB</span>
+              <span class="space-item-chip">🎮 Consola</span>
+              <span class="space-item-chip">🔷 Panells LED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FEATURES ======================== -->
+  <section id="features">
+    <div class="section-inner">
+      <div class="section-header text-center animate-on-scroll">
+        <div class="section-badge">✦ Funcions clau</div>
+        <h2 class="section-title">Tot el que necessites per<br>crear hàbits que duren</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll" style="transition-delay:0.05s">
+          <div class="feature-icon-wrap fi-purple">🪞</div>
+          <h3>El Vincle Espill</h3>
+          <p>L'algoritme que converteix els teus hàbits en estats d'ànim del Bit. Si fas esport, ell balla. Si t'oblides, ell et plora. Una connexió emocional real.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" style="transition-delay:0.1s">
+          <div class="feature-icon-wrap fi-pink">💌</div>
+          <h3>Notificacions Humanitzades</h3>
+          <p>Oblida't de les alarmes fredes. El teu Bit et contacta des de la preocupació i l'agraïment. "T'enyoro molt avui..."</p>
+        </div>
+        <div class="feature-card animate-on-scroll" style="transition-delay:0.15s">
+          <div class="feature-icon-wrap fi-mint">🏡</div>
+          <h3>The Space Personalitzable</h3>
+          <p>Un entorn isomètric 3D que actua com a dashboard visual. Decora l'habitació del teu Bit amb objectes guanyats completant reptes.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" style="transition-delay:0.2s">
+          <div class="feature-icon-wrap fi-sky">⚡</div>
+          <h3>Reptes Diaris Intel·ligents</h3>
+          <p>Micro-reptes adaptats a la teva àrea d'enfocament, dissenyats per ser assequibles i generar un progrés real i mesurable.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" style="transition-delay:0.25s">
+          <div class="feature-icon-wrap fi-gold">🎨</div>
+          <h3>Adopció & Personalització</h3>
+          <p>Posa nom al teu Bit, escull el seu aspecte i crea una connexió única. Cada Bit és tan especial com l'usuari que el cuida.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" style="transition-delay:0.3s">
+          <div class="feature-icon-wrap fi-peach">🧠</div>
+          <h3>Basat en Ciència</h3>
+          <p>Tots els reptes i mecàniques estan validats per experts en psicologia de la salut. Eficàcia científica envoltada d'estètica cozy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== AREAS ======================== -->
+  <section id="areas">
+    <div class="section-inner">
+      <div class="section-header text-center animate-on-scroll">
+        <div class="section-badge">✦ Àrees d'enfocament</div>
+        <h2 class="section-title">Escull el teu camí</h2>
+        <p class="section-subtitle">Quatre àrees de millora personal dissenyades per joves adults que volen créixer sense pressió.</p>
+      </div>
+
+      <div class="areas-grid">
+        <div class="area-card animate-on-scroll" style="transition-delay:0.1s">
+          <span class="area-emoji">📵</span>
+          <h3>Digital Detox</h3>
+          <p>Redueix el temps de pantalla, gestiona l'ús de xarxes socials i recupera el control del teu temps digital.</p>
+          <span class="area-pill">DETOX</span>
+        </div>
+        <div class="area-card animate-on-scroll" style="transition-delay:0.2s">
+          <span class="area-emoji">🏃</span>
+          <h3>Esport</h3>
+          <p>Crea rutines d'activitat física sostenibles. Des de passeigs diaris fins a sèries de gimnàs.</p>
+          <span class="area-pill">FITNESS</span>
+        </div>
+        <div class="area-card animate-on-scroll" style="transition-delay:0.3s">
+          <span class="area-emoji">📚</span>
+          <h3>Lectura</h3>
+          <p>Converteix la lectura en un hàbit diari agradable. El teu Bit creix cada pàgina que llegeixes.</p>
+          <span class="area-pill">READING</span>
+        </div>
+        <div class="area-card animate-on-scroll" style="transition-delay:0.4s">
+          <span class="area-emoji">🎓</span>
+          <h3>Estudi</h3>
+          <p>Tècniques de focus, gestions del temps i rutines d'aprenentatge adaptades als estudiants.</p>
+          <span class="area-pill">FOCUS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== TEAM ======================== -->
+  <section id="team">
+    <div class="section-inner">
+      <div class="section-header text-center animate-on-scroll">
+        <div class="section-badge">✦ L'equip</div>
+        <h2 class="section-title">Tres ments, una visió</h2>
+        <p class="section-subtitle">Un equip multidisciplinar que equilibra la viabilitat tècnica, la sostenibilitat financera i el rigor científic.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card animate-on-scroll" style="transition-delay:0.1s">
+          <div class="team-avatar">💰</div>
+          <h3>Jan Moran</h3>
+          <div class="team-role">Finance Lead</div>
+          <p>Estratègia de monetització, viabilitat econòmica i gestió de recursos.</p>
+        </div>
+        <div class="team-card animate-on-scroll" style="transition-delay:0.2s">
+          <div class="team-avatar">💻</div>
+          <h3>Gerard Garcia</h3>
+          <div class="team-role">Tech Lead</div>
+          <p>Arquitectura tècnica, desenvolupament de l'app i mecàniques de joc.</p>
+        </div>
+        <div class="team-card animate-on-scroll" style="transition-delay:0.3s">
+          <div class="team-avatar">🧬</div>
+          <h3>Lluna Lara</h3>
+          <div class="team-role">Health Expert</div>
+          <p>Validació d'hàbits, rigor psicològic i disseny de reptes saludables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CTA ======================== -->
+  <section id="cta">
+    <div class="cta-glow"></div>
+    <div class="section-inner text-center" style="position:relative;z-index:1;">
+      <div class="section-badge">✨ Aviat disponible</div>
+      <span class="cta-mascot">🌟</span>
+      <h2 class="section-title">Preparat per adoptar<br>el teu primer Bit?</h2>
+      <p class="section-subtitle">Uneix-te a la llista d'espera i sigues dels primers a descobrir BitSpace. El teu Bit ja et busca.</p>
+
+      <div class="waitlist-form">
+        <input type="email" placeholder="el-teu@email.com" aria-label="Correu electrònic">
+        <button type="submit" onclick="this.textContent='✓ Apuntat!';this.style.background='linear-gradient(135deg,#10b981,#059669)';">
+          Apunta'm ✨
+        </button>
+      </div>
+
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-bottom:2.5rem;">
+        Sense spam. Sense caps condicions. Seràs el primer a saber-ho.
+      </p>
+
+      <div class="store-btns">
+        <a href="#" class="store-btn" aria-label="Disponible a l'App Store">
+          <span class="store-icon">🍎</span>
+          <div>
+            <small>Disponible aviat a</small>
+            <big>App Store</big>
+          </div>
+        </a>
+        <a href="#" class="store-btn" aria-label="Disponible a Google Play">
+          <span class="store-icon">▶</span>
+          <div>
+            <small>Disponible aviat a</small>
+            <big>Google Play</big>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-text">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#A78BFA,#FF8FAB);border-radius:50% 50% 50% 40%/50% 50% 40% 50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;">🌟</div>
+          BitSpace
+        </div>
+        <p>L'app de benestar personal que converteix els teus hàbits saludables en la felicitat de la teva mascota virtual.</p>
+        <span class="footer-tagline">✦ cuida el teu bit, cuida de tu ✦</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Producte</h4>
+        <ul>
+          <li><a href="#concept">El Concepte</a></li>
+          <li><a href="#features">Funcions</a></li>
+          <li><a href="#spaces">The Space</a></li>
+          <li><a href="#areas">Àrees</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#team">L'Equip</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Premsa</a></li>
+          <li><a href="#">Contacte</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacitat</a></li>
+          <li><a href="#">Condicions d'ús</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">GDPR</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 BitSpace. Fet amb 💜 a Barcelona.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================== JS ======================== -->
+  <script>
+    // Scroll-triggered animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Sticky nav style
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

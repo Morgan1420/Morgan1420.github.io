@@ -1,17 +1,24 @@
 <template>
   <div class="home-container">
-    <div ref="carouselWrapper">
-      <Carousel @go-to-collaborate="scrollToCollaborate" @go-to-waitlist="scrollToWaitlist" />
+
+    <!-- NEW-->
+
+    <NavBar />
+    <Hero />
+    <Concept />
+    <How />
+    <Areas />
+    <Space />
+    <TresMents />
+    <WaitingList />
 
 
-    </div>
+
+    <!-- OLD -->
 
 
-    <NavBar class="nav-bar" :is-over-carousel="isOverCarousel" />
 
-    <section aria-labelledby="waitlist">
-      <Formulario id="waitlist" />
-    </section>
+
 
     <div id="prototype">
       <h2>{{ $t('prototype_title') }}</h2>
@@ -26,58 +33,41 @@
     <main role="main">
       <article itemscope itemtype="https://schema.org/WebApplication">
 
-
-
-        <section aria-labelledby="what-is-bitspace">
-          <VideoSection :title="t('what_is_bitspace')" :text="t('what_is_bitspace_text')"
-            videoSrc="https://www.youtube.com/watch?v=4rEZk1cxuSc" backgroundColor="#FFD8CF" />
-        </section>
-
-        <section aria-labelledby="how-it-works">
-          <InfoSectionLeft :title="t('how_it_works')" :text="t('how_it_works_text')" :imageSrc="bitLeyendoGif"
-            backgroundColor="#FFE4DD" />
-        </section>
-
-        <section aria-labelledby="what-about-bits">
-          <InfoSectionRight :title="t('what_about_bits')" :text="t('what_about_bits_text')" imageSrc=""
-            :image-src="gerardLlorandoGif" backgroundColor="#FFD8CF" />
-        </section>
-
-        <section aria-labelledby="what-about-space">
-          <InfoSectionLeft :title="t('what_about_space')" :text="t('what_about_space_text')" :imageSrc="casa"
-            backgroundColor="#FFE4DD" />
-        </section>
-
-        <section aria-labelledby="team">
-          <EquipPetit :title="t('team_title')" backgroundColor="#FFD8CF" />
-        </section>
-
-
-
       </article>
     </main>
 
-    <SiteFooter />
+    <Footer></Footer>
   </div>
+
+
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Carousel from './medium_components/Carousel.vue';
-import NavBar from './medium_components/navBar.vue';
 import VideoSection from './medium_components/VideoSection.vue'
 import Formulario from './complex_components/Formulario.vue';
 import InfoSectionLeft from './medium_components/InfoSectionLeft.vue';
 import InfoSectionRight from './medium_components/InfoSectionRight.vue';
 import Collaborate from './medium_components/Collaborate.vue';
 import EquipPetit from './medium_components/EquipPetit.vue';
-import SiteFooter from './medium_components/Footer.vue';
 import bitLeyendoGif from '@/assets/images/bit-leyendo.gif'
 import gerardLlorandoGif from '@/assets/images/Gerard_llorando_project_def.gif'
 import casa from '@/assets/images/casa.png'
 import CreaTuBit from './complex_components/CreaTuBit.vue';
 import fancyButton from './small_components/fancyButton.vue';
+
+import Hero from './views/Hero.vue';
+import Concept from './views/Concept.vue';
+import How from './views/How.vue';
+import Areas from './views/Areas.vue';
+import Space from './views/Space.vue';
+import TresMents from './views/TresMents.vue';
+import WaitingList from './views/WaitingList.vue';
+import Footer from './views/Footer.vue';
+import NavBar from './views/NavBar.vue';
+
 
 const { t, locale } = useI18n()
 
