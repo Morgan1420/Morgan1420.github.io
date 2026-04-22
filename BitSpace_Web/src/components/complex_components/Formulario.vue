@@ -5,27 +5,77 @@ export default {
 </script>
 
 <template>
-  <div class="waitlist-container">
-    <h2 class="title">{{ t('waitlist_title') }}</h2>
-    <form @submit.prevent="submitForm" class="waitlist-form">
-      <input v-model="email" type="email" :placeholder="t('waitlist_email_placeholder')" required class="input-email" />
-      <button type="submit" class="submit-btn" :disabled="loading">
-        {{ loading ? t('waitlist_button_loading') : t('waitlist_button_submit') }}
-      </button>
-      <p class="text-legal">En unir-te a la waitlist, acceptes la nostra Política de Privacitat. Podràs donar-te de
-        baixa
-        en qualsevol moment fent clic a l'enllaç que trobaràs al final de cada correu.</p>
-    </form>
+  <main class="sant-jordi-main">
+    <img src="@/assets/images/sant-jordi-bg.png" alt="Sant Jordi's Day illustration with red roses and an antique book"
+      class="bg-image" />
+    <div class="bg-gradient-linear"></div>
+    <div class="bg-gradient-radial"></div>
 
-    <p v-if="message" :class="messageClass" class="message">{{ message }}</p>
-  </div>
+    <section class="content-section">
+      <div class="content-wrapper">
+
+        <div v-if="!isMobile()" style="margin-top: 10rem;">
+          <br><br><br><br><br>
+        </div>
+
+
+
+        <p class="subtitle">23 d'Abril · Catalunya</p>
+
+        <h1 v-if="!isMobile()" class="title">
+          Uneix-te a la
+          <em>Waitlist</em>
+        </h1>
+
+        <!-- <p class="description">
+          {{ t('waitlist_sant_jordi_desc') || "Join the waitlist and celebrate Sant Jordi's Day with us — stories, roses, and something new in bloom." }}
+        </p> -->
+
+        <form @submit.prevent="submitForm" class="waitlist-form">
+          <input v-model="email" type="email" required
+            :placeholder="t('waitlist_email_placeholder') || 'your@email.com'" class="input-email" />
+          <button type="submit" class="submit-btn" :disabled="loading">
+            {{ loading ? t('waitlist_button_loading') : (t('waitlist_button_submit') || 'Join the waitlist') }}
+          </button>
+        </form>
+
+        <div aria-live="polite" class="message-container">
+          <p v-if="message" :class="messageClass" class="message">{{ message }}</p>
+        </div>
+
+        <div v-if="!isMobile()">
+          <br><br><br><br><br><br><br><br><br><br><br><br></br>
+          <p class="footer-text">Bona diada de Sant Jordi</p>
+        </div>
+
+        <div v-else>
+          <br>
+          <p class="footer-text">Bona diada de Sant Jordi</p>
+        </div>
+        
+      </div>
+    </section>
+  </main>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+
+// Reactividad para detectar si es móvil
+const windowWidth = ref(window.innerWidth)
+const updateWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+
+onMounted(() => window.addEventListener('resize', updateWidth))
+onBeforeUnmount(() => window.removeEventListener('resize', updateWidth))
+
+const isMobile = () => {
+  return windowWidth.value <= 640
+}
 
 const SCRIPT_BASE = 'https://script.google.com/macros/s/AKfycbyiPoDCZKIAY0nMLcXIAfiAWbdfNLb2IgAWXmAYnGbTfxPzqvS0UaDiQAKgpcgKyt6uCA/exec'
 
@@ -94,99 +144,219 @@ const submitForm = () => {
 </script>
 
 <style scoped>
-.waitlist-container {
-  max-width: 500px;
-  margin: 4rem auto;
-  padding: 2rem;
+/* CSS Variables */
+.sant-jordi-main {
+  --background: 36 38% 96%;
+  --foreground: 0 35% 15%;
+  --rose: 352 68% 42%;
+  --rose-deep: 352 70% 28%;
+  --parchment: 38 45% 92%;
+  --gold: 38 60% 52%;
+  --ink: 20 30% 12%;
+  --primary-foreground: 210 40% 98%;
 
-  background-color: #fae4de;
-  border: 10px solid #f8d1c6;
-  border-radius: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-family: sans-serif;
-  text-align: center;
-  animation: grow 2s ease-in-out infinite;
 }
 
-@keyframes grow {
-
-  0%,
-  100% {
-    transform: scale(1);
+@media (max-width: 640px) {
+  .sant-jordi-main {
+    min-height: auto;
+    /* Dejamos que la altura se adapte al contenido */
   }
+}
 
-  50% {
-    transform: scale(1.03);
+.bg-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 640px) {
+  .bg-image {
+
+    /* En móvil (pantalla vertical), cover recorta los lados. 
+       Podemos mover el foco (ej: 70% center) para mostrar más de la parte derecha de la foto,
+       o usar 'contain' si prefieres que no se recorte nada (aunque dejará espacios). */
+    object-position: 50% center;
   }
+}
+
+.bg-gradient-linear {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, hsla(var(--background), 0.4), hsla(var(--background), 0.2), hsla(var(--background), 0.8));
+}
+
+.bg-gradient-radial {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, hsla(var(--rose-deep), 0.35) 100%);
+}
+
+.content-section {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .content-section {
+    min-height: auto;
+    /* Ajuste automático a su contenido */
+    padding: 3rem 1.5rem;
+    /* Ajuste de padding para dejar un margen agradable */
+  }
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 36rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: hsl(var(--rose-deep));
 }
 
 .title {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #333;
-  font-weight: bold;
+  font-family: serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: hsl(var(--ink));
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4.5rem;
+  }
+}
+
+.title em {
+  color: hsl(var(--rose));
+  font-style: italic;
+}
+
+.description {
+  margin: 1.5rem auto 0;
+  max-width: 28rem;
+  font-size: 1rem;
+  color: hsla(var(--ink), 0.75);
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .description {
+    font-size: 1.125rem;
+  }
 }
 
 .waitlist-form {
+  margin: 2.5rem auto 0;
   display: flex;
+  width: 100%;
+  max-width: 28rem;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid hsla(var(--rose), 0.2);
+  background-color: hsla(var(--background), 0.7);
+  padding: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (min-width: 640px) {
+  .waitlist-form {
+    flex-direction: row;
+  }
 }
 
 .input-email {
-  padding: 0.85rem 1rem;
-  border-radius: 8px;
-  background-color: #fff;
+  flex: 1;
+  border: none;
+  background-color: transparent;
   font-size: 1rem;
-  border-width: 0;
-  border-style: solid;
+  padding: 0.5rem 0.75rem;
+  color: hsl(var(--ink));
+  outline: none;
 }
 
-.input-email:focus {
-  outline: none;
-  border-width: 3px;
-  border-color: #E57373;
+.input-email::placeholder {
+  color: hsla(var(--ink), 0.5);
 }
 
 .submit-btn {
-  background: #E57373;
-  /* Color que encaja con la paleta */
-  color: #fff;
-  padding: .85rem;
-  border-radius: 8px;
+  background-color: hsl(var(--rose));
+  color: hsl(var(--primary-foreground));
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: #d85a5a;
+  background-color: hsl(var(--rose-deep));
 }
 
 .submit-btn:disabled {
-  background-color: #ccc;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-.message {
+.message-container {
   margin-top: 1rem;
-  font-weight: 500;
-  font-size: 1rem;
+  min-height: 1.5rem;
+  font-size: 0.875rem;
+  color: hsla(var(--ink), 0.75);
+}
+
+.message {
+  margin: 0;
 }
 
 .success {
-  color: #2e8b57;
+  color: hsl(var(--rose));
 }
 
 .error {
-  color: #d9534f;
+  color: hsl(var(--rose-deep));
 }
 
-.text-legal {
-  font-size: x-small;
-  color: #555;
+.footer-text {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: hsla(var(--ink), 0.5);
 }
 </style>
