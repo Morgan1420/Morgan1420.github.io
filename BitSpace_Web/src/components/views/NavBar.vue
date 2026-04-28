@@ -1,7 +1,9 @@
 <template>
     <nav ref="navbarRef" :class="{ scrolled: isScrolled }" aria-label="Navegacio principal">
         <div class="nav-logo">
-            <div class="logo-blob">🌟</div>
+            <div class="logo-blob">
+                <img :src="BitPrincesa" alt="Bit logo" />
+            </div>
             BitSpace
         </div>
 
@@ -24,6 +26,7 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import BitPrincesa from '@/assets/images/Bits_Background/Bit_18.png'
 
 const navbarRef = ref(null)
 const isScrolled = ref(false)
@@ -105,7 +108,7 @@ onBeforeUnmount(() => {
     }
 
     50% {
-        transform: translateY(-18px) rotate(2deg);
+        transform: translateY(-8px) rotate(2deg);
     }
 }
 
@@ -151,6 +154,14 @@ nav.scrolled {
     justify-content: center;
     font-size: 1rem;
     animation: blob-float 4s ease-in-out infinite;
+}
+
+.nav-logo .logo-blob img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
 }
 
 .nav-links {

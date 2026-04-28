@@ -12,28 +12,28 @@
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">1</div>
                     <h3>Adopta el teu Bit</h3>
-                    <span class="step-icon"><img class="step-mascot" :src="stepMascot"
+                    <span class="step-icon"><img class="step-mascot" :src="Bit_adopta"
                             alt="Mascota de BitSpace" /></span>
                     <p>Posa-li nom i crea un vincle emocional des del primer moment.</p>
                 </div>
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">2</div>
                     <h3>Escull el teu camí</h3>
-                    <span class="step-icon"><img class="step-mascot" :src="stepMascot"
+                    <span class="step-icon"><img class="step-mascot" :src="Bit_escull"
                             alt="Mascota de BitSpace" /></span>
                     <p>Decideix el camí de millora que vols emprendre. Digital Detox, Esport, Lectura o Estudi.</p>
                 </div>
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">3</div>
                     <h3>Completa reptes diaris</h3>
-                    <span class="step-icon"><img class="step-mascot" :src="stepMascot"
+                    <span class="step-icon"><img class="step-mascot" :src="Bit_completa"
                             alt="Mascota de BitSpace" /></span>
                     <p>Completa Micro-reptes creats només per a tu. Senzills, motivadors i útils.</p>
                 </div>
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">4</div>
                     <h3>Decora el teu BitSpace</h3>
-                    <span class="step-icon"><img class="step-mascot" :src="stepMascot"
+                    <span class="step-icon"><img class="step-mascot" :src="Bit_decora"
                             alt="Mascota de BitSpace" /></span>
                     <p>Guanya monedes, desbloqueja objectes i construeix l'habitació dels somnis del teu Bit.</p>
                 </div>
@@ -45,7 +45,11 @@
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue'
 
-import stepMascot from '@/assets/images/Bit_8.png'
+import stepMascot from '@/assets/images/Bits_Background/Bit_8.png'
+import Bit_adopta from '@/assets/images/Bits_Background/Bit_25.png'
+import Bit_escull from '@/assets/images/Bits_Background/Bit_11.png'
+import Bit_completa from '@/assets/images/Bits_Background/Bit_18.png'
+import Bit_decora from '@/assets/images/Bits_Background/Bit_19.png'
 
 let observer
 
@@ -199,7 +203,7 @@ onBeforeUnmount(() => {
 
 .step-mascot {
     max-width: 150px;
-    max-height: 200px;
+    max-height: 120px;
     object-fit: contain;
     margin: 0 auto;
 }

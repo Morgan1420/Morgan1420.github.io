@@ -97,7 +97,7 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 
-const heroMascot = new URL('../../assets/images/Bit_8.png', import.meta.url).href
+const heroMascot = new URL('../../assets/images/Bits_Background/Bit_25.png', import.meta.url).href
 const reviewAvatar1 = new URL('../../assets/images/Web_icons/Review_person_1.png', import.meta.url).href
 const reviewAvatar2 = new URL('../../assets/images/Web_icons/Review_person_2.png', import.meta.url).href
 const prototypeLink = 'https://prototype.bitspace.es/ca'
