@@ -7,26 +7,25 @@
       <div class="spaces-grid">
         <div class="space-info animate-on-scroll">
           <div class="section-header animate-on-scroll">
-            <div class="section-badge"><b>✦</b> The Space <b>✦</b></div>
-            <h2 class="section-title">El teu refugi digital</h2>
+            <div class="section-badge"><b>✦</b> {{ t('space_badge') }} <b>✦</b></div>
+            <h2 class="section-title">{{ t('space_title') }}</h2>
             <p class="section-subtitle">
-              Un entorn isomètric 3D completament personalitzable. El teu Space és el teu dashboard visual i la
-              llar del teu Bit.
+              {{ t('space_subtitle') }}
             </p>
           </div>
           <div class="room-select">
             <button v-for="(room, index) in rooms" :key="room.name" type="button" class="room-button"
               :class="{ active: selectedRoomIndex === index }" :aria-pressed="selectedRoomIndex === index"
               @click="selectedRoomIndex = index">
-              <span class="room-button-label">{{ room.label }}</span>
-              <span class="room-button-subtitle">{{ room.caption }}</span>
+              <span class="room-button-label">{{ t(room.labelKey) }}</span>
+              <span class="room-button-subtitle">{{ t(room.captionKey) }}</span>
             </button>
           </div>
         </div>
 
         <div class="space-visuals animate-on-scroll">
           <div class="space-image-shell">
-            <img class="space-image" :src="currentRoom.image" :alt="currentRoom.alt" />
+            <img class="space-image" :src="currentRoom.image" :alt="t(currentRoom.altKey)" />
           </div>
         </div>
       </div>
@@ -36,11 +35,14 @@
 
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import cozyRoom from '@/assets/images/Spaces/cozyRoom.png'
 import cyberRoom from '@/assets/images/Spaces/cyberRoom.png'
 import natureRoom from '@/assets/images/Spaces/natureRoom.png'
 import japaneseRoom from '@/assets/images/Spaces/japaneseRoom.png'
+
+const { t } = useI18n()
 
 const spacesRoot = ref(null)
 const selectedRoomIndex = ref(0)
@@ -49,9 +51,9 @@ let observer
 const rooms = [
   {
     name: 'cozy',
-    label: 'Cozy room',
-    caption: 'Pastel i calma',
-    alt: 'Cozy room de BitSpace',
+    labelKey: 'space_room_cozy_label',
+    captionKey: 'space_room_cozy_caption',
+    altKey: 'space_room_cozy_alt',
     titleColor: 'var(--text-dark)',
     subtitleColor: 'var(--text-mid)',
     image: cozyRoom,
@@ -60,9 +62,9 @@ const rooms = [
   },
   {
     name: 'cyber',
-    label: 'Cyber room',
-    caption: 'Neó i energia',
-    alt: 'Cyber room de BitSpace',
+    labelKey: 'space_room_cyber_label',
+    captionKey: 'space_room_cyber_caption',
+    altKey: 'space_room_cyber_alt',
     titleColor: 'var(--white)',
     subtitleColor: 'rgba(255, 255, 255, 0.85)',
     image: cyberRoom,
@@ -71,9 +73,9 @@ const rooms = [
   },
   {
     name: 'nature',
-    label: 'Nature room',
-    caption: 'Verd i aire',
-    alt: 'Nature room de BitSpace',
+    labelKey: 'space_room_nature_label',
+    captionKey: 'space_room_nature_caption',
+    altKey: 'space_room_nature_alt',
     titleColor: 'var(--text-dark)',
     subtitleColor: 'var(--text-mid)',
     image: natureRoom,
@@ -82,9 +84,9 @@ const rooms = [
   },
   {
     name: 'japanese',
-    label: 'Japanese room',
-    caption: 'Suau i serè',
-    alt: 'Japanese room de BitSpace',
+    labelKey: 'space_room_japanese_label',
+    captionKey: 'space_room_japanese_caption',
+    altKey: 'space_room_japanese_alt',
     titleColor: 'var(--text-dark)',
     subtitleColor: 'var(--text-mid)',
     image: japaneseRoom,

@@ -1,5 +1,5 @@
 <template>
-    <nav ref="navbarRef" :class="{ scrolled: isScrolled }" aria-label="Navegacio principal">
+    <nav ref="navbarRef" :class="{ scrolled: isScrolled }" :aria-label="t('nav_aria_label')">
         <div class="nav-logo">
             <div class="logo-blob">
                 <img :src="BitPrincesa" alt="Bit logo" />
@@ -8,28 +8,39 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#concept" @click.prevent="scrollToSection('concept')">El Concepte</a></li>
-            <li><a href="#how" @click.prevent="scrollToSection('how')">Com funciona</a></li>
-            <li><a href="#areas" @click.prevent="scrollToSection('areas')">Àrees de millora</a></li>
-            <li><a href="#spaces" @click.prevent="scrollToSection('spaces')">The Space</a></li>
-            <li><a href="#team" @click.prevent="scrollToSection('team')">Equip</a></li>
+            <li><a href="#concept" @click.prevent="scrollToSection('concept')">{{ t('nav_concept') }}</a></li>
+            <li><a href="#how" @click.prevent="scrollToSection('how')">{{ t('nav_how') }}</a></li>
+            <li><a href="#areas" @click.prevent="scrollToSection('areas')">{{ t('nav_areas') }}</a></li>
+            <li><a href="#spaces" @click.prevent="scrollToSection('spaces')">{{ t('nav_spaces') }}</a></li>
+            <li><a href="#team" @click.prevent="scrollToSection('team')">{{ t('nav_team') }}</a></li>
             <li>
-                <a href="#cta" class="nav-cta" @click.prevent="scrollToSection('cta')">Uneix-te ✨</a>
+                <a href="#cta" class="nav-cta" @click.prevent="scrollToSection('cta')">{{ t('nav_join') }}</a>
             </li>
         </ul>
 
-        <button type="button" class="nav-lang" @click="goToSpanish" aria-label="Canviar idioma a espanyol">
-            ES / CA
+        <button
+            type="button"
+            class="nav-lang"
+            @click="toggleLanguage"
+            :aria-label="locale === 'en' ? t('nav_change_to_ca') : t('nav_change_to_en')"
+        >
+            <span :class="{ 'lang-active': locale === 'ca' }">CA</span> / <span :class="{ 'lang-active': locale === 'en' }">EN</span>
         </button>
     </nav>
 </template>
 
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useRoute, useRouter } from 'vue-router'
 import BitPrincesa from '@/assets/images/Bits_Background/Bit_18.png'
 
 const navbarRef = ref(null)
 const isScrolled = ref(false)
+
+const { t, locale } = useI18n()
+const route = useRoute()
+const router = useRouter()
 
 const handleScroll = () => {
     isScrolled.value = window.scrollY > 40
@@ -45,8 +56,21 @@ const scrollToSection = (id) => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
-const goToSpanish = () => {
-    window.location.href = '/es'
+const toggleLanguage = () => {
+    const nextLang = locale.value === 'en' ? 'ca' : 'en'
+
+    try {
+        localStorage.setItem('bitspace_lang', nextLang)
+    } catch {
+        // localStorage unavailable (e.g. private browsing) - ignore
+    }
+
+    router.push({
+        name: route.name,
+        params: { ...route.params, lang: nextLang },
+        query: route.query,
+        hash: route.hash,
+    })
 }
 
 onMounted(() => {
@@ -237,6 +261,11 @@ nav.scrolled {
 
 .nav-lang:hover {
     background: var(--lavender);
+}
+
+.nav-lang .lang-active {
+    color: var(--purple-deep);
+    font-weight: 700;
 }
 
 @media (max-width: 900px) {

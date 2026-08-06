@@ -2,11 +2,10 @@
     <section id="team">
         <div class="section-inner">
             <div class="section-header text-center animate-on-scroll">
-                <div class="section-badge"><b>✦</b> L'equip <b>✦</b></div>
-                <h2 class="section-title">Tres ments, una visio</h2>
+                <div class="section-badge"><b>✦</b> {{ t('home_team_badge') }} <b>✦</b></div>
+                <h2 class="section-title">{{ t('home_team_title') }}</h2>
                 <p class="section-subtitle">
-                    Un equip multidisciplinar que equilibra la viabilitat tecnica, la sostenibilitat
-                    financera i el rigor cientific.
+                    {{ t('home_team_subtitle') }}
                 </p>
             </div>
 
@@ -22,7 +21,7 @@
                     </a>
                     <div class="info-membre">
                         <h3 class="nom">Jan Moran Ricardo</h3>
-                        <div class="team-role">Finance Lead</div>
+                        <div class="team-role">{{ t('home_team_role_finance') }}</div>
                     </div>
                 </div>
                 <div class="team-card animate-on-scroll" style="transition-delay: 0.2s">
@@ -35,7 +34,7 @@
                     </a>
                     <div class="info-membre">
                         <h3 class="nom">Gerard Garcia Gros</h3>
-                        <div class="team-role">Tech Lead</div>
+                        <div class="team-role">{{ t('home_team_role_tech') }}</div>
                     </div>
                 </div>
                 <div class="team-card animate-on-scroll" style="transition-delay: 0.3s">
@@ -48,7 +47,7 @@
                     </a>
                     <div class="info-membre">
                         <h3 class="nom">Lluna Lara Valle</h3>
-                        <div class="team-role">Health Expert</div>
+                        <div class="team-role">{{ t('home_team_role_health') }}</div>
                     </div>
                 </div>
             </div>
@@ -58,6 +57,7 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import Img_Jan from '@/assets/images/Equip/Jan.png'
 import Bit_Jan from '@/assets/images/Bits_Background/Bit_jan_llegint.png'
@@ -65,6 +65,8 @@ import Img_Gerard from '@/assets/images/Equip/Gerard.png'
 import Bit_Gerard from '@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.png'
 import Img_Lluna from '@/assets/images/Equip/anulL.png'
 import Bit_Lluna from '@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.png'
+
+const { t } = useI18n()
 
 let observer = null
 

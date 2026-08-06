@@ -2,37 +2,34 @@
   <section id="areas">
     <div class="section-inner">
       <div class="section-header text-center animate-on-scroll">
-        <div class="section-badge"><b>✦</b> Àrees d'enfocament <b>✦</b></div>
-        <h2 class="section-title">Quin camí triaràs?</h2>
-        <p class="section-subtitle">Quatre àrees de millora personal dissenyades per joves adults que volen
-          créixer sense pressió.</p>
+        <div class="section-badge"><b>✦</b> {{ t('areas_badge') }} <b>✦</b></div>
+        <h2 class="section-title">{{ t('areas_title') }}</h2>
+        <p class="section-subtitle">{{ t('areas_subtitle') }}</p>
       </div>
 
       <div class="areas-grid">
         <div class="area-card animate-on-scroll" style="transition-delay:0.1s">
           <span class="area-emoji">📵</span>
-          <h3>Digital Detox</h3>
-          <p>Redueix el temps de pantalla, gestiona l'ús de xarxes socials i recupera el control del teu
-            temps.</p>
+          <h3>{{ t('areas_detox_title') }}</h3>
+          <p>{{ t('areas_detox_text') }}</p>
           <span class="area-pill">DETOX</span>
         </div>
         <div class="area-card animate-on-scroll" style="transition-delay:0.2s">
           <span class="area-emoji">🏃</span>
-          <h3>Esport</h3>
-          <p>Crea rutines d'activitat física sostenibles. Des de passeigs diaris fins a sèries de gimnàs.</p>
+          <h3>{{ t('areas_sport_title') }}</h3>
+          <p>{{ t('areas_sport_text') }}</p>
           <span class="area-pill">FITNESS</span>
         </div>
         <div class="area-card animate-on-scroll" style="transition-delay:0.3s">
           <span class="area-emoji">📚</span>
-          <h3>Lectura</h3>
-          <p>Converteix la lectura en un hàbit diari agradable. El teu Bit creix cada pàgina que llegeixes.
-          </p>
+          <h3>{{ t('areas_reading_title') }}</h3>
+          <p>{{ t('areas_reading_text') }}</p>
           <span class="area-pill">READING</span>
         </div>
         <div class="area-card animate-on-scroll" style="transition-delay:0.4s">
           <span class="area-emoji">🎓</span>
-          <h3>Estudi</h3>
-          <p>Tècniques de focus, gestions del temps i rutines d'aprenentatge adaptades als estudiants.</p>
+          <h3>{{ t('areas_study_title') }}</h3>
+          <p>{{ t('areas_study_text') }}</p>
           <span class="area-pill">FOCUS</span>
         </div>
       </div>
@@ -42,6 +39,9 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 let observer
 

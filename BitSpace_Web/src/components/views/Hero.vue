@@ -24,33 +24,29 @@
       <!-- Hero Text -->
       <div class="hero-content">
         <div class="hero-badge">
-          <span>✦</span> APP DE BENESTAR<span>✦</span>
+          <span>✦</span> {{ t('hero_badge') }}<span>✦</span>
         </div>
 
-        <h1 class="hero-title">
-          El teu benestar,<br>
-          <span class="highlight">reflectit en<br>un món digital</span>
-        </h1>
+        <h1 class="hero-title" v-html="t('hero_title')"></h1>
 
         <p class="hero-subtitle">
-          Adopta el teu Bit, crea hàbits saludables dia a dia i observa com creix feliç al teu costat. Perquè
-          cuidar-te no ha de ser una cosa que facis sol.
+          {{ t('hero_subtitle') }}
         </p>
 
         <div class="hero-tagline">
-          ✦ less scroll, more control ✦
+          {{ t('hero_tagline') }}
         </div>
 
         <div class="hero-actions">
           <a href="#cta" class="btn-primary"
             :class="{ 'is-muted': !activeWaitlistPrimary, 'is-hover-locked': hoveredButton === 'waitlist' }"
             @mouseenter="hoveredButton = 'waitlist'" @mouseleave="hoveredButton = null">
-            <span>📱</span> {{ activeWaitlistPrimary ? "Uneix-te a la llista" : "Llista d'espera" }}
+            <span>📱</span> {{ activeWaitlistPrimary ? t('hero_cta_join') : t('hero_cta_waitlist_short') }}
           </a>
           <a :href="prototypeLink" class="btn-secondary"
             :class="{ 'is-highlighted': !activeWaitlistPrimary, 'is-hover-locked': hoveredButton === 'prototype' }"
             @mouseenter="hoveredButton = 'prototype'" @mouseleave="hoveredButton = null" @click.prevent="openPrototype">
-            <span>▶</span> {{ activeWaitlistPrimary ? 'Prova el prototip' : 'Prova el prototip' }}
+            <span>▶</span> {{ t('hero_cta_prototype') }}
           </a>
         </div>
 
@@ -59,26 +55,26 @@
       <!-- Hero Visual -->
       <div class="hero-visual">
         <div class="hero-mascot-wrap">
-          <img class="hero-mascot" :src="heroMascot" alt="Mascota de BitSpace" />
+          <img class="hero-mascot" :src="heroMascot" :alt="t('mascot_alt_generic')" />
 
           <div class="reviews">
             <div class="review">
               <div class="review-img">
-                <img class="review-avatar" :src="reviewAvatar1" alt="Img Alfons">
+                <img class="review-avatar" :src="reviewAvatar1" :alt="t('hero_review1_alt')">
               </div>
               <div class="review-content">
-                <p><b>” </b> Cada cop que obro Instagram penso en vosaltres! 10/10</p>
-                <cite>— Alfons, mentor</cite>
+                <p><b>” </b> {{ t('hero_review1_text') }}</p>
+                <cite>{{ t('hero_review1_cite') }}</cite>
               </div>
             </div>
 
             <div class="review">
               <div class="review-img">
-                <img class="review-avatar" :src="reviewAvatar2" alt="Img Esther">
+                <img class="review-avatar" :src="reviewAvatar2" :alt="t('hero_review2_alt')">
               </div>
               <div class="review-content">
-                <p><b>” </b> M'encanta el vostre projecte! Com puc ajudar?</p>
-                <cite>— Esther, consultora</cite>
+                <p><b>” </b> {{ t('hero_review2_text') }}</p>
+                <cite>{{ t('hero_review2_cite') }}</cite>
               </div>
             </div>
 
@@ -96,6 +92,9 @@
 
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const heroMascot = new URL('../../assets/images/Bits_Background/Bit_25.png', import.meta.url).href
 const reviewAvatar1 = new URL('../../assets/images/Web_icons/Review_person_1.png', import.meta.url).href

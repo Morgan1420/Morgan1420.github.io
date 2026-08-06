@@ -160,6 +160,146 @@ const messages = {
     nav_lang_label_ca: 'Català',
     nav_lang_label_en: 'English',
     nav_lang_label_es: 'Castellano',
+    // Homepage (visible) sections
+    nav_aria_label: 'Navegació principal',
+    nav_concept: 'El Concepte',
+    nav_how: 'Com funciona',
+    nav_areas: 'Àrees de millora',
+    nav_spaces: 'The Space',
+    nav_join: 'Uneix-te ✨',
+    mascot_alt_generic: 'Mascota de BitSpace',
+    // Hero
+    hero_badge: 'APP DE BENESTAR',
+    hero_title:
+      'El teu benestar,<br>\n          <span class="highlight">reflectit en<br>un món digital</span>',
+    hero_subtitle:
+      "Adopta el teu Bit, crea hàbits saludables dia a dia i observa com creix feliç al teu costat. Perquè cuidar-te no ha de ser una cosa que facis sol.",
+    hero_tagline: '✦ menys scroll, més control ✦',
+    hero_cta_join: "Uneix-te a la llista d'espera",
+    hero_cta_waitlist_short: "Llista d'espera",
+    hero_cta_prototype: 'Prova el prototip',
+    hero_review1_text: 'Cada cop que obro Instagram penso en vosaltres! 10/10',
+    hero_review1_cite: '— Alfons, mentor',
+    hero_review1_alt: "Foto de l'Alfons",
+    hero_review2_text: "M'encanta el vostre projecte! Com puc ajudar?",
+    hero_review2_cite: '— Esther, consultora',
+    hero_review2_alt: "Foto de l'Esther",
+    // Concept
+    concept_badge: 'El concepte',
+    concept_title: 'El teu Bit és el<br>teu mirall digital',
+    concept_quote: '"Quan <em>cuides del teu Bit</em>, t\'estàs <em>cuidant a tu mateix</em>."',
+    concept_p1:
+      'BitSpace no és ni una llista "to-do" ni un bloquejador d\'apps, sinó un <strong>entorn gamificat i ple d\'eines </strong>que t\'ajudaran a créixer i millorar la teva vida digital.',
+    concept_p2:
+      "Des de BitSpace sabem que no tots comencem des del mateix punt A, ni volem arribar al mateix punt B. És per això que la personalització és un factor tan important — <strong>apliquem solucions individuals i basades en la ciència de l'hàbit.</strong>",
+    concept_uvp:
+      '"Si creus que pots donar més de tu mateix, però el telèfon t\'atrapa... BitSpace és per a tu."',
+    concept_card_flip_hint: 'Fes clic per girar',
+    concept_card_aria_show_back: 'mostrar explicació',
+    concept_card_aria_show_front: 'mostrar cara frontal',
+    concept_card_happy_title: 'Feliç',
+    concept_card_happy_back:
+      'Quan mantens el ritme, el teu Bit es mostra content, estable i amb energia per continuar creixent.',
+    concept_card_happy_alt: 'Feliç',
+    concept_card_focused_title: 'Concentrat',
+    concept_card_focused_back:
+      'Quan avances amb constància, el Bit entra en mode focus i recompensa cada petit progrés.',
+    concept_card_focused_alt: 'Concentrat',
+    concept_card_sad_title: 'Trist',
+    concept_card_sad_back:
+      "Quan t'allunyes dels teus hàbits, el Bit ho nota i et recorda suaument que torni la connexió.",
+    concept_card_sad_alt: 'Trist',
+    concept_card_tired_title: 'Cansat',
+    concept_card_tired_back:
+      'Quan et demanes massa, el Bit baixa el ritme i et recorda que descansar també forma part del progrés.',
+    concept_card_tired_alt: 'Cansat',
+    // How it works
+    how_badge: 'Com funciona',
+    how_title: 'Quatre passos cap al<br>teu millor tu',
+    how_subtitle:
+      'Un procés senzill, emocionant i científicament dissenyat per crear hàbits duradors.',
+    how_step1_title: 'Adopta el teu Bit',
+    how_step1_text: 'Posa-li nom i crea un vincle emocional des del primer moment.',
+    how_step2_title: 'Escull el teu camí',
+    how_step2_text:
+      'Decideix el camí de millora que vols emprendre. Digital Detox, Esport, Lectura o Estudi.',
+    how_step3_title: 'Completa reptes diaris',
+    how_step3_text: 'Completa Micro-reptes creats només per a tu. Senzills, motivadors i útils.',
+    how_step4_title: 'Decora el teu BitSpace',
+    how_step4_text:
+      "Guanya monedes, desbloqueja objectes i construeix l'habitació dels somnis del teu Bit.",
+    // Areas
+    areas_badge: "Àrees d'enfocament",
+    areas_title: 'Quin camí triaràs?',
+    areas_subtitle:
+      'Quatre àrees de millora personal dissenyades per joves adults que volen créixer sense pressió.',
+    areas_detox_title: 'Digital Detox',
+    areas_detox_text:
+      "Redueix el temps de pantalla, gestiona l'ús de xarxes socials i recupera el control del teu temps.",
+    areas_sport_title: 'Esport',
+    areas_sport_text:
+      "Crea rutines d'activitat física sostenibles. Des de passeigs diaris fins a sèries de gimnàs.",
+    areas_reading_title: 'Lectura',
+    areas_reading_text:
+      'Converteix la lectura en un hàbit diari agradable. El teu Bit creix cada pàgina que llegeixes.',
+    areas_study_title: 'Estudi',
+    areas_study_text:
+      "Tècniques de focus, gestions del temps i rutines d'aprenentatge adaptades als estudiants.",
+    // Space
+    space_badge: 'The Space',
+    space_title: 'El teu refugi digital',
+    space_subtitle:
+      'Un entorn isomètric 3D completament personalitzable. El teu Space és el teu dashboard visual i la llar del teu Bit.',
+    space_room_cozy_label: 'Cozy room',
+    space_room_cozy_caption: 'Pastel i calma',
+    space_room_cozy_alt: 'Cozy room de BitSpace',
+    space_room_cyber_label: 'Cyber room',
+    space_room_cyber_caption: 'Neó i energia',
+    space_room_cyber_alt: 'Cyber room de BitSpace',
+    space_room_nature_label: 'Nature room',
+    space_room_nature_caption: 'Verd i aire',
+    space_room_nature_alt: 'Nature room de BitSpace',
+    space_room_japanese_label: 'Japanese room',
+    space_room_japanese_caption: 'Suau i serè',
+    space_room_japanese_alt: 'Japanese room de BitSpace',
+    // Team (homepage "Tres ments" section)
+    home_team_badge: "L'equip",
+    home_team_title: 'Tres ments, una visió',
+    home_team_subtitle:
+      'Un equip multidisciplinar que equilibra la viabilitat tècnica, la sostenibilitat financera i el rigor científic.',
+    home_team_role_finance: 'Finance Lead',
+    home_team_role_tech: 'Tech Lead',
+    home_team_role_health: 'Health Expert',
+    // Waitlist / CTA
+    cta_badge: 'Aviat disponible',
+    cta_title: 'Preparat per adoptar<br />el teu primer Bit?',
+    cta_subtitle: "Uneix-te a la llista d'espera i sigues dels primers a descobrir BitSpace.",
+    cta_email_aria: 'Correu electrònic',
+    waitlist_button_done: 'Fet!',
+    cta_note: 'Sense spam. Sense cap condició. Seràs el primer a saber-ho.',
+    cta_store_soon: 'Disponible aviat a',
+    cta_store_appstore_aria: "Disponible a l'App Store",
+    cta_store_googleplay_aria: 'Disponible a Google Play',
+    // Footer
+    footer_brand_text:
+      'Adopta el teu Bit, crea hàbits saludables dia a dia i observa com creix feliç al teu costat.',
+    footer_slogan: "Cuida el teu Bit, cuida't a tu",
+    footer_col_product: 'Producte',
+    footer_col_company: 'Empresa',
+    footer_col_legal: 'Legal',
+    footer_link_features: 'Funcions',
+    footer_link_areas: 'Àrees',
+    footer_link_team: "L'Equip",
+    footer_link_mission: 'Missió',
+    footer_link_privacy: 'Privacitat',
+    footer_link_terms: "Condicions d'ús",
+    footer_link_cookies: 'Cookies',
+    footer_link_gdpr: 'GDPR',
+    footer_copyright: '© 2026 BitSpace. Fet amb 💜 a Barcelona.',
+    prototype_desc_1:
+      'BitSpace encara es troba en una fase "early seed" on encara s\'està validant i desenvolupant les bases de l\'aplicació final.',
+    prototype_desc_2:
+      'A continuació podreu veure doncs un petit prototip web perquè us feu a la idea de com es veurà BitSpace. Si teniu qualsevol dubte o opinió no dubteu a contactar-nos a la pesta de contacte.',
   },
   es: {
     // SEO Meta
@@ -476,6 +616,144 @@ const messages = {
     nav_lang_label_ca: 'Català',
     nav_lang_label_en: 'English',
     nav_lang_label_es: 'Castellano',
+    // Homepage (visible) sections
+    nav_aria_label: 'Main navigation',
+    nav_concept: 'The Concept',
+    nav_how: 'How it works',
+    nav_areas: 'Improvement areas',
+    nav_spaces: 'The Space',
+    nav_join: 'Join us ✨',
+    mascot_alt_generic: 'BitSpace mascot',
+    // Hero
+    hero_badge: 'WELLBEING APP',
+    hero_title:
+      'Your wellbeing,<br>\n          <span class="highlight">reflected in<br>a digital world</span>',
+    hero_subtitle:
+      "Adopt your Bit, build healthy habits day by day and watch it grow happily by your side. Because taking care of yourself shouldn't be something you do alone.",
+    hero_tagline: '✦ less scroll, more control ✦',
+    hero_cta_join: 'Join the waitlist',
+    hero_cta_waitlist_short: 'Waitlist',
+    hero_cta_prototype: 'Try the prototype',
+    hero_review1_text: 'Every time I open Instagram I think of you! 10/10',
+    hero_review1_cite: '— Alfons, mentor',
+    hero_review1_alt: 'Photo of Alfons',
+    hero_review2_text: 'I love your project! How can I help?',
+    hero_review2_cite: '— Esther, consultant',
+    hero_review2_alt: 'Photo of Esther',
+    // Concept
+    concept_badge: 'The concept',
+    concept_title: 'Your Bit is your<br>digital mirror',
+    concept_quote:
+      '"When you <em>take care of your Bit</em>, you\'re <em>taking care of yourself</em>."',
+    concept_p1:
+      'BitSpace is neither a to-do list nor an app blocker, but a <strong>gamified environment full of tools</strong> that will help you grow and improve your digital life.',
+    concept_p2:
+      "At BitSpace we know not everyone starts from the same point A, nor wants to reach the same point B. That's why personalization matters so much — <strong>we apply individual solutions grounded in habit science.</strong>",
+    concept_uvp:
+      '"If you believe you can give more of yourself, but your phone keeps trapping you... BitSpace is for you."',
+    concept_card_flip_hint: 'Click to flip',
+    concept_card_aria_show_back: 'show explanation',
+    concept_card_aria_show_front: 'show front side',
+    concept_card_happy_title: 'Happy',
+    concept_card_happy_back:
+      'When you keep up the pace, your Bit looks content, stable and full of energy to keep growing.',
+    concept_card_happy_alt: 'Happy',
+    concept_card_focused_title: 'Focused',
+    concept_card_focused_back:
+      'When you make steady progress, the Bit enters focus mode and rewards every small step forward.',
+    concept_card_focused_alt: 'Focused',
+    concept_card_sad_title: 'Sad',
+    concept_card_sad_back:
+      'When you drift away from your habits, the Bit notices and gently reminds you to reconnect.',
+    concept_card_sad_alt: 'Sad',
+    concept_card_tired_title: 'Tired',
+    concept_card_tired_back:
+      'When you push yourself too hard, the Bit slows down and reminds you that rest is part of progress too.',
+    concept_card_tired_alt: 'Tired',
+    // How it works
+    how_badge: 'How it works',
+    how_title: 'Four steps to<br>your best self',
+    how_subtitle: 'A simple, exciting process, scientifically designed to build lasting habits.',
+    how_step1_title: 'Adopt your Bit',
+    how_step1_text: 'Give it a name and build an emotional bond from the very first moment.',
+    how_step2_title: 'Choose your path',
+    how_step2_text:
+      'Decide which area of improvement to pursue. Digital Detox, Sport, Reading or Study.',
+    how_step3_title: 'Complete daily challenges',
+    how_step3_text: 'Complete micro-challenges created just for you. Simple, motivating and useful.',
+    how_step4_title: 'Decorate your BitSpace',
+    how_step4_text: "Earn coins, unlock items and build your Bit's dream room.",
+    // Areas
+    areas_badge: 'Focus areas',
+    areas_title: 'Which path will you choose?',
+    areas_subtitle:
+      'Four personal-improvement areas designed for young adults who want to grow without pressure.',
+    areas_detox_title: 'Digital Detox',
+    areas_detox_text:
+      'Reduce screen time, manage your social media use and take back control of your time.',
+    areas_sport_title: 'Sport',
+    areas_sport_text: 'Build sustainable physical activity routines. From daily walks to gym sessions.',
+    areas_reading_title: 'Reading',
+    areas_reading_text:
+      'Turn reading into an enjoyable daily habit. Your Bit grows with every page you read.',
+    areas_study_title: 'Study',
+    areas_study_text:
+      'Focus techniques, time management and learning routines adapted for students.',
+    // Space
+    space_badge: 'The Space',
+    space_title: 'Your digital retreat',
+    space_subtitle:
+      "A fully customizable 3D isometric environment. Your Space is your visual dashboard and your Bit's home.",
+    space_room_cozy_label: 'Cozy room',
+    space_room_cozy_caption: 'Pastel and calm',
+    space_room_cozy_alt: 'BitSpace cozy room',
+    space_room_cyber_label: 'Cyber room',
+    space_room_cyber_caption: 'Neon and energy',
+    space_room_cyber_alt: 'BitSpace cyber room',
+    space_room_nature_label: 'Nature room',
+    space_room_nature_caption: 'Green and air',
+    space_room_nature_alt: 'BitSpace nature room',
+    space_room_japanese_label: 'Japanese room',
+    space_room_japanese_caption: 'Soft and serene',
+    space_room_japanese_alt: 'BitSpace japanese room',
+    // Team (homepage "Tres ments" section)
+    home_team_badge: 'The team',
+    home_team_title: 'Three minds, one vision',
+    home_team_subtitle:
+      'A multidisciplinary team balancing technical feasibility, financial sustainability and scientific rigor.',
+    home_team_role_finance: 'Finance Lead',
+    home_team_role_tech: 'Tech Lead',
+    home_team_role_health: 'Health Expert',
+    // Waitlist / CTA
+    cta_badge: 'Coming soon',
+    cta_title: 'Ready to adopt<br />your first Bit?',
+    cta_subtitle: 'Join the waitlist and be among the first to discover BitSpace.',
+    cta_email_aria: 'Email address',
+    waitlist_button_done: 'Done!',
+    cta_note: "No spam. No strings attached. You'll be the first to know.",
+    cta_store_soon: 'Coming soon to',
+    cta_store_appstore_aria: 'Available on the App Store',
+    cta_store_googleplay_aria: 'Available on Google Play',
+    // Footer
+    footer_brand_text:
+      'Adopt your Bit, build healthy habits day by day and watch it grow happily by your side.',
+    footer_slogan: 'Care for your Bit, care for yourself',
+    footer_col_product: 'Product',
+    footer_col_company: 'Company',
+    footer_col_legal: 'Legal',
+    footer_link_features: 'Features',
+    footer_link_areas: 'Areas',
+    footer_link_team: 'The Team',
+    footer_link_mission: 'Mission',
+    footer_link_privacy: 'Privacy',
+    footer_link_terms: 'Terms of use',
+    footer_link_cookies: 'Cookies',
+    footer_link_gdpr: 'GDPR',
+    footer_copyright: '© 2026 BitSpace. Made with 💜 in Barcelona.',
+    prototype_desc_1:
+      'BitSpace is still in an "early seed" phase, where the foundations of the final app are still being validated and developed.',
+    prototype_desc_2:
+      'Below you can check out a small web prototype to get an idea of what BitSpace will look like. If you have any questions or feedback, feel free to reach out to us in the contact tab.',
   },
 }
 

@@ -7,6 +7,23 @@ import Collaborate from '../components/views/Collaborate.vue'
 import LanguageWrapper from './LanguageWrapper.vue' // 1. Importa el nuevo componente
 import i18n from '../i18n'
 
+const LANG_STORAGE_KEY = 'bitspace_lang'
+
+// Preferred CA/EN language: stored choice first, then browser language, defaulting to Catalan
+const getPreferredLang = () => {
+  try {
+    const stored = localStorage.getItem(LANG_STORAGE_KEY)
+    if (stored === 'ca' || stored === 'en') {
+      return stored
+    }
+  } catch {
+    // localStorage unavailable (e.g. private browsing)
+  }
+
+  const browserLang = typeof navigator !== 'undefined' ? navigator.language : ''
+  return browserLang && browserLang.toLowerCase().startsWith('en') ? 'en' : 'ca'
+}
+
 // SEO Meta Tags per idioma
 const getPageMeta = (lang) => {
   const meta = {
@@ -102,10 +119,15 @@ const routes = [
         if (i18n.global.locale.value !== lang) {
           i18n.global.locale.value = lang
         }
+        try {
+          localStorage.setItem(LANG_STORAGE_KEY, lang)
+        } catch {
+          // localStorage unavailable (e.g. private browsing)
+        }
         updateMetaTags(lang)
         return next()
       }
-      return next({ path: '/ca' }) // Redirigir a Català por defecto si el idioma no es válido
+      return next({ path: `/${getPreferredLang()}` }) // Idioma no vàlid: usar preferència guardada o del navegador
     },
     children: [
       {
@@ -137,7 +159,7 @@ const routes = [
   },
   {
     path: '/',
-    redirect: '/ca', // Redirigir la raíz al idioma por defecto (Català)
+    redirect: () => ({ path: `/${getPreferredLang()}` }), // Idioma per defecte: preferència guardada o del navegador
   },
 ]
 

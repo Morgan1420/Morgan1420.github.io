@@ -3,41 +3,41 @@
         <div class="cta-glow"></div>
 
         <div class="section-inner text-center cta-content">
-            <div class="section-badge">✨ Aviat disponible ✨</div>
+            <div class="section-badge">✨ {{ t('cta_badge') }} ✨</div>
             <span class="cta-mascot">🌟</span>
 
-            <h2 class="section-title">Preparat per adoptar<br />el teu primer Bit?</h2>
+            <h2 class="section-title" v-html="t('cta_title')"></h2>
 
             <p class="section-subtitle">
-                Uneix-te a la llista d'espera i sigues dels primers a descobrir BitSpace.
+                {{ t('cta_subtitle') }}
             </p>
 
             <form class="waitlist-form" @submit.prevent="submitForm">
                 <input v-model="email" type="email" :placeholder="t('waitlist_email_placeholder')"
-                    :class="{ confirmed: isConfirmed }" aria-label="Correu electrònic" required />
+                    :class="{ confirmed: isConfirmed }" :aria-label="t('cta_email_aria')" required />
 
                 <button type="submit" :class="{ joined: isConfirmed }" :disabled="loading">
-                    {{ loading ? t('waitlist_button_loading') : isConfirmed ? 'Fet!' : t('waitlist_button_submit') }}
+                    {{ loading ? t('waitlist_button_loading') : isConfirmed ? t('waitlist_button_done') : t('waitlist_button_submit') }}
                 </button>
             </form>
 
             <p v-if="message" :class="messageClass" class="waitlist-message">{{ message }}</p>
 
-            <p class="cta-note">Sense spam. Sense caps condicions. Seràs el primer a saber-ho.</p>
+            <p class="cta-note">{{ t('cta_note') }}</p>
 
             <div class="store-btns">
-                <a href="#" class="store-btn" aria-label="Disponible a l'App Store">
+                <a href="#" class="store-btn" :aria-label="t('cta_store_appstore_aria')">
                     <span class="store-icon">🍎</span>
                     <div>
-                        <small>Disponible aviat a</small>
+                        <small>{{ t('cta_store_soon') }}</small>
                         <big>App Store</big>
                     </div>
                 </a>
 
-                <a href="#" class="store-btn" aria-label="Disponible a Google Play">
+                <a href="#" class="store-btn" :aria-label="t('cta_store_googleplay_aria')">
                     <span class="store-icon">▶</span>
                     <div>
-                        <small>Disponible aviat a</small>
+                        <small>{{ t('cta_store_soon') }}</small>
                         <big>Google Play</big>
                     </div>
                 </a>

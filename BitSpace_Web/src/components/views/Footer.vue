@@ -6,43 +6,43 @@
                     <div class="brand-mark">🌟</div>
                     BitSpace
                 </div>
-                <p>Adopta el teu Bit, crea hàbits saludables dia a dia i observa com creix feliç al teu costat. </p>
-                <span class="footer-tagline"><b>✦</b> Cuida el teu Bit, cuida't a tu <b>✦</b></span>
+                <p>{{ t('footer_brand_text') }}</p>
+                <span class="footer-tagline"><b>✦</b> {{ t('footer_slogan') }} <b>✦</b></span>
             </div>
 
             <div class="footer-col">
-                <h4>Producte</h4>
+                <h4>{{ t('footer_col_product') }}</h4>
                 <ul>
-                    <li><a href="#concept">El Concepte</a></li>
-                    <li><a href="#how">Funcions</a></li>
-                    <li><a href="#areas">Àrees</a></li>
-                    <li><a href="#spaces">The Space</a></li>
+                    <li><a href="#concept">{{ t('nav_concept') }}</a></li>
+                    <li><a href="#how">{{ t('footer_link_features') }}</a></li>
+                    <li><a href="#areas">{{ t('footer_link_areas') }}</a></li>
+                    <li><a href="#spaces">{{ t('nav_spaces') }}</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Empresa</h4>
+                <h4>{{ t('footer_col_company') }}</h4>
                 <ul>
-                    <li><a href="#team">L'Equip</a></li>
-                    <li><a href="#">Missió</a></li>
-                    <li><a href="#">Història</a></li>
-                    <li><a href="#">Contacte</a></li>
+                    <li><a href="#team">{{ t('footer_link_team') }}</a></li>
+                    <li><a href="#">{{ t('footer_link_mission') }}</a></li>
+                    <li><a href="#">{{ t('nav_history') }}</a></li>
+                    <li><a href="#">{{ t('nav_contact_us') }}</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Legal</h4>
+                <h4>{{ t('footer_col_legal') }}</h4>
                 <ul>
-                    <li><a href="#">Privacitat</a></li>
-                    <li><a href="#">Condicions d'ús</a></li>
-                    <li><a href="#">Cookies</a></li>
-                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">{{ t('footer_link_privacy') }}</a></li>
+                    <li><a href="#">{{ t('footer_link_terms') }}</a></li>
+                    <li><a href="#">{{ t('footer_link_cookies') }}</a></li>
+                    <li><a href="#">{{ t('footer_link_gdpr') }}</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 BitSpace. Fet amb 💜 a Barcelona.</p>
+            <p>{{ t('footer_copyright') }}</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/bitspaceapp/" class="social-link" aria-label="Instagram">
                     <img :src="InstagramIcon" alt="Instagram" />
@@ -61,10 +61,13 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import LinkedInIcon from '@/assets/images/Web_icons/linkeding_icon.png'
 import YoutubeIcon from '@/assets/images/Web_icons/youtube.png'
 import InstagramIcon from '@/assets/images/Web_icons/instagram_icon.png'
+
+const { t } = useI18n()
 
 const footerRoot = ref(null)
 const linkHandlers = []

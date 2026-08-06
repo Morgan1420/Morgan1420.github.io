@@ -2,40 +2,39 @@
     <section id="how">
         <div class="section-inner">
             <div class="section-header text-center animate-on-scroll">
-                <div class="section-badge"><b>✦</b> Com funciona <b>✦</b></div>
-                <h2 class="section-title">Quatre passos cap al<br>teu millor tu</h2>
-                <p class="section-subtitle">Un procés senzill, emocionant i científicament dissenyat per crear hàbits
-                    duradors.</p>
+                <div class="section-badge"><b>✦</b> {{ t('how_badge') }} <b>✦</b></div>
+                <h2 class="section-title" v-html="t('how_title')"></h2>
+                <p class="section-subtitle">{{ t('how_subtitle') }}</p>
             </div>
 
             <div class="steps-grid">
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">1</div>
-                    <h3>Adopta el teu Bit</h3>
+                    <h3>{{ t('how_step1_title') }}</h3>
                     <span class="step-icon"><img class="step-mascot" :src="Bit_adopta"
-                            alt="Mascota de BitSpace" /></span>
-                    <p>Posa-li nom i crea un vincle emocional des del primer moment.</p>
+                            :alt="t('mascot_alt_generic')" /></span>
+                    <p>{{ t('how_step1_text') }}</p>
                 </div>
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">2</div>
-                    <h3>Escull el teu camí</h3>
+                    <h3>{{ t('how_step2_title') }}</h3>
                     <span class="step-icon"><img class="step-mascot" :src="Bit_escull"
-                            alt="Mascota de BitSpace" /></span>
-                    <p>Decideix el camí de millora que vols emprendre. Digital Detox, Esport, Lectura o Estudi.</p>
+                            :alt="t('mascot_alt_generic')" /></span>
+                    <p>{{ t('how_step2_text') }}</p>
                 </div>
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">3</div>
-                    <h3>Completa reptes diaris</h3>
+                    <h3>{{ t('how_step3_title') }}</h3>
                     <span class="step-icon"><img class="step-mascot" :src="Bit_completa"
-                            alt="Mascota de BitSpace" /></span>
-                    <p>Completa Micro-reptes creats només per a tu. Senzills, motivadors i útils.</p>
+                            :alt="t('mascot_alt_generic')" /></span>
+                    <p>{{ t('how_step3_text') }}</p>
                 </div>
                 <div class="step-card animate-on-scroll">
                     <div class="step-num">4</div>
-                    <h3>Decora el teu BitSpace</h3>
+                    <h3>{{ t('how_step4_title') }}</h3>
                     <span class="step-icon"><img class="step-mascot" :src="Bit_decora"
-                            alt="Mascota de BitSpace" /></span>
-                    <p>Guanya monedes, desbloqueja objectes i construeix l'habitació dels somnis del teu Bit.</p>
+                            :alt="t('mascot_alt_generic')" /></span>
+                    <p>{{ t('how_step4_text') }}</p>
                 </div>
             </div>
         </div>
@@ -44,12 +43,15 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import stepMascot from '@/assets/images/Bits_Background/Bit_8.png'
 import Bit_adopta from '@/assets/images/Bits_Background/Bit_25.png'
 import Bit_escull from '@/assets/images/Bits_Background/Bit_11.png'
 import Bit_completa from '@/assets/images/Bits_Background/Bit_18.png'
 import Bit_decora from '@/assets/images/Bits_Background/Bit_19.png'
+
+const { t } = useI18n()
 
 let observer
 

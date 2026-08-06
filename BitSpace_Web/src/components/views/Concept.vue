@@ -3,28 +3,17 @@
     <div class="section-inner">
       <div class="concept-grid">
         <div class="concept-text animate-on-scroll">
-          <div class="section-badge"><b>✦</b> El concepte <b>✦</b></div>
-          <h2 class="section-title">El teu Bit és el<br>teu mirall digital</h2>
+          <div class="section-badge"><b>✦</b> {{ t('concept_badge') }} <b>✦</b></div>
+          <h2 class="section-title" v-html="t('concept_title')"></h2>
 
-          <p class="big-quote">
-            "Quan <em>cuides del teu Bit</em>, t'estàs <em>cuidant a tu mateix</em>."
-          </p>
+          <p class="big-quote" v-html="t('concept_quote')"></p>
 
-          <p>
-            BitSpace no és ni una llista "to-do" ni un bloquejador d'apps, sinó un <strong>entorn gamificat
-              i ple
-              d'eines </strong>que t'ajudaran a créixer i millorar la teva vida digital.
-          </p>
+          <p v-html="t('concept_p1')"></p>
 
-          <p>
-            Des de BitSpace sabem que no tots comencem des del mateix punt A, ni volem arribar al mateix
-            punt B. És per això que la personalització és un factor tan important — <strong>apliquem
-              solucions individuals i basades en la ciència de l'hàbit.</strong>
-          </p>
+          <p v-html="t('concept_p2')"></p>
 
           <div class="uvp-card">
-            <p>"Si creus que pots donar més de tu mateix, però el telèfon t'atrapa... BitSpace és per a tu."
-            </p>
+            <p>{{ t('concept_uvp') }}</p>
           </div>
         </div>
 
@@ -32,16 +21,16 @@
           <div class="bit-states">
             <button v-for="(card, index) in emotionCards" :key="card.key" type="button" class="bit-state-card"
               :class="[card.variant, { flipped: flippedCards[index] }]" :aria-pressed="flippedCards[index]"
-              :aria-label="`${card.title} - ${flippedCards[index] ? 'mostrar cara frontal' : 'mostrar explicació'}`"
+              :aria-label="`${t(card.titleKey)} - ${flippedCards[index] ? t('concept_card_aria_show_front') : t('concept_card_aria_show_back')}`"
               @click="toggleCard(index)">
               <span class="bit-card-inner">
                 <span class="bit-card-face bit-card-front">
-                  <span class="bit-emoji"><img :src="card.image" :alt="card.alt"></span>
-                  <small>Fes clic per girar</small>
+                  <span class="bit-emoji"><img :src="card.image" :alt="t(card.altKey)"></span>
+                  <small>{{ t('concept_card_flip_hint') }}</small>
                 </span>
                 <span class="bit-card-face bit-card-back">
-                  <h4>{{ card.title }}</h4>
-                  <p>{{ card.backText }}</p>
+                  <h4>{{ t(card.titleKey) }}</h4>
+                  <p>{{ t(card.backKey) }}</p>
                 </span>
               </span>
             </button>
@@ -54,48 +43,47 @@
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import bitFelic from '@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.png'
 import bitConcentrat from '@/assets/images/Bits_Background/Bit_jan_llegint.png'
 import bitTired from '@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.png'
 import bitSad from '@/assets/images/Bits_Background/Bit_triste.png'
 
+const { t } = useI18n()
+
 const emotionCards = [
   {
     key: 'happy',
     variant: 'happy',
     image: bitFelic,
-    alt: 'Feliç',
-    title: 'Feliç',
-    frontText: 'Hàbits complerts. El Bit brilla!',
-    backText: 'Quan mantens el ritme, el teu Bit es mostra content, estable i amb energia per continuar creixent.',
+    altKey: 'concept_card_happy_alt',
+    titleKey: 'concept_card_happy_title',
+    backKey: 'concept_card_happy_back',
   },
   {
     key: 'focused',
     variant: 'focused',
     image: bitConcentrat,
-    alt: 'Concentrat',
-    title: 'Concentrat',
-    frontText: 'Hàbits complerts. El Bit brilla!',
-    backText: 'Quan avances amb constància, el Bit entra en mode focus i recompensa cada petit progrés.',
+    altKey: 'concept_card_focused_alt',
+    titleKey: 'concept_card_focused_title',
+    backKey: 'concept_card_focused_back',
   },
   {
     key: 'sad',
     variant: 'sad',
     image: bitSad,
-    alt: 'Trist',
-    title: 'Trist',
-    frontText: 'Pocs reptes completats avui.',
-    backText: 'Quan t’allunyes dels teus hàbits, el Bit ho nota i et recorda suaument que torni la connexió.',
+    altKey: 'concept_card_sad_alt',
+    titleKey: 'concept_card_sad_title',
+    backKey: 'concept_card_sad_back',
   },
   {
     key: 'tired',
     variant: 'tired',
     image: bitTired,
-    alt: 'Cansat',
-    title: 'Cansat',
-    frontText: 'Necessita que cuides de tu.',
-    backText: 'Quan et demanes massa, el Bit baixa el ritme i et recorda que descansar també forma part del progrés.',
+    altKey: 'concept_card_tired_alt',
+    titleKey: 'concept_card_tired_title',
+    backKey: 'concept_card_tired_back',
   },
 ]
 

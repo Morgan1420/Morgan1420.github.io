@@ -22,10 +22,8 @@
 
     <div id="prototype">
       <h2>{{ $t('prototype_title') }}</h2>
-      <p>BitSpace encara es troba en una fase "early seed" on on encara s'està validant i desenvolupant les bases
-        de l'aplicació final.</p>
-      <p>A continuació podreu veure doncs un petit prototip web perquè us feu a la idea de com es veurà BitSpace.
-        Si teniu qualsevol dubte o opinió no dubteu a contactar-nos a la pesta de contacte.</p>
+      <p>{{ $t('prototype_desc_1') }}</p>
+      <p>{{ $t('prototype_desc_2') }}</p>
       <p></p>
       <fancyButton :buttonText="$t('prototype_access')" @click="openPrototype" :center="true" />
     </div>
