@@ -29,9 +29,9 @@ const { t, locale } = useI18n()
 // Prototype link and opener
 const prototype_link = computed(() => {
   const loc = locale && locale.value ? String(locale.value).toLowerCase() : ''
-  if (loc.startsWith('en')) return 'https://prototype.bitspace.es/en'
-  if (loc.startsWith('es')) return 'https://prototype.bitspace.es/es'
-  return 'https://prototype.bitspace.es/ca'
+  if (loc.startsWith('en')) return 'https://prototype.bitspace.es'
+  if (loc.startsWith('es')) return 'https://prototype.bitspace.es'
+  return 'https://prototype.bitspace.es'
 })
 
 function openPrototype() {

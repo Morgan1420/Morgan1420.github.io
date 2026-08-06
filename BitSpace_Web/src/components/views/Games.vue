@@ -50,7 +50,7 @@ export default {
             scrollY: 0,
             isOverCarousel: true,
             headerObserver: null,
-            prototype_link: "https://prototype.bitspace.es/ca"
+            prototype_link: "https://prototype.bitspace.es"
         }
     },
     methods: {

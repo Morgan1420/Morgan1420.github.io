@@ -73,7 +73,7 @@ const isOverCarousel = ref(true)
 const carouselWrapper = ref(null)
 let observer
 
-const prototype_link = "https://prototype.bitspace.es/ca"
+const prototype_link = "https://prototype.bitspace.es"
 
 function openPrototype() {
   const url = prototype_link;
