@@ -131,7 +131,7 @@
 </template>
 
 <script setup>
-import { ref, onUnmounted } from 'vue'
+import { ref, computed, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import RiveCanvas from '@/components/common/RiveCanvas.vue'
 import respiracionRivUrl from '@/assets/animations/respiracion.riv'
@@ -143,9 +143,17 @@ const SCRIPT_BASE =
 
 const email = ref('')
 const loading = ref(false)
-const feedbackMessage = ref('')
+const feedbackKey = ref('')
+const feedbackCustomMessage = ref('')
 const feedbackStatus = ref('') // 'success' | 'exists' | 'error'
 let activeCleanup = null
+
+const feedbackMessage = computed(() => {
+  if (feedbackKey.value) {
+    return t(feedbackKey.value)
+  }
+  return feedbackCustomMessage.value
+})
 
 onUnmounted(() => {
   if (activeCleanup) {
@@ -162,7 +170,8 @@ function submitForm() {
   if (!cleanEmail || loading.value) return
 
   loading.value = true
-  feedbackMessage.value = ''
+  feedbackKey.value = ''
+  feedbackCustomMessage.value = ''
 
   if (activeCleanup) {
     activeCleanup()
@@ -188,7 +197,7 @@ function submitForm() {
     cleanup()
     loading.value = false
     feedbackStatus.value = 'error'
-    feedbackMessage.value = t('rebrand_waitlist_error')
+    feedbackKey.value = 'rebrand_waitlist_error'
   }, 10000)
 
   window[cbName] = (res) => {
@@ -198,14 +207,18 @@ function submitForm() {
 
     if (res && res.result === 'success') {
       feedbackStatus.value = 'success'
-      feedbackMessage.value = t('rebrand_waitlist_success')
+      feedbackKey.value = 'rebrand_waitlist_success'
       email.value = ''
     } else if (res && res.result === 'exists') {
       feedbackStatus.value = 'exists'
-      feedbackMessage.value = t('rebrand_waitlist_exists')
+      feedbackKey.value = 'rebrand_waitlist_exists'
     } else {
       feedbackStatus.value = 'error'
-      feedbackMessage.value = (res && res.message) || t('rebrand_waitlist_error')
+      if (res && res.message) {
+        feedbackCustomMessage.value = res.message
+      } else {
+        feedbackKey.value = 'rebrand_waitlist_error'
+      }
     }
   }
 
@@ -218,7 +231,7 @@ function submitForm() {
     cleanup()
     loading.value = false
     feedbackStatus.value = 'error'
-    feedbackMessage.value = t('rebrand_waitlist_error')
+    feedbackKey.value = 'rebrand_waitlist_error'
   }
 
   document.body.appendChild(script)

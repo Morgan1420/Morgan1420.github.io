@@ -13,7 +13,13 @@
         <div class="carousel-hud">
           <div class="hud-left">
             <span class="hud-indicator">
-              Pilar {{ currentCarouselIndex + 1 }} de {{ pillarsData.length }} •
+              {{
+                t('rebrand_pillar_counter', {
+                  current: currentCarouselIndex + 1,
+                  total: pillarsData.length,
+                })
+              }}
+              •
               {{ activeDeckPillar.tag }}
             </span>
             <div class="hud-pills" role="tablist">
@@ -25,7 +31,7 @@
                 :aria-selected="currentCarouselIndex === idx"
                 class="hud-dot"
                 :class="['dot-' + pilar.theme, { active: currentCarouselIndex === idx }]"
-                :title="'Anar al pilar ' + pilar.tag"
+                :title="'Anar a ' + pilar.tag"
                 @click="scrollToDeckStep(idx)"
               >
                 <span class="dot-inner"></span>
@@ -72,7 +78,7 @@
                   <p class="deck-card-text">{{ pilar.punchline }}</p>
                   <div class="deck-card-footer">
                     <span class="metric-highlight">+ {{ pilar.metric }}</span>
-                    <span class="deck-card-note">Hàbit diari clau</span>
+                    <span class="deck-card-note">{{ t('rebrand_pillar_daily_note') }}</span>
                   </div>
                 </div>
               </div>
@@ -106,7 +112,7 @@ const pillarsData = computed(() => [
     tag: t('rebrand_pillar_detox_tag'),
     title: t('rebrand_pillar_detox_title'),
     punchline: t('rebrand_pillar_detox_desc'),
-    metric: 'Temps de calma',
+    metric: t('rebrand_pillar_metric_detox'),
     animation: 'Idle_Movimiento',
   },
   {
@@ -115,7 +121,7 @@ const pillarsData = computed(() => [
     tag: t('rebrand_pillar_fitness_tag'),
     title: t('rebrand_pillar_fitness_title'),
     punchline: t('rebrand_pillar_fitness_desc'),
-    metric: 'Energia activa',
+    metric: t('rebrand_pillar_metric_fitness'),
     animation: 'Sport_Loop',
   },
   {
@@ -124,7 +130,7 @@ const pillarsData = computed(() => [
     tag: t('rebrand_pillar_reading_tag'),
     title: t('rebrand_pillar_reading_title'),
     punchline: t('rebrand_pillar_reading_desc'),
-    metric: 'Concentració',
+    metric: t('rebrand_pillar_metric_reading'),
     animation: 'Read_Loop',
   },
   {
@@ -133,7 +139,7 @@ const pillarsData = computed(() => [
     tag: t('rebrand_pillar_focus_tag'),
     title: t('rebrand_pillar_focus_title'),
     punchline: t('rebrand_pillar_focus_desc'),
-    metric: 'Rendiment net',
+    metric: t('rebrand_pillar_metric_focus'),
     animation: ['Study_Intro', 'Study_Loop'],
   },
 ])
@@ -154,7 +160,7 @@ function getDeckCardStyle(idx) {
   const offset = targetStep - idx
 
   // Current active card in the focal center
-  if (Math.abs(offset) < 0.03) {
+  if (Math.abs(offset) < 0.05) {
     return {
       transform: 'translate3d(0, 0, 0) scale(1)',
       opacity: 1,
@@ -169,7 +175,7 @@ function getDeckCardStyle(idx) {
     const dist = Math.min(-offset, 1.2)
     const translateX = dist * 140
     const scale = 1 - dist * 0.05
-    const opacity = Math.max(1 - dist * 1.3, 0)
+    const opacity = Math.max(1 - dist * 1.6, 0)
     return {
       transform: `translate3d(${translateX}px, 0, 0) scale(${scale})`,
       opacity: opacity,
@@ -184,7 +190,7 @@ function getDeckCardStyle(idx) {
     const dist = Math.min(offset, 1.2)
     const translateX = -dist * 140
     const scale = 1 - dist * 0.06
-    const opacity = Math.max(1 - dist * 1.4, 0)
+    const opacity = Math.max(1 - dist * 1.8, 0)
     return {
       transform: `translate3d(${translateX}px, 0, 0) scale(${scale})`,
       opacity: opacity,
@@ -282,7 +288,6 @@ onBeforeUnmount(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: visible;
   padding: 0.5rem 1rem;
   box-sizing: border-box;
 }
@@ -392,6 +397,7 @@ onBeforeUnmount(() => {
   justify-content: center;
   perspective: 1200px;
   padding: 0 1.5rem;
+  overflow: visible;
 }
 
 .deck-stage {
@@ -583,26 +589,90 @@ onBeforeUnmount(() => {
   }
 
   .bit-box-deck-sport {
-    width: 165px;
-    height: 160px;
-    margin-top: -30px;
+    width: 180px;
+    height: 190px;
+    margin-top: -35px;
+    margin-bottom: -10px;
+    z-index: 10;
   }
 }
 
 @media (max-width: 640px) {
+  .sticky-viewport {
+    top: 60px;
+    height: calc(100vh - 75px);
+    min-height: 520px;
+    padding: 0.25rem 0.75rem;
+    justify-content: center;
+  }
+
+  .section-header {
+    margin-bottom: 0.65rem;
+    padding: 0 0.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 4.5vw, 1.75rem);
+    margin-bottom: 0.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  .carousel-hud {
+    margin-bottom: 0.75rem;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .hud-indicator {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .hud-dot {
+    padding: 0.3rem 0.6rem;
+  }
+
   .deck-stage-wrapper {
-    height: 480px;
-    padding: 0 0.75rem;
+    height: 450px;
+    padding: 0 0.5rem;
+    overflow: visible;
   }
 
   .deck-card {
-    padding: 1.75rem 1.25rem;
+    padding: 1.25rem 1.15rem 1.25rem;
+    border-radius: var(--radius-lg);
+    overflow: visible;
   }
 
   .deck-card-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 0.65rem;
     text-align: center;
+    width: 100%;
+  }
+
+  .deck-visual-side {
+    min-height: 110px;
+    height: 110px;
+    margin-bottom: 0;
+    overflow: visible;
+  }
+
+  .bit-box-deck {
+    width: 120px;
+    height: 110px;
+  }
+
+  .bit-box-deck-sport {
+    width: 165px;
+    height: 170px;
+    margin-top: -35px;
+    margin-bottom: -15px;
+    z-index: 10;
   }
 
   .deck-content-side {
@@ -611,11 +681,35 @@ onBeforeUnmount(() => {
 
   .deck-card-badge-row {
     justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .deck-card-title {
+    font-size: 1.45rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+
+  .deck-card-text {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin-bottom: 0.85rem;
+    padding: 0 0.25rem;
   }
 
   .deck-card-footer {
     justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .metric-highlight {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  .deck-card-note {
+    font-size: 0.75rem;
   }
 
   .hud-hint {
@@ -624,6 +718,46 @@ onBeforeUnmount(() => {
 
   .hud-pills .dot-label {
     display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .deck-stage-wrapper {
+    height: 420px;
+    overflow: visible;
+  }
+
+  .deck-card {
+    padding: 1rem 0.85rem;
+    overflow: visible;
+  }
+
+  .deck-visual-side {
+    height: 95px;
+    min-height: 95px;
+    overflow: visible;
+  }
+
+  .bit-box-deck {
+    width: 105px;
+    height: 95px;
+  }
+
+  .bit-box-deck-sport {
+    width: 140px;
+    height: 145px;
+    margin-top: -28px;
+    margin-bottom: -12px;
+    z-index: 10;
+  }
+
+  .deck-card-title {
+    font-size: 1.3rem;
+  }
+
+  .deck-card-text {
+    font-size: 0.85rem;
+    margin-bottom: 0.65rem;
   }
 }
 </style>

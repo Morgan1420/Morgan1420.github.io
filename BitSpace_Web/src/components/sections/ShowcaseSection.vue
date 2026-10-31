@@ -43,11 +43,11 @@ const { t } = useI18n()
 <style scoped>
 .showcase-section {
   position: relative;
-  padding: 6rem 1.5rem;
+  padding: 3.5rem 1.5rem 4rem;
 }
 
 .showcase-container {
-  max-width: 1040px;
+  max-width: 860px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -57,8 +57,8 @@ const { t } = useI18n()
 /* Header */
 .section-header {
   text-align: center;
-  max-width: 680px;
-  margin-bottom: 3.5rem;
+  max-width: 620px;
+  margin-bottom: 2rem;
 }
 
 .section-title {
@@ -153,7 +153,11 @@ const { t } = useI18n()
 /* Responsive */
 @media (max-width: 640px) {
   .showcase-section {
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
   }
 
   .video-card-shell {

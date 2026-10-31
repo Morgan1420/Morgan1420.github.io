@@ -187,31 +187,45 @@ onBeforeUnmount(() => {
 .navbar-nav {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 0.5rem;
 }
 
 .nav-item {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-secondary);
-  transition: color 0.2s ease;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  text-decoration: none;
 }
 
 .nav-item:hover {
-  color: var(--text-primary);
+  background: var(--brand-mint, #ade5a8);
+  color: #18181b;
 }
 
 .nav-proto {
   color: var(--text-primary);
 }
 
+.nav-proto:hover {
+  background: var(--brand-mint, #ade5a8);
+  color: #18181b;
+}
+
 .external-icon {
   width: 13px;
   height: 13px;
   opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item:hover .external-icon {
+  opacity: 1;
 }
 
 /* Actions */

@@ -21,7 +21,8 @@ const messages = {
     rebrand_showcase_subtitle:
       'Una habitació isomètrica que evoluciona amb tu. Cada hàbit saludable que assoleixes en el món real es reflecteix en la felicitat del teu Bit.',
     rebrand_pillars_badge: 'ÀREES DE MILLORA',
-    rebrand_pillars_title: 'Quatre pilars per al teu benestar',
+    rebrand_pillars_title: 'Quatre hàbits clau per al teu benestar',
+    rebrand_pillar_counter: 'Hàbit {current} de {total}',
     rebrand_pillars_subtitle:
       "Tria quins aspectes de la teva rutina diària vols enfortir amb l'ajuda del teu company digital.",
     rebrand_pillars_options_btn: 'Veure opcions de disseny',
@@ -41,8 +42,13 @@ const messages = {
     rebrand_pillar_focus_desc:
       "Sessions de treball profund lliures d'interrupcions i de notificacions constants.",
     rebrand_pillar_focus_tag: 'FOCUS',
+    rebrand_pillar_metric_detox: 'Temps de calma',
+    rebrand_pillar_metric_fitness: 'Energia activa',
+    rebrand_pillar_metric_reading: 'Concentració',
+    rebrand_pillar_metric_focus: 'Rendiment net',
+    rebrand_pillar_daily_note: 'Hàbit diari clau',
     rebrand_proto_badge: 'PROTOTIP WEB',
-    rebrand_proto_title: 'Vols experimentar BitSpace ara mateix?',
+    rebrand_proto_title: 'Vols provar BitSpace ara mateix?',
     rebrand_proto_subtitle:
       'Hem desenvolupat una versió web interactiva preliminar perquè puguis tastar la mecànica de joc abans del llançament a les botigues.',
     rebrand_proto_button: 'Obrir prototip web',
@@ -379,7 +385,8 @@ const messages = {
     rebrand_showcase_subtitle:
       'Una habitación isométrica que evoluciona contigo. Cada hábito saludable que cumples en la vida real se refleja en la felicidad de tu Bit.',
     rebrand_pillars_badge: 'ÁREAS DE MEJORA',
-    rebrand_pillars_title: 'Cuatro pilares para tu bienestar',
+    rebrand_pillars_title: 'Cuatro hábitos clave para tu bienestar',
+    rebrand_pillar_counter: 'Hábito {current} de {total}',
     rebrand_pillars_subtitle:
       'Elige qué aspectos de tu rutina diaria quieres potenciar con el apoyo de tu compañero digital.',
     rebrand_pillars_options_btn: 'Ver opciones de diseño',
@@ -399,8 +406,13 @@ const messages = {
     rebrand_pillar_focus_desc:
       'Sesiones de enfoque profundo libres de interrupciones y notificaciones constantes.',
     rebrand_pillar_focus_tag: 'FOCUS',
+    rebrand_pillar_metric_detox: 'Tiempo de calma',
+    rebrand_pillar_metric_fitness: 'Energía activa',
+    rebrand_pillar_metric_reading: 'Concentración',
+    rebrand_pillar_metric_focus: 'Rendimiento neto',
+    rebrand_pillar_daily_note: 'Hábito diario clave',
     rebrand_proto_badge: 'PROTOTIPO WEB',
-    rebrand_proto_title: '¿Quieres experimentar BitSpace ahora mismo?',
+    rebrand_proto_title: '¿Quieres probar BitSpace ahora mismo?',
     rebrand_proto_subtitle:
       'Hemos desarrollado una versión web interactiva preliminar para que pruebes la mecánica de juego antes del lanzamiento en tiendas.',
     rebrand_proto_button: 'Abrir prototipo web',
@@ -594,7 +606,7 @@ const messages = {
     rebrand_nav_prototype: 'Prototype',
     rebrand_hero_badge: 'DIGITAL HEALTH APP',
     rebrand_hero_title:
-      'Care for your digital pet,<br><span class="highlight">take care of yourself</span>',
+      'Take care of your digital pet,<br><span class="highlight">take care of yourself</span>',
     rebrand_hero_subtitle:
       'Your wellbeing mirrored in a virtual companion. Turn daily self-care into a lasting routine through gentle gamification.',
     rebrand_cta_waitlist: 'Join the waitlist',
@@ -603,8 +615,9 @@ const messages = {
     rebrand_showcase_title: 'Your space, your rhythm',
     rebrand_showcase_subtitle:
       "An isometric room that grows with you. Every healthy habit you achieve in real life directly elevates your Bit's happiness.",
-    rebrand_pillars_badge: 'HABIT PILLARS',
-    rebrand_pillars_title: 'Four pillars for your growth',
+    rebrand_pillars_badge: 'HEALTH AREAS',
+    rebrand_pillars_title: 'Four key habits for your growth',
+    rebrand_pillar_counter: 'Habit {current} of {total}',
     rebrand_pillars_subtitle:
       'Choose which areas of your daily routine you want to strengthen alongside your digital companion.',
     rebrand_pillars_options_btn: 'View design options',
@@ -624,10 +637,15 @@ const messages = {
     rebrand_pillar_focus_desc:
       'Distraction-free focus sessions protected from incessant pings and digital noise.',
     rebrand_pillar_focus_tag: 'FOCUS',
+    rebrand_pillar_metric_detox: 'Calm time',
+    rebrand_pillar_metric_fitness: 'Active energy',
+    rebrand_pillar_metric_reading: 'Focus & depth',
+    rebrand_pillar_metric_focus: 'Net performance',
+    rebrand_pillar_daily_note: 'Key daily habit',
     rebrand_proto_badge: 'WEB PROTOTYPE',
-    rebrand_proto_title: 'Ready to experience BitSpace right now?',
+    rebrand_proto_title: 'Want to try BitSpace right now?',
     rebrand_proto_subtitle:
-      'We have built an early interactive web prototype so you can experience core gameplay mechanics before our app store launch.',
+      'We have built an early interactive web prototype so you can try core gameplay mechanics before our app store launch.',
     rebrand_proto_button: 'Open web prototype',
     rebrand_waitlist_badge: 'EARLY ACCESS',
     rebrand_waitlist_title: 'Be among the first to enter BitSpace',

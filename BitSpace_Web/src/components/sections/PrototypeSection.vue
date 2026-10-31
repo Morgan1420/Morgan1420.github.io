@@ -37,7 +37,7 @@ const prototypeUrl = 'https://prototype.bitspace.es'
 <style scoped>
 .proto-section {
   position: relative;
-  padding: 2.5rem 1.5rem 1rem;
+  padding: 2.5rem 1.5rem 2.5rem;
 }
 
 .proto-container {
