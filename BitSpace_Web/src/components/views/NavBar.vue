@@ -1,276 +1,302 @@
 <template>
-    <nav ref="navbarRef" :class="{ scrolled: isScrolled }" :aria-label="t('nav_aria_label')">
-        <div class="nav-logo">
-            <div class="logo-blob">
-                <img :src="BitPrincesa" alt="Bit logo" />
-            </div>
-            BitSpace
+  <header class="navbar-wrapper" :class="{ 'is-scrolled': isScrolled }">
+    <div class="navbar-container">
+      <!-- Logo Brand -->
+      <a href="#hero" class="navbar-brand" @click.prevent="scrollToSection('hero')">
+        <span class="brand-text">BitSpace</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="navbar-nav">
+        <a href="#showcase" class="nav-item" @click.prevent="scrollToSection('showcase')">
+          {{ t('rebrand_nav_showcase') }}
+        </a>
+        <a href="#pillars" class="nav-item" @click.prevent="scrollToSection('pillars')">
+          {{ t('rebrand_nav_pillars') }}
+        </a>
+        <a
+          :href="prototypeUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-item nav-proto"
+        >
+          {{ t('rebrand_nav_prototype') }}
+          <svg
+            class="external-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </nav>
+
+      <!-- Right Actions: Language Switcher + CTA -->
+      <div class="navbar-actions">
+        <!-- Language Selector -->
+        <div class="lang-switch">
+          <button
+            type="button"
+            class="lang-btn"
+            :class="{ active: currentLang === 'ca' }"
+            @click="setLanguage('ca')"
+            aria-label="Català"
+          >
+            CA
+          </button>
+          <span class="lang-divider">/</span>
+          <button
+            type="button"
+            class="lang-btn"
+            :class="{ active: currentLang === 'es' }"
+            @click="setLanguage('es')"
+            aria-label="Español"
+          >
+            ES
+          </button>
+          <span class="lang-divider">/</span>
+          <button
+            type="button"
+            class="lang-btn"
+            :class="{ active: currentLang === 'en' }"
+            @click="setLanguage('en')"
+            aria-label="English"
+          >
+            EN
+          </button>
         </div>
 
-        <ul class="nav-links">
-            <li><a href="#concept" @click.prevent="scrollToSection('concept')">{{ t('nav_concept') }}</a></li>
-            <li><a href="#how" @click.prevent="scrollToSection('how')">{{ t('nav_how') }}</a></li>
-            <li><a href="#areas" @click.prevent="scrollToSection('areas')">{{ t('nav_areas') }}</a></li>
-            <li><a href="#spaces" @click.prevent="scrollToSection('spaces')">{{ t('nav_spaces') }}</a></li>
-            <li><a href="#team" @click.prevent="scrollToSection('team')">{{ t('nav_team') }}</a></li>
-            <li>
-                <a href="#cta" class="nav-cta" @click.prevent="scrollToSection('cta')">{{ t('nav_join') }}</a>
-            </li>
-        </ul>
-
-        <button
-            type="button"
-            class="nav-lang"
-            @click="toggleLanguage"
-            :aria-label="locale === 'en' ? t('nav_change_to_ca') : t('nav_change_to_en')"
-        >
-            <span :class="{ 'lang-active': locale === 'ca' }">CA</span> / <span :class="{ 'lang-active': locale === 'en' }">EN</span>
-        </button>
-    </nav>
+        <!-- Waitlist CTA Button -->
+        <a href="#waitlist" class="btn-nav-cta" @click.prevent="scrollToSection('waitlist')">
+          {{ t('rebrand_nav_waitlist') }}
+        </a>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import BitPrincesa from '@/assets/images/Bits_Background/Bit_18.png'
-
-const navbarRef = ref(null)
-const isScrolled = ref(false)
 
 const { t, locale } = useI18n()
 const route = useRoute()
 const router = useRouter()
 
-const handleScroll = () => {
-    isScrolled.value = window.scrollY > 40
+const isScrolled = ref(false)
+const prototypeUrl = 'https://prototype.bitspace.es'
+
+const currentLang = computed(() => locale.value)
+
+function handleScroll() {
+  isScrolled.value = window.scrollY > 20
 }
 
-const scrollToSection = (id) => {
-    const target = document.getElementById(id)
-
-    if (!target) {
-        return
-    }
-
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+function scrollToSection(id) {
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
 
-const toggleLanguage = () => {
-    const nextLang = locale.value === 'en' ? 'ca' : 'en'
+function setLanguage(lang) {
+  if (locale.value === lang) return
+  locale.value = lang
+  try {
+    localStorage.setItem('bitspace_lang', lang)
+  } catch {
+    // localStorage no disponible
+  }
 
-    try {
-        localStorage.setItem('bitspace_lang', nextLang)
-    } catch {
-        // localStorage unavailable (e.g. private browsing) - ignore
-    }
-
-    router.push({
-        name: route.name,
-        params: { ...route.params, lang: nextLang },
-        query: route.query,
-        hash: route.hash,
-    })
+  // Actualizar ruta si contiene prefijo :lang
+  const currentPath = route.path
+  const segments = currentPath.split('/').filter(Boolean)
+  if (segments.length > 0 && ['ca', 'es', 'en'].includes(segments[0])) {
+    segments[0] = lang
+    router.push('/' + segments.join('/'))
+  } else {
+    router.push('/' + lang)
+  }
 }
 
 onMounted(() => {
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  handleScroll()
 })
 
 onBeforeUnmount(() => {
-    window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
-<style>
-@font-face {
-    font-family: 'Nunito';
-    src: url('../../assets/fonts/nunito/static/Nunito-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+<style scoped>
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 1.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@font-face {
-    font-family: 'Nunito';
-    src: url('../../assets/fonts/nunito/static/Nunito-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+.navbar-wrapper.is-scrolled {
+  padding: 0.75rem 1.5rem;
 }
 
-@font-face {
-    font-family: 'Baloo 2';
-    src: url('../../assets/fonts/baloo-2/static/Baloo2-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+.navbar-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1.25rem;
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
 }
 
-@font-face {
-    font-family: 'Baloo 2';
-    src: url('../../assets/fonts/baloo-2/static/Baloo2-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
+.navbar-wrapper.is-scrolled .navbar-container {
+  box-shadow: 0 8px 30px rgba(24, 24, 27, 0.08);
+  border-color: rgba(24, 24, 27, 0.12);
+  background: rgba(255, 255, 255, 0.88);
 }
 
-@font-face {
-    font-family: 'Press Start 2P';
-    src: url('../../assets/fonts/press-start-2p/PressStart2P-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+/* Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
-@keyframes blob-float {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(-2deg);
-    }
-
-    50% {
-        transform: translateY(-8px) rotate(2deg);
-    }
+/* Nav links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(255, 248, 242, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(196, 181, 253, 0.2);
-    transition: all 0.3s;
-    font-family: 'Nunito', sans-serif;
+.nav-item {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
-nav.scrolled {
-    padding: 0.7rem 2rem;
-    box-shadow: 0 4px 24px rgba(45, 27, 78, 0.08);
+.nav-item:hover {
+  color: var(--text-primary);
 }
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-family: 'Baloo 2', cursive;
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: var(--text-dark);
+.nav-proto {
+  color: var(--text-primary);
 }
 
-.nav-logo .logo-blob {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--purple), var(--pink));
-    border-radius: 50% 50% 50% 40% / 50% 50% 40% 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    animation: blob-float 4s ease-in-out infinite;
+.external-icon {
+  width: 13px;
+  height: 13px;
+  opacity: 0.7;
 }
 
-.nav-logo .logo-blob img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-    border-radius: 50%;
-    display: block;
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin: 0;
-    padding: 0;
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
 }
 
-.nav-links a {
-    color: var(--text-mid);
-    transition: color 0.2s;
-    position: relative;
-    text-decoration: none;
+.lang-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  border-radius: var(--radius-xs);
+  transition: all 0.2s ease;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--purple-deep);
-    border-radius: 2px;
-    transform: scaleX(0);
-    transition: transform 0.2s;
+.lang-btn:hover {
+  color: var(--text-primary);
 }
 
-.nav-links a:hover {
-    color: var(--purple-deep);
+.lang-btn.active {
+  color: var(--text-primary);
+  background: rgba(241, 178, 195, 0.25);
+  font-weight: 800;
 }
 
-.nav-links a:hover::after {
-    transform: scaleX(1);
+.lang-divider {
+  opacity: 0.3;
 }
 
-.nav-cta {
-    background: linear-gradient(135deg, var(--purple-deep), var(--pink-deep));
-    color: white !important;
-    padding: 0.5rem 1.25rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s !important;
+/* CTA */
+.btn-nav-cta {
+  background: var(--text-primary);
+  color: var(--bg-surface);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
 
-.nav-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(167, 139, 250, 0.4);
+.btn-nav-cta:hover {
+  background: #27272a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(24, 24, 27, 0.2);
 }
 
-.nav-cta::after {
-    display: none !important;
+/* Responsive */
+@media (max-width: 860px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-wrapper {
+    padding: 0.75rem 1rem;
+  }
 }
 
-.nav-lang {
+@media (max-width: 480px) {
+  .btn-nav-cta {
+    padding: 0.45rem 0.85rem;
     font-size: 0.8rem;
-    color: var(--text-light);
-    cursor: pointer;
-    border: 1px solid var(--purple);
-    padding: 0.25rem 0.6rem;
-    border-radius: 50px;
-    transition: all 0.2s;
-    background: transparent;
-    font-family: 'Nunito', sans-serif;
-}
+  }
 
-.nav-lang:hover {
-    background: var(--lavender);
-}
-
-.nav-lang .lang-active {
-    color: var(--purple-deep);
-    font-weight: 700;
-}
-
-@media (max-width: 900px) {
-    .nav-links {
-        display: none;
-    }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
 }
 </style>

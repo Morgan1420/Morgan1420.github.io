@@ -1,16 +1,18 @@
 <script>
 export default {
-  name: 'InfoSectionJustText'
+  name: 'InfoSectionJustText',
 }
 </script>
 
 <template>
-  <div class="container" :style="{ backgroundColor: backgroundColor, textAlign: center ? 'center' : 'left' }">
+  <div
+    class="container"
+    :style="{ backgroundColor: backgroundColor, textAlign: center ? 'center' : 'left' }"
+  >
     <div class="text-content">
       <h2 v-html="title"></h2>
       <p v-if="text" v-html="text"></p>
     </div>
-
   </div>
 </template>
 
@@ -18,20 +20,20 @@ export default {
 defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   text: {
     type: String,
-    default: ''
+    default: '',
   },
   backgroundColor: {
     type: String,
-    default: '#FFFFFF'
+    default: '#FFFFFF',
   },
   center: {
     type: Boolean,
     default: false,
-  }
+  },
 })
 </script>
 
@@ -63,7 +65,6 @@ defineProps({
   font-size: 1.4rem;
   line-height: 1.6;
 }
-
 
 @media (max-width: 768px) {
   .container {

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'InfoSectionRight'
+  name: 'InfoSectionRight',
 }
 </script>
 
@@ -20,20 +20,20 @@ export default {
 defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   text: {
     type: String,
-    default: ''
+    default: '',
   },
   imageSrc: {
     type: String,
-    required: true
+    required: true,
   },
   backgroundColor: {
     type: String,
-    default: '#FFFFFF'
-  }
+    default: '#FFFFFF',
+  },
 })
 </script>
 
@@ -72,11 +72,9 @@ defineProps({
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .image-content img {
-
   position: relative;
 
   max-height: 400px;
@@ -105,7 +103,6 @@ defineProps({
 }
 
 @media (max-width: 768px) {
-
   /* Hide images on small screens to reduce clutter and bandwidth */
   .image-content,
   .info-image {

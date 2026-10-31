@@ -6,8 +6,16 @@
       <!-- Bit con capas superpuestas -->
       <div class="bit-container">
         <img :src="bitBasicImage" alt="Bit Básico" class="bit-layer bit-base" />
-        <img :src="currentOutfitImage" :alt="`Ropa ${currentOutfitIndex + 1}`" class="bit-layer bit-outfit" />
-        <img :src="currentHairImage" :alt="`Pelo ${currentHairIndex + 1}`" class="bit-layer bit-hair" />
+        <img
+          :src="currentOutfitImage"
+          :alt="`Ropa ${currentOutfitIndex + 1}`"
+          class="bit-layer bit-outfit"
+        />
+        <img
+          :src="currentHairImage"
+          :alt="`Pelo ${currentHairIndex + 1}`"
+          class="bit-layer bit-hair"
+        />
       </div>
 
       <!-- Controles de personalización -->
@@ -16,16 +24,26 @@
         <div class="selector-section">
           <h2>{{ t('choose_outfit') }}</h2>
           <div class="selector">
-            <button @click="changeSelection('outfit', -1)" class="arrow-button" :disabled="currentOutfitIndex === 0"
-              aria-label="Ropa anterior">
+            <button
+              @click="changeSelection('outfit', -1)"
+              class="arrow-button"
+              :disabled="currentOutfitIndex === 0"
+              aria-label="Ropa anterior"
+            >
               &#9664;
             </button>
 
             <div class="options-preview" ref="outfitOptionsRef">
-              <div v-for="(outfit, index) in ropaImages" :key="`outfit-${index}`" class="option-item" :class="{
-                'active': index === currentOutfitIndex,
-                'adjacent': Math.abs(index - currentOutfitIndex) === 1
-              }" @click="currentOutfitIndex = index">
+              <div
+                v-for="(outfit, index) in ropaImages"
+                :key="`outfit-${index}`"
+                class="option-item"
+                :class="{
+                  active: index === currentOutfitIndex,
+                  adjacent: Math.abs(index - currentOutfitIndex) === 1,
+                }"
+                @click="currentOutfitIndex = index"
+              >
                 <div class="option-image-wrapper">
                   <img :src="bitBasicImage" alt="Base" class="option-base" />
                   <img :src="outfit" :alt="`Ropa ${index + 1}`" class="option-layer" />
@@ -33,8 +51,12 @@
               </div>
             </div>
 
-            <button @click="changeSelection('outfit', 1)" class="arrow-button"
-              :disabled="currentOutfitIndex === totalOutfits - 1" aria-label="Ropa siguiente">
+            <button
+              @click="changeSelection('outfit', 1)"
+              class="arrow-button"
+              :disabled="currentOutfitIndex === totalOutfits - 1"
+              aria-label="Ropa siguiente"
+            >
               &#9654;
             </button>
           </div>
@@ -44,16 +66,26 @@
         <div class="selector-section">
           <h2>{{ t('choose_hair') }}</h2>
           <div class="selector">
-            <button @click="changeSelection('hair', -1)" class="arrow-button" :disabled="currentHairIndex === 0"
-              aria-label="Pelo anterior">
+            <button
+              @click="changeSelection('hair', -1)"
+              class="arrow-button"
+              :disabled="currentHairIndex === 0"
+              aria-label="Pelo anterior"
+            >
               &#9664;
             </button>
 
             <div class="options-preview" ref="hairOptionsRef">
-              <div v-for="(hair, index) in hairImages" :key="`hair-${index}`" class="option-item" :class="{
-                'active': index === currentHairIndex,
-                'adjacent': Math.abs(index - currentHairIndex) === 1
-              }" @click="currentHairIndex = index">
+              <div
+                v-for="(hair, index) in hairImages"
+                :key="`hair-${index}`"
+                class="option-item"
+                :class="{
+                  active: index === currentHairIndex,
+                  adjacent: Math.abs(index - currentHairIndex) === 1,
+                }"
+                @click="currentHairIndex = index"
+              >
                 <div class="option-image-wrapper">
                   <img :src="bitBasicImage" alt="Base" class="option-base" />
                   <img :src="hair" :alt="`Pelo ${index + 1}`" class="option-layer" />
@@ -61,8 +93,12 @@
               </div>
             </div>
 
-            <button @click="changeSelection('hair', 1)" class="arrow-button"
-              :disabled="currentHairIndex === totalHairs - 1" aria-label="Pelo siguiente">
+            <button
+              @click="changeSelection('hair', 1)"
+              class="arrow-button"
+              :disabled="currentHairIndex === totalHairs - 1"
+              aria-label="Pelo siguiente"
+            >
               &#9654;
             </button>
           </div>
@@ -138,7 +174,7 @@ function scrollToSelected(containerRef, index) {
         items[index].scrollIntoView({
           behavior: 'smooth',
           block: 'nearest',
-          inline: 'center'
+          inline: 'center',
         })
       }
     }
@@ -161,7 +197,7 @@ watch(currentHairIndex, (newIndex) => {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #FFD8CF;
+  background-color: #ffd8cf;
 }
 
 h1 {
@@ -252,7 +288,7 @@ h1 {
   padding: 0.5rem;
   max-width: 100%;
   scrollbar-width: thin;
-  scrollbar-color: #FF6B6B #f0f0f0;
+  scrollbar-color: #ff6b6b #f0f0f0;
 }
 
 .options-preview::-webkit-scrollbar {
@@ -265,7 +301,7 @@ h1 {
 }
 
 .options-preview::-webkit-scrollbar-thumb {
-  background: #FF6B6B;
+  background: #ff6b6b;
   border-radius: 3px;
 }
 
@@ -285,7 +321,7 @@ h1 {
 }
 
 .option-item.active {
-  border-color: #FF6B6B;
+  border-color: #ff6b6b;
   background-color: rgba(255, 107, 107, 0.1);
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
@@ -324,7 +360,7 @@ h1 {
 }
 
 .arrow-button {
-  background-color: #FF6B6B;
+  background-color: #ff6b6b;
   color: white;
   border: none;
   border-radius: 50%;
@@ -340,7 +376,7 @@ h1 {
 }
 
 .arrow-button:hover:not(:disabled) {
-  background-color: #FF5252;
+  background-color: #ff5252;
   transform: scale(1.1);
 }
 

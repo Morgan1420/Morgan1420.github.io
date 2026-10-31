@@ -2,6 +2,65 @@ import { createI18n } from 'vue-i18n'
 
 const messages = {
   ca: {
+    // Rebranding Clean Landing
+    rebrand_nav_home: 'Inici',
+    rebrand_nav_showcase: 'Showcase',
+    rebrand_nav_pillars: 'Hàbits',
+    rebrand_nav_team: "L'equip",
+    rebrand_nav_waitlist: "Llista d'espera",
+    rebrand_nav_prototype: 'Prototip',
+    rebrand_hero_badge: 'APP DE SALUT DIGITAL',
+    rebrand_hero_title:
+      'Cuida la teva mascota digital,<br><span class="highlight">cuida\'t a tu mateix</span>',
+    rebrand_hero_subtitle:
+      'El teu benestar reflectit en una mascota virtual. Converteix la cura personal en un hàbit diari a través de la gamificació.',
+    rebrand_cta_waitlist: "Uneix-te a la llista d'espera",
+    rebrand_cta_prototype: 'Provar el prototip',
+    rebrand_showcase_badge: 'DESCOBREIX BITSPACE',
+    rebrand_showcase_title: 'El teu espai, el teu ritme',
+    rebrand_showcase_subtitle:
+      'Una habitació isomètrica que evoluciona amb tu. Cada hàbit saludable que assoleixes en el món real es reflecteix en la felicitat del teu Bit.',
+    rebrand_pillars_badge: 'ÀREES DE MILLORA',
+    rebrand_pillars_title: 'Quatre pilars per al teu benestar',
+    rebrand_pillars_subtitle:
+      "Tria quins aspectes de la teva rutina diària vols enfortir amb l'ajuda del teu company digital.",
+    rebrand_pillars_options_btn: 'Veure opcions de disseny',
+    rebrand_pillar_detox_title: 'Desconnexió Digital',
+    rebrand_pillar_detox_desc:
+      'Redueix el temps de pantalla innecessari i recupera la teva atenció i descans sense angoixa.',
+    rebrand_pillar_detox_tag: 'DETOX',
+    rebrand_pillar_fitness_title: 'Activitat Física',
+    rebrand_pillar_fitness_desc:
+      "Rutines actives i moviment diari que mantenen el teu Bit ple d'energia i vitalitat.",
+    rebrand_pillar_fitness_tag: 'FITNESS',
+    rebrand_pillar_reading_title: 'Hàbit Lector',
+    rebrand_pillar_reading_desc:
+      'Dedica moments de calma a la lectura diària i desbloqueja coneixement i serenitat.',
+    rebrand_pillar_reading_tag: 'LECTURA',
+    rebrand_pillar_focus_title: 'Estudi i Concentració',
+    rebrand_pillar_focus_desc:
+      "Sessions de treball profund lliures d'interrupcions i de notificacions constants.",
+    rebrand_pillar_focus_tag: 'FOCUS',
+    rebrand_proto_badge: 'PROTOTIP WEB',
+    rebrand_proto_title: 'Vols experimentar BitSpace ara mateix?',
+    rebrand_proto_subtitle:
+      'Hem desenvolupat una versió web interactiva preliminar perquè puguis tastar la mecànica de joc abans del llançament a les botigues.',
+    rebrand_proto_button: 'Obrir prototip web',
+    rebrand_waitlist_badge: 'ACCÉS ANTICIPAT',
+    rebrand_waitlist_title: 'Sigues dels primers a entrar a BitSpace',
+    rebrand_waitlist_subtitle:
+      "Inscriu el teu correu electrònic a la llista d'espera i rebràs prioritat absoluta quan obrim les primeres places.",
+    rebrand_waitlist_placeholder: 'El teu correu electrònic',
+    rebrand_waitlist_btn: 'Demanar accés',
+    rebrand_waitlist_sending: 'Processant sol·licitud...',
+    rebrand_waitlist_success: "Molt bé! T'hem afegit a la llista d'espera oficial de BitSpace.",
+    rebrand_waitlist_exists: "Aquest correu electrònic ja es troba registrat a la llista d'espera.",
+    rebrand_waitlist_error:
+      "Hi ha hagut un error en enviar la sol·licitud. Torna-ho a provar d'aquí a una estona.",
+    rebrand_waitlist_platforms: 'Properament disponible per a iOS i Android',
+    rebrand_footer_tagline: 'La teva salut, la seva vida.',
+    rebrand_footer_copyright: '© 2026 BitSpace. Fet amb 💜 a Barcelona.',
+
     // SEO Meta
     meta_title: 'BitSpace - Salut Digital | Cuida la teva mascota digital',
     meta_description:
@@ -103,7 +162,6 @@ const messages = {
     mwc_day3_location: 'HALL 8.1 STAND 8.1C43.7',
     mwc_day3_time: 'TOT EL DIA !!',
     // Collaborate Page
-    collaborate_title: 'Col·labora amb nosaltres!',
     collaborate_opinion_subtitle: "Quina t'agrada més?",
     collaborate_waitlist_description_1:
       "Actualment, BitSpace està en fase de desenvolupament i, per tant, no el trobareu disponible enlloc. Per tal doncs d'estar al corrent tant de l'estat del projecte i ser notificat quan aquest surti al mercat et recomanem que t'uneixis a la llista d'espera!",
@@ -173,7 +231,7 @@ const messages = {
     hero_title:
       'El teu benestar,<br>\n          <span class="highlight">reflectit en<br>un món digital</span>',
     hero_subtitle:
-      "Adopta el teu Bit, crea hàbits saludables dia a dia i observa com creix feliç al teu costat. Perquè cuidar-te no ha de ser una cosa que facis sol.",
+      'Adopta el teu Bit, crea hàbits saludables dia a dia i observa com creix feliç al teu costat. Perquè cuidar-te no ha de ser una cosa que facis sol.',
     hero_tagline: '✦ menys scroll, més control ✦',
     hero_cta_join: "Uneix-te a la llista d'espera",
     hero_cta_waitlist_short: "Llista d'espera",
@@ -189,7 +247,7 @@ const messages = {
     concept_title: 'El teu Bit és el<br>teu mirall digital',
     concept_quote: '"Quan <em>cuides del teu Bit</em>, t\'estàs <em>cuidant a tu mateix</em>."',
     concept_p1:
-      'BitSpace no és ni una llista "to-do" ni un bloquejador d\'apps, sinó un <strong>entorn gamificat i ple d\'eines </strong>que t\'ajudaran a créixer i millorar la teva vida digital.',
+      "BitSpace no és ni una llista \"to-do\" ni un bloquejador d'apps, sinó un <strong>entorn gamificat i ple d'eines </strong>que t'ajudaran a créixer i millorar la teva vida digital.",
     concept_p2:
       "Des de BitSpace sabem que no tots comencem des del mateix punt A, ni volem arribar al mateix punt B. És per això que la personalització és un factor tan important — <strong>apliquem solucions individuals i basades en la ciència de l'hàbit.</strong>",
     concept_uvp:
@@ -302,6 +360,65 @@ const messages = {
       'A continuació podreu veure doncs un petit prototip web perquè us feu a la idea de com es veurà BitSpace. Si teniu qualsevol dubte o opinió no dubteu a contactar-nos a la pesta de contacte.',
   },
   es: {
+    // Rebranding Clean Landing
+    rebrand_nav_home: 'Inicio',
+    rebrand_nav_showcase: 'Showcase',
+    rebrand_nav_pillars: 'Hábitos',
+    rebrand_nav_team: 'Equipo',
+    rebrand_nav_waitlist: 'Lista de espera',
+    rebrand_nav_prototype: 'Prototipo',
+    rebrand_hero_badge: 'APP DE SALUD DIGITAL',
+    rebrand_hero_title:
+      'Cuida tu mascota digital,<br><span class="highlight">cuídate a ti mismo</span>',
+    rebrand_hero_subtitle:
+      'Tu bienestar reflejado en una mascota virtual. Convierte el autocuidado en un hábito diario a través de la gamificación.',
+    rebrand_cta_waitlist: 'Unirme a la lista de espera',
+    rebrand_cta_prototype: 'Probar el prototipo',
+    rebrand_showcase_badge: 'DESCUBRE BITSPACE',
+    rebrand_showcase_title: 'Tu espacio, tu ritmo',
+    rebrand_showcase_subtitle:
+      'Una habitación isométrica que evoluciona contigo. Cada hábito saludable que cumples en la vida real se refleja en la felicidad de tu Bit.',
+    rebrand_pillars_badge: 'ÁREAS DE MEJORA',
+    rebrand_pillars_title: 'Cuatro pilares para tu bienestar',
+    rebrand_pillars_subtitle:
+      'Elige qué aspectos de tu rutina diaria quieres potenciar con el apoyo de tu compañero digital.',
+    rebrand_pillars_options_btn: 'Ver opciones de diseño',
+    rebrand_pillar_detox_title: 'Desconexión Digital',
+    rebrand_pillar_detox_desc:
+      'Reduce el tiempo de pantalla innecesario y recupera tu atención y descanso sin ansiedad.',
+    rebrand_pillar_detox_tag: 'DETOX',
+    rebrand_pillar_fitness_title: 'Actividad Física',
+    rebrand_pillar_fitness_desc:
+      'Rutinas activas y movimiento diario que mantienen a tu Bit lleno de energía y vitalidad.',
+    rebrand_pillar_fitness_tag: 'FITNESS',
+    rebrand_pillar_reading_title: 'Hábito Lector',
+    rebrand_pillar_reading_desc:
+      'Dedica momentos de calma a la lectura diaria y desbloquea conocimiento y serenidad.',
+    rebrand_pillar_reading_tag: 'LECTURA',
+    rebrand_pillar_focus_title: 'Estudio y Concentración',
+    rebrand_pillar_focus_desc:
+      'Sesiones de enfoque profundo libres de interrupciones y notificaciones constantes.',
+    rebrand_pillar_focus_tag: 'FOCUS',
+    rebrand_proto_badge: 'PROTOTIPO WEB',
+    rebrand_proto_title: '¿Quieres experimentar BitSpace ahora mismo?',
+    rebrand_proto_subtitle:
+      'Hemos desarrollado una versión web interactiva preliminar para que pruebes la mecánica de juego antes del lanzamiento en tiendas.',
+    rebrand_proto_button: 'Abrir prototipo web',
+    rebrand_waitlist_badge: 'ACCESO ANTICIPADO',
+    rebrand_waitlist_title: 'Sé de los primeros en entrar a BitSpace',
+    rebrand_waitlist_subtitle:
+      'Inscribe tu correo electrónico en la lista de espera y tendrás prioridad absoluta en cuanto abramos las primeras plazas.',
+    rebrand_waitlist_placeholder: 'Tu correo electrónico',
+    rebrand_waitlist_btn: 'Solicitar acceso',
+    rebrand_waitlist_sending: 'Procesando solicitud...',
+    rebrand_waitlist_success: '¡Genial! Te hemos añadido a la lista de espera oficial de BitSpace.',
+    rebrand_waitlist_exists: 'Este correo electrónico ya está registrado en la lista de espera.',
+    rebrand_waitlist_error:
+      'Hubo un error al enviar la solicitud. Por favor, inténtalo de nuevo en unos momentos.',
+    rebrand_waitlist_platforms: 'Próximamente disponible para iOS y Android',
+    rebrand_footer_tagline: 'Tu salud, su vida.',
+    rebrand_footer_copyright: '© 2026 BitSpace. Hecho con 💜 en Barcelona.',
+
     // SEO Meta
     meta_title: 'BitSpace - Salud Digital | Cuida tu mascota digital',
     meta_description:
@@ -403,7 +520,6 @@ const messages = {
     mwc_day3_location: 'HALL 8.1 STAND 8.1C43.7',
     mwc_day3_time: '¡TODO EL DÍA!!',
     // Collaborate Page
-    collaborate_title: '¡Colabora con nosotros!',
     collaborate_opinion_subtitle: '¿Cuál te gusta más?',
     collaborate_waitlist_description_1:
       'Actualmente, BitSpace está en fase de desarrollo y, por lo tanto, no lo encontrarás disponible en ningún lugar. Para poder estar al tanto del estado del proyecto y ser notificado cuando este salga al mercado te recomendamos que te unas a la lista de espera.',
@@ -459,8 +575,74 @@ const messages = {
     nav_lang_label_ca: 'Català',
     nav_lang_label_en: 'English',
     nav_lang_label_es: 'Castellano',
+    // Team (homepage "Tres ments" section)
+    home_team_badge: 'El equipo',
+    home_team_title: 'Tres mentes, una visión',
+    home_team_subtitle:
+      'Un equipo multidisciplinar que equilibra la viabilidad técnica, la sostenibilidad financiera y el rigor científico.',
+    home_team_role_finance: 'Finance Lead',
+    home_team_role_tech: 'Tech Lead',
+    home_team_role_health: 'Health Expert',
   },
   en: {
+    // Rebranding Clean Landing
+    rebrand_nav_home: 'Home',
+    rebrand_nav_showcase: 'Showcase',
+    rebrand_nav_pillars: 'Habits',
+    rebrand_nav_team: 'Team',
+    rebrand_nav_waitlist: 'Waitlist',
+    rebrand_nav_prototype: 'Prototype',
+    rebrand_hero_badge: 'DIGITAL HEALTH APP',
+    rebrand_hero_title:
+      'Care for your digital pet,<br><span class="highlight">take care of yourself</span>',
+    rebrand_hero_subtitle:
+      'Your wellbeing mirrored in a virtual companion. Turn daily self-care into a lasting routine through gentle gamification.',
+    rebrand_cta_waitlist: 'Join the waitlist',
+    rebrand_cta_prototype: 'Try the prototype',
+    rebrand_showcase_badge: 'DISCOVER BITSPACE',
+    rebrand_showcase_title: 'Your space, your rhythm',
+    rebrand_showcase_subtitle:
+      "An isometric room that grows with you. Every healthy habit you achieve in real life directly elevates your Bit's happiness.",
+    rebrand_pillars_badge: 'HABIT PILLARS',
+    rebrand_pillars_title: 'Four pillars for your growth',
+    rebrand_pillars_subtitle:
+      'Choose which areas of your daily routine you want to strengthen alongside your digital companion.',
+    rebrand_pillars_options_btn: 'View design options',
+    rebrand_pillar_detox_title: 'Digital Detox',
+    rebrand_pillar_detox_desc:
+      'Tame mindless screen time and regain mental clarity without guilt or rigid restrictions.',
+    rebrand_pillar_detox_tag: 'DETOX',
+    rebrand_pillar_fitness_title: 'Physical Activity',
+    rebrand_pillar_fitness_desc:
+      'Daily steps and mindful movement that keep your Bit energized and thriving.',
+    rebrand_pillar_fitness_tag: 'FITNESS',
+    rebrand_pillar_reading_title: 'Reading Habit',
+    rebrand_pillar_reading_desc:
+      'Dedicate quiet minutes to daily reading, finding calm and intellectual inspiration.',
+    rebrand_pillar_reading_tag: 'READING',
+    rebrand_pillar_focus_title: 'Deep Study & Focus',
+    rebrand_pillar_focus_desc:
+      'Distraction-free focus sessions protected from incessant pings and digital noise.',
+    rebrand_pillar_focus_tag: 'FOCUS',
+    rebrand_proto_badge: 'WEB PROTOTYPE',
+    rebrand_proto_title: 'Ready to experience BitSpace right now?',
+    rebrand_proto_subtitle:
+      'We have built an early interactive web prototype so you can experience core gameplay mechanics before our app store launch.',
+    rebrand_proto_button: 'Open web prototype',
+    rebrand_waitlist_badge: 'EARLY ACCESS',
+    rebrand_waitlist_title: 'Be among the first to enter BitSpace',
+    rebrand_waitlist_subtitle:
+      'Submit your email to the waitlist and gain priority access as soon as our public slots open.',
+    rebrand_waitlist_placeholder: 'Your email address',
+    rebrand_waitlist_btn: 'Request early access',
+    rebrand_waitlist_sending: 'Submitting request...',
+    rebrand_waitlist_success: 'Awesome! You have been added to the official BitSpace waitlist.',
+    rebrand_waitlist_exists: 'This email address is already on our waitlist.',
+    rebrand_waitlist_error: 'There was an error submitting your request. Please try again shortly.',
+    rebrand_waitlist_platforms: 'Coming soon to iOS and Android',
+    rebrand_footer_tagline: 'Your health, their life.',
+    rebrand_footer_copyright: '© 2026 BitSpace. Made with 💜 in Barcelona.',
+
     // SEO Meta
     meta_title: 'BitSpace - Digital Health | Take care of your digital pet',
     meta_description:
@@ -680,7 +862,8 @@ const messages = {
     how_step2_text:
       'Decide which area of improvement to pursue. Digital Detox, Sport, Reading or Study.',
     how_step3_title: 'Complete daily challenges',
-    how_step3_text: 'Complete micro-challenges created just for you. Simple, motivating and useful.',
+    how_step3_text:
+      'Complete micro-challenges created just for you. Simple, motivating and useful.',
     how_step4_title: 'Decorate your BitSpace',
     how_step4_text: "Earn coins, unlock items and build your Bit's dream room.",
     // Areas
@@ -692,7 +875,8 @@ const messages = {
     areas_detox_text:
       'Reduce screen time, manage your social media use and take back control of your time.',
     areas_sport_title: 'Sport',
-    areas_sport_text: 'Build sustainable physical activity routines. From daily walks to gym sessions.',
+    areas_sport_text:
+      'Build sustainable physical activity routines. From daily walks to gym sessions.',
     areas_reading_title: 'Reading',
     areas_reading_text:
       'Turn reading into an enjoyable daily habit. Your Bit grows with every page you read.',

@@ -1,24 +1,25 @@
 <template>
-  <div class="btn" :style="{ backgroundColor: colour, textAlign: center ? 'center' : 'left' }"> {{ buttonText }} </div>
+  <div class="btn" :style="{ backgroundColor: colour, textAlign: center ? 'center' : 'left' }">
+    {{ buttonText }}
+  </div>
 </template>
 
 <script setup>
-
 defineOptions({ name: 'FancyButton' })
 
 const props = defineProps({
   buttonText: {
     type: String,
-    required: true
+    required: true,
   },
   colour: {
     type: String,
-    default: '#ffbbac'
+    default: '#ffbbac',
   },
   center: {
     type: Boolean,
     default: false,
-  }
+  },
 })
 </script>
 
@@ -45,11 +46,13 @@ const props = defineProps({
   cursor: pointer;
 
   box-shadow: 0 6px 12px rgba(255, 111, 97, 0.18);
-  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    opacity 0.12s ease;
 }
 
 @keyframes pulse-btn {
-
   0%,
   100% {
     transform: scale(1);
@@ -71,12 +74,12 @@ const props = defineProps({
 
 .btn:active {
   transform: translateY(0);
-  opacity: .95
+  opacity: 0.95;
 }
 
 .btn:focus {
   outline: 3px solid rgba(255, 138, 128, 0.22);
-  outline-offset: 2px
+  outline-offset: 2px;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Collaborate-section'
+  name: 'Collaborate-section',
 }
 </script>
 
@@ -21,7 +21,7 @@ const { t } = useI18n()
 defineProps({
   backgroundColor: {
     type: String,
-    default: '#FFFFFF'
+    default: '#FFFFFF',
   },
 })
 </script>
@@ -36,7 +36,6 @@ defineProps({
   gap: 2rem;
   padding: 4rem 2rem;
 }
-
 
 h2 {
   margin-top: 1rem;
@@ -75,7 +74,7 @@ p {
   }
   .text-content {
     width: 100%;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 </style>

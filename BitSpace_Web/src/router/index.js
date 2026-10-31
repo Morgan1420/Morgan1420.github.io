@@ -155,7 +155,16 @@ const routes = [
         name: 'CreaTuBit',
         component: CreaTuBit,
       },
+      {
+        path: 'pilars',
+        name: 'PilarsShowcase',
+        component: () => import('../components/views/PilarsShowcase.vue'),
+      },
     ],
+  },
+  {
+    path: '/pilars',
+    redirect: () => ({ path: `/${getPreferredLang()}/pilars` }),
   },
   {
     path: '/',

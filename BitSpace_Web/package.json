@@ -17,6 +17,7 @@
     "seo:validate": "echo 'Validate sitemap at: https://www.xml-sitemaps.com/validate-xml-sitemap.html'"
   },
   "dependencies": {
+    "@rive-app/canvas": "^2.21.6",
     "vue": "^3.5.17",
     "vue-i18n": "^11.1.12",
     "vue-router": "^4.0.13"

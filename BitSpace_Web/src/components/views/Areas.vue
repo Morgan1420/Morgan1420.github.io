@@ -8,25 +8,25 @@
       </div>
 
       <div class="areas-grid">
-        <div class="area-card animate-on-scroll" style="transition-delay:0.1s">
+        <div class="area-card animate-on-scroll" style="transition-delay: 0.1s">
           <span class="area-emoji">📵</span>
           <h3>{{ t('areas_detox_title') }}</h3>
           <p>{{ t('areas_detox_text') }}</p>
           <span class="area-pill">DETOX</span>
         </div>
-        <div class="area-card animate-on-scroll" style="transition-delay:0.2s">
+        <div class="area-card animate-on-scroll" style="transition-delay: 0.2s">
           <span class="area-emoji">🏃</span>
           <h3>{{ t('areas_sport_title') }}</h3>
           <p>{{ t('areas_sport_text') }}</p>
           <span class="area-pill">FITNESS</span>
         </div>
-        <div class="area-card animate-on-scroll" style="transition-delay:0.3s">
+        <div class="area-card animate-on-scroll" style="transition-delay: 0.3s">
           <span class="area-emoji">📚</span>
           <h3>{{ t('areas_reading_title') }}</h3>
           <p>{{ t('areas_reading_text') }}</p>
           <span class="area-pill">READING</span>
         </div>
-        <div class="area-card animate-on-scroll" style="transition-delay:0.4s">
+        <div class="area-card animate-on-scroll" style="transition-delay: 0.4s">
           <span class="area-emoji">🎓</span>
           <h3>{{ t('areas_study_title') }}</h3>
           <p>{{ t('areas_study_text') }}</p>
@@ -47,8 +47,8 @@ let observer
 
 onMounted(() => {
   observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible')
           observer.unobserve(entry.target)
@@ -58,7 +58,9 @@ onMounted(() => {
     { threshold: 0.12 },
   )
 
-  document.querySelectorAll('#areas .animate-on-scroll').forEach(element => observer.observe(element))
+  document
+    .querySelectorAll('#areas .animate-on-scroll')
+    .forEach((element) => observer.observe(element))
 })
 
 onBeforeUnmount(() => {
@@ -128,7 +130,9 @@ onBeforeUnmount(() => {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
@@ -148,7 +152,9 @@ onBeforeUnmount(() => {
   padding: 2rem 1.5rem;
   text-align: center;
   box-shadow: var(--shadow-card);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   cursor: default;
 }
 
@@ -188,23 +194,23 @@ onBeforeUnmount(() => {
 }
 
 .area-card:nth-child(1) .area-pill {
-  background: #E0F2FE;
-  color: #0369A1;
+  background: #e0f2fe;
+  color: #0369a1;
 }
 
 .area-card:nth-child(2) .area-pill {
-  background: #DCFCE7;
-  color: #15803D;
+  background: #dcfce7;
+  color: #15803d;
 }
 
 .area-card:nth-child(3) .area-pill {
-  background: #FEF3C7;
-  color: #B45309;
+  background: #fef3c7;
+  color: #b45309;
 }
 
 .area-card:nth-child(4) .area-pill {
-  background: #EDE9FE;
-  color: #6D28D9;
+  background: #ede9fe;
+  color: #6d28d9;
 }
 
 @media (max-width: 900px) {

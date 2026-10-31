@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'FormularioComponent'
+  name: 'FormularioComponent',
 }
 </script>
 
@@ -8,13 +8,20 @@ export default {
   <div class="waitlist-container">
     <h2 class="title">{{ t('waitlist_title') }}</h2>
     <form @submit.prevent="submitForm" class="waitlist-form">
-      <input v-model="email" type="email" :placeholder="t('waitlist_email_placeholder')" required class="input-email" />
+      <input
+        v-model="email"
+        type="email"
+        :placeholder="t('waitlist_email_placeholder')"
+        required
+        class="input-email"
+      />
       <button type="submit" class="submit-btn" :disabled="loading">
         {{ loading ? t('waitlist_button_loading') : t('waitlist_button_submit') }}
       </button>
-      <p class="text-legal">En unir-te a la waitlist, acceptes la nostra Política de Privacitat. Podràs donar-te de
-        baixa
-        en qualsevol moment fent clic a l'enllaç que trobaràs al final de cada correu.</p>
+      <p class="text-legal">
+        En unir-te a la waitlist, acceptes la nostra Política de Privacitat. Podràs donar-te de
+        baixa en qualsevol moment fent clic a l'enllaç que trobaràs al final de cada correu.
+      </p>
     </form>
 
     <p v-if="message" :class="messageClass" class="message">{{ message }}</p>
@@ -27,7 +34,8 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const SCRIPT_BASE = 'https://script.google.com/macros/s/AKfycbyiPoDCZKIAY0nMLcXIAfiAWbdfNLb2IgAWXmAYnGbTfxPzqvS0UaDiQAKgpcgKyt6uCA/exec'
+const SCRIPT_BASE =
+  'https://script.google.com/macros/s/AKfycbyiPoDCZKIAY0nMLcXIAfiAWbdfNLb2IgAWXmAYnGbTfxPzqvS0UaDiQAKgpcgKyt6uCA/exec'
 
 const email = ref('')
 const message = ref('')
@@ -35,7 +43,9 @@ const loading = ref(false)
 
 const messageClass = computed(() =>
   message.value.includes(t('waitlist_success_added')) ||
-    message.value.includes(t('waitlist_error_exists')) ? 'success' : 'error'
+  message.value.includes(t('waitlist_error_exists'))
+    ? 'success'
+    : 'error',
 )
 
 function makeCallbackName() {
@@ -85,7 +95,11 @@ const submitForm = () => {
 
   // Limpiar función
   function cleanup() {
-    try { delete window[cbName] } catch { window[cbName] = undefined }
+    try {
+      delete window[cbName]
+    } catch {
+      window[cbName] = undefined
+    }
     if (script.parentNode) script.parentNode.removeChild(script)
   }
 
@@ -110,7 +124,6 @@ const submitForm = () => {
 }
 
 @keyframes grow {
-
   0%,
   100% {
     transform: scale(1);
@@ -146,14 +159,14 @@ const submitForm = () => {
 .input-email:focus {
   outline: none;
   border-width: 3px;
-  border-color: #E57373;
+  border-color: #e57373;
 }
 
 .submit-btn {
-  background: #E57373;
+  background: #e57373;
   /* Color que encaja con la paleta */
   color: #fff;
-  padding: .85rem;
+  padding: 0.85rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;

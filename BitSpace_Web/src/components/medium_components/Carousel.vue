@@ -1,19 +1,39 @@
 <template>
   <header class="header">
     <div class="bit-background">
-      <div v-for="(row, rowIndex) in rowsOfBits" :key="'row-' + rowIndex" class="bit-scroll-track"
-        :style="{ animationDuration: animationDuration }">
-        <img v-for="bit in row" :key="'r' + rowIndex + '-1-' + bit.id" :src="bit.src" alt="Bit character"
-          class="bit-bg-image" draggable="false" />
-        <img v-for="bit in row" :key="'r' + rowIndex + '-2-' + bit.id" :src="bit.src" alt="Bit character"
-          class="bit-bg-image" draggable="false" />
+      <div
+        v-for="(row, rowIndex) in rowsOfBits"
+        :key="'row-' + rowIndex"
+        class="bit-scroll-track"
+        :style="{ animationDuration: animationDuration }"
+      >
+        <img
+          v-for="bit in row"
+          :key="'r' + rowIndex + '-1-' + bit.id"
+          :src="bit.src"
+          alt="Bit character"
+          class="bit-bg-image"
+          draggable="false"
+        />
+        <img
+          v-for="bit in row"
+          :key="'r' + rowIndex + '-2-' + bit.id"
+          :src="bit.src"
+          alt="Bit character"
+          class="bit-bg-image"
+          draggable="false"
+        />
       </div>
     </div>
     <div class="header-content">
-      <img src="../../assets/images/Titol.png" alt="" draggable="false">
+      <img src="../../assets/images/Titol.png" alt="" draggable="false" />
       <div class="buttons">
         <fancyButton :buttonText="$t('prototype_access')" @click="openPrototype" :center="true" />
-        <fancyButton :buttonText="t('carousel_button_waitlist')" @click="$emit('go-to-waitlist')" :center="true" />
+        <fancyButton
+          :buttonText="t('carousel_button_waitlist')"
+          @click="$emit('go-to-waitlist')"
+          :center="true"
+        />
       </div>
     </div>
   </header>
@@ -42,13 +62,35 @@ function openPrototype() {
 defineEmits(['go-to-collaborate', 'go-to-waitlist'])
 
 const bitImageNames = [
-  'Bit_1.png', 'Bit_10.png', 'Bit_11.png', 'Bit_12.png', 'Bit_13.png',
-  'Bit_14.png', 'Bit_15.png', 'Bit_16.png', 'Bit_17.png', 'Bit_18.png',
-  'Bit_19.png', 'Bit_2.png', 'Bit_20.png', 'Bit_21_malo.png', 'Bit_22_malo.png',
-  'Bit_23.png', 'Bit_24.png', 'Bit_25.png', 'Bit_3.png', 'Bit_4.png',
-  'Bit_5.png', 'Bit_6.png', 'Bit_7.png', 'Bit_8.png', 'Bit_9.png',
-  'Bit_jan_llegint.png', 'Bit_triste.png', 'Lluna_Bit_sin_fondo.png'
-];
+  'Bit_1.png',
+  'Bit_10.png',
+  'Bit_11.png',
+  'Bit_12.png',
+  'Bit_13.png',
+  'Bit_14.png',
+  'Bit_15.png',
+  'Bit_16.png',
+  'Bit_17.png',
+  'Bit_18.png',
+  'Bit_19.png',
+  'Bit_2.png',
+  'Bit_20.png',
+  'Bit_21_malo.png',
+  'Bit_22_malo.png',
+  'Bit_23.png',
+  'Bit_24.png',
+  'Bit_25.png',
+  'Bit_3.png',
+  'Bit_4.png',
+  'Bit_5.png',
+  'Bit_6.png',
+  'Bit_7.png',
+  'Bit_8.png',
+  'Bit_9.png',
+  'Bit_jan_llegint.png',
+  'Bit_triste.png',
+  'Lluna_Bit_sin_fondo.png',
+]
 
 const rowsOfBits = ref([])
 const animationDuration = ref('180s')
@@ -62,7 +104,7 @@ function buildRows(rowsCount, itemsCount) {
       const imageName = bitImageNames[randomIndex]
       newRow.push({
         id: i,
-        src: new URL(`../../assets/images/Bits_Background/${imageName}`, import.meta.url).href
+        src: new URL(`../../assets/images/Bits_Background/${imageName}`, import.meta.url).href,
       })
     }
     allRows.push(newRow)
@@ -106,7 +148,6 @@ onBeforeUnmount(() => {
     mql.removeListener(onMediaChange)
   }
 })
-
 </script>
 
 <style scoped>
@@ -114,7 +155,7 @@ onBeforeUnmount(() => {
   position: relative;
   text-align: center;
   min-height: 100vh;
-  background-color: #FFE4DD;
+  background-color: #ffe4dd;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -151,7 +192,7 @@ onBeforeUnmount(() => {
   justify-content: space-around;
   opacity: 0.4;
   z-index: 1;
-  background-color: #FFE4DD;
+  background-color: #ffe4dd;
   overflow: hidden;
 }
 
@@ -177,7 +218,7 @@ onBeforeUnmount(() => {
 .header-content {
   position: relative;
   z-index: 2;
-  background-color: #FFE4DD;
+  background-color: #ffe4dd;
   padding: 1rem 1.75rem;
   border-radius: 15px;
   display: flex;
@@ -231,9 +272,7 @@ onBeforeUnmount(() => {
     flex-shrink: 0;
   }
 
-
   .header-content {
-
     padding: 1rem;
     padding-bottom: 0;
     max-width: 320px;
@@ -252,6 +291,5 @@ onBeforeUnmount(() => {
     padding: 0;
     margin: 0;
   }
-
 }
 </style>

@@ -1,14 +1,21 @@
 <template>
-  <div class="video-container" :style="{ backgroundColor: backgroundColor }"
-    :class="{ 'video-below': videoPosition === 'below' }">
+  <div
+    class="video-container"
+    :style="{ backgroundColor: backgroundColor }"
+    :class="{ 'video-below': videoPosition === 'below' }"
+  >
     <div class="text-content">
       <h2>{{ title }}</h2>
       <p v-if="text" v-html="text"></p>
     </div>
     <div class="video-content">
-      <iframe :src="embedUrl" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-        class="video-iframe"></iframe>
+      <iframe
+        :src="embedUrl"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        class="video-iframe"
+      ></iframe>
     </div>
   </div>
 </template>
@@ -19,20 +26,20 @@ import { computed } from 'vue'
 const props = defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   text: {
     type: String,
-    default: ''
+    default: '',
   },
   videoSrc: {
     type: String,
-    required: true
+    required: true,
   },
   backgroundColor: {
     type: String,
-    default: '#FFFFFF'
-  }
+    default: '#FFFFFF',
+  },
 })
 
 const embedUrl = computed(() => {

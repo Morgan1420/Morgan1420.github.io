@@ -15,6 +15,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  assetsInclude: ['**/*.riv'],
   base: '/',
   build: {
     // Optimizaciones para SEO y rendimiento

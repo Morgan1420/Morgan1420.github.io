@@ -19,13 +19,19 @@
 
         <div class="concept-visual animate-on-scroll">
           <div class="bit-states">
-            <button v-for="(card, index) in emotionCards" :key="card.key" type="button" class="bit-state-card"
-              :class="[card.variant, { flipped: flippedCards[index] }]" :aria-pressed="flippedCards[index]"
+            <button
+              v-for="(card, index) in emotionCards"
+              :key="card.key"
+              type="button"
+              class="bit-state-card"
+              :class="[card.variant, { flipped: flippedCards[index] }]"
+              :aria-pressed="flippedCards[index]"
               :aria-label="`${t(card.titleKey)} - ${flippedCards[index] ? t('concept_card_aria_show_front') : t('concept_card_aria_show_back')}`"
-              @click="toggleCard(index)">
+              @click="toggleCard(index)"
+            >
               <span class="bit-card-inner">
                 <span class="bit-card-face bit-card-front">
-                  <span class="bit-emoji"><img :src="card.image" :alt="t(card.altKey)"></span>
+                  <span class="bit-emoji"><img :src="card.image" :alt="t(card.altKey)" /></span>
                   <small>{{ t('concept_card_flip_hint') }}</small>
                 </span>
                 <span class="bit-card-face bit-card-back">
@@ -89,7 +95,7 @@ const emotionCards = [
 
 const flippedCards = ref([false, false, false, false])
 
-const toggleCard = index => {
+const toggleCard = (index) => {
   flippedCards.value[index] = !flippedCards.value[index]
 }
 
@@ -97,8 +103,8 @@ let observer
 
 onMounted(() => {
   observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible')
           observer.unobserve(entry.target)
@@ -108,7 +114,9 @@ onMounted(() => {
     { threshold: 0.12 },
   )
 
-  document.querySelectorAll('#concept .animate-on-scroll').forEach(element => observer.observe(element))
+  document
+    .querySelectorAll('#concept .animate-on-scroll')
+    .forEach((element) => observer.observe(element))
 })
 
 onBeforeUnmount(() => {
@@ -169,7 +177,9 @@ onBeforeUnmount(() => {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
@@ -178,7 +188,6 @@ onBeforeUnmount(() => {
 }
 
 @keyframes blob-float {
-
   0%,
   100% {
     transform: translateY(0) rotate(-2deg);
@@ -276,7 +285,9 @@ onBeforeUnmount(() => {
   min-height: 300px;
   min-width: 300px;
   border-radius: var(--radius-lg);
-  transition: transform 0.6s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.25s ease;
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -401,7 +412,6 @@ onBeforeUnmount(() => {
   font-size: 0.85rem;
   color: var(--text-dark);
 }
-
 
 @media (max-width: 900px) {
   .concept-grid {

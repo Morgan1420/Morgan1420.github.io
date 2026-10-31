@@ -1,21 +1,36 @@
 <template>
   <section id="hero">
-
     <!-- Sparkles -->
-    <svg class="hero-sparkle" style="top:15%;left:8%;width:28px;--sparkle-duration:3.2s;" viewBox="0 0 24 24"
-      fill="#C4B5FD">
+    <svg
+      class="hero-sparkle"
+      style="top: 15%; left: 8%; width: 28px; --sparkle-duration: 3.2s"
+      viewBox="0 0 24 24"
+      fill="#C4B5FD"
+    >
       <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z" />
     </svg>
-    <svg class="hero-sparkle" style="top:20%;right:12%;width:20px;--sparkle-duration:2.8s;--sparkle-delay:0.5s;"
-      viewBox="0 0 24 24" fill="#FDE68A">
+    <svg
+      class="hero-sparkle"
+      style="top: 20%; right: 12%; width: 20px; --sparkle-duration: 2.8s; --sparkle-delay: 0.5s"
+      viewBox="0 0 24 24"
+      fill="#FDE68A"
+    >
       <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z" />
     </svg>
-    <svg class="hero-sparkle" style="bottom:30%;left:5%;width:16px;--sparkle-duration:3.5s;--sparkle-delay:1s;"
-      viewBox="0 0 24 24" fill="#7DD3FC">
+    <svg
+      class="hero-sparkle"
+      style="bottom: 30%; left: 5%; width: 16px; --sparkle-duration: 3.5s; --sparkle-delay: 1s"
+      viewBox="0 0 24 24"
+      fill="#7DD3FC"
+    >
       <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z" />
     </svg>
-    <svg class="hero-sparkle" style="top:60%;right:8%;width:22px;--sparkle-duration:4s;--sparkle-delay:0.3s;"
-      viewBox="0 0 24 24" fill="#FFB5C8">
+    <svg
+      class="hero-sparkle"
+      style="top: 60%; right: 8%; width: 22px; --sparkle-duration: 4s; --sparkle-delay: 0.3s"
+      viewBox="0 0 24 24"
+      fill="#FFB5C8"
+    >
       <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5z" />
     </svg>
 
@@ -23,9 +38,7 @@
     <div class="hero-inner">
       <!-- Hero Text -->
       <div class="hero-content">
-        <div class="hero-badge">
-          <span>✦</span> {{ t('hero_badge') }}<span>✦</span>
-        </div>
+        <div class="hero-badge"><span>✦</span> {{ t('hero_badge') }}<span>✦</span></div>
 
         <h1 class="hero-title" v-html="t('hero_title')"></h1>
 
@@ -38,18 +51,33 @@
         </div>
 
         <div class="hero-actions">
-          <a href="#cta" class="btn-primary"
-            :class="{ 'is-muted': !activeWaitlistPrimary, 'is-hover-locked': hoveredButton === 'waitlist' }"
-            @mouseenter="hoveredButton = 'waitlist'" @mouseleave="hoveredButton = null">
-            <span>📱</span> {{ activeWaitlistPrimary ? t('hero_cta_join') : t('hero_cta_waitlist_short') }}
+          <a
+            href="#cta"
+            class="btn-primary"
+            :class="{
+              'is-muted': !activeWaitlistPrimary,
+              'is-hover-locked': hoveredButton === 'waitlist',
+            }"
+            @mouseenter="hoveredButton = 'waitlist'"
+            @mouseleave="hoveredButton = null"
+          >
+            <span>📱</span>
+            {{ activeWaitlistPrimary ? t('hero_cta_join') : t('hero_cta_waitlist_short') }}
           </a>
-          <a :href="prototypeLink" class="btn-secondary"
-            :class="{ 'is-highlighted': !activeWaitlistPrimary, 'is-hover-locked': hoveredButton === 'prototype' }"
-            @mouseenter="hoveredButton = 'prototype'" @mouseleave="hoveredButton = null" @click.prevent="openPrototype">
+          <a
+            :href="prototypeLink"
+            class="btn-secondary"
+            :class="{
+              'is-highlighted': !activeWaitlistPrimary,
+              'is-hover-locked': hoveredButton === 'prototype',
+            }"
+            @mouseenter="hoveredButton = 'prototype'"
+            @mouseleave="hoveredButton = null"
+            @click.prevent="openPrototype"
+          >
             <span>▶</span> {{ t('hero_cta_prototype') }}
           </a>
         </div>
-
       </div>
 
       <!-- Hero Visual -->
@@ -60,7 +88,7 @@
           <div class="reviews">
             <div class="review">
               <div class="review-img">
-                <img class="review-avatar" :src="reviewAvatar1" :alt="t('hero_review1_alt')">
+                <img class="review-avatar" :src="reviewAvatar1" :alt="t('hero_review1_alt')" />
               </div>
               <div class="review-content">
                 <p><b>” </b> {{ t('hero_review1_text') }}</p>
@@ -70,20 +98,14 @@
 
             <div class="review">
               <div class="review-img">
-                <img class="review-avatar" :src="reviewAvatar2" :alt="t('hero_review2_alt')">
+                <img class="review-avatar" :src="reviewAvatar2" :alt="t('hero_review2_alt')" />
               </div>
               <div class="review-content">
                 <p><b>” </b> {{ t('hero_review2_text') }}</p>
                 <cite>{{ t('hero_review2_cite') }}</cite>
               </div>
             </div>
-
           </div>
-
-
-
-
-
         </div>
       </div>
     </div>
@@ -97,8 +119,10 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const heroMascot = new URL('../../assets/images/Bits_Background/Bit_25.png', import.meta.url).href
-const reviewAvatar1 = new URL('../../assets/images/Web_icons/Review_person_1.png', import.meta.url).href
-const reviewAvatar2 = new URL('../../assets/images/Web_icons/Review_person_2.png', import.meta.url).href
+const reviewAvatar1 = new URL('../../assets/images/Web_icons/Review_person_1.png', import.meta.url)
+  .href
+const reviewAvatar2 = new URL('../../assets/images/Web_icons/Review_person_2.png', import.meta.url)
+  .href
 const prototypeLink = 'https://prototype.bitspace.es'
 
 const isWaitlistPrimary = ref(true)
@@ -144,7 +168,6 @@ onBeforeUnmount(() => {
    ANIMACIONS (KEYFRAMES)
 ============================================= */
 @keyframes sparkle-float {
-
   0%,
   100% {
     transform: translateY(0) rotate(0deg) scale(1);
@@ -158,7 +181,6 @@ onBeforeUnmount(() => {
 }
 
 @keyframes blob-float {
-
   0%,
   100% {
     transform: translateY(0) rotate(-2deg);
@@ -204,7 +226,6 @@ onBeforeUnmount(() => {
 }
 
 @keyframes pulse-glow {
-
   0%,
   100% {
     box-shadow: 0 0 20px rgba(196, 181, 253, 0.3);
@@ -225,7 +246,7 @@ onBeforeUnmount(() => {
   position: relative;
   overflow: hidden;
   padding: 0rem 2rem 4rem;
-  background: linear-gradient(160deg, #FFF8F2 0%, #F0E8FF 40%, #FFE8F2 70%, #E8F8FF 100%);
+  background: linear-gradient(160deg, #fff8f2 0%, #f0e8ff 40%, #ffe8f2 70%, #e8f8ff 100%);
   font-family: 'Nunito', sans-serif;
   color: var(--text-dark);
 }
@@ -233,7 +254,6 @@ onBeforeUnmount(() => {
 a {
   text-decoration: none;
 }
-
 
 .hero-inner {
   max-width: 1200px;
@@ -334,7 +354,12 @@ a {
   font-weight: 700;
   font-size: 1rem;
   font-family: 'Baloo 2', cursive;
-  transition: transform 1.15s ease, box-shadow 1.15s ease, background 1.15s ease, color 1.15s ease, border-color 1.15s ease;
+  transition:
+    transform 1.15s ease,
+    box-shadow 1.15s ease,
+    background 1.15s ease,
+    color 1.15s ease,
+    border-color 1.15s ease;
   box-shadow: 0 8px 24px rgba(167, 139, 250, 0.35);
   border: none;
   --cta-scale: 1;
@@ -357,7 +382,12 @@ a {
   font-size: 1rem;
   font-family: 'Baloo 2', cursive;
   border: 2px solid var(--purple);
-  transition: transform 1.15s ease, box-shadow 1.15s ease, background 1.15s ease, color 1.15s ease, border-color 1.15s ease;
+  transition:
+    transform 1.15s ease,
+    box-shadow 1.15s ease,
+    background 1.15s ease,
+    color 1.15s ease,
+    border-color 1.15s ease;
   --cta-scale: 1;
 }
 
@@ -380,7 +410,6 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
-
 .btn-secondary.is-highlighted {
   background: linear-gradient(135deg, var(--purple-deep) 0%, var(--pink-deep) 100%);
   color: white;
@@ -397,7 +426,6 @@ a {
 .hero-actions a.is-hover-locked {
   --cta-scale: 1.1;
 }
-
 
 .hero-visual {
   height: 100%;
@@ -456,7 +484,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .hero-mascot {
@@ -505,7 +532,9 @@ a {
   margin: 1rem auto 0;
   border: 1.5px solid var(--lavender);
   animation: pulse-glow 3s ease-in-out infinite;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   will-change: transform;
 }
 
@@ -513,7 +542,6 @@ a {
   transform: translateY(-6px);
   box-shadow: 0 14px 36px rgba(45, 27, 78, 0.14);
 }
-
 
 .review-avatar {
   width: 70px;

@@ -2,8 +2,6 @@
   <section id="spaces" ref="spacesRoot" :style="sectionStyle">
     <div class="spaces-bg"></div>
     <div class="section-inner">
-
-
       <div class="spaces-grid">
         <div class="space-info animate-on-scroll">
           <div class="section-header animate-on-scroll">
@@ -14,9 +12,15 @@
             </p>
           </div>
           <div class="room-select">
-            <button v-for="(room, index) in rooms" :key="room.name" type="button" class="room-button"
-              :class="{ active: selectedRoomIndex === index }" :aria-pressed="selectedRoomIndex === index"
-              @click="selectedRoomIndex = index">
+            <button
+              v-for="(room, index) in rooms"
+              :key="room.name"
+              type="button"
+              class="room-button"
+              :class="{ active: selectedRoomIndex === index }"
+              :aria-pressed="selectedRoomIndex === index"
+              @click="selectedRoomIndex = index"
+            >
               <span class="room-button-label">{{ t(room.labelKey) }}</span>
               <span class="room-button-subtitle">{{ t(room.captionKey) }}</span>
             </button>
@@ -57,7 +61,8 @@ const rooms = [
     titleColor: 'var(--text-dark)',
     subtitleColor: 'var(--text-mid)',
     image: cozyRoom,
-    background: 'linear-gradient(160deg, var(--lavender) 0%, var(--pink-soft) 48%, var(--cream) 100%)',
+    background:
+      'linear-gradient(160deg, var(--lavender) 0%, var(--pink-soft) 48%, var(--cream) 100%)',
     accent: 'var(--purple-deep)',
   },
   {
@@ -138,10 +143,15 @@ onBeforeUnmount(() => {
   position: relative;
   overflow: hidden;
   padding: 6rem 2rem;
-  background: var(--spaces-bg-start, linear-gradient(160deg, var(--pink-soft) 0%, var(--cream) 52%, var(--lavender) 100%));
+  background: var(
+    --spaces-bg-start,
+    linear-gradient(160deg, var(--pink-soft) 0%, var(--cream) 52%, var(--lavender) 100%)
+  );
   color: var(--text-dark);
   font-family: 'Nunito', sans-serif;
-  transition: background 0.35s ease, color 0.35s ease;
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
 }
 
 .spaces-bg {
@@ -207,7 +217,9 @@ onBeforeUnmount(() => {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
@@ -268,7 +280,9 @@ onBeforeUnmount(() => {
 .room-button.active {
   border-color: var(--spaces-accent, var(--purple-deep));
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), 0 14px 34px rgba(45, 27, 78, 0.16);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.2),
+    0 14px 34px rgba(45, 27, 78, 0.16);
   transform: translateY(-2px);
 }
 
@@ -311,7 +325,9 @@ onBeforeUnmount(() => {
   max-height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 18px 30px rgba(45, 27, 78, 0.12));
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .space-image-shell:hover .space-image {

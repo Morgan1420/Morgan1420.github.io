@@ -20,16 +20,17 @@ watch(
       locale.value = newLang
     }
   },
-  { immediate: true }
+  { immediate: true },
 )
 </script>
 
 <style scoped>
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  background-color: #FFD8CF; /* matches your .home-container */
+  min-height: 100%;
+  background: var(--bg-gradient);
 }
 
 #main-app-container {

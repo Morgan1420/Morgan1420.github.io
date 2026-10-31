@@ -2,11 +2,14 @@
   <div class="container" :style="{ backgroundColor: backgroundColor }">
     <h2>{{ t('equip_title') }}</h2>
     <div class="equip">
-
       <div class="membre">
         <div class="imatge-with-bit">
           <img class="imatge" src="@/assets/images/Equip/Jan.png" alt="Jan Moran Ricardo" />
-          <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Bit_jan_llegint.png" alt="Bit_Jan" />
+          <img
+            class="imatge_bit_right"
+            src="@/assets/images/Bits_Background/Bit_jan_llegint.svg"
+            alt="Bit_Jan"
+          />
         </div>
         <div class="info-membre">
           <div class="nom">{{ t('member_jan_name') }}</div>
@@ -18,19 +21,27 @@
       <div class="membre">
         <div class="imatge-with-bit">
           <img class="imatge" src="@/assets/images/Equip/Gerard.png" alt="Gerard Garcia Gross" />
-          <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.png"
-            alt="Bit_Gerard" />
+          <img
+            class="imatge_bit_right"
+            src="@/assets/images/Bits_Background/Gerard_Bit_sin_fondo.svg"
+            alt="Bit_Gerard"
+          />
         </div>
         <div class="info-membre">
           <div class="nom">{{ t('member_gerard_name') }}</div>
           <div class="estudis">{{ t('member_gerard_role') }}</div>
-        </div><!-- <div class="bottom_text">Fan #1 del Karting i de fer projectes personals</div> -->
+        </div>
+        <!-- <div class="bottom_text">Fan #1 del Karting i de fer projectes personals</div> -->
       </div>
 
       <div class="membre">
         <div class="imatge-with-bit">
           <img class="imatge" src="@/assets/images/Equip/anulL.png" alt="Lluna Lara Valle" />
-          <img class="imatge_bit_right" src="@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.png" alt="Bit_Lluna" />
+          <img
+            class="imatge_bit_right"
+            src="@/assets/images/Bits_Background/Lluna_Bit_sin_fondo.svg"
+            alt="Bit_Lluna"
+          />
         </div>
         <div class="info-membre">
           <div class="nom">{{ t('member_lluna_name') }}</div>
@@ -38,11 +49,6 @@
         </div>
         <!-- <div class="bottom_text">Apassionada de la lectura i dels cavalls</div> -->
       </div>
-
-
-
-
-
     </div>
   </div>
 </template>
@@ -56,8 +62,8 @@ const { t } = useI18n()
 defineProps({
   backgroundColor: {
     type: String,
-    default: '#FFFFFF'
-  }
+    default: '#FFFFFF',
+  },
 })
 </script>
 
@@ -71,7 +77,6 @@ defineProps({
   gap: 2rem;
   padding: 4rem 2rem;
 }
-
 
 h2 {
   margin-top: 1rem;
@@ -214,7 +219,7 @@ p {
   }
 
   .estudis {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: normal;
   }
 }
