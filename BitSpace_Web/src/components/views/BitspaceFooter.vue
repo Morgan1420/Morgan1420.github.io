@@ -44,19 +44,23 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 import bsLogoUrl from '@/assets/logo.svg'
 
 defineOptions({
   name: 'BitspaceFooter',
 })
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+const router = useRouter()
 const prototypeUrl = 'https://prototype.bitspace.es'
 
 function scrollTo(id) {
   const el = document.getElementById(id)
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  } else {
+    router.push({ path: `/${locale.value}`, hash: `#${id}` })
   }
 }
 </script>

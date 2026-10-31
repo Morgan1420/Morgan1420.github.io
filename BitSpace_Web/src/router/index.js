@@ -160,7 +160,19 @@ const routes = [
         name: 'PilarsShowcase',
         component: () => import('../components/views/PilarsShowcase.vue'),
       },
+      {
+        path: 'unsubscribe',
+        name: 'Unsubscribe',
+        component: () => import('../components/views/UnsubscribeView.vue'),
+      },
     ],
+  },
+  {
+    path: '/unsubscribe',
+    redirect: (to) => ({
+      path: `/${getPreferredLang()}/unsubscribe`,
+      query: to.query,
+    }),
   },
   {
     path: '/pilars',

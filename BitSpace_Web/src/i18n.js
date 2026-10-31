@@ -64,6 +64,22 @@ const messages = {
     rebrand_waitlist_error:
       "Hi ha hagut un error en enviar la sol·licitud. Torna-ho a provar d'aquí a una estona.",
     rebrand_waitlist_platforms: 'Properament disponible per a iOS i Android',
+    rebrand_unsub_badge: 'GESTIÓ DE SUBSCRIPCIÓ',
+    rebrand_unsub_title: "Donar-se de baixa de la llista d'espera",
+    rebrand_unsub_subtitle:
+      "Lamentem que te'n vagis. Si no vols rebre més comunicacions sobre BitSpace, pots confirmar la baixa aquí sota.",
+    rebrand_unsub_placeholder: 'El teu correu electrònic',
+    rebrand_unsub_btn: 'Confirmar baixa',
+    rebrand_unsub_sending: 'Processant la baixa...',
+    rebrand_unsub_success:
+      "T'has desinscrit correctament de la llista d'espera. Ja no rebràs més correus nostres.",
+    rebrand_unsub_already: 'Aquest correu electrònic ja estava donat de baixa prèviament.',
+    rebrand_unsub_not_found:
+      "Aquest correu electrònic no s'ha trobat a la llista d'espera.",
+    rebrand_unsub_error:
+      "Hi ha hagut un error en processar la baixa. Torna-ho a provar d'aquí a una estona.",
+    rebrand_unsub_back_home: 'Tornar a la pàgina principal',
+    rebrand_unsub_confirm_label: 'Correu electrònic a donar de baixa:',
     rebrand_footer_tagline: 'La teva salut, la seva vida.',
     rebrand_footer_copyright: '© 2026 BitSpace. Fet amb 💜 a Barcelona.',
 
@@ -428,6 +444,22 @@ const messages = {
     rebrand_waitlist_error:
       'Hubo un error al enviar la solicitud. Por favor, inténtalo de nuevo en unos momentos.',
     rebrand_waitlist_platforms: 'Próximamente disponible para iOS y Android',
+    rebrand_unsub_badge: 'GESTIÓN DE SUSCRIPCIÓN',
+    rebrand_unsub_title: 'Darse de baja de la lista de espera',
+    rebrand_unsub_subtitle:
+      'Lamentamos que te vayas. Si no deseas recibir más comunicaciones sobre BitSpace, puedes confirmar tu baja a continuación.',
+    rebrand_unsub_placeholder: 'Tu correo electrónico',
+    rebrand_unsub_btn: 'Confirmar baja',
+    rebrand_unsub_sending: 'Procesando la baja...',
+    rebrand_unsub_success:
+      'Te has desuscrito correctamente de la lista de espera. Ya no recibirás más correos nuestros.',
+    rebrand_unsub_already: 'Este correo electrónico ya estaba dado de baja previamente.',
+    rebrand_unsub_not_found:
+      'Este correo electrónico no se encuentra registrado en la lista de espera.',
+    rebrand_unsub_error:
+      'Hubo un error al procesar la baja. Por favor, inténtalo de nuevo en unos momentos.',
+    rebrand_unsub_back_home: 'Volver a la página principal',
+    rebrand_unsub_confirm_label: 'Correo electrónico a dar de baja:',
     rebrand_footer_tagline: 'Tu salud, su vida.',
     rebrand_footer_copyright: '© 2026 BitSpace. Hecho con 💜 en Barcelona.',
 
@@ -658,6 +690,21 @@ const messages = {
     rebrand_waitlist_exists: 'This email address is already on our waitlist.',
     rebrand_waitlist_error: 'There was an error submitting your request. Please try again shortly.',
     rebrand_waitlist_platforms: 'Coming soon to iOS and Android',
+    rebrand_unsub_badge: 'SUBSCRIPTION MANAGEMENT',
+    rebrand_unsub_title: 'Unsubscribe from the waitlist',
+    rebrand_unsub_subtitle:
+      'We are sorry to see you go. If you do not wish to receive further communications from BitSpace, please confirm below.',
+    rebrand_unsub_placeholder: 'Your email address',
+    rebrand_unsub_btn: 'Confirm unsubscribe',
+    rebrand_unsub_sending: 'Processing unsubscribe...',
+    rebrand_unsub_success:
+      'You have successfully unsubscribed from the waitlist. You will not receive further emails.',
+    rebrand_unsub_already: 'This email address was already unsubscribed.',
+    rebrand_unsub_not_found: 'This email address was not found in our waitlist.',
+    rebrand_unsub_error:
+      'An error occurred while processing your request. Please try again in a few moments.',
+    rebrand_unsub_back_home: 'Return to home page',
+    rebrand_unsub_confirm_label: 'Email address to unsubscribe:',
     rebrand_footer_tagline: 'Your health, their life.',
     rebrand_footer_copyright: '© 2026 BitSpace. Made with 💜 in Barcelona.',
 

@@ -38,7 +38,10 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: false,
-    open: true,
+    open: false,
+    watch: {
+      usePolling: true,
+    },
   },
   // Preview optimizations
   preview: {
