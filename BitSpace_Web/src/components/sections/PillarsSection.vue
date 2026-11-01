@@ -100,7 +100,7 @@ defineOptions({
   name: 'PillarsSection',
 })
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 
 const stickyContainerRef = ref(null)
 const scrollProgress = ref(0)

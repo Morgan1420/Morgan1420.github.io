@@ -1,10 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BitspaceHome from '../components/BitspaceHome.vue'
-import CreaTuBit from '../components/complex_components/CreaTuBit.vue'
-import Games from '../components/views/Games.vue'
-import Team from '../components/views/Team.vue'
-import Collaborate from '../components/views/Collaborate.vue'
-import LanguageWrapper from './LanguageWrapper.vue' // 1. Importa el nuevo componente
+import LanguageWrapper from './LanguageWrapper.vue'
 import i18n from '../i18n'
 
 const LANG_STORAGE_KEY = 'bitspace_lang'
@@ -134,26 +130,6 @@ const routes = [
         path: '',
         name: 'Home',
         component: BitspaceHome,
-      },
-      {
-        path: 'games',
-        name: 'Games',
-        component: Games,
-      },
-      {
-        path: 'team',
-        name: 'Team',
-        component: Team,
-      },
-      {
-        path: 'collaborate',
-        name: 'Collaborate',
-        component: Collaborate,
-      },
-      {
-        path: 'crea-tu-bit',
-        name: 'CreaTuBit',
-        component: CreaTuBit,
       },
       {
         path: 'pilars',
