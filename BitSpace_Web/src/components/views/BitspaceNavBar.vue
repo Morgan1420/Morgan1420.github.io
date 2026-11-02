@@ -17,6 +17,9 @@
         <a href="#team" class="nav-item" @click.prevent="scrollToSection('team')">
           {{ t('rebrand_nav_team') }}
         </a>
+        <a href="#resources" class="nav-item" @click.prevent="scrollToSection('resources')">
+          {{ t('rebrand_nav_resources') }}
+        </a>
         <a
           :href="prototypeUrl"
           target="_blank"
@@ -167,6 +170,22 @@
             </a>
             <a href="#team" class="drawer-nav-item" @click.prevent="handleMobileNavClick('team')">
               <span class="drawer-item-label">{{ t('rebrand_nav_team') }}</span>
+              <svg
+                class="drawer-item-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+            <a
+              href="#resources"
+              class="drawer-nav-item"
+              @click.prevent="handleMobileNavClick('resources')"
+            >
+              <span class="drawer-item-label">{{ t('rebrand_nav_resources') }}</span>
               <svg
                 class="drawer-item-arrow"
                 viewBox="0 0 24 24"

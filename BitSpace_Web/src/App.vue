@@ -1,6 +1,7 @@
 <template>
   <div id="main-app-container">
     <router-view />
+    <CookieBanner />
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import CookieBanner from './components/views/CookieBanner.vue'
 
 const route = useRoute()
 const { locale } = useI18n()

@@ -17,11 +17,17 @@
       <!-- 4. Prototype Callout pointing to https://prototype.bitspace.es -->
       <PrototypeSection />
 
+      <!-- 4.5. DevBlog YouTube Series Callout -->
+      <DevblogSection />
+
       <!-- 5. Core Lead Capture: Waitlist connected to Google Apps Script -->
       <WaitlistSection />
 
       <!-- 6. Our Team with photos and companion Bits -->
       <TeamSection />
+
+      <!-- 7. Educational Resources, Guides & Comparisons -->
+      <ResourcesSection />
     </main>
 
     <!-- Footer -->
@@ -35,8 +41,10 @@ import HeroSection from '@/components/sections/HeroSection.vue'
 import ShowcaseSection from '@/components/sections/ShowcaseSection.vue'
 import PillarsSection from '@/components/sections/PillarsSection.vue'
 import PrototypeSection from '@/components/sections/PrototypeSection.vue'
+import DevblogSection from '@/components/sections/DevblogSection.vue'
 import WaitlistSection from '@/components/sections/WaitlistSection.vue'
 import TeamSection from '@/components/sections/TeamSection.vue'
+import ResourcesSection from '@/components/sections/ResourcesSection.vue'
 import BitspaceFooter from '@/components/views/BitspaceFooter.vue'
 </script>
 

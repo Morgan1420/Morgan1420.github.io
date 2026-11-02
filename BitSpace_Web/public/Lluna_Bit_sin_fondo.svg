@@ -1,0 +1,132 @@
+<svg width="500" height="520" viewBox="0 0 500 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Bit Scholar (Amarillo Pastel - Corona Real y Libro en Perspectiva)</title>
+  <!-- CANÓNICA ANATOMÍA BASE DE BIT (100% INMUTABLE) -->
+  <g id="Bit_Base" transform="translate(36, 110)">
+    <path id="Oreja_L_Relleno" d="M43.3506 113.914C43.3506 113.914 29.5121 111.937 19.6274 97.1102C9.74264 82.2832 7.27148 78.8235 6.28302 60.5368C5.29456 42.2501 9.74264 35.3309 21.1101 20.998C32.8046 6.2527 65.097 6.17099 65.097 6.17099C65.097 6.17099 81.901 8.14796 90.7972 16.5499C99.6934 24.9519 108.095 38.7905 109.578 45.7098C111.061 52.6291 118.474 75.8581 111.308 80.0591" fill="#fff098" />
+    <path id="Oreja_L_Borde" d="M43.3506 113.914C43.3506 113.914 29.5121 111.937 19.6274 97.1102C9.74264 82.2832 7.27148 78.8235 6.28302 60.5368C5.29456 42.2501 9.74264 35.3309 21.1101 20.998C32.8046 6.2527 65.097 6.17099 65.097 6.17099C65.097 6.17099 81.901 8.14796 90.7972 16.5499C99.6934 24.9519 108.095 38.7905 109.578 45.7098C111.061 52.6291 118.474 75.8581 111.308 80.0591" fill="none" stroke="black" stroke-width="12.3402" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="Oreja_R_Relleno" d="M312.214 63.008C312.214 63.008 315.372 49.6508 318.516 44.5978C321.976 39.0376 321.605 36.8136 334.455 25.9404C347.305 15.0672 371.523 18.0326 371.523 18.0326C371.523 18.0326 390.304 18.0326 404.142 30.8827C417.981 43.7328 421.44 66.9619 421.44 66.9619C421.44 66.9619 422.429 93.1563 409.579 107.983C399.497 119.616 384.373 128.741 384.373 128.741" fill="#fff098" />
+    <path id="Oreja_R_Borde" d="M312.214 63.008C312.214 63.008 315.372 49.6508 318.516 44.5978C321.976 39.0376 321.605 36.8136 334.455 25.9404C347.305 15.0672 371.523 18.0326 371.523 18.0326C371.523 18.0326 390.304 18.0326 404.142 30.8827C417.981 43.7328 421.44 66.9619 421.44 66.9619C421.44 66.9619 422.429 93.1563 409.579 107.983C399.497 119.616 384.373 128.741 384.373 128.741" fill="none" stroke="black" stroke-width="12.3402" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="Sombra_Interior" d="M36.895 277.919L25.0128 291.199L24.3138 307.974L36.1961 326.147C36.1961 326.147 51.573 335.932 55.7668 338.728C59.9605 341.524 87.9186 351.309 90.7145 352.707C93.5103 354.105 128.458 361.095 136.146 363.191C143.835 365.288 181.578 369.482 184.374 370.181C187.17 370.88 216.526 374.375 220.72 374.375C224.914 374.375 258.463 373.676 264.055 372.977C269.647 372.278 304.594 367.735 307.39 367.735C310.186 367.735 336.996 360.995 340.241 359.697C345.483 357.6 371.694 343.97 371.694 343.97L384.625 333.136L391.265 326.846L392.662 313.566L386.372 300.286L376.587 292.597L365.403 284.909L343.736 277.22L327.66 276.521L292.712 274.424L256.367 268.833L213.031 267.435L175.288 266.037C175.288 266.037 142.437 263.241 138.942 263.241C135.448 263.241 86.5207 261.144 86.5207 261.144L52.272 262.542L36.895 277.919Z" fill="#470047" fill-opacity="0.297" />
+    <path id="Cuerpo" d="M10.4902 177.338L28.2827 135.328L48.0521 108.146L60.9022 88.3761L68.81 75.526L78.4475 65.8884L88.5794 56.9922L100.441 52.5441L115.762 47.6017L130.095 41.918L145.169 37.717L155.054 34.9988L166.421 34.0103L175.07 32.5276L185.944 31.7862H198.547H213.127L228.942 32.2804L239.074 34.0103L250.194 36.9757L262.55 39.9411L271.199 43.1536L282.814 46.6132L302.089 55.7566L321.611 65.6413L340.886 77.0087L355.219 89.8588L367.822 104.686L377.954 119.266L385.367 131.127L394.511 144.966L401.183 157.322L406.867 168.195L411.809 179.315C411.809 179.315 414.527 187.223 414.774 189.2C415.022 191.177 416.504 202.05 416.504 202.05L416.01 227.997V239.365L414.774 247.52L407.361 271.243L397.723 288.294L383.638 303.121L370.046 310.782L355.466 317.701L308.514 334.011L276.883 339.942L249.453 341.919L229.189 341.671L199.288 339.942L172.846 337.965L143.439 333.517L119.469 327.092L109.09 322.643L98.2169 318.937L87.3438 313.994L80.1774 310.535L70.0455 304.604L53.9829 294.966L41.6271 283.599L30.7539 272.726L20.1278 258.393L14.6913 247.52L10.9845 236.894L8.51332 226.268L8.26614 212.182L9.00749 199.826L10.4902 177.338Z" fill="#fff098" stroke="black" stroke-width="12.3402" stroke-linejoin="round" />
+    <path id="Ojo_Izquierdo" d="M120.37 177.605C129.805 178.159 138.098 167.629 138.894 154.086C139.689 140.543 132.686 129.114 123.251 128.56C113.816 128.006 105.523 138.535 104.727 152.079C103.931 165.622 110.935 177.05 120.37 177.605Z" fill="black" />
+    <path id="Ojo_Derecho" d="M241.113 187.3C250.548 187.854 258.842 177.324 259.637 163.781C260.433 150.237 253.429 138.809 243.994 138.255C234.56 137.701 226.266 148.23 225.47 161.774C224.675 175.317 231.678 186.745 241.113 187.3Z" fill="black" />
+    <path id="Boca" d="M144.829 201.605C144.829 201.605 176.241 230.448 208.716 202.409" fill="none" stroke="black" stroke-width="11.5843" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="Accesorios">
+    <!-- Rubor de Mejillas de Bits.jpeg (3 trazos oblicuos rosas suaves en cada mejilla) -->
+    <g id="Rubor_Mejillas" fill="none" stroke="#F79EC2" stroke-width="5" stroke-linecap="round">
+      <!-- Mejilla izquierda -->
+      <line x1="126" y1="304" x2="133" y2="292" />
+      <line x1="138" y1="307" x2="145" y2="294" />
+      <line x1="150" y1="309" x2="157" y2="296" />
+      <!-- Mejilla derecha -->
+      <line x1="296" y1="316" x2="303" y2="304" />
+      <line x1="308" y1="318" x2="315" y2="305" />
+      <line x1="320" y1="320" x2="327" y2="307" />
+    </g>
+
+    <!-- Corona Real Dorada Apoyada Directamente Sobre la Cabeza (con separación limpia de la oreja derecha) -->
+    <g id="Corona_Real">
+      <path d="M 263 145
+               L 276 92
+               L 295 110
+               L 324 87
+               L 332 115
+               L 355 108
+               L 332 164
+               Q 296 163, 263 145 Z"
+            fill="#E3C31A" stroke="black" stroke-width="6.8" stroke-linejoin="round" stroke-linecap="round" />
+
+      <!-- Brillo lateral interior de la corona -->
+      <path d="M 272 140 L 280 105" stroke="#F7E26B" stroke-width="3.5" stroke-linecap="round" />
+
+      <!-- 3 Perlas rosas con contorno negro continuo en las puntas -->
+      <g id="Perlas_Corona">
+        <circle cx="275" cy="87" r="6.8" fill="#F49AC1" stroke="black" stroke-width="5" />
+        <circle cx="325" cy="81" r="7.2" fill="#F49AC1" stroke="black" stroke-width="5" />
+        <circle cx="358" cy="104" r="6.5" fill="#F49AC1" stroke="black" stroke-width="5" />
+      </g>
+    </g>
+
+    <!-- Libro Azul Real de Tapa Dura en Perspectiva 3/4 Mirando Hacia el Bit -->
+    <g id="Libro_Real" transform="translate(96, 336)">
+      <!-- Sombra proyectada bajo el libro -->
+      <ellipse cx="106" cy="148" rx="94" ry="11" fill="#000000" fill-opacity="0.20" />
+
+      <!-- 1. Bloque de páginas blancas abiertas en abanico mirando hacia Bit -->
+      <g id="Paginas_Abiertas_Libro">
+        <!-- Abanico izquierdo de hojas blancas hacia Bit -->
+        <path d="M 16 14
+                 C 44 -1, 82 10, 110 44
+                 L 100 49
+                 L 13 18 Z"
+              fill="#FFFFFF" stroke="black" stroke-width="5.8" stroke-linejoin="round" stroke-linecap="round" />
+        <path d="M 38 14 Q 74 19, 105 44" fill="none" stroke="black" stroke-width="2.6" stroke-linecap="round" />
+
+        <!-- Abanico derecho de hojas blancas hacia Bit -->
+        <path d="M 114 44
+                 C 140 8, 168 0, 188 10
+                 L 195 17
+                 L 122 49 Z"
+              fill="#FFFFFF" stroke="black" stroke-width="5.8" stroke-linejoin="round" stroke-linecap="round" />
+        <path d="M 119 44 Q 150 16, 188 14" fill="none" stroke="black" stroke-width="2.8" stroke-linecap="round" />
+      </g>
+
+      <!-- 2. Cubierta izquierda (contraportada en perspectiva 3/4 con líneas blancas onduladas) -->
+      <g id="Contraportada_Izquierda">
+        <path d="M 13 17
+                 L 100 48
+                 L 86 150
+                 L 4 105 Z"
+              fill="#04159E" stroke="black" stroke-width="6.8" stroke-linejoin="round" stroke-linecap="round" />
+
+        <!-- 5 líneas blancas caligráficas en perspectiva de Bits.jpeg -->
+        <g fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 28 41 Q 36 39, 44 46 T 60 53 T 76 61" />
+          <path d="M 24 55 Q 34 54, 44 61 T 64 69 T 80 76" />
+          <path d="M 23 71 Q 35 71, 48 78 T 72 88" />
+          <path d="M 31 87 Q 42 89, 54 96" />
+          <path d="M 16 95 Q 28 95, 40 103 T 64 115" />
+        </g>
+      </g>
+
+      <!-- 3. Lomo central rectangular de tapa dura -->
+      <path id="Lomo_Central"
+            d="M 100 48
+               L 122 49
+               L 109 151
+               L 86 150 Z"
+            fill="#031082" stroke="black" stroke-width="6.8" stroke-linejoin="round" stroke-linecap="round" />
+
+      <!-- 4. Cubierta derecha (portada en escorzo 3/4 con emblema burdeos y detalles dorados) -->
+      <g id="Portada_Derecha">
+        <path d="M 122 49
+                 L 195 19
+                 L 186 125
+                 L 109 151 Z"
+              fill="#04159E" stroke="black" stroke-width="6.8" stroke-linejoin="round" stroke-linecap="round" />
+
+        <!-- Arco blanco superior de portada -->
+        <path d="M 146 51 Q 160 42, 174 39" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" />
+
+        <!-- Emblema central burdeos sobre pedestal azul acero -->
+        <path d="M 143 69
+                 C 144 55, 168 48, 167 62
+                 L 164 119
+                 L 139 128 Z"
+              fill="#680C0C" stroke="black" stroke-width="4.5" stroke-linejoin="round" />
+
+        <!-- Pedestal inferior azul acero -->
+        <polygon points="131,130 172,115 174,125 129,141"
+                 fill="#6488B4" stroke="black" stroke-width="4.2" stroke-linejoin="round" />
+
+        <!-- Cenefas caligráficas doradas de portada -->
+        <g fill="none" stroke="#F5DF2E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 134 78 L 139 69 L 145 76 L 152 66 L 158 73 L 165 63 L 173 67" />
+          <path d="M 148 93 L 153 86 L 157 92 L 161 85" />
+          <path d="M 131 113 Q 137 106, 143 110 T 156 105 T 169 100 T 177 97" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

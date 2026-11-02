@@ -22,12 +22,26 @@
           <a href="#pillars" class="footer-link" @click.prevent="scrollTo('pillars')">{{
             t('rebrand_nav_pillars')
           }}</a>
+          <router-link :to="`/${locale}/pilars`" class="footer-link">
+            {{ t('rebrand_nav_showcase_pilars') || 'Showcase Pilars' }}
+          </router-link>
+          <router-link :to="`/${locale}/recursos`" class="footer-link">
+            {{ t('rebrand_nav_resources') || 'Recursos' }}
+          </router-link>
           <a href="#team" class="footer-link" @click.prevent="scrollTo('team')">{{
             t('rebrand_nav_team')
           }}</a>
           <a href="#waitlist" class="footer-link" @click.prevent="scrollTo('waitlist')">{{
             t('rebrand_nav_waitlist')
           }}</a>
+          <a
+            href="https://www.youtube.com/@BitSpaceDigitalHealth"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-link"
+          >
+            DevBlog (YouTube)
+          </a>
           <a :href="prototypeUrl" target="_blank" rel="noopener noreferrer" class="footer-link">{{
             t('rebrand_nav_prototype')
           }}</a>

@@ -1,0 +1,239 @@
+﻿Informe Integral sobre la Ecología Digital Juvenil en España: Análisis Cronométrico, Psicosocial y Conductual del Uso de Dispositivos Móviles y Redes Sociales en la Cohorte de 18 a 25 Años (2024-2025)
+
+
+
+
+1. Introducción: La Omnipresencia de la Mediación Tecnológica en la Juventud Española
+
+
+La presente investigación constituye un análisis exhaustivo y pormenorizado sobre los patrones de consumo digital en la población joven española, acotada específicamente al rango etario de entre 18 y 25 años. Este grupo demográfico, situado en una intersección crítica entre la adolescencia tardía y la adultez temprana —una fase a menudo denominada "adultez emergente"—, se caracteriza por ser la primera generación que ha atravesado la totalidad de sus etapas formativas conscientes en un entorno de conectividad ubicua. Para estos individuos, el teléfono inteligente no es meramente una herramienta de comunicación o un accesorio tecnológico, sino el eje gravitacional sobre el que orbitan sus procesos de socialización, construcción de identidad, gestión emocional y entretenimiento.
+El objetivo de este reporte es trascender la superficie de las métricas básicas de "tiempo de pantalla" para deconstruir la anatomía de ese tiempo: su distribución, sus motivaciones subyacentes, sus variaciones según el género y el contexto temporal (laboral frente a festivo), y sus profundas implicaciones en la salud mental y el bienestar psicosocial. En un contexto donde la atención se ha convertido en la divisa más valiosa de la economía digital, entender cómo invierten los jóvenes españoles sus horas de vigilia es fundamental para sociólogos, educadores, responsables de políticas públicas y actores del mercado.
+Para la elaboración de este documento, se ha realizado una triangulación masiva de datos provenientes de fuentes académicas de prestigio, como el Instituto Cultura y Sociedad de la Universidad de Navarra, informes de la industria digital como IAB Spain y Smartme Analytics, y estudios longitudinales de salud pública como los de la Gasol Foundation. El análisis abarca el periodo reciente de 2024 y proyecciones hacia 2025, ofreciendo una radiografía actualizada que revela una realidad de hiperconexión estructural, donde la distinción entre la vida "online" y "offline" se ha vuelto prácticamente obsoleta.
+
+
+2. Marco Demográfico y Tecnológico: La Generación de la Hiperconectividad
+
+
+
+
+2.1. Penetración y Acceso al Dispositivo
+
+
+En el ecosistema español actual, la barrera de acceso a la tecnología móvil para el segmento de 18 a 25 años es inexistente. Los datos indican una penetración del smartphone que roza la universalidad. Según el informe de IAB Spain sobre redes sociales, el 98% de los accesos a estas plataformas se realiza a través de un dispositivo móvil.1 Este dato es crucial porque desplaza a otros dispositivos como el ordenador (91%) o la Smart TV (75%) a un rol secundario o complementario. El móvil es el dispositivo primario, íntimo y constante; es el primer objeto que se consulta al despertar y el último al dormir, actuando como una prótesis cognitiva permanente.
+La ubicuidad del dispositivo móvil en esta franja de edad tiene implicaciones profundas en la inmediatez del consumo. A diferencia de las generaciones precedentes, que debían desplazarse físicamente hacia un ordenador para "conectarse", el joven de 18 a 25 años reside en un estado de conexión latente perpetua. Las notificaciones push, la vibración háptica y la integración de wearables (relojes inteligentes) aseguran que la latencia entre el estímulo digital y la respuesta del usuario se mida en segundos.
+
+
+2.2. Perfil del Usuario: Nativos vs. Huérfanos Digitales
+
+
+Aunque a menudo se etiqueta a este grupo como "nativos digitales", el análisis de los datos sugiere una realidad más compleja. Si bien poseen una destreza intuitiva en el manejo de interfaces, su comprensión de los mecanismos subyacentes (algoritmos de recomendación, privacidad de datos, economía de la atención) es a menudo limitada. Informes sobre competencias digitales revelan que, aunque el uso es intensivo, no siempre es crítico. Esta asimetría entre habilidad de uso y comprensión estructural exacerba la vulnerabilidad de los jóvenes ante diseños adictivos y patrones oscuros (dark patterns) implementados por las plataformas de redes sociales para maximizar el tiempo de permanencia.
+
+
+3. Análisis Cuantitativo del Tiempo de Pantalla: Métricas de una Jornada Digital
+
+
+El análisis cronométrico del uso del móvil revela cifras que, observadas en su conjunto, indican una transformación radical en la distribución del tiempo libre y productivo de los jóvenes españoles.
+
+
+3.1. Volumen Total de Uso del Smartphone
+
+
+Los datos agregados para el año 2024 y las proyecciones de 2025 sitúan el uso medio diario del teléfono móvil en la población joven española (específicamente la Generación Z, que engloba el rango 18-25) por encima de las 4 horas diarias. Según la telemetría de Smartme Analytics, el promedio se establece en 4 horas y 6 minutos.2 Es imperativo dimensionar esta cifra: representa más del 25% del tiempo total de vigilia de un individuo (asumiendo 8 horas de sueño), y si descontamos las horas dedicadas a obligaciones académicas o laborales y a las necesidades biológicas básicas (comer, higiene), el móvil consume prácticamente la totalidad del tiempo de ocio disponible.
+Comparativamente, este uso supera significativamente al de los Millennials (3 horas y 40 minutos) y al de los mayores de 34 años (3 horas y 16 minutos).2 Esto evidencia una brecha generacional donde la intensidad de la conexión es inversamente proporcional a la edad. A nivel global, las cifras son aún más elevadas, con la Generación Z promediando alrededor de 9 horas de tiempo de pantalla total (multidispositivo) 3, pero en el contexto específico de España, el smartphone actúa como el concentrador principal de esta actividad.
+
+
+3.2. Desglose Específico en Redes Sociales
+
+
+Dentro del cómputo global de uso del dispositivo, las redes sociales ocupan la posición hegemónica. Un estudio focalizado del grupo "Jóvenes en transición" de la Universidad de Navarra arroja una métrica de precisión quirúrgica: los jóvenes españoles de 18 a 24 años dedican una media de 167 minutos al día exclusivamente a las redes sociales.4
+Esta cifra de 2 horas y 47 minutos diarios dedicada a la interacción social digital y al consumo de contenido generado por usuarios es reveladora. No se trata de un consumo pasivo similar al de la televisión tradicional, sino de una actividad que demanda atención cognitiva, interacción motora (scroll, like, typing) y procesamiento emocional constante. La discrepancia entre las 4 horas de uso total del móvil y las casi 3 horas de redes sociales sugiere que el resto del tiempo se distribuye entre mensajería instantánea (WhatsApp), streaming de música (Spotify), navegación web y utilidades, pero el núcleo de la experiencia digital es, indudablemente, la plataforma social.
+
+
+3.3. Variabilidad Temporal: El Efecto Fin de Semana
+
+
+El comportamiento digital no es estático; fluctúa según los ritmos sociales y laborales. Investigaciones realizadas en poblaciones juveniles (como el estudio en jóvenes andaluces) demuestran que el tiempo de uso del móvil se expande significativamente durante los fines de semana.5 Durante los días laborables o lectivos, las estructuras externas (clases universitarias, horarios de trabajo) actúan como diques de contención parciales para el uso del móvil. Sin embargo, al desaparecer estas estructuras los sábados y domingos, el tiempo de pantalla tiende a ocupar el vacío, superando con creces el promedio de 4 horas.
+Este fenómeno sugiere que el uso del móvil se ha convertido en la actividad "por defecto" (default mode) del ocio juvenil. Ante la ausencia de una actividad planificada alternativa, la inercia conductual lleva al desbloqueo de la pantalla. Además, estudios sobre población escolar y adolescente —cuyos hábitos se proyectan a la etapa universitaria— indican un incremento de hasta 11 horas semanales en el uso de pantallas en los últimos tres años, una tendencia acelerada por la pandemia y que no ha remitido en la etapa post-COVID.6
+
+
+3.4. Tabla Comparativa de Métricas de Tiempo (2024-2025)
+
+
+La siguiente tabla sintetiza los hallazgos cuantitativos más relevantes extraídos de las diversas fuentes analizadas, ofreciendo una visión estructurada de la carga temporal digital.
+
+
+Métrica Analizada
+	Valor Promedio (España 18-25 años)
+	Notas Contextuales y Fuente
+	Uso Total Smartphone (Diario)
+	4 horas 06 minutos
+	Dato específico Gen Z España. Representa la conexión total multidispositivo en movilidad. 2
+	Tiempo en Redes Sociales (Diario)
+	167 minutos (2h 47m)
+	Dato específico rango 18-24 años. Incluye navegación activa y pasiva en feeds. 4
+	Uso en Fin de Semana
+	> 4 horas (Tendencia al alza)
+	Se observa una relajación de los límites de autocontrol y horarios externos. 5
+	Tiempo en TikTok (Promedio)
+	67 - 94 minutos
+	Varía según perfil de usuario. Heavy users superan las 2 horas. 7
+	Tiempo en Instagram (Promedio)
+	~60 - 71 minutos
+	Aumento reciente impulsado por el formato Reels. 10
+	Tiempo en WhatsApp (Estimado)
+	Uso intermitente continuo
+	Alta frecuencia de apertura pero menor duración por sesión comparado con vídeo.
+	
+
+4. Ecosistema de Plataformas: La Batalla por la Atención
+
+
+El análisis de las plataformas específicas revela que no todas las horas de pantalla son iguales. Existe una clara segmentación en la función que cumple cada aplicación en la vida del joven, configurando una dieta digital variada pero desequilibrada hacia el entretenimiento pasivo.
+
+
+4.1. TikTok: El Nuevo Paradigma de Consumo Pasivo
+
+
+TikTok se ha erigido como el agujero negro temporal de la Generación Z. Con un tiempo de uso medio que oscila entre 1 hora y 7 minutos y los 94 minutos diarios en España 8, esta plataforma domina la economía de la atención. Para el segmento de 18 a 24 años, TikTok ha dejado de ser una simple red social para convertirse en una plataforma de entretenimiento algorítmico.
+La naturaleza de su consumo es radicalmente diferente a la de sus predecesoras. Mientras que Facebook o el Instagram original requerían una red de "amigos" para generar contenido, TikTok se basa en un "gráfico de interés". El algoritmo "For You" (Para Ti) elimina la necesidad de decisión activa por parte del usuario, ofreciendo un flujo ininterrumpido de estímulos de alta intensidad y corta duración. Investigaciones de la UOC alertan que uno de cada cinco jóvenes, especialmente mujeres, pasa más de dos horas al día en esta aplicación, lo que se asocia con un mayor riesgo de aislamiento y problemas de salud mental.7 El consumo en TikTok es predominantemente pasivo y nocturno, colonizando las horas de descanso.
+
+
+4.2. Instagram: Gestión de la Identidad y Validación
+
+
+A pesar del ascenso meteórico de TikTok, Instagram mantiene su relevancia, con un tiempo de uso que ha repuntado hasta los 71 minutos diarios.10 Sin embargo, su función psicológica es distinta. Instagram es el "escaparate social". Es el lugar donde se gestiona la identidad pública, se curan las imágenes y se busca la validación social a través de la interacción directa con pares.
+La introducción de "Reels" (vídeos cortos verticales) ha sido una maniobra exitosa de Meta para retener a la audiencia joven que migraba a TikTok, fusionando en una sola app la gestión social (Stories/DM) y el entretenimiento pasivo (Reels). No obstante, esta dualidad incrementa la presión estética y social, ya que el usuario no solo consume contenido de desconocidos (como en TikTok), sino que se compara constantemente con su círculo social cercano y con influencers.13
+
+
+4.3. WhatsApp: La Infraestructura Invisible
+
+
+WhatsApp merece una mención aparte. Aunque las métricas de "tiempo total" pueden ser inferiores a las de las plataformas de vídeo, su frecuencia de uso es la más alta. Para el joven español de 18-25 años, WhatsApp no es una aplicación, es una infraestructura. Es el canal por donde fluye la coordinación logística, académica, familiar y amorosa. La ansiedad asociada a WhatsApp no proviene del tiempo de consumo, sino de la obligación de disponibilidad inmediata ("doble check azul") y la gestión de múltiples grupos activos simultáneamente.
+
+
+4.4. El Rol de las Plataformas de Streaming (Twitch y YouTube)
+
+
+Plataformas como YouTube y Twitch siguen capturando una cuota significativa de tiempo, especialmente en el consumo de formatos largos (podcasts, gameplays, tutoriales). YouTube mantiene un liderazgo en la utilidad y el aprendizaje informal, mientras que Twitch genera comunidades de pertenencia muy fuertes, donde los usuarios pueden pasar horas "acompañando" a un streamer, simulando una interacción social parasocial que mitiga sentimientos de soledad.
+
+
+5. Dimensiones de Género: Una Brecha Conductual Significativa
+
+
+El análisis desagregado por género es fundamental para comprender los matices del uso de la tecnología en esta franja de edad. Los datos globales y locales coinciden en señalar patrones divergentes entre hombres y mujeres jóvenes.
+
+
+5.1. Intensidad de Uso Femenina
+
+
+Las estadísticas indican que las mujeres jóvenes (16-24 años) presentan un tiempo de pantalla significativamente mayor que sus pares masculinos. Datos de Demand Sage aplicables al contexto occidental muestran que las mujeres de este grupo promedian 7 horas y 32 minutos de conexión diaria, frente a las 7 horas y 7 minutos de los hombres.14 En España, esta tendencia se confirma con el perfil de usuario de TikTok, que es mayoritariamente femenino (57%).8
+Las mujeres jóvenes tienden a utilizar las redes sociales con un enfoque más comunicativo y relacional, pero también están más expuestas a la presión de la imagen y la comparación social. Plataformas visuales como Instagram y Pinterest tienen una base de usuarias más sólida, lo que las expone de manera desproporcionada a estándares de belleza idealizados y a dinámicas de ciberacoso o presión estética.15
+
+
+5.2. Patrones de Consumo Masculino
+
+
+Por el contrario, los hombres jóvenes tienden a diversificar más su tiempo de pantalla hacia el entretenimiento interactivo (videojuegos) y plataformas de información o debate (X/Twitter, Reddit). Twitter, por ejemplo, es una red más masculinizada (58,8% hombres), donde el rango de 25-34 años es muy activo.16 El consumo masculino a menudo se centra en la competencia (gaming) o la opinión, mientras que el femenino gravita hacia la socialización y la autoexpresión estética.
+Esta diferencia en los patrones de uso implica que los riesgos asociados también difieren: mientras ellas pueden sufrir más ansiedad relacionada con la autoimagen y el ciberacoso social, ellos pueden ser más propensos al aislamiento social derivado del consumo inmersivo de videojuegos o comunidades online cerradas.
+
+
+6. Determinantes Psicosociales: ¿Por qué se conectan?
+
+
+Uno de los aportes más valiosos de la investigación reciente, específicamente del estudio de la Universidad de Navarra, es el análisis de las motivaciones profundas detrás de estas 4 horas de conexión diaria. El "para qué" es tan importante como el "cuánto".
+
+
+6.1. La Evasión como Mecanismo de Afrontamiento
+
+
+El hallazgo más preocupante es el alto porcentaje de uso evasivo. El 44% de los jóvenes de 18 a 24 años admite usar el móvil para "evadir pensamientos incómodos".4 Este dato revela que el smartphone se ha convertido en una herramienta de regulación emocional disfuncional. Ante la ansiedad, el aburrimiento, la tristeza o la incertidumbre propia de la etapa de transición a la adultez, el joven recurre a la pantalla como un anestésico digital.
+Esta conducta de evasión impide el desarrollo de estrategias de afrontamiento (coping) saludables. En lugar de procesar la emoción negativa, se la suprime mediante una inyección de dopamina rápida proporcionada por un vídeo de TikTok o un like en Instagram. A largo plazo, esto puede generar una intolerancia al malestar psicológico y una dependencia emocional del dispositivo.
+
+
+6.2. FOMO y la Vigilancia Social
+
+
+Un 40% de los usuarios utiliza las redes para "ver qué hacen sus contactos".4 Este comportamiento está impulsado por el FOMO (Fear Of Missing Out o Miedo a Perderse Algo). La necesidad de monitorizar constantemente la vida de los demás genera un estado de alerta permanente y una sensación de insuficiencia personal al comparar la propia vida cotidiana con los "grandes éxitos" curados que los demás publican en sus perfiles.
+
+
+6.3. Comunicación vs. Aislamiento
+
+
+Paradójicamente, aunque el 83% afirma usar el móvil para comunicarse 4, los índices de soledad percibida en esta generación son los más altos de la historia reciente. La comunicación digital, a menudo asíncrona y desprovista de señales no verbales, no logra satisfacer plenamente la necesidad biológica de conexión humana. El resultado es una "soledad conectada": estar perpetuamente en contacto con cientos de personas, pero sentirse íntimamente desconectado.
+
+
+7. Impacto en la Salud Integral y el Rendimiento
+
+
+El uso intensivo del móvil tiene consecuencias tangibles en la salud física, mental y en el desempeño académico/laboral de los jóvenes de 18 a 25 años.
+
+
+7.1. Salud Mental: Ansiedad y Dependencia
+
+
+El informe de ICMediaNet destaca que un 29% de los jóvenes admite sentirse "enganchado" a las redes sociales.15 La nomofobia (miedo irracional a estar sin el móvil) afecta al 43% de los jóvenes, que sienten ansiedad si no tienen acceso inmediato al dispositivo.17 Existe una correlación directa entre el tiempo de uso excesivo y la aparición de síntomas de ansiedad, depresión y baja autoestima, especialmente exacerbada por la validación externa cuantificable (likes/views).
+
+
+7.2. Higiene del Sueño y Ritmos Circadianos
+
+
+El uso del móvil en las horas nocturnas es una práctica generalizada. La exposición a la luz azul de las pantallas inhibe la secreción de melatonina, retrasando el inicio del sueño. Además, la activación cognitiva que provocan las redes sociales impide la relajación necesaria para el descanso. Los estudios vinculan este uso nocturno con somnolencia diurna, fatiga crónica y una disminución en la capacidad de concentración al día siguiente.18
+
+
+7.3. Fragmentación de la Atención y Rendimiento Académico
+
+
+En el ámbito universitario, el móvil es el principal distractor. El 51% de los estudiantes admite usar el teléfono mientras estudia.17 Esta multitarea constante es un mito: el cerebro no procesa dos tareas cognitivas a la vez, sino que alterna entre ellas (task switching), lo que conlleva un "coste de cambio" que reduce la eficiencia y la profundidad del aprendizaje. La capacidad para el "trabajo profundo" (Deep Work) se ve severamente erosionada, lo que impacta negativamente en el rendimiento académico y en la capacidad de análisis complejo.20
+
+
+8. Implicaciones para el Mercado y la Publicidad
+
+
+Desde una perspectiva económica, este grupo de edad es el objetivo prioritario de las marcas, pero su comportamiento presenta desafíos únicos.
+
+
+8.1. Escepticismo Publicitario e Influencers
+
+
+A pesar de pasar horas en redes, los jóvenes son críticos con la publicidad tradicional. El 54% considera la publicidad en redes molesta.13 Sin embargo, el 49% sigue a influencers, otorgándoles una credibilidad superior a la de las instituciones o marcas corporativas.13 La estrategia de marketing efectiva para este segmento no es la interrupción (anuncios pop-up), sino la integración orgánica a través de creadores de contenido que hablen su mismo lenguaje visual y cultural.
+
+
+8.2. Social Commerce y Brandformance
+
+
+El tiempo de permanencia en plataformas como TikTok e Instagram ha impulsado el "Social Commerce". Los jóvenes no solo consumen contenido, sino que descubren y compran productos directamente en las apps. El modelo de "Brandformance" (construcción de marca + resultados de venta) es la norma, aprovechando la impulsividad del consumo digital nocturno y la influencia de las tendencias virales.22
+
+
+9. Conclusiones y Perspectivas Futuras
+
+
+El análisis de los datos de 2024 y 2025 confirma que los jóvenes españoles de 18 a 25 años viven inmersos en una hiperconexión estructural que define su realidad cotidiana. Con más de 4 horas de uso diario del móvil y casi 3 horas dedicadas exclusivamente a redes sociales, la vida digital ha dejado de ser un complemento para convertirse en el escenario principal de la existencia juvenil.
+Las conclusiones principales de este estudio son:
+1. Cronificación del Uso Intensivo: El tiempo de pantalla no muestra signos de disminuir; por el contrario, se consolida y aumenta, especialmente en formatos de vídeo corto (TikTok) que fomentan un consumo pasivo y adictivo.
+2. La Evasión como Motor: Una parte sustancial del tiempo de conexión (44%) está motivada por la necesidad de escapar del malestar emocional, lo que plantea un reto de salud mental pública de primer orden.
+3. Diferenciación de Género: Las mujeres jóvenes soportan una carga mayor de tiempo de pantalla y presión estética, mientras que los hombres diversifican más hacia el ocio interactivo.
+4. Impacto Sistémico: La falta de sueño, la fragmentación de la atención y la dependencia emocional del dispositivo están moldeando una generación con desafíos únicos en su desarrollo cognitivo y emocional.
+Hacia el futuro, la integración de la Inteligencia Artificial Generativa en las redes sociales promete personalizar aún más el contenido, haciendo que los algoritmos de retención sean más eficaces y difíciles de resistir. El desafío para la sociedad española —educadores, familias y legisladores— no es demonizar la tecnología, sino dotar a los jóvenes de las competencias críticas y emocionales necesarias para recuperar la soberanía sobre su propia atención. La "dieta digital" del futuro no debe basarse en la abstinencia, sino en la consciencia y la intencionalidad del uso.
+Obras citadas
+1. Conclusiones del estudio de IAB Spain sobre redes sociales 2024 - Moio, fecha de acceso: noviembre 27, 2025, https://moio.io/blog/conclusiones-del-estudio-de-iab-spain-sobre-redes-sociales-2024/
+2. DIGITAL CONSUMERS BY GENERATION - Smartme Analytics, fecha de acceso: noviembre 27, 2025, https://api.smartmeanalytics.com/images/report/informe-digital-consumer-by-generation-.pdf
+3. Alarming Average Screen Time Statistics (2025) - Exploding Topics, fecha de acceso: noviembre 27, 2025, https://explodingtopics.com/blog/screen-time-stats
+4. El tiempo que pasan los jóvenes usando el móvil se relaciona con su salud mental, pero afecta más para qué lo utilizan - Universidad de Navarra, fecha de acceso: noviembre 27, 2025, https://www.unav.edu/noticias/-/contents/22/08/2024/el-tiempo-que-pasan-los-jovenes-usando-el-movil-se-relaciona-con-su-salud-mental-pero-afecta-mas-para-que-lo-utilizan/content/lovPblW1fC70/116614992
+5. El uso del móvil entre los jóvenes andaluces supera las cuatro horas diarias en fin de semana | Vicerrectorado de Investigación, fecha de acceso: noviembre 27, 2025, https://www.investigacion.us.es/noticias/el-uso-del-movil-entre-los-jovenes-andaluces-supera-las-cuatro-horas-diarias-en-fin-de-semana
+6. Incremento de 11 horas semanales en el uso de pantallas en solo tres años y medio: un desafío para el bienestar infantil y adolescente - - Gasol Foundation, fecha de acceso: noviembre 27, 2025, https://gasolfoundation.org/es/incremento-de-11-horas-semanales-en-el-uso-de-pantallas-en-solo-tres-anos-y-medio-un-desafio-para-el-bienestar-infantil-y-adolescente/
+7. España: Uno de cada cinco jóvenes pasa más de dos horas diarias en TikTok, fecha de acceso: noviembre 27, 2025, https://www.diariolasamericas.com/mundo/espana-uno-cada-cinco-jovenes-pasa-mas-dos-horas-diarias-tiktok-n5367543
+8. Estadísticas del uso de redes sociales en 2024 (España y mundo) - Una Vida Online, fecha de acceso: noviembre 27, 2025, https://unavidaonline.com/estadisticas-redes-sociales/
+9. Los menores de 18 años dedican 67 minutos diarios a las redes sociales y tienen preferencia por TikTok, según Qustodio - Europa Press, fecha de acceso: noviembre 27, 2025, https://www.europapress.es/portaltic/software/noticia-menores-18-anos-dedican-67-minutos-diarios-redes-sociales-tienen-preferencia-tiktok-qustodio-20250121134553.html
+10. España, el país desarrollado donde más tiempo pasan los jóvenes en las redes sociales, fecha de acceso: noviembre 27, 2025, https://www.antena3.com/noticias/tecnologia/espana-pais-desarrollado-donde-mas-tiempo-pasan-jovenes-redes-sociales_2024012465b17cb8b83407000137cfab.html
+11. TikTok sigue siendo la red social más utilizada por los menores españoles, con una media de 94 minutos al día | ORAIN, fecha de acceso: noviembre 27, 2025, https://orain.eus/es/actualidad/sociedad/2024/01/24/tiktok-sigue-siendo-red-social-mas-utilizada-por-menores-espanoles-con-media-de-94-minutos-al-dia/
+12. El 20 % de los jóvenes pasa demasiado tiempo en TikTok - UOC, fecha de acceso: noviembre 27, 2025, https://www.uoc.edu/es/news/2024/adiccion-de-los-adolescentes-a-tiktok
+13. Resumen del Estudio Anual de Redes Sociales 2024 - IAB Spain, fecha de acceso: noviembre 27, 2025, https://www.irudigital.com/resumen-estudio-anual-redes-sociales-2024-iab-spain/
+14. Average Screen Time Statistics 2025 (By Age, Gender & Region), fecha de acceso: noviembre 27, 2025, https://www.demandsage.com/screen-time-statistics/
+15. estudio sobre el uso de redes sociales por parte de menores en espana | ICMEDIA, fecha de acceso: noviembre 27, 2025, https://icmedianet.org/wp-content/uploads/2025/07/Estudio-sobre-el-uso-de-redes-sociales-por-parte-de-menores-en-Espana-14072025-1.pdf
+16. Evolución del consumo de redes sociales en España (junio 2024 - mayo 2025), fecha de acceso: noviembre 27, 2025, https://www.mediadiamond.es/evolucion-del-consumo-de-redes-sociales-en-espana-junio-2024-mayo-2025/
+17. Más de 50 sorprendentes estadísticas sobre el tiempo frente a la pantalla - GoStudent, fecha de acceso: noviembre 27, 2025, https://www.gostudent.org/es-es/blog/estadisticas-sobre-el-tiempo-frente-a-la-pantalla
+18. Influencia del Tiempo de Pantallas en Conductas Externalizantes e Internalizantes en Niños de 6-12 Años - Revista de Psicología y Educación, fecha de acceso: noviembre 27, 2025, https://www.revistadepsicologiayeducacion.es/pdf/268.pdf
+19. Influencia del uso de redes sociales en el sueño, el rendimiento académico y la actividad física en - Revistas UM, fecha de acceso: noviembre 27, 2025, https://revistas.um.es/riite/article/download/629881/371171/2438711
+20. Estudio del uso y consumo de dispositivos móviles en universitarios - ResearchGate, fecha de acceso: noviembre 27, 2025, https://www.researchgate.net/publication/352901860_Estudio_del_uso_y_consumo_de_dispositivos_moviles_en_universitarios
+21. el impacto del uso excesivo del teléfono inteligente en el rendimiento académico: una revisión sistemática de la literatura - Ciencia Latina Revista Científica Multidisciplinar, fecha de acceso: noviembre 27, 2025, https://ciencialatina.org/index.php/cienciala/article/download/11724/17087/
+22. Estudios archivo | IAB Spain, fecha de acceso: noviembre 27, 2025, https://iabspain.es/estudio/

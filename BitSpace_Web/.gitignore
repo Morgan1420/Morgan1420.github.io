@@ -30,3 +30,8 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+.env
+
+# Private subscriber email exports (GDPR compliance)
+*.csv
+email-campaigns/*.csv

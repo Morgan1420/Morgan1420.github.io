@@ -7,9 +7,11 @@ const messages = {
     rebrand_nav_showcase: 'Showcase',
     rebrand_nav_pillars: 'Hàbits',
     rebrand_nav_team: "L'equip",
+    rebrand_nav_resources: 'Recursos',
     rebrand_nav_waitlist: "Llista d'espera",
     rebrand_nav_prototype: 'Prototip',
-    rebrand_hero_badge: 'APP DE SALUT DIGITAL',
+    rebrand_nav_showcase_pilars: 'Laboratori Hàbits',
+    rebrand_hero_badge: 'APP DE BENESTAR DIGITAL',
     rebrand_hero_title:
       'Cuida la teva mascota digital,<br><span class="highlight">cuida\'t a tu mateix</span>',
     rebrand_hero_subtitle:
@@ -52,6 +54,11 @@ const messages = {
     rebrand_proto_subtitle:
       'Hem desenvolupat una versió web interactiva preliminar perquè puguis tastar la mecànica de joc abans del llançament a les botigues.',
     rebrand_proto_button: 'Obrir prototip web',
+    rebrand_devblog_badge: 'DEVBLOG A YOUTUBE',
+    rebrand_devblog_title: 'Documentem el camí cap a la startup',
+    rebrand_devblog_subtitle:
+      'Acompanya\'ns darrere de les càmeres: el dia a dia de l\'equip, el procés de creació dels Bits i els reptes de desenvolupar una app des de zero en format Shorts.',
+    rebrand_devblog_button: 'Veure el canal a YouTube',
     rebrand_waitlist_badge: 'ACCÉS ANTICIPAT',
     rebrand_waitlist_title: 'Sigues dels primers a entrar a BitSpace',
     rebrand_waitlist_subtitle:
@@ -82,9 +89,14 @@ const messages = {
     rebrand_unsub_confirm_label: 'Correu electrònic a donar de baixa:',
     rebrand_footer_tagline: 'La teva salut, la seva vida.',
     rebrand_footer_copyright: '© 2026 BitSpace. Fet amb 💜 a Barcelona.',
+    cookie_banner_title: 'Cuidem la teva privacitat',
+    cookie_banner_text:
+      'Utilitzem emmagatzematge local estrictament necessari per recordar la teva preferència d\'idioma i millorar la teva experiència. No utilitzem cookies publicitàries ni de rastreig de tercers.',
+    cookie_banner_accept: 'Acceptar',
+    cookie_banner_reject: 'Només necessàries',
 
     // SEO Meta
-    meta_title: 'BitSpace - Salut Digital | Cuida la teva mascota digital',
+    meta_title: 'BitSpace - Benestar Digital | Cuida la teva mascota digital',
     meta_description:
       "BitSpace és una aplicació mòbil que t'ajuda a millorar els teus hàbits de salut cuidant una mascota digital. Millora el teu benestar mentre el teu Bit creix feliç.",
 
@@ -118,7 +130,7 @@ const messages = {
       '<b>ENQUESTA GENERAL:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
     collaborate_text_3:
       "Forma part del canvi i contacta'ns per saber com pots col·laborar a través del nostre correu electrònic: info{'@'}bitspace.es",
-    footer_logo_text: 'BitSpace: Digital Health',
+    footer_logo_text: 'BitSpace: Digital Wellbeing',
     footer_contact_title: 'Contacta amb nosaltres',
     footer_social_title: 'Segueix-nos a',
     waitlist_title: "Uneix-te a la nostra llista d'espera",
@@ -387,9 +399,11 @@ const messages = {
     rebrand_nav_showcase: 'Showcase',
     rebrand_nav_pillars: 'Hábitos',
     rebrand_nav_team: 'Equipo',
+    rebrand_nav_resources: 'Recursos',
     rebrand_nav_waitlist: 'Lista de espera',
     rebrand_nav_prototype: 'Prototipo',
-    rebrand_hero_badge: 'APP DE SALUD DIGITAL',
+    rebrand_nav_showcase_pilars: 'Laboratorio Hábitos',
+    rebrand_hero_badge: 'APP DE BIENESTAR DIGITAL',
     rebrand_hero_title:
       'Cuida tu mascota digital,<br><span class="highlight">cuídate a ti mismo</span>',
     rebrand_hero_subtitle:
@@ -432,6 +446,11 @@ const messages = {
     rebrand_proto_subtitle:
       'Hemos desarrollado una versión web interactiva preliminar para que pruebes la mecánica de juego antes del lanzamiento en tiendas.',
     rebrand_proto_button: 'Abrir prototipo web',
+    rebrand_devblog_badge: 'DEVBLOG EN YOUTUBE',
+    rebrand_devblog_title: 'Documentamos el camino hacia la startup',
+    rebrand_devblog_subtitle:
+      'Acompáñanos detrás de las cámaras: el día a día del equipo, el proceso de creación de los Bits y los retos de crear una app desde cero en formato Shorts.',
+    rebrand_devblog_button: 'Ver canal en YouTube',
     rebrand_waitlist_badge: 'ACCESO ANTICIPADO',
     rebrand_waitlist_title: 'Sé de los primeros en entrar a BitSpace',
     rebrand_waitlist_subtitle:
@@ -462,9 +481,14 @@ const messages = {
     rebrand_unsub_confirm_label: 'Correo electrónico a dar de baja:',
     rebrand_footer_tagline: 'Tu salud, su vida.',
     rebrand_footer_copyright: '© 2026 BitSpace. Hecho con 💜 en Barcelona.',
+    cookie_banner_title: 'Cuidamos tu privacidad',
+    cookie_banner_text:
+      'Utilizamos almacenamiento local estrictamente necesario para recordar tu preferencia de idioma y mejorar tu experiencia. No utilizamos cookies publicitarias ni rastreadores de terceros.',
+    cookie_banner_accept: 'Aceptar',
+    cookie_banner_reject: 'Solo necesarias',
 
     // SEO Meta
-    meta_title: 'BitSpace - Salud Digital | Cuida tu mascota digital',
+    meta_title: 'BitSpace - Bienestar Digital | Cuida tu mascota digital',
     meta_description:
       'BitSpace es una aplicación móvil que te ayuda a mejorar tus hábitos de salud cuidando una mascota digital. Mejora tu bienestar mientras tu Bit crece feliz.',
 
@@ -498,7 +522,7 @@ const messages = {
       '<b>ENCUESTA GENERAL:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
     collaborate_text_3:
       "Forma parte del cambio y contáctanos para saber cómo puedes colaborar a través de nuestro correo electrónico: info{'@'}bitspace.es",
-    footer_logo_text: 'BitSpace: Digital Health',
+    footer_logo_text: 'BitSpace: Digital Wellbeing',
     footer_contact_title: 'Contacta con nosotros',
     footer_social_title: 'Síguenos en',
     footer_rights: 'Todos los derechos reservados',
@@ -634,9 +658,11 @@ const messages = {
     rebrand_nav_showcase: 'Showcase',
     rebrand_nav_pillars: 'Habits',
     rebrand_nav_team: 'Team',
+    rebrand_nav_resources: 'Resources',
     rebrand_nav_waitlist: 'Waitlist',
     rebrand_nav_prototype: 'Prototype',
-    rebrand_hero_badge: 'DIGITAL HEALTH APP',
+    rebrand_nav_showcase_pilars: 'Habit Laboratory',
+    rebrand_hero_badge: 'DIGITAL WELLBEING APP',
     rebrand_hero_title:
       'Take care of your digital pet,<br><span class="highlight">take care of yourself</span>',
     rebrand_hero_subtitle:
@@ -679,6 +705,11 @@ const messages = {
     rebrand_proto_subtitle:
       'We have built an early interactive web prototype so you can try core gameplay mechanics before our app store launch.',
     rebrand_proto_button: 'Open web prototype',
+    rebrand_devblog_badge: 'DEVBLOG ON YOUTUBE',
+    rebrand_devblog_title: 'Documenting our startup journey',
+    rebrand_devblog_subtitle:
+      'Join us behind the scenes: daily team life, crafting the Bits companions, and the raw challenges of building an app from scratch in daily Shorts.',
+    rebrand_devblog_button: 'Watch on YouTube',
     rebrand_waitlist_badge: 'EARLY ACCESS',
     rebrand_waitlist_title: 'Be among the first to enter BitSpace',
     rebrand_waitlist_subtitle:
@@ -707,9 +738,14 @@ const messages = {
     rebrand_unsub_confirm_label: 'Email address to unsubscribe:',
     rebrand_footer_tagline: 'Your health, their life.',
     rebrand_footer_copyright: '© 2026 BitSpace. Made with 💜 in Barcelona.',
+    cookie_banner_title: 'We value your privacy',
+    cookie_banner_text:
+      'We only use strictly necessary local storage to remember your language preference and improve your browsing experience. We do not use advertising cookies or third-party trackers.',
+    cookie_banner_accept: 'Accept',
+    cookie_banner_reject: 'Necessary only',
 
     // SEO Meta
-    meta_title: 'BitSpace - Digital Health | Take care of your digital pet',
+    meta_title: 'BitSpace - Digital Wellbeing | Take care of your digital pet',
     meta_description:
       'BitSpace is a mobile app that helps you improve your health habits by caring for a digital pet. Improve your wellbeing while your Bit grows happily.',
 
@@ -743,7 +779,7 @@ const messages = {
       '<b>GENERAL SURVEY:</b> <a id="enllaç-enquestes" href="https://forms.gle/y2QSFbbpGMoVtNNK6" target="_blank" rel="noopener noreferrer">https://forms.gle/y2QSFbbpGMoVtNNK6</a>',
     collaborate_text_3:
       "Be part of the change and contact us to learn how to collaborate via email: info{'@'}bitspace.es",
-    footer_logo_text: 'BitSpace: Digital Health',
+    footer_logo_text: 'BitSpace: Digital Wellbeing',
     footer_contact_title: 'Contact us',
     footer_social_title: 'Follow us on',
     footer_rights: 'All rights reserved',

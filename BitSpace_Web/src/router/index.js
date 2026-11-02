@@ -2,57 +2,116 @@ import { createRouter, createWebHistory } from 'vue-router'
 import BitspaceHome from '../components/BitspaceHome.vue'
 import LanguageWrapper from './LanguageWrapper.vue'
 import i18n from '../i18n'
+import { getArticleBySlug } from '../data/articles'
 
 const LANG_STORAGE_KEY = 'bitspace_lang'
 
-// Preferred CA/EN language: stored choice first, then browser language, defaulting to Catalan
+// Preferred CA/ES/EN language: stored choice first, then browser language, defaulting to Catalan
 const getPreferredLang = () => {
   try {
     const stored = localStorage.getItem(LANG_STORAGE_KEY)
-    if (stored === 'ca' || stored === 'en') {
+    if (stored === 'ca' || stored === 'es' || stored === 'en') {
       return stored
     }
   } catch {
     // localStorage unavailable (e.g. private browsing)
   }
 
-  const browserLang = typeof navigator !== 'undefined' ? navigator.language : ''
-  return browserLang && browserLang.toLowerCase().startsWith('en') ? 'en' : 'ca'
+  const browserLang = (typeof navigator !== 'undefined' ? navigator.language : '').toLowerCase()
+  if (browserLang.startsWith('es')) {
+    return 'es'
+  }
+  if (browserLang.startsWith('en')) {
+    return 'en'
+  }
+  return 'ca'
 }
 
-// SEO Meta Tags per idioma
-const getPageMeta = (lang) => {
+// SEO Meta Tags per idioma i ruta
+const getPageMeta = (lang, currentRoutePath = '') => {
+  const cleanPath = (currentRoutePath || (typeof window !== 'undefined' ? window.location.pathname : ''))
+    .replace(/^\/(?:ca|es|en)(?:\/|$)/, '')
+    .replace(/\/$/, '')
+
+  if (cleanPath === 'recursos') {
+    const hubMeta = {
+      ca: {
+        title: 'Recursos i Guies de Benestar Digital | BitSpace',
+        description:
+          "Articles, guies de desintoxicació digital, comparatives d'eines i tutorials per crear hàbits saludables amb la tecnologia.",
+        ogTitle: 'Recursos i Guies de Benestar Digital | BitSpace',
+        ogDescription:
+          "Articles, guies de desintoxicació digital, comparatives d'eines i tutorials per crear hàbits saludables amb la tecnologia.",
+      },
+      es: {
+        title: 'Recursos y Guías de Bienestar Digital | BitSpace',
+        description:
+          'Artículos, guías de desintoxicación digital, comparativas de herramientas y tutoriales para crear hábitos saludables con la tecnología.',
+        ogTitle: 'Recursos y Guías de Bienestar Digital | BitSpace',
+        ogDescription:
+          'Artículos, guías de desintoxicación digital, comparativas de herramientas y tutoriales para crear hábitos saludables con la tecnología.',
+      },
+      en: {
+        title: 'Digital Wellbeing Resources & Guides | BitSpace',
+        description:
+          'Articles, digital detox guides, tool comparisons, and step-by-step tutorials to build healthy habits with technology.',
+        ogTitle: 'Digital Wellbeing Resources & Guides | BitSpace',
+        ogDescription:
+          'Articles, digital detox guides, tool comparisons, and step-by-step tutorials to build healthy habits with technology.',
+      },
+    }
+    return hubMeta[lang] || hubMeta.ca
+  }
+
+  if (cleanPath.startsWith('recursos/')) {
+    const slug = cleanPath.replace(/^recursos\//, '')
+    const article = getArticleBySlug(slug)
+    if (article) {
+      const title = article.title[lang] || article.title.es || article.title.ca
+      const desc =
+        (article.metaDescription && (article.metaDescription[lang] || article.metaDescription.es || article.metaDescription.ca)) ||
+        (article.summary && (article.summary[lang] || article.summary.ca)) ||
+        ''
+      return {
+        title: `${title} | BitSpace`,
+        description: desc,
+        ogTitle: `${title} | BitSpace`,
+        ogDescription: desc,
+      }
+    }
+  }
+
   const meta = {
     ca: {
-      title: 'BitSpace - Salut Digital | Cuida la teva mascota digital',
+      title: 'BitSpace - Benestar Digital | Cuida la teva mascota digital',
       description:
-        "BitSpace és una aplicació mòbil que t'ajuda a millorar els teus hàbits de salut cuidant una mascota digital. Millora el teu benestar mentre el teu Bit creix feliç.",
-      ogTitle: 'BitSpace - Salut Digital | Cuida la teva mascota digital',
+        "Cuida la teva mascota digital i millora els teus hàbits de salut. BitSpace gamifica el teu descans, activitat física, lectura i concentració.",
+      ogTitle: 'BitSpace - Benestar Digital | Cuida la teva mascota digital',
       ogDescription:
-        'Millora els teus hàbits de salut cuidant una mascota digital. El teu Bit actuarà com a mirall de la teva salut i benestar.',
+        'Cuida la teva mascota digital i millora els teus hàbits de salut. El teu Bit evoluciona amb el teu progrés real.',
     },
     es: {
-      title: 'BitSpace - Salud Digital | Cuida tu mascota digital',
+      title: 'BitSpace - Bienestar Digital | Cuida tu mascota digital',
       description:
-        'BitSpace es una aplicación móvil que te ayuda a mejorar tus hábitos de salud cuidando una mascota digital. Mejora tu bienestar mientras tu Bit crece feliz.',
-      ogTitle: 'BitSpace - Salud Digital | Cuida tu mascota digital',
+        'Cuida tu mascota digital y mejora tus hábitos de salud. BitSpace gamifica tu desconexión, deporte, lectura y concentración diaria.',
+      ogTitle: 'BitSpace - Bienestar Digital | Cuida tu mascota digital',
       ogDescription:
-        'Mejora tus hábitos de salud cuidando una mascota digital. Tu Bit actuará como un espejo de tu salud y bienestar.',
+        'Cuida tu mascota digital y mejora tus hábitos de salud. Tu Bit evoluciona con tu bienestar en el mundo real.',
     },
     en: {
-      title: 'BitSpace - Digital Health | Take care of your digital pet',
+      title: 'BitSpace - Digital Wellbeing | Care for your digital pet',
       description:
-        'BitSpace is a mobile app that helps you improve your health habits by caring for a digital pet. Improve your wellbeing while your Bit grows happily.',
-      ogTitle: 'BitSpace - Digital Health | Take care of your digital pet',
+        'Take care of your digital pet and build healthy habits. BitSpace gamifies your digital detox, fitness, reading and focus.',
+      ogTitle: 'BitSpace - Digital Wellbeing | Care for your digital pet',
       ogDescription:
-        'Improve your health habits by caring for a digital pet. Your Bit acts as a mirror of your health and wellbeing.',
+        'Take care of your digital pet and build healthy habits. Your Bit grows as your real-world habits improve.',
     },
   }
   return meta[lang] || meta.ca
 }
 
-const updateMetaTags = (lang) => {
-  const meta = getPageMeta(lang)
+const updateMetaTags = (lang, currentRoutePath = '') => {
+  const meta = getPageMeta(lang, currentRoutePath)
 
   // Update title
   document.title = meta.title
@@ -62,6 +121,12 @@ const updateMetaTags = (lang) => {
   if (metaDescription) {
     metaDescription.setAttribute('content', meta.description)
   }
+
+  // Determine subpath without language prefix (e.g., '' or 'pilars' or 'unsubscribe')
+  const cleanPath = (currentRoutePath || window.location.pathname)
+    .replace(/^\/(?:ca|es|en)(?:\/|$)/, '')
+    .replace(/\/$/, '')
+  const subpath = cleanPath ? `/${cleanPath}` : ''
 
   // Update Open Graph
   let ogTitle = document.querySelector('meta[property="og:title"]')
@@ -76,7 +141,7 @@ const updateMetaTags = (lang) => {
 
   let ogUrl = document.querySelector('meta[property="og:url"]')
   if (ogUrl) {
-    ogUrl.setAttribute('content', `https://bitspace.es/${lang}`)
+    ogUrl.setAttribute('content', `https://bitspace.es/${lang}${subpath}`)
   }
 
   // Update Twitter Card
@@ -92,13 +157,27 @@ const updateMetaTags = (lang) => {
 
   let twitterUrl = document.querySelector('meta[name="twitter:url"]')
   if (twitterUrl) {
-    twitterUrl.setAttribute('content', `https://bitspace.es/${lang}`)
+    twitterUrl.setAttribute('content', `https://bitspace.es/${lang}${subpath}`)
   }
 
-  // Update canonical URL
+  // Update canonical URL (self-referential)
   let canonical = document.querySelector('link[rel="canonical"]')
   if (canonical) {
-    canonical.setAttribute('href', `https://bitspace.es/${lang}`)
+    canonical.setAttribute('href', `https://bitspace.es/${lang}${subpath}`)
+  }
+
+  // Update or synchronize hreflang alternates (self-referential & localized)
+  const languages = ['ca', 'es', 'en']
+  languages.forEach((altLang) => {
+    let altLink = document.querySelector(`link[rel="alternate"][hreflang="${altLang}"]`)
+    if (altLink) {
+      altLink.setAttribute('href', `https://bitspace.es/${altLang}${subpath}`)
+    }
+  })
+
+  let xDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]')
+  if (xDefault) {
+    xDefault.setAttribute('href', `https://bitspace.es/ca${subpath}`)
   }
 
   // Update HTML lang attribute
@@ -120,7 +199,7 @@ const routes = [
         } catch {
           // localStorage unavailable (e.g. private browsing)
         }
-        updateMetaTags(lang)
+        updateMetaTags(lang, to.path)
         return next()
       }
       return next({ path: `/${getPreferredLang()}` }) // Idioma no vàlid: usar preferència guardada o del navegador
@@ -137,11 +216,29 @@ const routes = [
         component: () => import('../components/views/PilarsShowcase.vue'),
       },
       {
+        path: 'recursos',
+        name: 'ResourcesHub',
+        component: () => import('../components/views/ResourcesHubView.vue'),
+      },
+      {
+        path: 'recursos/:slug',
+        name: 'ArticleView',
+        component: () => import('../components/views/ArticleView.vue'),
+      },
+      {
         path: 'unsubscribe',
         name: 'Unsubscribe',
         component: () => import('../components/views/UnsubscribeView.vue'),
       },
     ],
+  },
+  {
+    path: '/recursos',
+    redirect: () => ({ path: `/${getPreferredLang()}/recursos` }),
+  },
+  {
+    path: '/recursos/:slug',
+    redirect: (to) => ({ path: `/${getPreferredLang()}/recursos/${to.params.slug}` }),
   },
   {
     path: '/unsubscribe',
@@ -180,7 +277,16 @@ const router = createRouter({
 router.afterEach((to) => {
   const lang = to.params.lang
   if (lang && ['es', 'ca', 'en'].includes(lang)) {
-    updateMetaTags(lang)
+    updateMetaTags(lang, to.path)
+  }
+
+  // Notificar a Google Analytics (GA4) del cambio de página y título en SPA
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: to.fullPath,
+    })
   }
 })
 

@@ -1,0 +1,100 @@
+<svg width="500" height="520" viewBox="0 0 500 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Bit Coder (Azul Celeste - Portátil en Perspectiva Mirando al Bit)</title>
+  <!-- CANÓNICA ANATOMÍA BASE DE BIT (100% INMUTABLE) -->
+  <g id="Bit_Base" transform="translate(36, 110)">
+    <path id="Oreja_L_Relleno" d="M43.3506 113.914C43.3506 113.914 29.5121 111.937 19.6274 97.1102C9.74264 82.2832 7.27148 78.8235 6.28302 60.5368C5.29456 42.2501 9.74264 35.3309 21.1101 20.998C32.8046 6.2527 65.097 6.17099 65.097 6.17099C65.097 6.17099 81.901 8.14796 90.7972 16.5499C99.6934 24.9519 108.095 38.7905 109.578 45.7098C111.061 52.6291 118.474 75.8581 111.308 80.0591" fill="#98b0f8" />
+    <path id="Oreja_L_Borde" d="M43.3506 113.914C43.3506 113.914 29.5121 111.937 19.6274 97.1102C9.74264 82.2832 7.27148 78.8235 6.28302 60.5368C5.29456 42.2501 9.74264 35.3309 21.1101 20.998C32.8046 6.2527 65.097 6.17099 65.097 6.17099C65.097 6.17099 81.901 8.14796 90.7972 16.5499C99.6934 24.9519 108.095 38.7905 109.578 45.7098C111.061 52.6291 118.474 75.8581 111.308 80.0591" fill="none" stroke="black" stroke-width="12.3402" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="Oreja_R_Relleno" d="M312.214 63.008C312.214 63.008 315.372 49.6508 318.516 44.5978C321.976 39.0376 321.605 36.8136 334.455 25.9404C347.305 15.0672 371.523 18.0326 371.523 18.0326C371.523 18.0326 390.304 18.0326 404.142 30.8827C417.981 43.7328 421.44 66.9619 421.44 66.9619C421.44 66.9619 422.429 93.1563 409.579 107.983C399.497 119.616 384.373 128.741 384.373 128.741" fill="#98b0f8" />
+    <path id="Oreja_R_Borde" d="M312.214 63.008C312.214 63.008 315.372 49.6508 318.516 44.5978C321.976 39.0376 321.605 36.8136 334.455 25.9404C347.305 15.0672 371.523 18.0326 371.523 18.0326C371.523 18.0326 390.304 18.0326 404.142 30.8827C417.981 43.7328 421.44 66.9619 421.44 66.9619C421.44 66.9619 422.429 93.1563 409.579 107.983C399.497 119.616 384.373 128.741 384.373 128.741" fill="none" stroke="black" stroke-width="12.3402" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="Sombra_Interior" d="M36.895 277.919L25.0128 291.199L24.3138 307.974L36.1961 326.147C36.1961 326.147 51.573 335.932 55.7668 338.728C59.9605 341.524 87.9186 351.309 90.7145 352.707C93.5103 354.105 128.458 361.095 136.146 363.191C143.835 365.288 181.578 369.482 184.374 370.181C187.17 370.88 216.526 374.375 220.72 374.375C224.914 374.375 258.463 373.676 264.055 372.977C269.647 372.278 304.594 367.735 307.39 367.735C310.186 367.735 336.996 360.995 340.241 359.697C345.483 357.6 371.694 343.97 371.694 343.97L384.625 333.136L391.265 326.846L392.662 313.566L386.372 300.286L376.587 292.597L365.403 284.909L343.736 277.22L327.66 276.521L292.712 274.424L256.367 268.833L213.031 267.435L175.288 266.037C175.288 266.037 142.437 263.241 138.942 263.241C135.448 263.241 86.5207 261.144 86.5207 261.144L52.272 262.542L36.895 277.919Z" fill="#470047" fill-opacity="0.297" />
+    <path id="Cuerpo" d="M10.4902 177.338L28.2827 135.328L48.0521 108.146L60.9022 88.3761L68.81 75.526L78.4475 65.8884L88.5794 56.9922L100.441 52.5441L115.762 47.6017L130.095 41.918L145.169 37.717L155.054 34.9988L166.421 34.0103L175.07 32.5276L185.944 31.7862H198.547H213.127L228.942 32.2804L239.074 34.0103L250.194 36.9757L262.55 39.9411L271.199 43.1536L282.814 46.6132L302.089 55.7566L321.611 65.6413L340.886 77.0087L355.219 89.8588L367.822 104.686L377.954 119.266L385.367 131.127L394.511 144.966L401.183 157.322L406.867 168.195L411.809 179.315C411.809 179.315 414.527 187.223 414.774 189.2C415.022 191.177 416.504 202.05 416.504 202.05L416.01 227.997V239.365L414.774 247.52L407.361 271.243L397.723 288.294L383.638 303.121L370.046 310.782L355.466 317.701L308.514 334.011L276.883 339.942L249.453 341.919L229.189 341.671L199.288 339.942L172.846 337.965L143.439 333.517L119.469 327.092L109.09 322.643L98.2169 318.937L87.3438 313.994L80.1774 310.535L70.0455 304.604L53.9829 294.966L41.6271 283.599L30.7539 272.726L20.1278 258.393L14.6913 247.52L10.9845 236.894L8.51332 226.268L8.26614 212.182L9.00749 199.826L10.4902 177.338Z" fill="#98b0f8" stroke="black" stroke-width="12.3402" stroke-linejoin="round" />
+    <path id="Ojo_Izquierdo" d="M120.37 177.605C129.805 178.159 138.098 167.629 138.894 154.086C139.689 140.543 132.686 129.114 123.251 128.56C113.816 128.006 105.523 138.535 104.727 152.079C103.931 165.622 110.935 177.05 120.37 177.605Z" fill="black" />
+    <path id="Ojo_Derecho" d="M241.113 187.3C250.548 187.854 258.842 177.324 259.637 163.781C260.433 150.237 253.429 138.809 243.994 138.255C234.56 137.701 226.266 148.23 225.47 161.774C224.675 175.317 231.678 186.745 241.113 187.3Z" fill="black" />
+    <path id="Boca" d="M144.829 201.605C144.829 201.605 176.241 230.448 208.716 202.409" fill="none" stroke="black" stroke-width="11.5843" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="Accesorios">
+    <!-- Bombilla Flotante de Bits.jpeg -->
+    <g id="Bombilla_Ideas">
+      <circle cx="250" cy="50" r="38" fill="#FFF9C4" fill-opacity="0.45" />
+      <path d="M 230 84 C 230 78, 222 68, 218 58 C 210 38, 222 16, 250 16 C 278 16, 290 38, 282 58 C 278 68, 270 78, 270 84 Z" fill="#FEFA8E" stroke="black" stroke-width="7" stroke-linejoin="round" />
+      <path d="M 226 42 C 228 30, 238 24, 250 23" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M 240 82 L 243 64 L 247 56 L 250 62 L 253 56 L 257 64 L 260 82" stroke="black" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <g id="Casquillo_Roscado">
+        <rect x="232" y="84" width="36" height="7" rx="3.5" fill="#CFD8DC" stroke="black" stroke-width="4.5" stroke-linejoin="round" />
+        <rect x="234" y="91" width="32" height="7" rx="3.5" fill="#B0BEC5" stroke="black" stroke-width="4.5" stroke-linejoin="round" />
+        <path d="M 242 98 L 258 98 C 258 103, 242 103, 242 98 Z" fill="#455A64" stroke="black" stroke-width="4" stroke-linejoin="round" />
+      </g>
+    </g>
+    <!-- Portátil en Perspectiva Cónica de 2 Puntos (Mirando hacia Bit, mismo ancho de pantalla y teclado) -->
+    <g id="Portatil_Gris" transform="translate(88, 340)">
+      <!-- Sombra proyectada bajo el chasis -->
+      <ellipse cx="128" cy="141" rx="122" ry="11" fill="#000000" fill-opacity="0.20" />
+
+      <!-- 1. CHASIS INFERIOR Y TECLADO EN PERSPECTIVA (Mismo ancho que la pantalla, hacia Bit) -->
+      <g id="Teclado_Base_Perspectiva">
+        <!-- Silueta exterior unificada de la base completa (canto inferior + lateral derecho + plano superior) -->
+        <path d="M 13 108
+                 L 180 63
+                 L 249 66
+                 Q 260 67, 260 75
+                 Q 260 80, 255 85
+                 L 211 133
+                 Q 203 141, 190 141
+                 Q 102 143, 24 135
+                 Q 12 133, 12.5 121 Z"
+              fill="#BCBCBC" stroke="black" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" />
+
+        <!-- Cara superior del deck del teclado (delimitada por el bisel lateral derecho hacia la bisagra) -->
+        <path d="M 180 63
+                 L 249 66
+                 Q 257 67, 252 73
+                 L 205 123
+                 L 14 115 Z"
+              fill="#CFCFCF" stroke="black" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" />
+
+        <!-- Cavidad de teclas mirando hacia la pantalla oculta y hacia Bit -->
+        <polygon points="185,74 236,76 200,113 165,112"
+                 fill="#8D99A6" stroke="black" stroke-width="4.5" stroke-linejoin="round" />
+
+        <!-- Filas y divisiones de teclas fugando hacia los dos puntos de fuga -->
+        <g stroke="#263238" stroke-width="2.8" stroke-linecap="round">
+          <line x1="180" y1="83" x2="227" y2="85" />
+          <line x1="175" y1="93" x2="218" y2="94" />
+          <line x1="170" y1="103" x2="209" y2="104" />
+          <line x1="213" y1="75" x2="180" y2="112" />
+        </g>
+      </g>
+
+      <!-- 2. TAPA TRASERA DE LA PANTALLA (Pantalla oculta mirando a Bit; igual ancho que la base) -->
+      <g id="Tapa_Pantalla">
+        <!-- Tapa con sutil fuga hacia la izquierda (arista derecha ligeramente más cercana por perspectiva) -->
+        <path d="M 30 17
+                 Q 112 11, 188 10
+                 Q 204 10, 205 26
+                 L 206 116
+                 Q 206 124, 195 125
+                 Q 104 127, 21 119
+                 Q 13 118, 13 109
+                 L 17 32
+                 Q 18 18, 30 17 Z"
+              fill="#D4D4D4" stroke="black" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" />
+
+        <!-- Brillo limpio en el borde superior de la tapa -->
+        <path d="M 32 24 Q 112 18, 187 17" stroke="#ECECEC" stroke-width="3.5" stroke-linecap="round" fill="none" />
+
+        <!-- Emblema central (pera minimalista de Bits.jpeg en perspectiva sutil) -->
+        <g id="Logo_Tapa" transform="translate(111, 69) skewY(-1.5)">
+          <circle cx="-1" cy="-27" r="3.8" fill="black" />
+          <path d="M -2 -18
+                   C 3 -18, 5 -10, 6 -3
+                   C 7 3, 15 5, 15 14
+                   C 15 23, 7 27, -2 27
+                   C -12 27, -18 21, -18 12
+                   C -18 4, -11 -1, -8 -8
+                   C -6 -13, -5 -18, -2 -18 Z"
+                fill="black" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
