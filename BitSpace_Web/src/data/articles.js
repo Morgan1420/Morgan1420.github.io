@@ -1,6 +1,8 @@
 // Catálogo de Artículos y Recursos SEO/AEO para BitSpace
 // Fundamentado en la investigación científica y el Brief oficial de BitSpace
 
+import { ARTICLES_FUTUROS } from './articles_futuros.js'
+
 export const ARTICLE_CATEGORIES = {
   comparativas: {
     id: 'comparativas',
@@ -43,7 +45,7 @@ export const ARTICLE_CATEGORIES = {
   },
 }
 
-export const ARTICLES = [
+const INITIAL_ARTICLES = [
   // --------------------------------------------------------------------------
   // 1. COMPARATIVA: BitSpace vs Opal
   // --------------------------------------------------------------------------
@@ -268,6 +270,28 @@ Furthermore, your success directly cares for **your Bit**, your virtual pet in a
     ],
   },
 ]
+
+// Obtener fecha actual en formato YYYY-MM-DD
+export function getTodayDateString() {
+  const now = new Date()
+  const year = now.getFullYear()
+  const month = String(now.getMonth() + 1).padStart(2, '0')
+  const day = String(now.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+// Catálogo completo de artículos
+export const ALL_ARTICLES = [...INITIAL_ARTICLES, ...ARTICLES_FUTUROS]
+
+// Artículos publicados (cuya fecha sea hoy o anterior, ordenados de más reciente a más antiguo)
+export const ARTICLES = ALL_ARTICLES
+  .filter((a) => a.publishDate <= getTodayDateString())
+  .sort((a, b) => b.publishDate.localeCompare(a.publishDate))
+
+// Artículos programados para próximas semanas
+export const UPCOMING_ARTICLES = ALL_ARTICLES
+  .filter((a) => a.publishDate > getTodayDateString())
+  .sort((a, b) => a.publishDate.localeCompare(b.publishDate))
 
 // Funciones de ayuda
 export function getArticleBySlug(slug) {

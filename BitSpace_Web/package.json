@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-static-routes.js",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",

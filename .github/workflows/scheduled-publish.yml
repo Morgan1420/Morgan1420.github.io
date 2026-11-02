@@ -1,0 +1,46 @@
+name: Deploy Programado y Publicación Automática
+
+on:
+  schedule:
+    # Se ejecuta ÚNICAMENTE los jueves a las 06:00 UTC (07:00 AM hora peninsular española)
+    - cron: '0 6 * * 4'
+  workflow_dispatch: # Permite ejecutar el despliegue manualmente desde la pestaña Actions de GitHub
+
+permissions:
+  contents: write
+
+concurrency:
+  group: 'pages-deploy'
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio (rama rebranding)
+        uses: actions/checkout@v4
+        with:
+          ref: rebranding
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: BitSpace_Web/package-lock.json
+
+      - name: Instalar dependencias
+        working-directory: ./BitSpace_Web
+        run: npm ci
+
+      - name: Compilar y generar rutas estáticas (SEO 200 OK)
+        working-directory: ./BitSpace_Web
+        run: npm run build
+
+      - name: Desplegar a GitHub Pages (gh-pages)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./BitSpace_Web/dist
+          cname: bitspace.es
