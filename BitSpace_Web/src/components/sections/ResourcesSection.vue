@@ -84,13 +84,9 @@ const currentLang = computed(() => {
   return ['es', 'ca', 'en'].includes(lang) ? lang : 'ca'
 })
 
-// Highlight this week's active releases: Opal (today) and Doomscrolling (Thursday)
+// Artículos destacados en portada: los artículos más recientes publicados (máximo 3)
 const featuredArticles = computed(() => {
-  const selectedSlugs = [
-    'bitspace-vs-opal',
-    'como-frenar-el-doomscrolling-tiktok-instagram',
-  ]
-  return ARTICLES.filter((a) => selectedSlugs.includes(a.slug))
+  return ARTICLES.slice(0, 3)
 })
 
 function formatDate(dateStr) {

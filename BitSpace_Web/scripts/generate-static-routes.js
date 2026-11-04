@@ -152,6 +152,31 @@ function injectMeta(html, { route, lang, title, description, heroImage }) {
     )
   }
 
+  // Actualizar etiquetas hreflang para que apunten a los idiomas hermanos de esta ruta exacta
+  const languagesList = ['ca', 'es', 'en']
+  languagesList.forEach((altLang) => {
+    const altRoute = route.replace(/^\/(?:ca|es|en)/, `/${altLang}`)
+    const altUrl = `https://bitspace.es${altRoute}`
+    const hreflangRegex = new RegExp(`<link\\s+rel="alternate"\\s+hreflang="${altLang}"\\s+href="[^"]*"\\s*\\/?>`, 'i')
+    if (hreflangRegex.test(modified)) {
+      modified = modified.replace(
+        hreflangRegex,
+        `<link rel="alternate" hreflang="${altLang}" href="${altUrl}" />`
+      )
+    }
+  })
+
+  // Actualizar x-default a la versión en catalán de esta ruta
+  const caRoute = route.replace(/^\/(?:ca|es|en)/, '/ca')
+  const xDefaultUrl = `https://bitspace.es${caRoute}`
+  const xDefaultRegex = /<link\s+rel="alternate"\s+hreflang="x-default"\s+href="[^"]*"\s*\/?>/i
+  if (xDefaultRegex.test(modified)) {
+    modified = modified.replace(
+      xDefaultRegex,
+      `<link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />`
+    )
+  }
+
   return modified
 }
 

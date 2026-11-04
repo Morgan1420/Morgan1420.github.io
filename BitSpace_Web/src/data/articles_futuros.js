@@ -11,6 +11,12 @@ export const ARTICLES_FUTUROS = [
     readTime: '6 min',
     publishDate: '2026-11-05',
     status: 'scheduled',
+    heroImage: '/images/articles/como-frenar-el-doomscrolling-tiktok-instagram.jpg',
+    heroImageAlt: {
+      es: 'Cómo Frenar el Doomscrolling - Romper el bucle de dopamina en redes sociales',
+      ca: 'Com Frenar el Doomscrolling - Trencar el bucle de dopamina a xarxes socials',
+      en: 'How to Stop Doomscrolling - Break the social media dopamine loop',
+    },
     author: 'BitSpace Research Team',
     title: {
       es: 'Cómo Frenar el Doomscrolling en TikTok e Instagram: 5 Pasos para Romper el Bucle de Dopamina',
