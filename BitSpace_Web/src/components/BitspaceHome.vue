@@ -52,9 +52,11 @@ import BitspaceFooter from '@/components/views/BitspaceFooter.vue'
 .home-layout {
   position: relative;
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: clip;
 }
 
 .main-content {
@@ -62,5 +64,7 @@ import BitspaceFooter from '@/components/views/BitspaceFooter.vue'
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 </style>
