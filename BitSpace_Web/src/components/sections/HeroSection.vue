@@ -3,8 +3,22 @@
     <div class="hero-container">
       <!-- 1. Full 100vh Viewport: Logo alone -->
       <div class="hero-logo-screen">
-        <div class="hero-animation-wrap">
+        <div class="hero-animation-wrap" :class="{ 'is-mobile-logo': isMobile }">
+          <!-- Logo para móvil: nuevo archivo .riv con artboard LogoPequeno continuo y en grande -->
           <RiveCanvas
+            v-if="isMobile"
+            key="mobile-logo"
+            :src="logoMobileRivUrl"
+            artboard="LogoPequeno"
+            state-machine="State Machine 1"
+            fit="contain"
+            alignment="center"
+            class="hero-rive"
+          />
+          <!-- Logo para ordenador: logo original intacto con su temporizador original -->
+          <RiveCanvas
+            v-else
+            key="desktop-logo"
             :src="logoRivUrl"
             state-machine="State Machine 1"
             :repeat-interval="5000"
@@ -71,13 +85,34 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import RiveCanvas from '@/components/common/RiveCanvas.vue'
 import logoRivUrl from '@/assets/animations/logo.riv'
+import logoMobileRivUrl from '@/assets/animations/logo-mobile.riv'
 import respiracionRivUrl from '@/assets/animations/respiracion.riv'
 
 const { t } = useI18n()
 const prototypeUrl = 'https://prototype.bitspace.es'
+
+const isMobile = ref(false)
+
+function checkMobile() {
+  if (typeof window !== 'undefined') {
+    isMobile.value = window.innerWidth <= 860
+  }
+}
+
+onMounted(() => {
+  checkMobile()
+  window.addEventListener('resize', checkMobile, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('resize', checkMobile)
+  }
+})
 
 function scrollToWaitlist() {
   const el = document.getElementById('waitlist')
@@ -166,6 +201,31 @@ function scrollToWaitlist() {
   background: transparent;
   padding: 0;
   display: inline-block;
+}
+
+/* Efecto de tachado asimétrico a mano alzada */
+.hero-title :deep(.strikethrough-hand) {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.15rem;
+  color: #a1a1aa;
+}
+
+.hero-title :deep(.strike-word) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title :deep(.strike-svg) {
+  position: absolute;
+  top: 50%;
+  left: -8%;
+  width: 116%;
+  height: 28px;
+  transform: translateY(-50%) rotate(-2.5deg);
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
 }
 
 .hero-subtitle {
@@ -283,14 +343,23 @@ function scrollToWaitlist() {
   .hero-logo-screen {
     height: 100vh;
     min-height: 520px;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .hero-animation-wrap {
     width: 95vw;
-    height: clamp(220px, 48vw, 340px);
+    height: clamp(280px, 60vw, 420px);
     margin: 0;
+  }
+
+  .hero-animation-wrap.is-mobile-logo {
+    width: 96vw;
+    max-width: 600px;
+    height: clamp(480px, 78vh, 750px);
+    margin: 0;
+    transform: scale(1.8);
+    transform-origin: center center;
   }
 
   .hero-content-screen {

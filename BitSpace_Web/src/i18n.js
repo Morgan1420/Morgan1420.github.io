@@ -13,9 +13,9 @@ const messages = {
     rebrand_nav_showcase_pilars: 'Laboratori Hàbits',
     rebrand_hero_badge: 'APP DE BENESTAR DIGITAL',
     rebrand_hero_title:
-      'Cuida la teva mascota digital,<br><span class="highlight">cuida\'t a tu mateix</span>',
+      'Els teus hàbits <span class="strikethrough-hand"><span class="strike-word">digitals</span><svg class="strike-svg" viewBox="0 0 140 28" fill="none" preserveAspectRatio="none"><path d="M4 18 C35 8, 95 6, 134 11" stroke="#e879a9" stroke-width="3.5" stroke-linecap="round" /><path d="M12 22 C48 15, 88 16, 126 19" stroke="#ade5a8" stroke-width="2.5" stroke-linecap="round" opacity="0.85" /></svg></span> reals,<br><span class="highlight">reflectits al teu Bit</span>',
     rebrand_hero_subtitle:
-      'El teu benestar reflectit en una mascota virtual. Converteix la cura personal en un hàbit diari a través de la gamificació.',
+      'BitSpace gamifica la teva desconnexió, concentració, esport i lectura. Cada hàbit que compleixes fora del mòbil omple de vida i fa evolucionar el teu Bit, i tu, també.',
     rebrand_cta_waitlist: "Uneix-te a la llista d'espera",
     rebrand_cta_prototype: 'Provar el prototip',
     rebrand_showcase_badge: 'DESCOBREIX BITSPACE',
@@ -405,9 +405,9 @@ const messages = {
     rebrand_nav_showcase_pilars: 'Laboratorio Hábitos',
     rebrand_hero_badge: 'APP DE BIENESTAR DIGITAL',
     rebrand_hero_title:
-      'Cuida tu mascota digital,<br><span class="highlight">cuídate a ti mismo</span>',
+      'Tus hábitos <span class="strikethrough-hand"><span class="strike-word">digitales</span><svg class="strike-svg" viewBox="0 0 140 28" fill="none" preserveAspectRatio="none"><path d="M4 18 C35 8, 95 6, 134 11" stroke="#e879a9" stroke-width="3.5" stroke-linecap="round" /><path d="M12 22 C48 15, 88 16, 126 19" stroke="#ade5a8" stroke-width="2.5" stroke-linecap="round" opacity="0.85" /></svg></span> reales,<br><span class="highlight">reflejados en tu Bit</span>',
     rebrand_hero_subtitle:
-      'Tu bienestar reflejado en una mascota virtual. Convierte el autocuidado en un hábito diario a través de la gamificación.',
+      'BitSpace gamifica tu desconexión, concentración, deporte y lectura. Cada hábito que cumples fuera del móvil llena de vida y evoluciona tu Bit, y tú, también.',
     rebrand_cta_waitlist: 'Unirme a la lista de espera',
     rebrand_cta_prototype: 'Probar el prototipo',
     rebrand_showcase_badge: 'DESCUBRE BITSPACE',
@@ -664,9 +664,9 @@ const messages = {
     rebrand_nav_showcase_pilars: 'Habit Laboratory',
     rebrand_hero_badge: 'DIGITAL WELLBEING APP',
     rebrand_hero_title:
-      'Take care of your digital pet,<br><span class="highlight">take care of yourself</span>',
+      'Your <span class="strikethrough-hand"><span class="strike-word">digital</span><svg class="strike-svg" viewBox="0 0 140 28" fill="none" preserveAspectRatio="none"><path d="M4 18 C35 8, 95 6, 134 11" stroke="#e879a9" stroke-width="3.5" stroke-linecap="round" /><path d="M12 22 C48 15, 88 16, 126 19" stroke="#ade5a8" stroke-width="2.5" stroke-linecap="round" opacity="0.85" /></svg></span> real habits,<br><span class="highlight">mirrored in your Bit</span>',
     rebrand_hero_subtitle:
-      'Your wellbeing mirrored in a virtual companion. Turn daily self-care into a lasting routine through gentle gamification.',
+      'BitSpace gamifies your digital detox, focus, fitness, and reading. Every habit you complete away from your phone brings life and evolves your Bit, and you, too.',
     rebrand_cta_waitlist: 'Join the waitlist',
     rebrand_cta_prototype: 'Try the prototype',
     rebrand_showcase_badge: 'DISCOVER BITSPACE',

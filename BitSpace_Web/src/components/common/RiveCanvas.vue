@@ -13,6 +13,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  artboard: {
+    type: String,
+    default: null,
+  },
   stateMachine: {
     type: String,
     default: null,
@@ -160,6 +164,10 @@ async function initRive() {
       },
     }
 
+    if (props.artboard) {
+      riveConfig.artboard = props.artboard
+    }
+
     if (props.stateMachine) {
       riveConfig.stateMachines = [props.stateMachine]
     } else if (props.animation) {
@@ -214,11 +222,15 @@ onBeforeUnmount(() => {
 })
 
 watch(
-  () => props.src,
+  () => [props.src, props.artboard],
   () => {
     clearRepeatTimer()
     if (riveInstance) {
-      riveInstance.cleanup()
+      try {
+        riveInstance.cleanup()
+      } catch {
+        // Ignorar
+      }
       riveInstance = null
     }
     initRive()
