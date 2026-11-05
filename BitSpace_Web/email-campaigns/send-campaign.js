@@ -134,16 +134,17 @@ function parseWaitlistCsv(filePath) {
     const email = rawEmail.toLowerCase()
     const rawEvent = (cols[effectiveEventIdx] || '').toLowerCase()
 
-    // Determinamos si es evento de baja
-    const isUnsubscribed =
+    // Determinamos si el usuario no debe recibir envíos (Baja, Inactivo, etc.)
+    const isExcluded =
       rawEvent.includes('baja') ||
+      rawEvent.includes('inactiv') ||
       rawEvent.includes('desuscrit') ||
       rawEvent.includes('unsub') ||
       rawEvent.includes('cancel')
 
     userStatusMap.set(email, {
       email,
-      active: !isUnsubscribed,
+      active: !isExcluded,
       lastEvent: cols[effectiveEventIdx] || 'Alta',
     })
   }
@@ -187,10 +188,10 @@ async function runCampaign() {
 
   console.log(`\n📊 Análisis del CSV:`)
   console.log(`   - Correos activos en la lista: ${activeRecipients.length}`)
-  console.log(`   - Correos con evento 'Baja' (DESCARTADOS): ${unsubscribedRecipients.length}`)
+  console.log(`   - Correos descartados (Baja / Inactivo): ${unsubscribedRecipients.length}`)
 
   if (unsubscribedRecipients.length > 0) {
-    console.log(`   🚫 Bajas detectadas: ${unsubscribedRecipients.join(', ')}`)
+    console.log(`   🚫 Descartados detectados: ${unsubscribedRecipients.join(', ')}`)
   }
 
   // Destinatarios efectivos según si es modo test, test2 o masivo

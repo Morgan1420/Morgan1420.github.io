@@ -109,8 +109,16 @@ La próxima vez que desbloquees el móvil, haz una pausa de 3 segundos y pregún
       ],
     },
     references: [
-      'Virós-Martín, C., Montaña-Blasco, M., & Jiménez-Morales, M. (2024). Can\'t stop scrolling! Adolescents\' patterns of TikTok use and digital well-being self-perception. Humanities and Social Sciences Communications (Nature Portfolio).',
-      'IAB Spain & Smartme Analytics (2024-2025). Estudio de Redes Sociales y Hábitos Móviles en Jóvenes.',
+      {
+        text: 'Virós-Martín, C., Montaña-Blasco, M., & Jiménez-Morales, M. (2024). Can\'t stop scrolling! Adolescents\' patterns of TikTok use and digital well-being self-perception. Humanities and Social Sciences Communications (Nature Portfolio).',
+        url: 'https://www.nature.com/articles/s41599-024-03984-5',
+        source: 'Nature Portfolio',
+      },
+      {
+        text: 'IAB Spain & Smartme Analytics (2024-2025). Estudio de Redes Sociales y Hábitos Móviles en Jóvenes.',
+        url: 'https://moio.io/blog/estudio-de-redes-sociales-2025-de-iab-spain/',
+        source: 'IAB Spain',
+      },
     ],
   },
   // --------------------------------------------------------------------------

@@ -100,7 +100,20 @@
           <h3 class="references-title">{{ tArticle('references_title') }}</h3>
           <ul class="references-list">
             <li v-for="(refItem, refIdx) in article.references" :key="refIdx">
-              {{ refItem }}
+              <template v-if="typeof refItem === 'object' && refItem.url">
+                {{ refItem.text }}
+                <a
+                  :href="refItem.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="reference-external-link"
+                >
+                  [{{ refItem.source || 'Ver estudio' }} ↗]
+                </a>
+              </template>
+              <template v-else>
+                {{ refItem }}
+              </template>
             </li>
           </ul>
         </footer>
@@ -666,6 +679,19 @@ watch(
   line-height: 1.6;
   color: var(--text-muted, #71717a);
   margin-bottom: 0.4rem;
+}
+
+.reference-external-link {
+  color: var(--brand-black, #18181b);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 0.35rem;
+  transition: opacity 0.2s ease;
+}
+
+.reference-external-link:hover {
+  opacity: 0.7;
 }
 
 /* CTA Box */
