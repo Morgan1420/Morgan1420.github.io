@@ -61,7 +61,7 @@ const messages = {
     rebrand_devblog_button: 'Veure el canal a YouTube',
     rebrand_waitlist_hero_badge: 'ACCÉS ANTICIPAT',
     rebrand_waitlist_hero_title:
-      'Menys pantalla, més vida real.<br><span class="highlight">El teu Bit t\'està esperant.</span>',
+      'Menys pantalla,<br>més vida real.<br><span class="highlight">El teu Bit t\'està esperant.</span>',
     rebrand_waitlist_hero_subtitle:
       "Inscriu el teu correu electrònic a la llista d'espera oficial i sigues dels primers a provar BitSpace quan obrim les places.",
     rebrand_waitlist_hero_back: 'Tornar a la web',
@@ -459,7 +459,7 @@ const messages = {
     rebrand_devblog_button: 'Ver canal en YouTube',
     rebrand_waitlist_hero_badge: 'ACCESO ANTICIPADO',
     rebrand_waitlist_hero_title:
-      'Menos pantalla, más vida real.<br><span class="highlight">Tu Bit te está esperando.</span>',
+      'Menos pantalla,<br>más vida real.<br><span class="highlight">Tu Bit te está esperando.</span>',
     rebrand_waitlist_hero_subtitle:
       'Inscribe tu correo electrónico en la lista de espera oficial y sé de los primeros en probar BitSpace cuando abramos plazas.',
     rebrand_waitlist_hero_back: 'Volver a la web',
@@ -724,7 +724,7 @@ const messages = {
     rebrand_devblog_button: 'Watch on YouTube',
     rebrand_waitlist_hero_badge: 'EARLY ACCESS',
     rebrand_waitlist_hero_title:
-      'Less screen time, more real life.<br><span class="highlight">Your Bit is waiting for you.</span>',
+      'Less screen time,<br>more real life.<br><span class="highlight">Your Bit is waiting for you.</span>',
     rebrand_waitlist_hero_subtitle:
       'Submit your email to the official waitlist to gain priority access as soon as our public slots open.',
     rebrand_waitlist_hero_back: 'Back to website',

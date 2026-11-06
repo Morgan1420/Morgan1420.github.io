@@ -44,12 +44,6 @@
     <main class="waitlist-main">
       <div class="waitlist-container">
         <div class="waitlist-hero-card">
-          <!-- Top Badge -->
-          <div class="waitlist-badge">
-            <span class="badge-dot"></span>
-            <span>{{ t('rebrand_waitlist_hero_badge') }}</span>
-          </div>
-
           <!-- Catchy Hero Title & Subtitle -->
           <h1 class="waitlist-title" v-html="t('rebrand_waitlist_hero_title')"></h1>
           <p class="waitlist-subtitle">{{ t('rebrand_waitlist_hero_subtitle') }}</p>
@@ -469,42 +463,6 @@ function submitForm() {
   background: var(--bit-pink-soft);
   filter: blur(50px);
   pointer-events: none;
-}
-
-/* Badge */
-.waitlist-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.4rem 0.95rem;
-  background: var(--bit-mint-soft);
-  border: 1px solid rgba(173, 229, 168, 0.55);
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #15803d;
-  letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
-}
-
-.badge-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
-  animation: pulse-dot 2s infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.25);
-    opacity: 0.75;
-  }
 }
 
 /* Title & Subtitle */
