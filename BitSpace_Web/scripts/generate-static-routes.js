@@ -56,6 +56,24 @@ const HUB_META = {
   },
 }
 
+const WAITLIST_META = {
+  ca: {
+    title: "Llista d'espera oficial | BitSpace",
+    description:
+      "Uneix-te a la llista d'espera oficial de BitSpace. Menys pantalla, més vida real per a tu i el teu Bit.",
+  },
+  es: {
+    title: 'Lista de espera oficial | BitSpace',
+    description:
+      'Únete a la lista de espera oficial de BitSpace. Menos pantalla, más vida real para ti y tu Bit.',
+  },
+  en: {
+    title: 'Official Waitlist | BitSpace',
+    description:
+      'Join the official BitSpace waitlist. Less screen time, more real life for you and your Bit.',
+  },
+}
+
 const languages = ['ca', 'es', 'en']
 const routesToGenerate = []
 
@@ -66,6 +84,16 @@ languages.forEach((lang) => {
     lang,
     title: DEFAULT_META[lang].title,
     description: DEFAULT_META[lang].description,
+  })
+})
+
+// 1.5. Waitlist routes
+languages.forEach((lang) => {
+  routesToGenerate.push({
+    route: `/${lang}/waitlist`,
+    lang,
+    title: WAITLIST_META[lang].title,
+    description: WAITLIST_META[lang].description,
   })
 })
 
@@ -236,6 +264,39 @@ let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Waitlist CA -->
+  <url>
+    <loc>https://bitspace.es/ca/waitlist</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/waitlist"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es/waitlist"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en/waitlist"/>
+  </url>
+
+  <!-- Waitlist ES -->
+  <url>
+    <loc>https://bitspace.es/es/waitlist</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/waitlist"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es/waitlist"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en/waitlist"/>
+  </url>
+
+  <!-- Waitlist EN -->
+  <url>
+    <loc>https://bitspace.es/en/waitlist</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/waitlist"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es/waitlist"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en/waitlist"/>
   </url>
 
   <!-- Recursos Hub CA -->

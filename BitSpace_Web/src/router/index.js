@@ -33,6 +33,36 @@ const getPageMeta = (lang, currentRoutePath = '') => {
     .replace(/^\/(?:ca|es|en)(?:\/|$)/, '')
     .replace(/\/$/, '')
 
+  if (cleanPath === 'waitlist') {
+    const waitlistMeta = {
+      ca: {
+        title: "Llista d'espera oficial | BitSpace",
+        description:
+          "Uneix-te a la llista d'espera oficial de BitSpace. Menys pantalla, més vida real per a tu i el teu Bit.",
+        ogTitle: "Llista d'espera oficial | BitSpace",
+        ogDescription:
+          "Uneix-te a la llista d'espera oficial de BitSpace. Menys pantalla, més vida real per a tu i el teu Bit.",
+      },
+      es: {
+        title: 'Lista de espera oficial | BitSpace',
+        description:
+          'Únete a la lista de espera oficial de BitSpace. Menos pantalla, más vida real para ti y tu Bit.',
+        ogTitle: 'Lista de espera oficial | BitSpace',
+        ogDescription:
+          'Únete a la lista de espera oficial de BitSpace. Menos pantalla, más vida real para ti y tu Bit.',
+      },
+      en: {
+        title: 'Official Waitlist | BitSpace',
+        description:
+          'Join the official BitSpace waitlist. Less screen time, more real life for you and your Bit.',
+        ogTitle: 'Official Waitlist | BitSpace',
+        ogDescription:
+          'Join the official BitSpace waitlist. Less screen time, more real life for you and your Bit.',
+      },
+    }
+    return waitlistMeta[lang] || waitlistMeta.ca
+  }
+
   if (cleanPath === 'recursos') {
     const hubMeta = {
       ca: {
@@ -226,11 +256,21 @@ const routes = [
         component: () => import('../components/views/ArticleView.vue'),
       },
       {
+        path: 'waitlist',
+        name: 'Waitlist',
+        meta: { hideCookieBanner: true },
+        component: () => import('../components/views/WaitlistView.vue'),
+      },
+      {
         path: 'unsubscribe',
         name: 'Unsubscribe',
         component: () => import('../components/views/UnsubscribeView.vue'),
       },
     ],
+  },
+  {
+    path: '/waitlist',
+    redirect: () => ({ path: `/${getPreferredLang()}/waitlist` }),
   },
   {
     path: '/recursos',

@@ -59,6 +59,12 @@ const messages = {
     rebrand_devblog_subtitle:
       'Acompanya\'ns darrere de les càmeres: el dia a dia de l\'equip, el procés de creació dels Bits i els reptes de desenvolupar una app des de zero en format Shorts.',
     rebrand_devblog_button: 'Veure el canal a YouTube',
+    rebrand_waitlist_hero_badge: 'ACCÉS ANTICIPAT',
+    rebrand_waitlist_hero_title:
+      'Menys pantalla, més vida real.<br><span class="highlight">El teu Bit t\'està esperant.</span>',
+    rebrand_waitlist_hero_subtitle:
+      "Inscriu el teu correu electrònic a la llista d'espera oficial i sigues dels primers a provar BitSpace quan obrim les places.",
+    rebrand_waitlist_hero_back: 'Tornar a la web',
     rebrand_waitlist_badge: 'ACCÉS ANTICIPAT',
     rebrand_waitlist_title: 'Sigues dels primers a entrar a BitSpace',
     rebrand_waitlist_subtitle:
@@ -451,6 +457,12 @@ const messages = {
     rebrand_devblog_subtitle:
       'Acompáñanos detrás de las cámaras: el día a día del equipo, el proceso de creación de los Bits y los retos de crear una app desde cero en formato Shorts.',
     rebrand_devblog_button: 'Ver canal en YouTube',
+    rebrand_waitlist_hero_badge: 'ACCESO ANTICIPADO',
+    rebrand_waitlist_hero_title:
+      'Menos pantalla, más vida real.<br><span class="highlight">Tu Bit te está esperando.</span>',
+    rebrand_waitlist_hero_subtitle:
+      'Inscribe tu correo electrónico en la lista de espera oficial y sé de los primeros en probar BitSpace cuando abramos plazas.',
+    rebrand_waitlist_hero_back: 'Volver a la web',
     rebrand_waitlist_badge: 'ACCESO ANTICIPADO',
     rebrand_waitlist_title: 'Sé de los primeros en entrar a BitSpace',
     rebrand_waitlist_subtitle:
@@ -710,6 +722,12 @@ const messages = {
     rebrand_devblog_subtitle:
       'Join us behind the scenes: daily team life, crafting the Bits companions, and the raw challenges of building an app from scratch in daily Shorts.',
     rebrand_devblog_button: 'Watch on YouTube',
+    rebrand_waitlist_hero_badge: 'EARLY ACCESS',
+    rebrand_waitlist_hero_title:
+      'Less screen time, more real life.<br><span class="highlight">Your Bit is waiting for you.</span>',
+    rebrand_waitlist_hero_subtitle:
+      'Submit your email to the official waitlist to gain priority access as soon as our public slots open.',
+    rebrand_waitlist_hero_back: 'Back to website',
     rebrand_waitlist_badge: 'EARLY ACCESS',
     rebrand_waitlist_title: 'Be among the first to enter BitSpace',
     rebrand_waitlist_subtitle:

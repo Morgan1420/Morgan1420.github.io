@@ -1,7 +1,7 @@
 <template>
   <div id="main-app-container">
     <router-view />
-    <CookieBanner />
+    <CookieBanner v-if="!route.meta?.hideCookieBanner" />
   </div>
 </template>
 
