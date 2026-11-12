@@ -5,7 +5,7 @@
   <!-- Catalan / Default Home -->
   <url>
     <loc>https://bitspace.es/ca</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
@@ -16,7 +16,7 @@
   <!-- Spanish Home -->
   <url>
     <loc>https://bitspace.es/es</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
@@ -27,7 +27,7 @@
   <!-- English Home -->
   <url>
     <loc>https://bitspace.es/en</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca"/>
@@ -38,7 +38,7 @@
   <!-- Root redirect -->
   <url>
     <loc>https://bitspace.es/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -46,7 +46,7 @@
   <!-- Waitlist CA -->
   <url>
     <loc>https://bitspace.es/ca/waitlist</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/waitlist"/>
@@ -57,7 +57,7 @@
   <!-- Waitlist ES -->
   <url>
     <loc>https://bitspace.es/es/waitlist</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/waitlist"/>
@@ -68,7 +68,7 @@
   <!-- Waitlist EN -->
   <url>
     <loc>https://bitspace.es/en/waitlist</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/waitlist"/>
@@ -79,7 +79,7 @@
   <!-- Recursos Hub CA -->
   <url>
     <loc>https://bitspace.es/ca/recursos</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/recursos"/>
@@ -90,7 +90,7 @@
   <!-- Recursos Hub ES -->
   <url>
     <loc>https://bitspace.es/es/recursos</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/recursos"/>
@@ -101,12 +101,39 @@
   <!-- Recursos Hub EN -->
   <url>
     <loc>https://bitspace.es/en/recursos</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/recursos"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es/recursos"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en/recursos"/>
+  </url>
+  <url>
+    <loc>https://bitspace.es/ca/recursos/bienestar-digital-estudiantes-universitarios</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es/recursos/bienestar-digital-estudiantes-universitarios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/recursos/bienestar-digital-estudiantes-universitarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en/recursos/bienestar-digital-estudiantes-universitarios"/>
+  </url>
+  <url>
+    <loc>https://bitspace.es/es/recursos/bienestar-digital-estudiantes-universitarios</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es/recursos/bienestar-digital-estudiantes-universitarios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/recursos/bienestar-digital-estudiantes-universitarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en/recursos/bienestar-digital-estudiantes-universitarios"/>
+  </url>
+  <url>
+    <loc>https://bitspace.es/en/recursos/bienestar-digital-estudiantes-universitarios</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bitspace.es/es/recursos/bienestar-digital-estudiantes-universitarios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bitspace.es/ca/recursos/bienestar-digital-estudiantes-universitarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitspace.es/en/recursos/bienestar-digital-estudiantes-universitarios"/>
   </url>
   <url>
     <loc>https://bitspace.es/ca/recursos/como-frenar-el-doomscrolling-tiktok-instagram</loc>
